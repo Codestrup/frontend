@@ -6,8 +6,8 @@ export default function WorkProcess1() {
             <section className="work-process-section fix section-padding pt-0">
                 <div className="container">
                     <div className="section-title text-center">
-                        <span>How IT work</span>
-                        <h2>Standard Work Process</h2>
+                        <h2>Our Features</h2>
+                        <span>Find global work experience in any field or region with Virtual Internships, the No. 1 platform for remote internships.</span>
                     </div>
                     <div className="process-work-wrapper">
                         <div className="line-shape">
@@ -23,9 +23,10 @@ export default function WorkProcess1() {
                                         </h6>
                                     </div>
                                     <div className="content">
-                                        <h4>Choose A Service</h4>
+                                        <h4>Complete Flexibility</h4>
                                         <p>
-                                            In a free hour, when our power of choice is untrammeled and
+
+                                            Flexible learning enhances diversity, accessibility, and student autonomy and
                                         </p>
                                     </div>
                                 </div>
@@ -33,9 +34,10 @@ export default function WorkProcess1() {
                             <div className="col-xl-3 col-lg-4 col-md-6">
                                 <div className="work-process-items text-center">
                                     <div className="content style-2">
-                                        <h4>Define Requirements</h4>
+                                        <h4>Real Experience</h4>
                                         <p>
-                                            In a free hour, when our power of choice is untrammeled and
+
+                                            Real examples stimulate critical thinking and problem-solving and
                                         </p>
                                     </div>
                                     <div className="icon">
@@ -55,9 +57,10 @@ export default function WorkProcess1() {
                                         </h6>
                                     </div>
                                     <div className="content">
-                                        <h4>Request A Meeting</h4>
+                                        <h4>Award Winning & Certification</h4>
                                         <p>
-                                            In a free hour, when our power of choice is untrammeled and
+
+                                            Our program offers strategies for career growth and skill validation and
                                         </p>
                                     </div>
                                 </div>
@@ -65,9 +68,9 @@ export default function WorkProcess1() {
                             <div className="col-xl-3 col-lg-4 col-md-6">
                                 <div className="work-process-items text-center">
                                     <div className="content style-2">
-                                        <h4>Finial Solutio3</h4>
+                                        <h4>Save Time</h4>
                                         <p>
-                                            In a free hour, when our power of choice is untrammeled and
+                                        Online learning reduces time by 25% to 60%.
                                         </p>
                                     </div>
                                     <div className="icon">

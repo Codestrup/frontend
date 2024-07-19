@@ -153,7 +153,15 @@ export default function Menu() {
                 <li>
                     <Link href="/contact">Contact</Link>
                 </li>
+                <Link href="/l" className="theme-btn wow fadeInUp" data-wow-delay=".8s" style={{
+                    padding: '10px 20px'
+                }}>
+                    Login|SignUp
+
+                </Link>
+
             </ul>
+
         </>
     )
 }

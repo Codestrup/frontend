@@ -21,14 +21,12 @@ export default function Footer3() {
                                     </div>
                                     <div className="footer-content">
                                         <p>
-                                            Phasellus ultricies aliquam volutpat
-                                            ullamcorper laoreet neque, a lacinia
-                                            curabitur lacinia mollis
+                                            making its mark as a quality software house. We develop IT solutions, underlined by innovation & value creation that impacts & redefines the businesses processes.
                                         </p>
                                         <div className="social-icon d-flex align-items-center">
-                                            <Link href="#"><i className="fab fa-facebook-f" /></Link>
-                                            <Link href="#"><i className="fab fa-twitter" /></Link>
-                                            <Link href="#"><i className="fa-brands fa-linkedin-in" /></Link>
+                                            <Link href="https://www.facebook.com/codestrup"><i className="fab fa-facebook-f" /></Link>
+                                            <Link href="https://www.instagram.com/codestrup_infotech/"><i className="fab fa-instagram" /></Link>
+                                            <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd"><i className="fa-brands fa-linkedin-in" /></Link>
                                             <Link href="#"><i className="fa-brands fa-youtube" /></Link>
                                         </div>
                                     </div>
@@ -41,21 +39,27 @@ export default function Footer3() {
                                     </div>
                                     <ul className="list-area">
                                         <li>
-                                            <Link href="/about">
+                                            <Link href="/">
                                                 <i className="fa-solid fa-chevron-right" />
-                                                Infotech About
+                                                Home
                                             </Link>
                                         </li>
                                         <li>
                                             <Link href="/service">
                                                 <i className="fa-solid fa-chevron-right" />
-                                                Our Services
+                                                internship
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/news">
+                                            <Link href="/project">
                                                 <i className="fa-solid fa-chevron-right" />
-                                                Our Blogs
+                                                Learning Center
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/Achivement">
+                                                <i className="fa-solid fa-chevron-right" />
+                                                Top Achievers
                                             </Link>
                                         </li>
                                         <li>
@@ -76,50 +80,46 @@ export default function Footer3() {
                             <div className="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".5s">
                                 <div className="single-footer-widget style-margin">
                                     <div className="widget-head">
-                                        <h3>IT Solution</h3>
+                                        <h3>SERVICES</h3>
                                     </div>
                                     <ul className="list-area">
                                         <li>
-                                            <Link href="/service-details">
+                                            <Link href="/terms-condition">
                                                 <i className="fa-solid fa-chevron-right" />
-                                                IT Management
+                                                Terms & Condition
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/refund-policy">
+                                                <i className="fa-solid fa-chevron-right" />
+                                                Refund Policy
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link href="/privacy-policy">
+                                                <i className="fa-solid fa-chevron-right" />
+                                                Privacy Policy
                                             </Link>
                                         </li>
                                         <li>
                                             <Link href="/service-details">
                                                 <i className="fa-solid fa-chevron-right" />
-                                                Web Development
+                                                Disclimer
                                             </Link>
                                         </li>
-                                        <li>
-                                            <Link href="/service-details">
-                                                <i className="fa-solid fa-chevron-right" />
-                                                Cyber Security
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/service-details">
-                                                <i className="fa-solid fa-chevron-right" />
-                                                SEO Optimization
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/service-details">
-                                                <i className="fa-solid fa-chevron-right" />
-                                                App Development
-                                            </Link>
-                                        </li>
+
                                     </ul>
                                 </div>
                             </div>
                             <div className="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".7s">
                                 <div className="single-footer-widget style-margin">
                                     <div className="widget-head">
-                                        <h3>Newsletter</h3>
+                                        <h3>Your Knowledge Base</h3>
                                     </div>
                                     <div className="footer-content">
                                         <p>
-                                            Sign up to seargin weekly newsletter to get the latest updates.
+                                            Learn about the latest internship projects and achievements.
+                                            Stay connected with the Codestrup Infotech internship community
                                         </p>
                                         <div className="footer-input">
                                             <input type="email" id="email2" placeholder="Enter Email Address" />
@@ -138,11 +138,11 @@ export default function Footer3() {
                         <div className="footer-wrapper d-flex align-items-center justify-content-between">
                             <div className="footer-logo wow fadeInLeft" data-wow-delay=".3s">
                                 <Link href="/">
-                                    <img src="/assets/img/logo/white-logo.svg" alt="logo-img" />
+                                    <img src="/assets/img/logo/Codestrup.png" alt="logo-img" />
                                 </Link>
                             </div>
                             <p className="wow fadeInRight color-2" data-wow-delay=".5s">
-                                © All Copyright {new Date().getFullYear()} by <Link href="/">Infotech</Link>
+                                © All Copyright {new Date().getFullYear()} by <Link href="/">Codestrup</Link>
                             </p>
                         </div>
                     </div>

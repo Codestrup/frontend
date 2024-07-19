@@ -18,7 +18,7 @@ export default function Faq1() {
                         <div className="row g-4">
                             <div className="col-lg-6 wow fadeInUp" data-wow-delay=".4s">
                                 <div className="faq-image">
-                                    <img src="/assets/img/faq/faq.png" alt="faq-img" />
+                                    <img src="/assets/img/hero/image.png" alt="faq-img"  />
                                 </div>
                             </div>
                             <div className="col-lg-6">
@@ -26,7 +26,7 @@ export default function Faq1() {
                                     <div className="section-title">
                                         <span className="wow fadeInUp">See Our Faqs</span>
                                         <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                                            Keep Your Business Safe &amp; <br /> Ensure High Availability
+                                        Build your career through learning.
                                         </h2>
                                     </div>
                                     <div className="faq-accordion mt-4 mt-md-0">

@@ -34,17 +34,17 @@ export default function Hero1() {
                                 The only platform that guarantees real-world work experience across the globe.
                                 </p>
                                 <div className="hero-button">
-                                    <Link href="/about" className="theme-btn wow fadeInUp" data-wow-delay=".8s">
+                                    <Link href="/service" className="theme-btn wow fadeInUp" data-wow-delay=".8s">
                                         Apply Now
                                         <i className="fa-solid fa-arrow-right-long" />
                                     </Link>
-                                    <VideoPopup style={3} />
+                                    {/* <VideoPopup style={3} /> */}
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-4">
                             <div className="hero-image wow fadeInUp" data-wow-delay=".4s">
-                                <img src="/assets/img/hero/hero.png" alt="hero-img" />
+                                <img src="/assets/img/hero/hero01.png" alt="hero-img" />
                             </div>
                         </div>
                     </div>

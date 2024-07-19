@@ -15,16 +15,16 @@ export default function About1() {
                                 <div className="about-image-items">
                                     <div className="counter-shape float-bob-y">
                                         <div className="icon">
-                                            <img src="/assets/img/about/icon-1.svg" alt="icon-img" />
+                                            <img src="/assets/img/about/icon-1" alt="" />
                                         </div>
                                         <div className="content">
                                             <h3><CounterUp count={6561}/>+</h3>
                                         </div>
                                     </div>
                                     <VideoPopup style={2} />
-                                    <div className="about-image-1 bg-cover wow fadeInLeft" data-wow-delay=".3s" style={{ backgroundImage: 'url("assets/img/about/01.jpg")' }}>
+                                    <div className="about-image-1 bg-cover wow fadeInLeft" data-wow-delay=".3s" style={{ backgroundImage: 'url("assets/img/about1.jpeg")' }}>
                                         <div className="about-image-2 wow fadeInUp" data-wow-delay=".5s">
-                                            <img src="/assets/img/about/02.jpg" alt="about-img" />
+                                            <img src="/assets/img/about3.jpeg" alt="about-img" />
                                         </div>
                                     </div>
                                 </div>
@@ -65,7 +65,7 @@ export default function About1() {
                                         </div>
                                         <div className="icon-items wow fadeInUp" data-wow-delay=".9s">
                                             <div className="icon">
-                                                <img src="/assets/img/about/icon-3.svg" alt="icon-img" />
+                                                <img src="/assets/img/about/icon-1.svg" alt="icon-img"   />
                                             </div>
                                             <div className="content">
                                                 <h4>Certificates and Goodies</h4>
@@ -77,7 +77,7 @@ export default function About1() {
                                     </div>
                                     <div className="about-author">
                                         <div className="about-button wow fadeInUp" data-wow-delay=".5s">
-                                            <Link href="/about" className="theme-btn">
+                                            <Link href="/service" className="theme-btn">
                                                 Apply Now
                                                 <i className="fa-solid fa-arrow-right-long" />
                                             </Link>

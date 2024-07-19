@@ -6001,6 +6001,8 @@ input.main-search-input::placeholder {
   bottom: 25px;
   left: 25px;
   right: 25px;
+  padding-top: 80px;
+  /* margin: 80px; */
   padding: 35px 30px;
   background-color: var(--white);
   overflow: hidden;
@@ -6340,8 +6342,8 @@ input.main-search-input::placeholder {
   color: var(--theme);
   margin-bottom: 10px;
   display: inline-block;
-  font-weight: 500;
-  text-transform: uppercase;
+  font-weight: 200;
+  text-transform: capitalize;
 }
 .section-title h2 span {
   color: var(--theme);

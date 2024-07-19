@@ -115,7 +115,7 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
-<Footer3 />
+                <Footer3 />
             </Layout>
         </>
     )

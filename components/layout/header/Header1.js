@@ -20,20 +20,21 @@ export default function Header1({
                             <ul className="contact-list">
                                 <li>
                                     <i className="far fa-envelope" />
-                                    <Link href="/mailto:info@example.com" className="link">info@example.com</Link>
+                                    <Link href="/mailto:info@codestrup.com" className="link">info@codestrup.com</Link>
                                 </li>
                                 <li>
                                     <i className="fa-solid fa-phone-volume" />
-                                    <Link href="/tel:2086660112">+208-666-0112</Link>
+                                    <Link href="/tel: 9699997689">+91 9699997689</Link>
                                 </li>
                             </ul>
                             <div className="top-right">
                                 <div className="social-icon d-flex align-items-center">
                                     <span>Follow Us:</span>
-                                    <Link href="#"><i className="fab fa-facebook-f" /></Link>
-                                    <Link href="#"><i className="fab fa-twitter" /></Link>
-                                    <Link href="#"><i className="fa-brands fa-linkedin-in" /></Link>
+                                    <Link href="https://www.facebook.com/people/Codestrup-Infotech/61559222888433/?mibextid=ZbWKwL"><i className="fab fa-facebook-f" /></Link>
+                                    <Link href="https://t.me/+6HxZOtDBk6w0N2Vl"><i className="fab fa-telegram" /></Link>
+                                    <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd"><i className="fa-brands fa-linkedin-in" /></Link>
                                     <Link href="#"><i className="fa-brands fa-youtube" /></Link>
+                                    <Link href="https://www.instagram.com/codestrup_infotech/"><i className="fa-brands fa-instagram" /></Link>
                                 </div>
                             </div>
                         </div>
@@ -46,7 +47,9 @@ export default function Header1({
                                 <div className="header-left">
                                     <div className="logo">
                                         <Link href="/" className="header-logo">
-                                            <img src="/assets/img/logo/black-logo.svg" alt="logo-img" />
+                                            <img src="/assets/img/logo/Codestrup.png" alt="logo-img"  style={{
+                                                width:'20vw'
+                                            }}/>
                                         </Link>
                                     </div>
                                 </div>

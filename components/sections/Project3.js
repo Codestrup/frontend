@@ -9,9 +9,9 @@ export default function Project3() {
                 <div className="container">
                     <div className="section-title-area">
                         <div className="section-title">
-                            <span className="text-white">Learning Center</span>
+                            <span className="text-white">Our Projects</span>
                             <h2 className="text-white">
-                                Our Latest Incredible <br /> Client's Projects
+                            Code the World with Us  <br/> at Codestrup Infotech
                             </h2>
                         </div>
                         <VideoPopup style={1} />

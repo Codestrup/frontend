@@ -1,4 +1,3 @@
-
 'use client'
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -32,59 +31,54 @@ const swiperOptions = {
         },
     },
 }
+
+const brandImgStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '10px',
+    // width:'180px'
+}
+
+const imgStyle = {
+    width: '154px',
+    height: 'auto',
+    margin: '10px',
+}
+
 export default function BrandSlider2() {
     return (
         <>
-            <div className="swiper brand-slider-2">
+            <div className="swiper brand-slider-2" style={{ padding: '20px' }}>
                 <Swiper {...swiperOptions} className="swiper-wrapper">
                     <SwiperSlide>
-                        <div className="brand-img">
-                            <img src="/assets/img/brand/01.png" alt="img" />
+                        <div className="brand-img" style={brandImgStyle}>
+                            <img src="/assets/img/brand/01.png" alt="img" style={imgStyle} />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="brand-img">
-                            <img src="/assets/img/brand/02.png" alt="img" />
+                        <div className="brand-img" style={brandImgStyle}>
+                            <img src="/assets/img/brand/02.png" alt="img" style={imgStyle} />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="brand-img">
-                            <img src="/assets/img/brand/03.png" alt="img" />
+                        <div className="brand-img" style={brandImgStyle}>
+                            <img src="/assets/img/brand/03.png" alt="img" style={imgStyle} />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="brand-img">
-                            <img src="/assets/img/brand/04.png" alt="img" />
+                        <div className="brand-img" style={brandImgStyle}>
+                            <img src="/assets/img/brand/04.png" alt="img" style={imgStyle} />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="brand-img">
-                            <img src="/assets/img/brand/01.png" alt="img" />
+                        <div className="brand-img" style={brandImgStyle}>
+                            <img src="/assets/img/brand/05.png" alt="img" style={imgStyle} />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="brand-img">
-                            <img src="/assets/img/brand/01.png" alt="img" />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="brand-img">
-                            <img src="/assets/img/brand/02.png" alt="img" />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="brand-img">
-                            <img src="/assets/img/brand/03.png" alt="img" />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="brand-img">
-                            <img src="/assets/img/brand/04.png" alt="img" />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="brand-img">
-                            <img src="/assets/img/brand/01.png" alt="img" />
+                        <div className="brand-img" style={brandImgStyle}>
+                            <img src="/assets/img/brand/06.png" alt="img" style={imgStyle} />
                         </div>
                     </SwiperSlide>
                 </Swiper>

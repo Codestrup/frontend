@@ -49,11 +49,11 @@ export default function ProjectSlider3() {
                     <SwiperSlide>
                         <div className="project-items style-2">
                             <div className="project-image">
-                                <img src="/assets/img/project/08.jpg" alt="project-img" />
-                                <div className="project-content">
-                                    <p>Technology</p>
+                                <img src="/assets/img/project/image-removebg-preview (3).png" alt="project-img" />
+                                <div className="project-content" >
+                                    <p>Web Development</p>
                                     <h4>
-                                        <Link href="/project-details">Software Development</Link>
+                                        <Link href="/project-details">Sarva Shiksha School</Link>
                                     </h4>
                                     <Link href="/project-details" className="arrow-icon-2">
                                         <i className="fa-solid fa-arrow-right" />
@@ -65,11 +65,13 @@ export default function ProjectSlider3() {
                     <SwiperSlide>
                         <div className="project-items style-2">
                             <div className="project-image">
-                                <img src="/assets/img/project/09.jpg" alt="project-img" />
+                                <img src="/assets/img/project/qr1.jpeg" alt="project-img" />
                                 <div className="project-content">
-                                    <p>Solutions</p>
+                                    <p>App Development</p>
                                     <h4>
-                                        <Link href="/project-details">Analytic Solutions</Link>
+                                        <Link href="/project-details">Smart Qr
+                                            Restaurant App
+                                        </Link>
                                     </h4>
                                     <Link href="/project-details" className="arrow-icon-2">
                                         <i className="fa-solid fa-arrow-right" />
@@ -81,11 +83,12 @@ export default function ProjectSlider3() {
                     <SwiperSlide>
                         <div className="project-items style-2">
                             <div className="project-image">
-                                <img src="/assets/img/project/10.jpg" alt="project-img" />
+                                <img src="/assets/img/project/qr1.jpeg" alt="project-img" />
                                 <div className="project-content">
-                                    <p>Technology</p>
+                                    <p>App Development</p>
                                     <h4>
-                                        <Link href="/project-details">Design Solutions</Link>
+                                        <Link href="/project-details">Whats App
+                                        Bulk Sender</Link>
                                     </h4>
                                     <Link href="/project-details" className="arrow-icon-2">
                                         <i className="fa-solid fa-arrow-right" />
@@ -97,11 +100,12 @@ export default function ProjectSlider3() {
                     <SwiperSlide>
                         <div className="project-items style-2">
                             <div className="project-image">
-                                <img src="/assets/img/project/11.jpg" alt="project-img" />
+                                <img src="/assets/img/project/image-removebg-preview (7).png" alt="project-img" />
                                 <div className="project-content">
-                                    <p>Technology</p>
+                                    <p>Web Development</p>
                                     <h4>
-                                        <Link href="/project-details">Software Development</Link>
+                                        <Link href="/project-details">Learning
+                                        Management System</Link>
                                     </h4>
                                     <Link href="/project-details" className="arrow-icon-2">
                                         <i className="fa-solid fa-arrow-right" />
@@ -113,11 +117,12 @@ export default function ProjectSlider3() {
                     <SwiperSlide>
                         <div className="project-items style-2">
                             <div className="project-image">
-                                <img src="/assets/img/project/11.jpg" alt="project-img" />
+                                <img src="/assets/img/project/image-removebg-preview (10).png" alt="project-img" />
                                 <div className="project-content">
-                                    <p>Technology</p>
+                                    <p>Wordpress</p>
                                     <h4>
-                                        <Link href="/project-details">Software Development</Link>
+                                        <Link href="/project-details">Single Product
+                                        Multivendor E-Commerce</Link>
                                     </h4>
                                     <Link href="/project-details" className="arrow-icon-2">
                                         <i className="fa-solid fa-arrow-right" />

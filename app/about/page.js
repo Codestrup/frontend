@@ -42,11 +42,12 @@ export default function About() {
                                             <div className="section-title">
                                                 <span className="wow fadeInUp">ABOUT INFOTECK</span>
                                                 <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                                                    We Are Increasing Business Success With <span>Technology</span>
+                                                Internship Highlights
+
                                                 </h2>
                                             </div>
                                             <p className="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
-                                                It is a long established fact that a reader will be distracted the readable <br /> content of a page when looking at layout the point.
+                                            Become certified with our Virtual Internship Program
                                             </p>
                                             <div className="about-icon-items">
                                                 <div className="icon-items wow fadeInUp" data-wow-delay=".7s">
@@ -54,9 +55,10 @@ export default function About() {
                                                         <img src="/assets/img/about/icon-4.svg" alt="icon-img" />
                                                     </div>
                                                     <div className="content">
-                                                        <h4>Problem Solving</h4>
+                                                        <h4>Learner Friendly
+                                                        </h4>
                                                         <p>
-                                                            Aliquam erat volutpat Nullam imperdiet
+                                                        Our Internship is designed by experts with domain knowledge on Research & Training
                                                         </p>
                                                     </div>
                                                 </div>
@@ -65,9 +67,20 @@ export default function About() {
                                                         <img src="/assets/img/about/icon-5.svg" alt="icon-img" />
                                                     </div>
                                                     <div className="content">
-                                                        <h4>Mission &amp; Vision</h4>
+                                                        <h4>Real Experience</h4>
                                                         <p>
-                                                            Ut vehiculadictumst. Maecenas ante.
+                                                        Every Internship Session is equivalent to a Project, every session is application & output based contents. 
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div className="icon-items wow fadeInUp" data-wow-delay=".9s">
+                                                    <div className="icon">
+                                                        <img src="/assets/img/about/icon-5.svg" alt="icon-img" />
+                                                    </div>
+                                                    <div className="content">
+                                                        <h4>Certificates and Goodies</h4>
+                                                        <p>
+                                                        After successful internship completion, We provide certificates and goodies to our trainee.
                                                         </p>
                                                     </div>
                                                 </div>

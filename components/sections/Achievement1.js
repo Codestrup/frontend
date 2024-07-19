@@ -10,7 +10,7 @@ export default function Achievement1() {
                         <div className="section-title mb-0">
                             <span className="text-white wow fadeInUp">achievement</span>
                             <h2 className="text-white wow fadeInUp" data-wow-delay=".3s">
-                                We Are Increasing <br /> Business Success
+                            From Intern to Achiever
                             </h2>
                         </div>
                         <div className="counter-area">

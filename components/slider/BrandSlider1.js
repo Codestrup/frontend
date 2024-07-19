@@ -39,6 +39,62 @@ export default function BrandSlider1() {
             <div className="swiper brand-slider">
                 <Swiper {...swiperOptions} className="swiper-wrapper">
                     <SwiperSlide>
+                        <div className="brand-image"  >
+                            <img src="/assets/img/wordpress1.png" alt="brand-img" style={{
+                                width:'170px',
+                                height:'60px',
+                            }} />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="brand-image">
+                            <img src="/assets/img/figma1 (2).png" alt="brand-img" style={{
+                                width:'150px',
+                                height:'60px',
+                            }}  />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="brand-image">
+                            <img src="/assets/img/nextjs.png" alt="brand-img"  style={{
+                                width:'140px',
+                                height:'60px',
+                            }} />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="brand-image">
+                            <img src="/assets/img/reactjs.png" alt="brand-img" style={{
+                                width:'140px',
+                                height:'60px',
+                            }} />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="brand-image">
+                            <img src="/assets/img/angular1.png" alt="brand-img" style={{
+                                width:'170px',
+                                height:'60px',
+                            }} />
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="brand-image">
+                            <img src="/assets/img/nodejs.png" alt="brand-img" style={{
+                                width:'140px',
+                                height:'80px',
+                            }}/>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="brand-image">
+                            <img src="/assets/img/python.png" alt="brand-img" style={{
+                                width:'140px',
+                                height:'55px',
+                            }} />
+                        </div>
+                    </SwiperSlide>
+                    {/* <SwiperSlide>
                         <div className="brand-image">
                             <img src="/assets/img/brand.png" alt="brand-img" />
                         </div>
@@ -52,44 +108,10 @@ export default function BrandSlider1() {
                         <div className="brand-image">
                             <img src="/assets/img/brand.png" alt="brand-img" />
                         </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/brand.png" alt="brand-img" />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/brand.png" alt="brand-img" />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/brand.png" alt="brand-img" />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/brand.png" alt="brand-img" />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/brand.png" alt="brand-img" />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/brand.png" alt="brand-img" />
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/brand.png" alt="brand-img" />
-                        </div>
-                    </SwiperSlide>
+                    </SwiperSlide> */}
                 </Swiper>
             </div>
+          
         </>
     )
 }
