@@ -164,7 +164,7 @@ button {
 }
 
 input:focus {
-  color: var(--white);
+  /* color: var(--white); */
   outline: none;
 }
 
