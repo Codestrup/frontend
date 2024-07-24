@@ -137,7 +137,7 @@ export default function ServiceDetails() {
   const handleClick = (index) => {
     setActiveItem(index);
   };
-  console.log("intership", internship);
+
 
   const sendOtp = async (values) => {
     try {
