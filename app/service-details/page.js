@@ -32,6 +32,8 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { menuProps } from "../../utils/menuProps";
 import { toast } from "react-hot-toast";
+import Image from "next/image";
+import internshipImage from "../../public/assets/internship_image.jpg";
 
 const formValidationSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -160,6 +162,7 @@ export default function ServiceDetails() {
   const [consent, setConsent] = useState(false);
   const [yesNoValue, setYesNoValue] = useState("");
   const [referenceValue, setReferenceValue] = useState("");
+  const { setInternshipId, internshipId } = useInternship();
 
   useEffect(() => {
     const fetchInternships = async () => {
@@ -167,8 +170,12 @@ export default function ServiceDetails() {
         const response = await axios.get("https://api.codestrup.in/loadjobs");
         setServices(response?.data?.data || []);
 
+        // const internship = response?.data?.data.filter((item) => {
+        //   return item?._id === localStorage.getItem("internshipId");
+        // });
+
         const internship = response?.data?.data.filter((item) => {
-          return item?._id === localStorage.getItem("internshipId");
+          return item?._id === internshipId;
         });
 
         setInternship(internship);
@@ -178,7 +185,7 @@ export default function ServiceDetails() {
     };
 
     fetchInternships();
-  }, []);
+  }, [internshipId]);
 
   const handleClick = (index) => {
     setActiveItem(index);
@@ -280,12 +287,19 @@ export default function ServiceDetails() {
     setReferenceValue(e.target.value);
   };
 
+  const handleApplyNowClick = (id) => {
+    setInternshipId(id);
+    router.push("/service-details");
+  };
+
   return (
     <>
       <Layout
         headerStyle={1}
         footerStyle={2}
-        breadcrumbTitle="Intership Details"
+        breadcrumbTitle="Internship"
+        internshipTitle={internship[0]?.jobTitle ?? ""}
+        internshipDescription={internship[0]?.description ?? ""}
       >
         <section className="service-details-section fix section-padding">
           <div className="container">
@@ -295,7 +309,8 @@ export default function ServiceDetails() {
                   <div className="main-sidebar">
                     <div className="single-sidebar-widget">
                       <div className="wid-title">
-                        <h3>All Services</h3>
+                        {/* <h3>All Services</h3> */}
+                        <h3>INTERNSHIP POSITIONS</h3>
                       </div>
                       <div className="widget-categories">
                         <ul>
@@ -306,9 +321,33 @@ export default function ServiceDetails() {
                                 activeItem === service._id ? "active" : ""
                               }
                             >
-                              <Link href={`/service-details`}>
+                              <div>
+                                {service?.imageUrl &&
+                                  service?.imageUrl !== "" && (
+                                    <img
+                                      src={
+                                        service?.imageUrl ??
+                                        "/assets/internship_image.jpg"
+                                      }
+                                      style={{
+                                        width: "40px",
+                                        height: "40px",
+                                        objectFit: "cover",
+                                        borderRadius: "50%",
+                                      }}
+                                    />
+                                  )}
+                              </div>
+                              <p
+                                onClick={() =>
+                                  handleApplyNowClick(service?._id)
+                                }
+                                style={{
+                                  cursor: "pointer",
+                                }}
+                              >
                                 {service.jobTitle}
-                              </Link>
+                              </p>
                               <i className="fa-solid fa-arrow-right-long" />
                             </li>
                           ))}
@@ -449,7 +488,9 @@ export default function ServiceDetails() {
                                   onChange={handleChange}
                                   onBlur={handleBlur}
                                 >
-                                  <MenuItem value="" disabled>Gender</MenuItem>
+                                  <MenuItem value="" disabled>
+                                    Gender
+                                  </MenuItem>
                                   <MenuItem value="Male">Male</MenuItem>
                                   <MenuItem value="Female">Female</MenuItem>
                                   <MenuItem value="Other">Other</MenuItem>
@@ -859,7 +900,13 @@ export default function ServiceDetails() {
                     }}
                   >
                     <p>Visit Our Website First</p> -{" "}
-                    <a href="http://codestrup.in.s3-website.ap-south-1.amazonaws.com/">
+                    <a
+                      style={{
+                        color: "blue",
+                      }}
+                      target="_blank"
+                      href="http://codestrup.in.s3-website.ap-south-1.amazonaws.com/"
+                    >
                       Click Here
                     </a>
                   </li>
@@ -872,7 +919,16 @@ export default function ServiceDetails() {
                         gap: "10px",
                       }}
                     >
-                      <p>{item.name}</p> - <a href={item.link}>Click Here</a>
+                      <p>{item.name}</p> -{" "}
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        style={{
+                          color: "blue",
+                        }}
+                      >
+                        Click Here
+                      </a>
                     </li>
                   ))}
                 </ul>

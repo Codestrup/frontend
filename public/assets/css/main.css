@@ -7440,6 +7440,10 @@ input.main-search-input::placeholder {
 .main-sidebar .single-sidebar-widget .widget-categories ul li:hover i {
   color: var(--white);
 }
+.main-sidebar .single-sidebar-widget .widget-categories ul li:hover p {
+  color: var(--white);
+}
+
 .main-sidebar .single-sidebar-widget .widget-categories ul li.active {
   background-color: var(--theme);
 }
