@@ -40,12 +40,24 @@ const swiperOptions = {
   },
 };
 
-
 export default function Service1() {
-    const router = useRouter();
+  const router = useRouter();
   const [internships, setInternships] = useState([]);
-  const {setInternshipId} = useInternship();
- 
+  const { setInternshipId } = useInternship();
+
+  // State to manage the toggle for each item
+  const [showFullDescription, setShowFullDescription] = useState(
+    internships.reduce((acc, item) => ({ ...acc, [item._id]: false }), {})
+  );
+
+  // Function to toggle the description
+  const toggleDescription = (id) => {
+    setShowFullDescription((prevState) => ({
+      ...prevState,
+      [id]: !prevState[id],
+    }));
+  };
+
   useEffect(() => {
     const fetchInternships = async () => {
       try {
@@ -60,10 +72,10 @@ export default function Service1() {
   }, []);
 
   const handleApplyNowClick = (id) => {
-    console.log("id".id)
+    console.log("id".id);
     setInternshipId(id);
-    router.push("/service-details")
-  }
+    router.push("/service-details");
+  };
 
   return (
     <section
@@ -94,27 +106,64 @@ export default function Service1() {
             <Swiper {...swiperOptions} className="swiper-wrapper">
               {internships.map((item) => (
                 <SwiperSlide key={item._id}>
-                  <div className="service-box-items">
-                    <div className="icon">
-                      {/* <img src={item.imageUrl} alt="icon-img" /> */}
-                    </div>
-                    <div className="content">
-                      <h4>
-                        <Link href="/service-details">{item.jobTitle}</Link>
-                      </h4>
-                      <p>{item.description}</p>
-                      <div className="d-flex align-items-center justify-content-between">
-                        <button
-                          className="theme-btn-2 mt-3 d-flex align-items-center"
-                          onClick={() => handleApplyNowClick(item._id)}
-                        >
-                          Apply Now
-                          <i className="fa-solid fa-arrow-right-long ms-2" />
-                        </button>
-                        <span className="theme-btn-2 mt-3 d-flex align-items-center">
-                          ₹ {item.price}
-                        </span>
+                  <div
+                    className="service-box-items"
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                      minHeight: "300px",
+                      padding: "20px",
+                      boxSizing: "border-box",
+                    }}
+                  >
+                    <div>
+                      <div className="icon">
+                        {/* <img src={item.imageUrl} alt="icon-img" /> */}
                       </div>
+                      <div className="content">
+                        <h4>
+                          <Link href="/service-details">{item.jobTitle}</Link>
+                        </h4>
+                        <div>
+                          <p>
+                            {showFullDescription[item._id]
+                              ? item.description
+                              : `${item.description.substring(0, 50)}...`}
+                              &nbsp;
+                            {item.description.length > 50 && (
+                              <span>
+                                <button
+                                  onClick={() => toggleDescription(item._id)}
+                                  className="read-more-less-btn"
+                                >
+                                  {showFullDescription[item._id]
+                                    ? "Read Less"
+                                    : "Read More"}
+                                </button>
+                              </span>
+                            )}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="content-bottom d-flex align-items-center justify-content-between"
+                      style={{
+                        marginTop: "auto",
+                      }}
+                    >
+                      <span
+                        className="theme-btn-3 apply-now-btn mt-3 d-flex align-items-center "
+                        onClick={() => handleApplyNowClick(item._id)}
+                        style={{cursor:'pointer'}}
+                      >
+                        Apply Now
+                        <i className="fa-solid fa-arrow-right-long ms-2" />
+                      </span>
+                      <span className="theme-btn-3 mt-3 d-flex align-items-center">
+                        ₹ {item.price}
+                      </span>
                     </div>
                   </div>
                 </SwiperSlide>

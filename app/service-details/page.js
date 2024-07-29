@@ -26,6 +26,7 @@ import {
   Dialog,
   IconButton,
   CircularProgress,
+  RadioGroup,
 } from "@mui/material";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
@@ -102,6 +103,48 @@ const socialLinks = [
   },
 ];
 
+const internshipPerks = [
+  {
+    id: 1,
+    name: "Offer Letter from Codestrup infotech Pvt Ltd.",
+  },
+
+  {
+    id: 2,
+    name: "Internship Certificate - A verifiable completion certificate is provided after successful completion of one month of internship.",
+  },
+
+  {
+    id: 3,
+    name: "Letter of recommendation (based on Performance) - A verifiable recommendation letter is provided to top performing interns based on various assessment parameters.",
+  },
+
+  {
+    id: 4,
+    name: "Appreciation Letter (Best Performer Recognition).",
+  },
+
+  {
+    id: 5,
+    name: "Network Opportunities - Connect with  members and interns from around the world experiencing a multicultural and rare diverse working environment.",
+  },
+
+  {
+    id: 6,
+    name: "Learning Opportunities - As an intern at  Codestrup infotech Pvt Ltd  , you'll dive into a collaborative, intellectually stimulating environment, gaining hands-on experience with cutting-edge projects at the forefront of technological advancement",
+  },
+
+  {
+    id: 7,
+    name: "Network Opportunities - Connect with  members and interns from around the world experiencing a multicultural and rare diverse working environment.",
+  },
+
+  {
+    id: 8,
+    name: "Job Opportunities - Access employment opportunities with us. This form is for  INTERNSHIP in Codestrup Infotech Pvt Ltd for JUNE 2024 Batch.",
+  },
+];
+
 export default function ServiceDetails() {
   const router = useRouter();
   // const { internshipId } = useInternship();
@@ -113,7 +156,10 @@ export default function ServiceDetails() {
   const [formValues, setFormValues] = useState(null);
   const [showVerifyTextfield, setShowVerifyTextfield] = useState(false);
   const [consentDialogOpen, setConsentDialogOpen] = useState(false);
+  const [informationDialogOpen, setInformationDialogOpen] = useState(true);
   const [consent, setConsent] = useState(false);
+  const [yesNoValue, setYesNoValue] = useState("");
+  const [referenceValue, setReferenceValue] = useState("");
 
   useEffect(() => {
     const fetchInternships = async () => {
@@ -137,7 +183,6 @@ export default function ServiceDetails() {
   const handleClick = (index) => {
     setActiveItem(index);
   };
-  console.log("intership", internship);
 
   const sendOtp = async (values) => {
     try {
@@ -227,6 +272,14 @@ export default function ServiceDetails() {
     setFormValues(values);
   };
 
+  const handleYesNoChange = (e) => {
+    setYesNoValue(e.target.value);
+  };
+
+  const handleReferenceChange = (e) => {
+    setReferenceValue(e.target.value);
+  };
+
   return (
     <>
       <Layout
@@ -314,7 +367,10 @@ export default function ServiceDetails() {
                       {internship[0]?.jobTitle ?? ""}
                     </h4>
 
-                    <Card sx={{ padding: "20px", marginTop: "20px" }}>
+                    <Card
+                      sx={{ padding: "20px", marginTop: "20px" }}
+                      elevation={3}
+                    >
                       <Formik
                         initialValues={{
                           firstName: "",
@@ -393,7 +449,7 @@ export default function ServiceDetails() {
                                   onChange={handleChange}
                                   onBlur={handleBlur}
                                 >
-                                  <MenuItem value="">Gender</MenuItem>
+                                  <MenuItem value="" disabled>Gender</MenuItem>
                                   <MenuItem value="Male">Male</MenuItem>
                                   <MenuItem value="Female">Female</MenuItem>
                                   <MenuItem value="Other">Other</MenuItem>
@@ -555,103 +611,115 @@ export default function ServiceDetails() {
                               </Box>
 
                               <Box mt={2}>
-                                <Typography variant="h6">
+                                <h4>
                                   Joined our Telegram ,LinkedIn , Whatsapp,
                                   Facebook?
-                                </Typography>
+                                </h4>
 
-                                <Typography variant="body2">
+                                <h6
+                                  style={{
+                                    fontWeight: 500,
+                                    marginBottom: "10px",
+                                  }}
+                                >
                                   Please join the Telegram community for
                                   continued communication
-                                </Typography>
+                                </h6>
 
-                                <List>
+                                <ul>
                                   {socialLinks.map((item) => (
-                                    <ListItem key={item.id}>
-                                      <ListItemText
-                                        sx={{
-                                          display: "flex",
-                                          alignItems: "center",
-                                          gap: "20px",
-                                        }}
-                                        primary={item.name}
-                                        secondary={
-                                          <Link
-                                            href={item.link}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            sx={{
-                                              color: "blue",
-                                              fontWeight: 500,
-                                            }}
-                                          >
-                                            Click Here
-                                          </Link>
-                                        }
-                                      />
-                                    </ListItem>
+                                    <li
+                                      key={item.id}
+                                      style={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                        gap: "10px",
+                                      }}
+                                    >
+                                      <p>{item.name}</p> -{" "}
+                                      <a href={item.link}>Click Here</a>
+                                    </li>
                                   ))}
-                                </List>
+                                </ul>
+
                                 <Box>
-                                  <FormControlLabel
-                                    control={<Radio />}
-                                    label={"Yes"}
-                                  />
-                                  <FormControlLabel
-                                    control={<Radio />}
-                                    label={"No"}
-                                  />
+                                  <RadioGroup
+                                    value={yesNoValue}
+                                    onChange={handleYesNoChange}
+                                    sx={{
+                                      display: "flex",
+                                      flexDirection: "row",
+                                    }}
+                                  >
+                                    <FormControlLabel
+                                      control={<Radio />}
+                                      label={<p>Yes</p>}
+                                      value="yes"
+                                    />
+                                    <FormControlLabel
+                                      control={<Radio />}
+                                      label={<p>No</p>}
+                                      value="no"
+                                    />
+                                  </RadioGroup>
                                 </Box>
                               </Box>
 
                               <Box mt={2}>
-                                <Typography variant="h6">
-                                  Where did you learn about us?
-                                </Typography>
+                                <h4>Where did you learn about us?</h4>
                                 <Box
                                   sx={{
                                     display: "flex",
                                     flexDirection: "column",
                                   }}
                                 >
-                                  <FormControlLabel
-                                    control={<Radio />}
-                                    label={
-                                      <Typography variant="body2">
-                                        Social Media - LinkedIn, Facebook,
-                                        Instagram etc
-                                      </Typography>
-                                    }
-                                  />
+                                  <RadioGroup
+                                    value={referenceValue}
+                                    onChange={handleReferenceChange}
+                                  >
+                                    <FormControlLabel
+                                      control={<Radio />}
+                                      label={
+                                        <p>
+                                          Social Media - LinkedIn, Facebook,
+                                          Instagram etc
+                                        </p>
+                                      }
+                                      value="socialMedia"
+                                    />
 
-                                  <FormControlLabel
-                                    control={<Radio />}
-                                    label={
-                                      <Typography variant="body2">
-                                        Referral - Friends, Colleagues,
-                                        Relatives etc
-                                      </Typography>
-                                    }
-                                  />
+                                    <FormControlLabel
+                                      control={<Radio />}
+                                      label={
+                                        <p>
+                                          Referral - Friends, Colleagues,
+                                          Relatives etc
+                                        </p>
+                                      }
+                                      value="friends"
+                                    />
 
-                                  <FormControlLabel
-                                    control={<Radio />}
-                                    label={
-                                      <Typography variant="body2">
-                                        Job portals - Internshala, Frapp,
-                                        LetsIntern, Naukri et
-                                      </Typography>
-                                    }
-                                  />
+                                    <FormControlLabel
+                                      control={<Radio />}
+                                      label={
+                                        <p>
+                                          Job portals - Internshala, Frapp,
+                                          LetsIntern, Naukri etc
+                                        </p>
+                                      }
+                                      value="jobPortals"
+                                    />
 
-                                  <FormControlLabel
-                                    control={<Radio />}
-                                    label={
-                                      <Typography variant="body2">
-                                        Campus Placement Cell/Coordinators
-                                      </Typography>
-                                    }
-                                  />
+                                    <FormControlLabel
+                                      control={<Radio />}
+                                      label={
+                                        <p>
+                                          Campus Placement Cell/Coordinators
+                                        </p>
+                                      }
+                                      value="campusPlacement"
+                                    />
+                                  </RadioGroup>
                                 </Box>
                               </Box>
 
@@ -670,12 +738,12 @@ export default function ServiceDetails() {
                                     />
                                   }
                                   label={
-                                    <Typography variant="body2">
+                                    <p>
                                       I have understood the internship details
                                       and I hereby acknowledge and accept the
                                       terms and conditions of Codestrup
                                       Internship Program
-                                    </Typography>
+                                    </p>
                                   }
                                 />
 
@@ -713,6 +781,7 @@ export default function ServiceDetails() {
         </section>
         <Footer3 />
 
+        {/* confirmation dialog */}
         {consentDialogOpen && (
           <Dialog
             open={consentDialogOpen}
@@ -740,6 +809,81 @@ export default function ServiceDetails() {
                 </Button>
                 <Button variant="contained" onClick={() => handleConsentYes()}>
                   Yes
+                </Button>
+              </Box>
+            </Box>
+          </Dialog>
+        )}
+
+        {/* information dialog */}
+        {informationDialogOpen && (
+          <Dialog
+            open={informationDialogOpen}
+            onClose={() => setInformationDialogOpen(false)}
+            sx={{
+              "& .MuiDialog-paperWidthSm": {
+                width: "100%",
+                maxWidth: "700px",
+              },
+            }}
+          >
+            <Box sx={{ padding: "30px", position: "relative" }}>
+              <h2 variant="h4" style={{ textAlign: "center" }}>
+                {internship[0]?.jobTitle ?? ""}
+              </h2>
+
+              <IconButton
+                sx={{ position: "absolute", top: 0, right: "5px" }}
+                onClick={() => setInformationDialogOpen(false)}
+              >
+                <i className="fas fa-times" />
+              </IconButton>
+
+              <Box mt={2}>
+                <h5 variant="h4">Perks you will receive are:</h5>
+
+                <ol>
+                  {internshipPerks.map((item) => (
+                    <li key={item.id}>{item.name}</li>
+                  ))}
+                </ol>
+              </Box>
+
+              <Box>
+                <ul>
+                  <li
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
+                    }}
+                  >
+                    <p>Visit Our Website First</p> -{" "}
+                    <a href="http://codestrup.in.s3-website.ap-south-1.amazonaws.com/">
+                      Click Here
+                    </a>
+                  </li>
+                  {socialLinks.map((item) => (
+                    <li
+                      key={item.id}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "10px",
+                      }}
+                    >
+                      <p>{item.name}</p> - <a href={item.link}>Click Here</a>
+                    </li>
+                  ))}
+                </ul>
+              </Box>
+
+              <Box mt={2} display="flex" justifyContent="center">
+                <Button
+                  variant="contained"
+                  onClick={() => setInformationDialogOpen(false)}
+                >
+                  Next
                 </Button>
               </Box>
             </Box>
