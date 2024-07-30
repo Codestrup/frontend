@@ -1222,6 +1222,29 @@ span {
     padding: 0;
   }
 }
+.contact-info-area .contact-info-items .icon1 {
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
+  text-align: center;
+  position: relative;
+}
+
+/* fgjdtrymutusrdmtd */
+.contact-info-area .contact-info-items .icon1::before {
+  position: absolute;
+  top: 0;
+  left: -19px;
+  right: 0;
+  bottom: 0;
+  width: 70px;
+  height: 70px;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../assets/img/circle-2.png");
+  animation: cir36 10s linear infinite;
+}
 .contact-info-area .contact-info-items .icon {
   width: 65px;
   height: 65px;
@@ -1229,6 +1252,8 @@ span {
   text-align: center;
   position: relative;
 }
+
+/* fgjdtrymutusrdmtd */
 .contact-info-area .contact-info-items .icon::before {
   position: absolute;
   top: 0;
@@ -2271,7 +2296,7 @@ span {
 }
 
 .footer-widgets-wrapper {
-  padding: 90px 0 120px;
+  padding: 50px 0 120px;
   position: relative;
   z-index: 9;
 }
@@ -6914,7 +6939,7 @@ input.main-search-input::placeholder {
 }
 
 .service-wrapper {
-  margin-bottom: 187px;
+  margin-bottom: 20px;
 }
 .service-wrapper .service-text {
   margin-top: 50px;

@@ -12,10 +12,10 @@ const swiperOptions = {
   spaceBetween: 30,
   speed: 1500,
   loop: true,
-  // autoplay: {
-  //   delay: 1500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: ".array-prev",
     prevEl: ".array-next",
@@ -79,8 +79,8 @@ export default function Service1() {
 
   return (
     <section
-      className="service-section fix section-padding bg-cover"
-      style={{ backgroundImage: 'url("assets/img/service/service-bg.jpg")' }}
+      className="service-section fix  bg-cover"
+      style={{ backgroundImage: 'url("assets/img/service/service-bg.jpg")',paddingTop:'120px' }}
       id="service"
     >
       <div className="container">
@@ -172,7 +172,7 @@ export default function Service1() {
           </div>
           <div className="service-text wow fadeInUp" data-wow-delay=".4s">
             <Link
-              href="/l"
+              href="/service-details"
               className="theme-btn wow fadeInUp"
               data-wow-delay=".8s"
               style={{

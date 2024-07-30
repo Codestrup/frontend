@@ -3,11 +3,11 @@
 export default function WorkProcess1() {
     return (
         <>
-            <section className="work-process-section fix section-padding pt-0">
+            <section className="work-process-section fix " style={{paddingTop:'70px',paddingBottom:'70px'}}>
                 <div className="container">
                     <div className="section-title text-center">
-                        <h2>Our Features</h2>
-                        <span>Find global work experience in any field or region with Virtual Internships, the No. 1 platform for remote internships.</span>
+                        <h2 style={{marginBottom:'10px'}}>Our Features</h2>
+                        <span style={{fontWeight:600}}>Find global work experience in any field or region with Virtual Internships, the No. 1 platform for remote internships.</span>
                     </div>
                     <div className="process-work-wrapper">
                         <div className="line-shape">
@@ -70,7 +70,7 @@ export default function WorkProcess1() {
                                     <div className="content style-2">
                                         <h4>Save Time</h4>
                                         <p>
-                                        Online learning reduces time by 25% to 60%.
+                                            Online learning reduces time by 25% to 60%.
                                         </p>
                                     </div>
                                     <div className="icon">

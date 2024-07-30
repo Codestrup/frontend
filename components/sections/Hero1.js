@@ -6,15 +6,13 @@ export default function Hero1() {
     return (
         <>
             <section className="hero-section fix hero-1 bg-cover" style={{ backgroundImage: 'url("assets/img/hero/hero-bg.jpg")' }}>
-                <div className="text-transparent">
+                {/* <div className="text-transparent">
                     <h2>Technology</h2>
-                </div>
+                </div> */}
                 <div className="line-shape">
                     <img src="/assets/img/hero/line-shape.png" alt="shape-img" />
                 </div>
-                <div className="dot-shape">
-                    <img src="/assets/img/hero/dot-shape.png" alt="shape-img" />
-                </div>
+                
                 <div className="frame-shape">
                     <img src="/assets/img/hero/frame.png" alt="shape-img" />
                 </div>
@@ -34,7 +32,7 @@ export default function Hero1() {
                                 The only platform that guarantees real-world work experience across the globe.
                                 </p>
                                 <div className="hero-button">
-                                    <Link href="/service" className="theme-btn wow fadeInUp" data-wow-delay=".8s">
+                                    <Link href="/service-details" className="theme-btn wow fadeInUp" data-wow-delay=".8s">
                                         Apply Now
                                         <i className="fa-solid fa-arrow-right-long" />
                                     </Link>

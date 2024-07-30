@@ -32,7 +32,7 @@ export default function About1() {
                             <div className="col-lg-6 mt-4 mt-lg-0">
                                 <div className="about-content">
                                     <div className="section-title">
-                                        <span className="wow fadeInUp">ABOUT INFOTECK</span>
+                                        <span className="wow fadeInUp">ABOUT CODESTRUP</span>
                                         <h2 className="wow fadeInUp" data-wow-delay=".3s">
                                         Internship Highlights
                                         </h2>
@@ -77,7 +77,7 @@ export default function About1() {
                                     </div>
                                     <div className="about-author">
                                         <div className="about-button wow fadeInUp" data-wow-delay=".5s">
-                                            <Link href="/service" className="theme-btn">
+                                            <Link href="/service-details" className="theme-btn">
                                                 Apply Now
                                                 <i className="fa-solid fa-arrow-right-long" />
                                             </Link>

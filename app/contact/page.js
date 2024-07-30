@@ -8,7 +8,7 @@ export default function Contact() {
     return (
         <>
 
-            <Layout headerStyle={1} footerStyle={2} breadcrumbTitle="Contact Us">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Contact Us">
                 <div>
                     <section className="contact-section fix section-padding">
                         <div className="container">
@@ -27,7 +27,9 @@ export default function Contact() {
                                                     <div className="content">
                                                         <p>Call Us 7/24</p>
                                                         <h3>
-                                                            <Link href="/tel:+2085550112">+208-555-0112</Link>
+                                                            <Link href="/tel:+2085550112">
+                                                                +91 9699997689
+                                                            </Link>
                                                         </h3>
                                                     </div>
                                                 </div>
@@ -42,29 +44,30 @@ export default function Contact() {
                                                     <div className="content">
                                                         <p>Make a Quote</p>
                                                         <h3>
-                                                            <Link href="/mailto:infotech@gmail.com">Infotech@gmail.com</Link>
+                                                            <Link href="/mailto:info@codestrup.com">Info@codestrup.com
+                                                            </Link>
                                                         </h3>
                                                     </div>
                                                 </div>
                                                 <div className="contact-info-items border-none">
-                                                    <div className="icon">
+                                                    <div className="icon1">
                                                         <svg width={32} height={32} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path fillRule="evenodd" clipRule="evenodd" d="M16 1.66675C11.036 1.66675 7 5.73875 7 10.7614C7 12.4627 7.74933 14.5734 8.84 16.6787C11.2413 21.3147 15.2413 25.9841 15.2413 25.9841C15.3352 26.0934 15.4516 26.1812 15.5826 26.2413C15.7135 26.3015 15.8559 26.3326 16 26.3326C16.1441 26.3326 16.2865 26.3015 16.4174 26.2413C16.5484 26.1812 16.6648 26.0934 16.7587 25.9841C16.7587 25.9841 20.7587 21.3147 23.16 16.6787C24.2507 14.5734 25 12.4627 25 10.7614C25 5.73875 20.964 1.66675 16 1.66675ZM16 7.00008C15.0447 7.02585 14.1371 7.42346 13.4705 8.10828C12.8039 8.79311 12.4309 9.71106 12.4309 10.6667C12.4309 11.6224 12.8039 12.5404 13.4705 13.2252C14.1371 13.91 15.0447 14.3076 16 14.3334C16.9553 14.3076 17.8629 13.91 18.5295 13.2252C19.1961 12.5404 19.5691 11.6224 19.5691 10.6667C19.5691 9.71106 19.1961 8.79311 18.5295 8.10828C17.8629 7.42346 16.9553 7.02585 16 7.00008Z" fill="white" />
                                                             <path fillRule="evenodd" clipRule="evenodd" d="M22.3774 23.1694C23.4614 23.4948 24.3547 23.8974 24.972 24.3694C25.372 24.6734 25.6654 24.9707 25.6654 25.3334C25.6654 25.5467 25.544 25.7401 25.3734 25.9334C25.0907 26.2521 24.6707 26.5387 24.1507 26.8054C22.3134 27.7454 19.3427 28.3334 15.9987 28.3334C12.6547 28.3334 9.68403 27.7454 7.8467 26.8054C7.3267 26.5387 6.9067 26.2521 6.62403 25.9334C6.45336 25.7401 6.33203 25.5467 6.33203 25.3334C6.33203 24.9707 6.62536 24.6734 7.02536 24.3694C7.6427 23.8974 8.53603 23.4948 9.62003 23.1694C9.87411 23.093 10.0874 22.9188 10.2131 22.6852C10.3387 22.4515 10.3664 22.1775 10.29 21.9234C10.2136 21.6693 10.0395 21.456 9.80579 21.3304C9.57212 21.2047 9.29811 21.177 9.04403 21.2534C7.39336 21.7507 6.1107 22.4321 5.34003 23.1854C4.6627 23.8454 4.33203 24.5841 4.33203 25.3334C4.33203 26.2694 4.86136 27.2027 5.93736 27.9814C7.82536 29.3467 11.6174 30.3334 15.9987 30.3334C20.38 30.3334 24.172 29.3467 26.06 27.9814C27.136 27.2027 27.6654 26.2694 27.6654 25.3334C27.6654 24.5841 27.3347 23.8454 26.6574 23.1854C25.8867 22.4321 24.604 21.7507 22.9534 21.2534C22.8276 21.2156 22.6955 21.2029 22.5648 21.2161C22.4341 21.2293 22.3073 21.2681 22.1916 21.3304C22.0759 21.3926 21.9736 21.477 21.8905 21.5787C21.8074 21.6805 21.7452 21.7976 21.7074 21.9234C21.6695 22.0492 21.6569 22.1812 21.6701 22.3119C21.6833 22.4427 21.7221 22.5695 21.7843 22.6852C21.8465 22.8009 21.9309 22.9032 22.0327 22.9863C22.1344 23.0694 22.2516 23.1316 22.3774 23.1694Z" fill="white" />
                                                         </svg>
                                                     </div>
-                                                    <div className="content">
+                                                    <div className="content" >
                                                         <p>Location</p>
                                                         <h3>
-                                                            4517 Washington ave.
+                                                        Office No.301 3rd Floor,Umed Building,Nanded City Rd,Pune,Maharastra 411041
                                                         </h3>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="video-image">
+                                            {/* <div className="video-image">
                                                 <img src="/assets/img/video.jpg" alt="img" />
                                                 <VideoPopup style={1} />
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
@@ -107,15 +110,15 @@ export default function Contact() {
                         </div>
                     </section>
                     {/*<< Map Section Start >>*/}
-                    <div className="map-section">
+                    {/* <div className="map-section">
                         <div className="map-items">
                             <div className="googpemap">
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6678.7619084840835!2d144.9618311901502!3d-37.81450084255415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x3119cc820fdfc62e!2sEnvato!5e0!3m2!1sen!2sbd!4v1641984054261!5m2!1sen!2sbd" style={{ border: 0 }} allowFullScreen loading="lazy" />
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
-                <Footer3 />
+                {/* <Footer3 /> */}
             </Layout>
         </>
     )

@@ -38,12 +38,19 @@ const brandImgStyle = {
     alignItems: 'center',
     padding: '10px',
     // width:'180px'
+    width:'100%',
+     height:"100%",
+      minHeight:'100px',
+       overflow:"hidden",
 }
 
 const imgStyle = {
-    width: '154px',
-    height: 'auto',
-    margin: '10px',
+    // width: '154px',
+    // height: 'auto',
+    // margin: '10px',
+    width:"100%" ,
+     height:"100px" , 
+     objectFit:"contain"
 }
 
 export default function BrandSlider2() {
