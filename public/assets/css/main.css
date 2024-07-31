@@ -1223,7 +1223,7 @@ span {
   }
 }
 .contact-info-area .contact-info-items .icon1 {
-  width: 65px;
+  width: 105px;
   height: 65px;
   line-height: 65px;
   text-align: center;
@@ -2296,7 +2296,7 @@ span {
 }
 
 .footer-widgets-wrapper {
-  padding: 50px 0 120px;
+  padding: 50px 0 150px;
   position: relative;
   z-index: 9;
 }
@@ -2342,6 +2342,13 @@ span {
 .footer-widgets-wrapper .single-footer-widget .footer-content p {
   color: var(--text-2);
 }
+.footer-widgets-wrapper .single-footer-widget .footer-content ul {
+  color: var(--text-2);
+}
+.footer-widgets-wrapper .single-footer-widget .footer-content ul li  {
+  color: var(--text-2);
+}
+
 .footer-widgets-wrapper .single-footer-widget .footer-content .social-icon {
   margin-top: 40px;
   gap: 15px;
@@ -2832,7 +2839,7 @@ span {
 .footer-section .shape-2 {
   position: absolute;
   bottom: 0;
-  right: -3%;
+  right: 0;
 }
 .footer-section .footer-shape-4 {
   position: absolute;
@@ -3748,7 +3755,7 @@ span {
 }
 
 .offcanvas__logo a img {
-  width: 150px;
+  width: 260px;
 }
 
 .offcanvas__wrapper {
@@ -3895,28 +3902,28 @@ span {
 }
 .breadcrumb-wrapper .page-heading {
   position: relative;
-  padding: 180px 0;
+  padding: 73px 0;
   text-align: center;
   z-index: 9;
 }
 @media (max-width: 1199px) {
   .breadcrumb-wrapper .page-heading {
-    padding: 140px 0;
+    padding: 70px 0;
   }
 }
 @media (max-width: 991px) {
   .breadcrumb-wrapper .page-heading {
-    padding: 120px 0;
+    padding: 60px 0;
   }
 }
 @media (max-width: 767px) {
   .breadcrumb-wrapper .page-heading {
-    padding: 100px 0;
+    padding: 60px 0;
   }
 }
 @media (max-width: 575px) {
   .breadcrumb-wrapper .page-heading {
-    padding: 80px 0;
+    padding: 50px 0;
   }
 }
 .breadcrumb-wrapper .page-heading h1 {

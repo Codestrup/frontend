@@ -15,7 +15,7 @@ export default function Offcanvas({
                             <div className="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                                 <div className="offcanvas__logo">
                                     <Link href="/">
-                                        <img src="/assets/img/logo/Codestrup.png" alt="logo-img" style={{width:"18vw"}} />
+                                        <img src="/assets/img/logo/Codestrup.png" alt="logo-img"  />
                                     </Link>
                                 </div>
                                 <div className="offcanvas__close" onClick={handleOffCanvas}>
@@ -24,12 +24,14 @@ export default function Offcanvas({
                                     </button>
                                 </div>
                             </div>
-                            <p className="text d-none d-lg-block">
-                            Codestrup Infotech offers exciting internship opportunities for aspiring tech talents. Gain hands-on experience in app development, web development, data science, cybersecurity Collaborate with industry experts, work on real-world projects, and kickstart your career. Join our team and shape the future of technology.
-                            </p>
-                            <div className="d-none d-md-block d-lg-none">
+
+                            <div className=" d-md-block d-lg-none">
                                 <MobileMenu />
                             </div>
+                            <p className="text ">
+                                Join Codestrup Infotech for hands-on experience in app development, web development, data science, and cybersecurity. Collaborate with industry experts, work on real-world projects, and kickstart your tech career with us.
+                            </p>
+
 
                             <div className="offcanvas__contact">
                                 <h4>Contact Info</h4>
@@ -39,7 +41,7 @@ export default function Offcanvas({
                                             <i className="fal fa-map-marker-alt" />
                                         </div>
                                         <div className="offcanvas__contact-text">
-                                            <Link target="_blank" href="#">Office No.301 3rd floor,Umed building,Nanded City Rd,Pune,Maharastra 411041</Link>
+                                            <Link target="_blank" href="#">Office No.301 3rd floorb, Umed building,  Nanded City rd,    Pune , Maharastra 411041</Link>
                                         </div>
                                     </li>
                                     <li className="d-flex align-items-center">
@@ -47,7 +49,7 @@ export default function Offcanvas({
                                             <i className="fal fa-envelope" />
                                         </div>
                                         <div className="offcanvas__contact-text">
-                                            <Link href="/mailto:info@azent.com"><span className="mailto:info@codestrup.com">info@codestrup.com</span></Link>
+                                            <Link href="mailto:info@codestrup.com"><span className="mailto:info@codestrup.com">Info@codestrup.com</span></Link>
                                         </div>
                                     </li>
                                     <li className="d-flex align-items-center">
@@ -55,7 +57,7 @@ export default function Offcanvas({
                                             <i className="fal fa-clock" />
                                         </div>
                                         <div className="offcanvas__contact-text">
-                                            <Link target="_blank" href="#">Mod-Sat, 10am -06pm</Link>
+                                            <Link target="_blank" href="#">Mon-Fri, 10am - 6pm</Link>
                                         </div>
                                     </li>
                                     <li className="d-flex align-items-center">
@@ -68,14 +70,23 @@ export default function Offcanvas({
                                     </li>
                                 </ul>
                                 <div className="header-button mt-4">
-                                    <Link href="/contact" className="theme-btn text-center">
+                                    <Link href="/contact" className="theme-btn text-center d-none d-lg-block">
                                         <span>Contact<i className="fa-solid fa-arrow-right-long" /></span>
+                                    </Link>
+                                    <Link href="/l" className="theme-btn wow fadeInUp d-lg-none " data-wow-delay=".8s" style={{
+                                        padding: '16px 24px',
+                                        display:'flex',
+                                        justifyContent:'center'
+                                    }}>
+                                        <span> Login | SignUp<i className="fa-solid fa-arrow-right-long" /></span>
+                                       
+
                                     </Link>
                                 </div>
                                 <div className="social-icon d-flex align-items-center">
                                     <Link href="https://www.facebook.com/people/Codestrup-Infotech/61559222888433/?mibextid=ZbWKwL"><i className="fab fa-facebook-f" /></Link>
                                     <Link href="https://t.me/+6HxZOtDBk6w0N2Vl"><i className="fab fa-telegram" /></Link>
-                                    <Link href="#"><i className="fab fa-youtube" /></Link>
+                                    {/* <Link href="#"><i className="fab fa-youtube" /></Link> */}
                                     <Link href="https://www.instagram.com/codestrup_infotech/"><i className="fab fa-instagram" /></Link>
                                     <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd"><i className="fab fa-linkedin-in" /></Link>
                                 </div>

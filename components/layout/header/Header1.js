@@ -33,7 +33,7 @@ export default function Header1({
                                     <Link href="https://www.facebook.com/people/Codestrup-Infotech/61559222888433/?mibextid=ZbWKwL"><i className="fab fa-facebook-f" /></Link>
                                     <Link href="https://t.me/+6HxZOtDBk6w0N2Vl"><i className="fab fa-telegram" /></Link>
                                     <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd"><i className="fa-brands fa-linkedin-in" /></Link>
-                                    <Link href="#"><i className="fa-brands fa-youtube" /></Link>
+                               
                                     <Link href="https://www.instagram.com/codestrup_infotech/"><i className="fa-brands fa-instagram" /></Link>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@ export default function Header1({
                                     <div className="logo">
                                         <Link href="/" className="header-logo">
                                             <img src="/assets/img/logo/Codestrup.png" alt="logo-img"  style={{
-                                                width:'20vw'
+                                                width:'260px'
                                             }}/>
                                         </Link>
                                     </div>
@@ -65,7 +65,7 @@ export default function Header1({
                                             </nav>
                                         </div>
                                     </div>
-                                    {/* <a onClick={handleSearch} className="search-trigger search-icon"><i className="fal fa-search" /></a> */}
+{/*                                   
                                     <div className="header-button">
                                         <Link href="/contact" className="theme-btn">
                                             <span>
@@ -73,7 +73,7 @@ export default function Header1({
                                                 <i className="fa-solid fa-arrow-right-long" />
                                             </span>
                                         </Link>
-                                    </div>
+                                    </div> */}
                                     <div className="header__hamburger d-xl-block my-auto">
                                         <div className="sidebar__toggle" onClick={handleOffCanvas}>
                                             <i className="fas fa-bars" />

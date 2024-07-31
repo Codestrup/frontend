@@ -4,8 +4,8 @@ import Link from "next/link";
 export default function Project() {
   return (
     <>
-      <Layout headerStyle={1} footerStyle={2} breadcrumbTitle="Learning Center">
-        <section className="project-section section-padding fix">
+      <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Coming Soon">
+        {/* <section className="project-section section-padding fix">
           <div className="container">
             <div className="row g-4">
               <div
@@ -110,8 +110,8 @@ export default function Project() {
               </div>
             </div>
           </div>
-        </section>
-        <Footer3 />
+        </section> */}
+        
       </Layout>
     </>
   );

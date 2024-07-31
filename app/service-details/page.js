@@ -340,7 +340,7 @@ export default function ServiceDetails() {
                         </ul>
                       </div>
                     </div>
-                    <div
+                    {/* <div
                       className="single-sidebar-image bg-cover"
                       style={{
                         backgroundImage: 'url("assets/img/service/post.jpg")',
@@ -355,7 +355,7 @@ export default function ServiceDetails() {
                           <Link href="/tel:+2085550112">+208-555-0112</Link>
                         </h5>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 

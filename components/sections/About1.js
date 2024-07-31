@@ -21,7 +21,7 @@ export default function About1() {
                                             <h3><CounterUp count={6561}/>+</h3>
                                         </div>
                                     </div>
-                                    <VideoPopup style={2} />
+                                 
                                     <div className="about-image-1 bg-cover wow fadeInLeft" data-wow-delay=".3s" style={{ backgroundImage: 'url("assets/img/about1.jpeg")' }}>
                                         <div className="about-image-2 wow fadeInUp" data-wow-delay=".5s">
                                             <img src="/assets/img/about3.jpeg" alt="about-img" />
@@ -82,13 +82,8 @@ export default function About1() {
                                                 <i className="fa-solid fa-arrow-right-long" />
                                             </Link>
                                         </div>
-                                        {/* <div className="author-image wow fadeInUp" data-wow-delay=".7s">
-                                            <img src="/assets/img/about/author.png" alt="author-img" />
-                                            <div className="content">
-                                                <h6>Ronald Richards</h6>
-                                                <p>Co, Founder</p>
-                                            </div>
-                                        </div> */}
+                                    
+                                    
                                     </div>
                                 </div>
                             </div>
