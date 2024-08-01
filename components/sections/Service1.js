@@ -79,8 +79,8 @@ export default function Service1() {
 
   return (
     <section
-      className="service-section fix section-padding bg-cover"
-      style={{ backgroundImage: 'url("assets/img/service/service-bg.jpg")' }}
+      className="service-section fix  bg-cover"
+      style={{ backgroundImage: 'url("assets/img/service/service-bg.jpg")',paddingTop:'120px' }}
       id="service"
     >
       <div className="container">
@@ -118,14 +118,14 @@ export default function Service1() {
                     }}
                   >
                     <div>
-                      <div className="icon">
-                        {/* <img src={item.imageUrl} alt="icon-img" /> */}
+                      <div className="" style={{width:'100%' , height:"100%", minHeight:'100px', overflow:"hidden"}}>
+                        <img src={item?.imageUrl} alt="icon-img" style={{width:"100%" , height:"100px" , objectFit:"contain"}}/>
                       </div>
                       <div className="content">
                         <h4>
                           <Link href="/service-details">{item.jobTitle}</Link>
                         </h4>
-                        <div>
+                        <div style={{height:"100%", minHeight:"90px"}}>
                           <p>
                             {showFullDescription[item._id]
                               ? item.description
@@ -172,7 +172,7 @@ export default function Service1() {
           </div>
           <div className="service-text wow fadeInUp" data-wow-delay=".4s">
             <Link
-              href="/l"
+              href="/service-details"
               className="theme-btn wow fadeInUp"
               data-wow-delay=".8s"
               style={{

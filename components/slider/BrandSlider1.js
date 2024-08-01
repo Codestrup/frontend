@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
     // slidesPerView: 5,
-    spaceBetween: 30,
+    spaceBetween: 50,
     speed: 1300,
     loop: true,
     centeredSlides: true,
@@ -38,62 +38,45 @@ export default function BrandSlider1() {
         <>
             <div className="swiper brand-slider">
                 <Swiper {...swiperOptions} className="swiper-wrapper">
+                    {/* 2 */}
                     <SwiperSlide>
-                        <div className="brand-image"  >
-                            <img src="/assets/img/wordpress1.png" alt="brand-img" style={{
-                                width:'170px',
-                                height:'60px',
-                            }} />
+                        <div className="brand-image" style={{width:'100%' , height:"100%", minHeight:'100px', overflow:"hidden"}}>
+                            <img src="/assets/img/angular1.png" alt="brand-img" style={{width:"100%" , height:"100px" , objectFit:"contain"}} />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/figma1 (2).png" alt="brand-img" style={{
-                                width:'150px',
-                                height:'60px',
-                            }}  />
+                        <div className="brand-image" style={{width:'100%' , height:"100%", minHeight:'100px', overflow:"hidden"}}>
+                            <img src="/assets/img/python.png" alt="brand-img" style={{width:"100%" , height:"100px" , objectFit:"contain"}} />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/nextjs.png" alt="brand-img"  style={{
-                                width:'140px',
-                                height:'60px',
-                            }} />
+                        <div className="brand-image" style={{width:'100%' , height:"100%", minHeight:'100px', overflow:"hidden"}}>
+                            <img src="/assets/img/nodejs.png" alt="brand-img" style={{width:"100%" , height:"100px" , objectFit:"contain"}} />
+                        </div>
+                    </SwiperSlide>
+                    
+                    <SwiperSlide>
+                        <div className="brand-image" style={{width:'100%' , height:"100%", minHeight:'100px', overflow:"hidden"}}>
+                            <img src="/assets/img/reactjs.png" alt="brand-img" style={{width:"100%" , height:"100px" , objectFit:"contain"}} />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/reactjs.png" alt="brand-img" style={{
-                                width:'140px',
-                                height:'60px',
-                            }} />
+                        <div className="brand-image" style={{width:'100%' , height:"100%", minHeight:'100px', overflow:"hidden"}}>
+                            <img src="/assets/img/nextjs.png" alt="brand-img" style={{width:"100%" , height:"100px" , objectFit:"contain"}} />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/angular1.png" alt="brand-img" style={{
-                                width:'170px',
-                                height:'60px',
-                            }} />
+                        <div className="brand-image" style={{width:'100%' , height:"100%", minHeight:'100px', overflow:"hidden"}}>
+                            <img src="/assets/img/figma1 (2).png"  alt="brand-img" style={{width:"100%" , height:"100px" , objectFit:"contain"}} />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/nodejs.png" alt="brand-img" style={{
-                                width:'140px',
-                                height:'80px',
-                            }}/>
+                        <div className="brand-image" style={{width:'100%' , height:"100%", minHeight:'100px', overflow:"hidden"}}>
+                            <img src="/assets/img/wordpress1.png"  alt="brand-img" style={{width:"100%" , height:"100px" , objectFit:"contain"}} />
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="brand-image">
-                            <img src="/assets/img/python.png" alt="brand-img" style={{
-                                width:'140px',
-                                height:'55px',
-                            }} />
-                        </div>
-                    </SwiperSlide>
+                    
+                  
                     {/* <SwiperSlide>
                         <div className="brand-image">
                             <img src="/assets/img/brand.png" alt="brand-img" />
