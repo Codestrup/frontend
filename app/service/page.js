@@ -2,9 +2,8 @@
 
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Accordion1 from "@/components/elements/Accordion1";
+
 import Layout from "@/components/layout/Layout";
-import VideoPopup from "@/components/elements/VideoPopup";
 import Link from "next/link";
 import BrandSlider1 from "@/components/slider/BrandSlider1";
 import Footer3 from "@/components/layout/footer/Footer3";

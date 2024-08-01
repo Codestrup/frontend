@@ -41,7 +41,7 @@ export default function About() {
                                     <div className="col-lg-6 mt-4 mt-lg-0">
                                         <div className="about-content">
                                             <div className="section-title">
-                                                <span className="wow fadeInUp">ABOUT CODESTRUP</span>
+                                                <span className="wow fadeInUp">ABOUT CODESTRUP INFOTECH</span>
                                                 <h2 className="wow fadeInUp" data-wow-delay=".3s">
                                                 Internship Highlights
 
@@ -260,36 +260,7 @@ export default function About() {
                             </div>
                         </div>
                     </section>
-                    {/* Project Section Start */}
-                    {/* <section className="project-section-2 section-padding fix">
-                        <div className="left-shape">
-                            <img src="/assets/img/project/left-shape.png" alt="shape-img" />
-                        </div>
-                        <div className="right-shape">
-                            <img src="/assets/img/project/right-shape.png" alt="shape-img" />
-                        </div>
-                        <div className="container">
-                            <div className="section-title-area">
-                                <div className="section-title">
-                                    <span className="wow fadeInUp">PROJECTS</span>
-                                    <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                                        Our Latest Incredible <br /> Client's Projects
-                                    </h2>
-                                </div>
-                                <div className="array-button wow fadeInUp" data-wow-delay=".5s">
-                                    <button className="array-prev"><i className="fal fa-arrow-right" /></button>
-                                    <button className="array-next"><i className="fal fa-arrow-left" /></button>
-                                </div>
-                            </div>
-                            <div className="project-wrapper">
-                                <ProjectSlider2 showDots />
-                            </div>
-                        </div>
-                    </section> */}
-                    {/*<< Marque Section Start >>*/}
-                 
-              
-                    {/* Brand Section Start */}
+                  
                     <div className="brand-section fix pb-5 pt-5">
                         <div className="container">
                             <div className="brand-wrapper">

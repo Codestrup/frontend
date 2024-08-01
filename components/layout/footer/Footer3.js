@@ -143,9 +143,9 @@ export default function Footer3() {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="/service-details">
+                                            <Link href="/disclaimer">
                                                 <i className="fa-solid fa-chevron-right" />
-                                                Disclimer
+                                                Disclaimer
                                             </Link>
                                         </li>
 
@@ -227,7 +227,7 @@ export default function Footer3() {
 
                         <p className="wow fadeInRight " style={{ color: 'white' }} data-wow-delay=".5s">
                             © All Copyright {new Date().getFullYear()} by
-                            <Link href="/" style={{ color: 'white' }}> CodeStrup</Link>
+                            <Link href="/" style={{ color: 'white' }}> Codestrup Infotech</Link>
                         </p>
                     </div>
                 </div>
