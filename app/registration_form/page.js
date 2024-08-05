@@ -801,7 +801,7 @@ export default function ServiceDetails() {
                                       className="col-12 col-md-6 d-flex align-items-center mb-3 z-index-1 position-relative z-index-1"
                                     >
                                       <p className="mb-0">{item.name}</p> -{" "}
-                                      <Link href={item.link} className="text-primary text-decoration-underline ms-2  ">
+                                      <Link href={item.link} className="text-primary text-decoration-underline ms-2   ">
                                         Click Here
                                       </Link>
                                     </li>
