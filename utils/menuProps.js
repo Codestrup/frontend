@@ -12,6 +12,8 @@ export const menuProps = {
     PaperProps: {
       style: {
         maxHeight: 200,
+        backgroundColor:'#18185e',
+        color:'white'
       },
     },
   }

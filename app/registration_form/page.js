@@ -450,7 +450,7 @@ export default function ServiceDetails() {
                                           },
                                         },
                                         "& .MuiInputLabel-shrink": {
-                                          color: "black !important", 
+                                          color: "black !important",
                                         }
                                       }}
                                     />
@@ -466,7 +466,28 @@ export default function ServiceDetails() {
                               </Grid>
                               <Grid container spacing={2}>
                                 <Grid item xs={12} sm={12} md={12} lg={6}>
-                                  <Box mt={2}>
+                                  <Box mt={2} sx={{
+                                    '& .MuiOutlinedInput-root': {
+                                      '& fieldset': {
+                                        borderColor: "rgba(0, 0, 0, 0.5)",
+                                      },
+                                      '&:hover fieldset': {
+                                        borderColor: 'black !important', 
+                                      },
+                                      '&.Mui-focused fieldset': {
+                                        borderColor: 'black', 
+                                      },
+                                    },
+                                    '& .MuiInputLabel-root': {
+                                      color: 'black !important', 
+                                    },
+                                    '& .MuiSelect-icon': {
+                                      color: 'rgba(0, 0, 0, 0.5)', 
+                                    },
+                                    '& .MuiOutlinedInput-root.Mui-focused .MuiSelect-icon': {
+                                      color: 'black !important', 
+                                    },
+                                  }}>
                                     <Select
                                       fullWidth
                                       name="gender"
@@ -476,25 +497,7 @@ export default function ServiceDetails() {
                                       onChange={handleChange}
                                       onBlur={handleBlur}
                                       style={{ textAlign: 'start' }}
-                                      sx={{
-                                        "& .MuiOutlinedInput-root": {
-                                          "& fieldset": {
-                                            borderColor: "black", // Default border color
-                                          },
-                                          "&:hover fieldset": {
-                                            borderColor: "black", // Border color on hover
-                                          },
-                                          "&.Mui-focused fieldset": {
-                                            borderColor: "black", // Border color when focused
-                                          },
-                                        },
-                                        "& .MuiInputLabel-root": {
-                                          color: "black", // Label color
-                                        },
-                                        "& .MuiSelect-icon": {
-                                          color: "black", // Dropdown arrow color
-                                        }
-                                      }}
+
                                     >
                                       <MenuItem value="" disabled>Gender</MenuItem>
                                       <MenuItem value="Male">Male</MenuItem>
@@ -505,6 +508,8 @@ export default function ServiceDetails() {
                                       {touched.gender && errors.gender}
                                     </FormHelperText>
                                   </Box>
+
+
 
                                 </Grid>
                                 <Grid item xs={12} sm={12} md={12} lg={6}>
@@ -530,7 +535,7 @@ export default function ServiceDetails() {
                                           },
                                         },
                                         "& .MuiInputLabel-shrink": {
-                                          color: "black !important", 
+                                          color: "black !important",
                                         }
                                       }}
                                     />
@@ -570,7 +575,7 @@ export default function ServiceDetails() {
                                             },
                                           },
                                           "& .MuiInputLabel-shrink": {
-                                            color: "black !important", 
+                                            color: "black !important",
                                           }
                                         }}
                                       />
@@ -689,7 +694,7 @@ export default function ServiceDetails() {
                                       },
                                     },
                                     "& .MuiInputLabel-shrink": {
-                                      color: "black !important", 
+                                      color: "black !important",
                                     }
                                   }}
                                 />
@@ -721,7 +726,7 @@ export default function ServiceDetails() {
                                       },
                                     },
                                     "& .MuiInputLabel-shrink": {
-                                      color: "black !important", 
+                                      color: "black !important",
                                     }
                                   }}
                                 />
@@ -752,7 +757,7 @@ export default function ServiceDetails() {
                                       },
                                     },
                                     "& .MuiInputLabel-shrink": {
-                                      color: "black !important", 
+                                      color: "black !important",
                                     }
                                   }}
                                 />
@@ -813,16 +818,17 @@ export default function ServiceDetails() {
                                       display: "flex",
                                       flexDirection: "row",
                                       position: 'relative',
-                                      zIndex: '1'
+                                      zIndex: '1',
+
                                     }}
                                   >
                                     <FormControlLabel
-                                      control={<Radio />}
+                                      control={<Radio style={{ color: '#18185e' }} />}
                                       label={<p>Yes</p>}
                                       value="yes"
                                     />
                                     <FormControlLabel
-                                      control={<Radio />}
+                                      control={<Radio style={{ color: '#18185e' }} />}
                                       label={<p>No</p>}
                                       value="no"
                                     />
@@ -845,9 +851,10 @@ export default function ServiceDetails() {
                                   <RadioGroup
                                     value={referenceValue}
                                     onChange={handleReferenceChange}
+
                                   >
                                     <FormControlLabel
-                                      control={<Radio />}
+                                      control={<Radio style={{ color: '#18185e' }} />}
                                       label={
                                         <p>
                                           Social Media - LinkedIn, Facebook,
@@ -858,7 +865,7 @@ export default function ServiceDetails() {
                                     />
 
                                     <FormControlLabel
-                                      control={<Radio />}
+                                      control={<Radio style={{ color: '#18185e' }} />}
                                       label={
                                         <p>
                                           Referral - Friends, Colleagues,
@@ -869,7 +876,7 @@ export default function ServiceDetails() {
                                     />
 
                                     <FormControlLabel
-                                      control={<Radio />}
+                                      control={<Radio style={{ color: '#18185e' }} />}
                                       label={
                                         <p>
                                           Job portals - Internshala, Frapp,
@@ -880,7 +887,7 @@ export default function ServiceDetails() {
                                     />
 
                                     <FormControlLabel
-                                      control={<Radio />}
+                                      control={<Radio style={{ color: '#18185e' }} />}
                                       label={
                                         <p>
                                           Campus Placement Cell/Coordinators
@@ -899,7 +906,7 @@ export default function ServiceDetails() {
                                       color="primary"
                                       checked={values.termsConditions}
                                       onChange={(e) => setFieldValue("termsConditions", e.target.checked)}
-                                      style={{ padding: '0', marginRight: '8px' }}
+                                      style={{ padding: '0', marginRight: '8px', color: '#18185e' }}
                                     />
                                   }
                                   label={
@@ -908,7 +915,7 @@ export default function ServiceDetails() {
                                       zIndex: '1',
                                       alignSelf: 'flex-start'
                                     }}>
-                                      I accept the terms and conditions of the Codestrup Internship Program as described.
+                                      I accept the Codestrup Internship Program terms and conditions as described.
                                     </span>
                                   }
                                   style={{ margin: '0' }}
