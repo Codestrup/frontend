@@ -65,8 +65,8 @@ export default function Testimonial3() {
                                     <div className="client-items">
                                         <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/02.jpg")' }} />
                                         <div className="client-content">
-                                            <h4>Kathryn Murphy</h4>
-                                            <p>Web Designer</p>
+                                            <h4>Rubel</h4>
+                                            {/* <p>Web Designer</p> */}
                                             <div className="star">
                                                 <i className="fas fa-star" />
                                                 <i className="fas fa-star" />
@@ -77,7 +77,7 @@ export default function Testimonial3() {
                                         </div>
                                     </div>
                                     <p>
-                                        Consectetur adipiscing elit. Integer nunc viverra laoreet est the is porta pretium metus aliquam eget maecenas porta is nunc viverra Aenean pulvinar maximus leo ”
+                                    My Codestrup internship as a Java developer was great. I learned new concepts, built projects, and highly recommend it. ”
                                     </p>
                                 </div>
                             </SwiperSlide>
@@ -89,8 +89,8 @@ export default function Testimonial3() {
                                     <div className="client-items">
                                         <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/03.jpg")' }} />
                                         <div className="client-content">
-                                            <h4>Albert Flores</h4>
-                                            <p>Medical Assistant</p>
+                                            <h4>Abhishek </h4>
+                                            {/* <p>Medical Assistant</p> */}
                                             <div className="star">
                                                 <i className="fas fa-star" />
                                                 <i className="fas fa-star" />
@@ -101,7 +101,7 @@ export default function Testimonial3() {
                                         </div>
                                     </div>
                                     <p>
-                                        Consectetur adipiscing elit. Integer nunc viverra laoreet est the is porta pretium metus aliquam eget maecenas porta is nunc viverra Aenean pulvinar maximus leo ”
+                                    It has been pivotal in my career. Codestrup offers meaningful projects, a supportive team, and growth. Thank you, Codestrup! ”
                                     </p>
                                 </div>
                             </SwiperSlide>
@@ -113,8 +113,8 @@ export default function Testimonial3() {
                                     <div className="client-items">
                                         <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/02.jpg")' }} />
                                         <div className="client-content">
-                                            <h4>Kathryn Murphy</h4>
-                                            <p>Web Designer</p>
+                                            <h4>Vaibhav </h4>
+                                            {/* <p>Web Designer</p> */}
                                             <div className="star">
                                                 <i className="fas fa-star" />
                                                 <i className="fas fa-star" />
@@ -125,7 +125,7 @@ export default function Testimonial3() {
                                         </div>
                                     </div>
                                     <p>
-                                        Consectetur adipiscing elit. Integer nunc viverra laoreet est the is porta pretium metus aliquam eget maecenas porta is nunc viverra Aenean pulvinar maximus leo ”
+                                    I am grateful to work as an intern at Codestrup. The team's support, communication, and virtual environment were excellent ”
                                     </p>
                                 </div>
                             </SwiperSlide>
@@ -137,8 +137,8 @@ export default function Testimonial3() {
                                     <div className="client-items">
                                         <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/03.jpg")' }} />
                                         <div className="client-content">
-                                            <h4>Albert Flores</h4>
-                                            <p>Medical Assistant</p>
+                                            <h4>Tushar </h4>
+                                            {/* <p>Medical Assistant</p> */}
                                             <div className="star">
                                                 <i className="fas fa-star" />
                                                 <i className="fas fa-star" />
@@ -149,7 +149,55 @@ export default function Testimonial3() {
                                         </div>
                                     </div>
                                     <p>
-                                        Consectetur adipiscing elit. Integer nunc viverra laoreet est the is porta pretium metus aliquam eget maecenas porta is nunc viverra Aenean pulvinar maximus leo ”
+                                    The internship provided an excellent learning experience, offering opportunities to apply skills, work on diverse projects, and receive valuable mentorship. ”
+                                    </p>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className="testimonial-box-items">
+                                    <div className="icon">
+                                        <img src="/assets/img/testimonial/icon.png" alt="icon-img" />
+                                    </div>
+                                    <div className="client-items">
+                                        <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/03.jpg")' }} />
+                                        <div className="client-content">
+                                            <h4>Prajakta Kokate</h4>
+                                            {/* <p>Medical Assistant</p> */}
+                                            <div className="star">
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star color-text" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>
+                                    The overall experience with Codestrup was just amazing. It is more focused on providing internships to students and software development. ”
+                                    </p>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className="testimonial-box-items">
+                                    <div className="icon">
+                                        <img src="/assets/img/testimonial/icon.png" alt="icon-img" />
+                                    </div>
+                                    <div className="client-items">
+                                        <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/03.jpg")' }} />
+                                        <div className="client-content">
+                                            <h4>Mayur Latke </h4>
+                                            {/* <p>Medical Assistant</p> */}
+                                            <div className="star">
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star color-text" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>
+                                    An excellent platform that offers a supportive environment, valuable internship opportunities, and great learning experiences for students and professionals alike. ”
                                     </p>
                                 </div>
                             </SwiperSlide>

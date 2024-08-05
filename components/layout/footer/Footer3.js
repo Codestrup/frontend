@@ -72,13 +72,13 @@ export default function Footer3() {
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/service-details">
+                                                        <Link href="/internship">
                                                             <i className="fa-solid fa-chevron-right" />
                                                             internship
                                                         </Link>
                                                     </li>
                                                     <li style={{marginBottom:'15px'}}>
-                                                        <Link href="/project">
+                                                        <Link href="/learning_Center">
                                                             <i className="fa-solid fa-chevron-right" />
                                                             Learning Center
                                                         </Link>

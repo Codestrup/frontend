@@ -77,7 +77,7 @@ export default function About1() {
                                     </div>
                                     <div className="about-author">
                                         <div className="about-button wow fadeInUp" data-wow-delay=".5s">
-                                            <Link href="/service-details" className="theme-btn">
+                                            <Link href="/internship" className="theme-btn">
                                                 Apply Now
                                                 <i className="fa-solid fa-arrow-right-long" />
                                             </Link>
