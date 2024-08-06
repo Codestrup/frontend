@@ -12,7 +12,7 @@ const page = () => {
                 <div className='container'>
 
                     <h2 className='text-center wow fadeInUp ' style={{ paddingBottom: '12px' }}>WELCOME TO CODESTRUP</h2>
-                    <p className='wow fadeInUp' style={{ padding: '47px' }} >The Company ensures steady commitment to your usage of the Platform and privacy with regard to the protection of your invaluable information. This document contains information about the Website and mobile application https://codestrup.in/ hereinafter referred to as the “Platform”.
+                    <p className='wow fadeInUp' style={{ padding: '47px' }} >The Company ensures steady commitment to your usage of the Platform and privacy with regard to the protection of your invaluable information. This document contains information about the Website and mobile application <Link href='https://codestrup.in/' style={{ color: "#384bff" }}>https://codestrup.in/ </Link>  hereinafter referred to as the “Platform”.
 
                         In order to provide You with Our uninterrupted use of services, We may collect and, in some circumstances, disclose information about you with your permission. To ensure better protection of Your privacy, We provide this notice explaining Our information collection and disclosure policies, and the choices You make about the way Your information is collected and used.
 

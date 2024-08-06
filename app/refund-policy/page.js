@@ -48,7 +48,7 @@ const page = () => {
 
                         Refund request can be initiated in two ways
 
-                        Kindly contact concern branch managers through mail (enquiry@codestrup.com) and get confirmation about your refund eligibility. This will work when item quantity is one or more.
+                        Kindly contact concern branch managers through mail <Link href='https://codestrup.in/' style={{ color: "#384bff" }}>(enquiry@codestrup.com)</Link>  and get confirmation about your refund eligibility. This will work when item quantity is one or more.
 
                     </p>
 
