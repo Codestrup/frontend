@@ -124,6 +124,12 @@ export default function Footer3() {
                                         <h3>Services</h3>
                                     </div>
                                     <ul className="list-area">
+                                    <li>
+                                            <Link href="/privacy-policy">
+                                                <i className="fa-solid fa-chevron-right" />
+                                                Privacy Policy
+                                            </Link>
+                                        </li>
                                         <li>
                                             <Link href="/terms-condition">
                                                 <i className="fa-solid fa-chevron-right" />
@@ -136,12 +142,7 @@ export default function Footer3() {
                                                 Refund Policy
                                             </Link>
                                         </li>
-                                        <li>
-                                            <Link href="/privacy-policy">
-                                                <i className="fa-solid fa-chevron-right" />
-                                                Privacy Policy
-                                            </Link>
-                                        </li>
+                                      
                                         <li>
                                             <Link href="/disclaimer">
                                                 <i className="fa-solid fa-chevron-right" />
