@@ -48,10 +48,7 @@ const Page = () => {
         setInformationDialogOpen(true); 
     };
 
-    // const handleNextClick = () => {
-    //     setInformationDialogOpen(false); 
-    //     router.push("/registration_form"); 
-    // };
+  
     const handleNextClick = () => {
         setInformationDialogOpen(false); 
         router.push("/registration_form"); 
@@ -151,7 +148,7 @@ const Page = () => {
                                                     minHeight: "300px",
                                                     padding: "20px",
                                                     boxSizing: "border-box",
-                                                    // boxShadow: "h-offset v-offset blur spread color"
+                                              
                                                       filter: 'drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5))',
                                                       marginTop:'48px'
                                                 }}

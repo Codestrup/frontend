@@ -46,7 +46,7 @@ export default function Hero1() {
                         </div>
                         <div className="col-lg-4">
                             <div className="hero-image wow fadeInUp" data-wow-delay=".4s">
-                                <img src="/assets/img/hero/hero01.png" alt="hero-img" />
+                                <img src="/assets/img/hero/image.png" alt="hero-img" style={{marginLeft:'15px'}} />
                             </div>
                         </div>
                     </div>

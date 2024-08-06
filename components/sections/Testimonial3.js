@@ -38,8 +38,8 @@ export default function Testimonial3() {
     return (
         <>
             <section className="tesimonial-section-3 section-padding section-bg-2 bg-cover">
-                <div className="line-shape">
-                    <img src="/assets/img/team/line-shape.png" alt="shape-img" />
+                <div className="line-shape  d-none d-lg-block">
+                    <img src="/assets/img/team/line-shape.png" alt="shape-img"  />
                 </div>
                 <div className="mask-shape">
                     <img src="/assets/img/team/mask-shape.png" alt="shape-img" />
@@ -63,7 +63,7 @@ export default function Testimonial3() {
                                         <img src="/assets/img/testimonial/icon.png" alt="icon-img" />
                                     </div>
                                     <div className="client-items">
-                                        <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/02.jpg")' }} />
+                                        <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/male.gif")' }} />
                                         <div className="client-content">
                                             <h4>Rubel</h4>
                                             {/* <p>Web Designer</p> */}
@@ -87,7 +87,7 @@ export default function Testimonial3() {
                                         <img src="/assets/img/testimonial/icon.png" alt="icon-img" />
                                     </div>
                                     <div className="client-items">
-                                        <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/03.jpg")' }} />
+                                        <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/male.gif")' }} />
                                         <div className="client-content">
                                             <h4>Abhishek </h4>
                                             {/* <p>Medical Assistant</p> */}
@@ -111,7 +111,7 @@ export default function Testimonial3() {
                                         <img src="/assets/img/testimonial/icon.png" alt="icon-img" />
                                     </div>
                                     <div className="client-items">
-                                        <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/02.jpg")' }} />
+                                        <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/male.gif")' }} />
                                         <div className="client-content">
                                             <h4>Vaibhav </h4>
                                             {/* <p>Web Designer</p> */}
@@ -135,7 +135,7 @@ export default function Testimonial3() {
                                         <img src="/assets/img/testimonial/icon.png" alt="icon-img" />
                                     </div>
                                     <div className="client-items">
-                                        <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/03.jpg")' }} />
+                                        <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/male.gif")' }} />
                                         <div className="client-content">
                                             <h4>Tushar </h4>
                                             {/* <p>Medical Assistant</p> */}
@@ -159,7 +159,7 @@ export default function Testimonial3() {
                                         <img src="/assets/img/testimonial/icon.png" alt="icon-img" />
                                     </div>
                                     <div className="client-items">
-                                        <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/03.jpg")' }} />
+                                        <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/female.gif")' }} />
                                         <div className="client-content">
                                             <h4>Prajakta Kokate</h4>
                                             {/* <p>Medical Assistant</p> */}
@@ -183,7 +183,7 @@ export default function Testimonial3() {
                                         <img src="/assets/img/testimonial/icon.png" alt="icon-img" />
                                     </div>
                                     <div className="client-items">
-                                        <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/03.jpg")' }} />
+                                        <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/male.gif")' }} />
                                         <div className="client-content">
                                             <h4>Mayur Latke </h4>
                                             {/* <p>Medical Assistant</p> */}
@@ -198,6 +198,81 @@ export default function Testimonial3() {
                                     </div>
                                     <p>
                                     An excellent platform that offers a supportive environment, valuable internship opportunities, and great learning experiences for students and professionals alike. ”
+                                    </p>
+                                </div>
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <div className="testimonial-box-items">
+                                    <div className="icon">
+                                        <img src="/assets/img/testimonial/icon.png" alt="icon-img" />
+                                    </div>
+                                    <div className="client-items">
+                                        <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/female.gif")' }} />
+                                        <div className="client-content">
+                                            <h4>Aarti Khandagale</h4>
+                                            {/* <p>Web Designer</p> */}
+                                            <div className="star">
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>
+                                    Codestrup Infotech's WordPress Developer internship offers a great chance to enhance your skills with hands-on projects and professional guidance. ”
+                                    </p>
+                                </div>
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <div className="testimonial-box-items">
+                                    <div className="icon">
+                                        <img src="/assets/img/testimonial/icon.png" alt="icon-img" />
+                                    </div>
+                                    <div className="client-items">
+                                        <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/female.gif")' }} />
+                                        <div className="client-content">
+                                            <h4>Renuka Kuratkar</h4>
+                                            {/* <p>Web Designer</p> */}
+                                            <div className="star">
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>
+                                    The React internship at Codestrup Infotech provides excellent learning opportunities, from real-world projects to experienced mentorship and skill development. ”
+                                    </p>
+                                </div>
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <div className="testimonial-box-items">
+                                    <div className="icon">
+                                        <img src="/assets/img/testimonial/icon.png" alt="icon-img" />
+                                    </div>
+                                    <div className="client-items">
+                                        <div className="client-image style-2 bg-cover" style={{ backgroundImage: 'url("assets/img/testimonial/female.gif")' }} />
+                                        <div className="client-content">
+                                            <h4>Poonam Rathod </h4>
+                                            {/* <p>Web Designer</p> */}
+                                            <div className="star">
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star" />
+                                                <i className="fas fa-star" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>
+                                    As a React intern at Codestrup Infotech, I gained valuable experience and also learned Next.js, significantly boosting my full-stack development skills ”
                                     </p>
                                 </div>
                             </SwiperSlide>

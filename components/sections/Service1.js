@@ -71,7 +71,7 @@ export default function Service1() {
   const handleApplyNowClick = (id) => {
     console.log("id".id);
     setInternshipId(id);
-    router.push("/service-details");
+    router.push("/internship");
   };
 
   return (

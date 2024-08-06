@@ -13,7 +13,8 @@ export const menuProps = {
       style: {
         maxHeight: 200,
         backgroundColor:'#18185e',
-        color:'white'
+        color:'white',
+        
       },
     },
   }

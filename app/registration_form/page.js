@@ -472,20 +472,20 @@ export default function ServiceDetails() {
                                         borderColor: "rgba(0, 0, 0, 0.5)",
                                       },
                                       '&:hover fieldset': {
-                                        borderColor: 'black !important', 
+                                        borderColor: 'black !important',
                                       },
                                       '&.Mui-focused fieldset': {
-                                        borderColor: 'black', 
+                                        borderColor: 'black',
                                       },
                                     },
                                     '& .MuiInputLabel-root': {
-                                      color: 'black !important', 
+                                      color: 'black !important',
                                     },
                                     '& .MuiSelect-icon': {
-                                      color: 'rgba(0, 0, 0, 0.5)', 
+                                      color: 'rgba(0, 0, 0, 0.5)',
                                     },
                                     '& .MuiOutlinedInput-root.Mui-focused .MuiSelect-icon': {
-                                      color: 'black !important', 
+                                      color: 'black !important',
                                     },
                                   }}>
                                     <Select
@@ -582,8 +582,7 @@ export default function ServiceDetails() {
 
                                       <FormHelperText
                                         error
-                                        className="helperText
-                                                                                position-relative z-index-1"
+                                        className="helperText position-relative z-index-1"
                                       >
                                         {touched.email && errors.email}
                                       </FormHelperText>
