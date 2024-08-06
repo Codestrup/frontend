@@ -11,6 +11,7 @@ Version: 1.0.0
   --body: #fff;
   --black: #000;
   --white: #fff;
+  --btn: #fff;
   --theme: #384bff;
   --theme2: #384bff;
   --header: #0f0d1d;
@@ -77,6 +78,63 @@ Version: 1.0.0
 .theme-btn:hover::after {
   width: 100%;
 }
+
+
+
+.theme-btn1 {
+  background-color: var(--white);
+  color: var(--theme);
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 24px 40px;
+  border-radius: 0;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+  line-height: 1;
+}
+.theme-btn1::before {
+  content: "";
+  background-color: var(--header);
+  width: 0;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: -1;
+}
+.theme-btn1::after {
+  content: "";
+  background-color: var(--header);
+  width: 0;
+  height: 50%;
+  /* color: #000; */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: -1;
+}
+.theme-btn1 i {
+  margin-left: 10px;
+}
+.theme-btn1:hover {
+  color: var(--white);
+}
+.theme-btn1:hover::before,
+.theme-btn1:hover::after {
+  width: 100%;
+}
+
+
+
+
 .theme-btn.hover-white::before,
 .theme-btn.hover-white::after {
   background-color: var(--white);
@@ -2842,9 +2900,11 @@ span {
   right: 0;
 }
 .footer-section .footer-shape-4 {
+  height: 100%;
   position: absolute;
   top: 0;
   left: -5%;
+
 }
 
 .header-top-section {
@@ -8350,7 +8410,8 @@ input.main-search-input::placeholder {
 .tesimonial-section-3 .mask-shape {
   position: absolute;
   right: 0;
-  top: 5%;
+  /* top: 5%; */
+  bottom: 0;
 }
 @media (max-width: 1899px) {
   .tesimonial-section-3 .array-button {

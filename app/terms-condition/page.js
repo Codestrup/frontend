@@ -12,7 +12,7 @@ const page = () => {
                 </div>
                 <div className='container'>
                     <p className='text-center wow fadeInUp  '>TERMS AND CONDITIONS OF SERVICE AND USE</p>
-                    <h2 className='text-center wow fadeInUp ' style={{ paddingBottom: '12px' }}>WELCOME TO CODESTRUP</h2>
+                    {/* <h2 className='text-center wow fadeInUp ' style={{ paddingBottom: '12px' }}>WELCOME TO CODESTRUP</h2> */}
                     <p className='wow fadeInUp' style={{ padding: '47px' }} >The Company ensures steady commitment to your usage of the Platform and privacy with regard to the protection of your invaluable information. This document contains information about the Website and mobile application <Link href='/' style={{ color: '#384bff' }}>https://codestrup.in/ </Link> hereinafter referred to as the “Platform”.
 
                         These terms and conditions of use ("Terms") constitute a legal agreement between you and the Company. Use of this Site constitutes your unconditional acceptance of these Terms herein and by all terms, policies and guidelines incorporated by reference. These Terms apply to your use of this Site, and do not alter in any way the terms or conditions of any other agreement you may have with the Company, its subsidiaries or affiliates. If you are using the Site on behalf of any entity, you further represent and warrant that you are authorized to accept these Terms on such entity's behalf, and that such entity agrees to indemnify the Company for violations of these Terms. If you do not agree with these terms, please do not use this Site.</p>

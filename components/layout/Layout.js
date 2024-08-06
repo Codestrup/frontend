@@ -1,17 +1,17 @@
 
 'use client'
 import { useEffect, useState } from "react"
-import BackToTop from '../elements/BackToTop'
+// import BackToTop from '../elements/BackToTop'
 import Breadcrumb from './Breadcrumb'
 import MouseCursor from "./MouseCursor"
 import Offcanvas from "./Offcanvas"
-import Search from "./Search"
+// import Search from "./Search"
 
 import Footer3 from "./footer/Footer3"
 import Header1 from "./header/Header1"
-import Header2 from './header/Header2'
-import Header3 from "./header/Header3"
-import Header4 from "./header/Header4"
+// import Header2 from './header/Header2'
+// import Header3 from "./header/Header3"
+// import Header4 from "./header/Header4"
 
 export default function Layout({ headerStyle, footerStyle, onePageNav, breadcrumbTitle, children }) {
     const [scroll, setScroll] = useState(0)
@@ -59,7 +59,7 @@ export default function Layout({ headerStyle, footerStyle, onePageNav, breadcrum
             {footerStyle == 3 ? < Footer3 /> : null}
             {footerStyle == 4 ? < Footer4 /> : null} */}
 
-            <BackToTop />
+            {/* <BackToTop /> */}
         </>
     )
 }

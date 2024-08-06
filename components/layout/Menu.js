@@ -17,13 +17,13 @@ export default function Menu() {
                     <Link href="/about">About</Link>
                 </li>
                 <li>
-                    <Link href="/service-details">
+                    <Link href="/internship">
                         Internship
 
                     </Link>
 
                 </li>
-                <li><Link href="/project">Learning Center</Link></li>
+                <li><Link href="/learning_Center">Learning Center</Link></li>
 
                 
 
