@@ -54,6 +54,7 @@ const formValidationSchema = Yup.object().shape({
 
   email: Yup.string()
     .email("Invalid email address")
+    .matches(/^[a-zA-Z0-9._%+-]+@gmail\.com$/, 'Email must be a Gmail address')
     .required("Email is required"),
 
   collegeName: Yup.string()
@@ -74,78 +75,7 @@ const formValidationSchema = Yup.object().shape({
     .required("Terms and conditions must be accepted"),
 });
 
-const socialLinks = [
-  {
-    id: 1,
-    name: "Telegram",
-    link: "https://t.me/+6HxZOtDBk6w0N2Vl",
-  },
-  {
-    id: 2,
-    name: "Instagram",
-    link: "https://bit.ly/45tfDXd",
-  },
 
-  {
-    id: 3,
-    name: "Facebook",
-    link: "https://bit.ly/3zciBU0",
-  },
-
-  {
-    id: 4,
-    name: "Whatsapp",
-    link: "https://bit.ly/4cn7J3I",
-  },
-
-  {
-    id: 5,
-    name: "Lindkdin",
-    link: "https://bit.ly/4erKOpQ",
-  },
-];
-
-const internshipPerks = [
-  {
-    id: 1,
-    name: "Offer Letter from Codestrup infotech Pvt Ltd.",
-  },
-
-  {
-    id: 2,
-    name: "Internship Certificate - A verifiable completion certificate is provided after successful completion of one month of internship.",
-  },
-
-  {
-    id: 3,
-    name: "Letter of recommendation (based on Performance) - A verifiable recommendation letter is provided to top performing interns based on various assessment parameters.",
-  },
-
-  {
-    id: 4,
-    name: "Appreciation Letter (Best Performer Recognition).",
-  },
-
-  {
-    id: 5,
-    name: "Network Opportunities - Connect with  members and interns from around the world experiencing a multicultural and rare diverse working environment.",
-  },
-
-  {
-    id: 6,
-    name: "Learning Opportunities - As an intern at  Codestrup infotech Pvt Ltd  , you'll dive into a collaborative, intellectually stimulating environment, gaining hands-on experience with cutting-edge projects at the forefront of technological advancement",
-  },
-
-  {
-    id: 7,
-    name: "Network Opportunities - Connect with  members and interns from around the world experiencing a multicultural and rare diverse working environment.",
-  },
-
-  {
-    id: 8,
-    name: "Job Opportunities - Access employment opportunities with us. This form is for  INTERNSHIP in Codestrup Infotech Pvt Ltd for JUNE 2024 Batch.",
-  },
-];
 
 export default function ServiceDetails() {
   const router = useRouter();
@@ -158,11 +88,20 @@ export default function ServiceDetails() {
   const [formValues, setFormValues] = useState(null);
   const [showVerifyTextfield, setShowVerifyTextfield] = useState(false);
   const [consentDialogOpen, setConsentDialogOpen] = useState(false);
-  const [informationDialogOpen, setInformationDialogOpen] = useState(true);
   const [consent, setConsent] = useState(false);
   const [yesNoValue, setYesNoValue] = useState("");
   const [referenceValue, setReferenceValue] = useState("");
   const { setInternshipId, internshipId } = useInternship();
+  const [isOTPButtonEnabled, setIsOTPButtonEnabled] = useState(false);
+
+  const validateEmail = (email) => {
+    // Enable button if email contains @gmail.com and is not empty
+    if (email && email.includes('@gmail.com')) {
+      setIsOTPButtonEnabled(true);
+    } else {
+      setIsOTPButtonEnabled(false);
+    }
+  };
 
   useEffect(() => {
     const fetchInternships = async () => {
@@ -230,6 +169,36 @@ export default function ServiceDetails() {
       }
     }
   };
+  const socialLinks = [
+    {
+      id: 1,
+      name: "Telegram",
+      link: "https://t.me/+6HxZOtDBk6w0N2Vl",
+    },
+    {
+      id: 2,
+      name: "Instagram",
+      link: "https://bit.ly/45tfDXd",
+    },
+
+    {
+      id: 3,
+      name: "Facebook",
+      link: "https://bit.ly/3zciBU0",
+    },
+
+    {
+      id: 4,
+      name: "Whatsapp",
+      link: "https://bit.ly/4cn7J3I",
+    },
+
+    {
+      id: 5,
+      name: "Lindkdin",
+      link: "https://bit.ly/4erKOpQ",
+    },
+  ];
 
   const handleConsentYes = async () => {
     setConsentDialogOpen(false);
@@ -294,123 +263,105 @@ export default function ServiceDetails() {
 
   return (
     <>
-      <Layout
-        headerStyle={1}
-        footerStyle={2}
-        breadcrumbTitle="Internship"
-        internshipTitle={internship[0]?.jobTitle ?? ""}
-        internshipDescription={internship[0]?.description ?? ""}
-      >
-        <section className="service-details-section fix section-padding">
-          <div className="container">
+      {/* 1 */}
+      <Layout>
+        <section className="service-details-section fix section-padding footer-section footer-bg ">
+          <div className="footer-shape-4  d-none d-lg-block">
+            <img src="/assets/img/footer-shape-4.png" alt="shape-img" style={{ height: '100%', objectFit: 'contain' }} />
+          </div>
+
+          <div className="shape-2">
+            <img src="/assets/img/footer-shape-3.png" alt="shape-img" />
+          </div>
+          <div className="container" style={{ position: 'relative', zIndex: 3 }}>
             <div className="service-details-wrapper">
               <div className="row g-4">
-                <div className="col-12 col-lg-4 order-2 order-md-1">
-                  <div className="main-sidebar">
-                    <div className="single-sidebar-widget">
-                      <div className="wid-title">
-                        {/* <h3>All Services</h3> */}
-                        <h3>INTERNSHIP POSITIONS</h3>
-                      </div>
-                      <div className="widget-categories">
-                        <ul>
-                          {services.map((service) => (
-                            <li
-                              key={service._id}
-                              className={
-                                activeItem === service._id ? "active" : ""
-                              }
-                            >
-                              <div>
-                                {service?.imageUrl &&
-                                  service?.imageUrl !== "" && (
-                                    <img
-                                      src={
-                                        service?.imageUrl ??
-                                        "/assets/internship_image.jpg"
-                                      }
-                                      style={{
-                                        width: "40px",
-                                        height: "40px",
-                                        objectFit: "cover",
-                                        borderRadius: "50%",
-                                      }}
-                                    />
-                                  )}
-                              </div>
-                              <p
-                                onClick={() =>
-                                  handleApplyNowClick(service?._id)
-                                }
-                                style={{
-                                  cursor: "pointer",
-                                }}
-                              >
-                                {service.jobTitle}
-                              </p>
-                              <i className="fa-solid fa-arrow-right-long" />
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                    <div className="single-sidebar-widget">
-                      <div className="wid-title">
-                        <h3>Opening Hours</h3>
-                      </div>
-                      <div className="opening-category">
-                        <ul>
-                          <li>
-                            <i className="fa-regular fa-clock" />
-                            Mon - Sat: 10.00 AM - 4.00 PM
-                          </li>
-                          <li>
-                            <i className="fa-regular fa-clock" />
-                            Sun: 09.00 AM - 4.00 PM
-                          </li>
-                          <li>
-                            <i className="fa-regular fa-clock" />
-                            Friday: Closed
-                          </li>
-                          <li>
-                            <i className="fa-regular fa-clock" />
-                            Emergency: 24 hours
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div
-                      className="single-sidebar-image bg-cover"
-                      style={{
-                        backgroundImage: 'url("assets/img/service/post.jpg")',
-                      }}
-                    >
-                      <div className="contact-text">
-                        <div className="icon">
-                          <i className="fa-solid fa-phone" />
-                        </div>
-                        <h4>Need Help? Call Here</h4>
-                        <h5>
-                          <Link href="/tel:+2085550112">+208-555-0112</Link>
-                        </h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
-                <div className="col-12 col-lg-8 order-1 order-md-2">
-                  <div className="service-details-items">
+
+                <div className="col-12 col-lg-8 order-1 order-md-2 center">
+                  <div className="service-details-items ">
                     {/* Details content */}
 
-                    <h4 style={{ textAlign: "center" }}>
+                    <h4 style={{ textAlign: "center", textTransform: 'uppercase', color: 'white' }}>
                       {internship[0]?.jobTitle ?? ""}
                     </h4>
 
                     <Card
                       sx={{ padding: "20px", marginTop: "20px" }}
                       elevation={3}
+                      style={{
+                        background: 'linear-gradient(90deg, #5D54A4, #7C78B8)',
+                        // background: 'linear-gradient(90deg, #4a486d)',
+                        position: 'relative',
+                        // boxShadow: '0px 0px 24px #384bff'
+                        borderRadius: '50px'
+                      }}
                     >
+                      <div className="screen__background"
+                        style={{
+                          position: 'absolute',
+                          top: '0',
+                          left: '0',
+                          right: '0',
+                          bottom: '0',
+                          zIndex: '0',
+                          WebkitClipPath: 'inset(0 0 0 0)',
+                          clipPath: 'inset(0 0 0 0)'
+                        }}
+                      >
+                        <span className="screen__background__shape screen__background__shape4"
+                          style={{
+                            transform: 'rotate(45deg)',
+                            position: 'absolute',
+                            height: '532px',
+                            width: '289px',
+                            background: '#18185e',
+                            top: '765px',
+                            right: '-147px',
+                            borderRadius: '60px'
+                          }}
+                        ></span>
+                        <span className="screen__background__shape screen__background__shape3"
+                          style={{
+                            transform: 'rotate(45deg)',
+                            position: 'absolute',
+                            height: '900px',
+                            width: '250px',
+                            background: 'linear-gradient(270deg, #272777, #6A679E)',
+                            top: '103px',
+                            right: '-22px',
+                            borderRadius: '32px'
+                          }}
+                        ></span>
+                        <span className="screen__background__shape screen__background__shape2"
+                          style={{
+                            transform: 'rotate(45deg)',
+                            position: 'absolute',
+                            height: ' 340px',
+                            width: '495px',
+                            // background: '#272777',
+                            background: 'linear-gradient(45deg, #6A679E,  #272777)',
+                            top: '-88px',
+                            right: '-37px',
+                            borderRadius: '32px'
+                          }}
+                        ></span>
+                        <span className="screen__background__shape screen__background__shape1"
+                          style={{
+                            transform: 'rotate(45deg)',
+                            position: 'absolute',
+                            height: '700px',
+                            width: '700px',
+                            background: '#FFF',
+                            top: '180px',
+                            right: '190px',
+                            borderRadius: '0 72px 0 0'
+                          }}
+                        ></span>
+
+                      </div>
                       <Formik
+                        className="container"
                         initialValues={{
                           firstName: "",
                           lastName: "",
@@ -425,7 +376,16 @@ export default function ServiceDetails() {
                         }}
                         validationSchema={formValidationSchema}
                         onSubmit={(values) => handleSubmit(values)}
+                        validateOnChange={true}
+                        validateOnBlur={true}
+                        style={{
+                          zIndex: ' 1',
+                          position: 'relative',
+                          height: '100%'
+                        }}
+
                       >
+
                         {({
                           values,
                           handleBlur,
@@ -433,8 +393,14 @@ export default function ServiceDetails() {
                           errors,
                           touched,
                           setFieldValue,
+                          isValid
                         }) => (
-                          <Form>
+
+                          <Form style={{
+                            // width:'320px',
+                            padding: '30px',
+                            // paddingTop: '156px'
+                          }}>
                             <Box mt={2}>
                               <Grid container spacing={2}>
                                 <Grid item xs={12} sm={12} md={12} lg={6}>
@@ -442,15 +408,31 @@ export default function ServiceDetails() {
                                     <TextField
                                       fullWidth
                                       variant="outlined"
-                                      label="FirstName"
+                                      label="First Name"
                                       name="firstName"
                                       value={values.firstName}
                                       onChange={handleChange}
                                       onBlur={handleBlur}
+                                      sx={{
+                                        "& .MuiOutlinedInput-root": {
+                                          "& fieldset": {
+                                            borderColor: "rgba(0, 0, 0, 0.5)",
+                                          },
+                                          "&:hover fieldset": {
+                                            borderColor: "black",
+                                          },
+                                          "&.Mui-focused fieldset": {
+                                            borderColor: "black",
+                                          },
+                                        },
+                                        "& .MuiInputLabel-shrink": {
+                                          color: "black !important",
+                                        },
+                                      }}
                                     />
                                     <FormHelperText
                                       error
-                                      className="helperText"
+                                      className="helperText position-relative z-index-1"
                                     >
                                       {touched.firstName && errors.firstName}
                                     </FormHelperText>
@@ -462,60 +444,123 @@ export default function ServiceDetails() {
                                     <TextField
                                       fullWidth
                                       variant="outlined"
-                                      label="LastName"
+                                      label="Last Name"
                                       name="lastName"
                                       value={values.lastName}
                                       onChange={handleChange}
                                       onBlur={handleBlur}
+                                      sx={{
+                                        "& .MuiOutlinedInput-root": {
+                                          "& fieldset": {
+                                            borderColor: "rgba(0, 0, 0, 0.5)",
+                                          },
+                                          "&:hover fieldset": {
+                                            borderColor: "black",
+                                          },
+                                          "&.Mui-focused fieldset": {
+                                            borderColor: "black",
+                                          },
+                                        },
+                                        "& .MuiInputLabel-shrink": {
+                                          color: "black !important",
+                                        }
+                                      }}
                                     />
 
                                     <FormHelperText
                                       error
-                                      className="helperText"
+                                      className="helperText position-relative z-index-1"
                                     >
                                       {touched.lastName && errors.lastName}
                                     </FormHelperText>
                                   </Box>
                                 </Grid>
                               </Grid>
-                              <Box mt={2}>
-                                <Select
-                                  fullWidth
-                                  name="gender"
-                                  value={values.gender}
-                                  displayEmpty
-                                  MenuProps={menuProps}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                >
-                                  <MenuItem value="" disabled>
-                                    Gender
-                                  </MenuItem>
-                                  <MenuItem value="Male">Male</MenuItem>
-                                  <MenuItem value="Female">Female</MenuItem>
-                                  <MenuItem value="Other">Other</MenuItem>
-                                </Select>
-                                <FormHelperText error className="helperText">
-                                  {touched.gender && errors.gender}
-                                </FormHelperText>
-                              </Box>
+                              <Grid container spacing={2}>
+                                <Grid item xs={12} sm={12} md={12} lg={6}>
+                                  <Box mt={2} sx={{
+                                    '& .MuiOutlinedInput-root': {
+                                      '& fieldset': {
+                                        borderColor: "rgba(0, 0, 0, 0.5)",
+                                      },
+                                      '&:hover fieldset': {
+                                        borderColor: 'black !important',
+                                      },
+                                      '&.Mui-focused fieldset': {
+                                        borderColor: 'black',
+                                      },
+                                    },
+                                    '& .MuiInputLabel-root': {
+                                      color: 'black !important',
+                                    },
+                                    '& .MuiSelect-icon': {
+                                      color: 'rgba(0, 0, 0, 0.5)',
+                                    },
+                                    '& .MuiOutlinedInput-root.Mui-focused .MuiSelect-icon': {
+                                      color: 'black !important',
+                                    },
+                                  }}>
+                                    <Select
+                                      fullWidth
+                                      name="gender"
+                                      value={values.gender}
+                                      displayEmpty
+                                      MenuProps={menuProps}
+                                      onChange={handleChange}
+                                      onBlur={handleBlur}
+                                      style={{ textAlign: 'start' }}
 
-                              <Box mt={2}>
-                                <TextField
-                                  fullWidth
-                                  variant="outlined"
-                                  label="Contact Number"
-                                  name="contactNumber"
-                                  value={values.contactNumber}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                />
+                                    >
+                                      <MenuItem value="" disabled>Gender</MenuItem>
+                                      <MenuItem value="Male">Male</MenuItem>
+                                      <MenuItem value="Female">Female</MenuItem>
+                                      <MenuItem value="Other">Other</MenuItem>
+                                    </Select>
+                                    <FormHelperText error className="helperText position-relative z-index-1">
+                                      {touched.gender && errors.gender}
+                                    </FormHelperText>
+                                  </Box>
 
-                                <FormHelperText error className="helperText">
-                                  {touched.contactNumber &&
-                                    errors.contactNumber}
-                                </FormHelperText>
-                              </Box>
+
+
+                                </Grid>
+                                <Grid item xs={12} sm={12} md={12} lg={6}>
+                                  <Box mt={2}>
+                                    <TextField
+                                      fullWidth
+                                      variant="outlined"
+                                      label="Contact Number"
+                                      name="contactNumber"
+                                      value={values.contactNumber}
+                                      onChange={handleChange}
+                                      onBlur={handleBlur}
+                                      sx={{
+                                        "& .MuiOutlinedInput-root": {
+                                          "& fieldset": {
+                                            borderColor: "rgba(0, 0, 0, 0.5)",
+                                          },
+                                          "&:hover fieldset": {
+                                            borderColor: "black",
+                                          },
+                                          "&.Mui-focused fieldset": {
+                                            borderColor: "black",
+                                          },
+                                        },
+                                        "& .MuiInputLabel-shrink": {
+                                          color: "black !important",
+                                        }
+                                      }}
+                                    />
+
+                                    <FormHelperText error className="helperText position-relative z-index-1 ">
+                                      {touched.contactNumber &&
+                                        errors.contactNumber}
+                                    </FormHelperText>
+                                  </Box>
+
+                                </Grid>
+
+                              </Grid>
 
                               <Box mt={2}>
                                 <Grid container spacing={2}>
@@ -529,11 +574,27 @@ export default function ServiceDetails() {
                                         value={values.email}
                                         onChange={handleChange}
                                         onBlur={handleBlur}
+                                        sx={{
+                                          "& .MuiOutlinedInput-root": {
+                                            "& fieldset": {
+                                              borderColor: "rgba(0, 0, 0, 0.5)",
+                                            },
+                                            "&:hover fieldset": {
+                                              borderColor: "black",
+                                            },
+                                            "&.Mui-focused fieldset": {
+                                              borderColor: "black",
+                                            },
+                                          },
+                                          "& .MuiInputLabel-shrink": {
+                                            color: "black !important",
+                                          }
+                                        }}
                                       />
 
                                       <FormHelperText
                                         error
-                                        className="helperText"
+                                        className="helperText position-relative z-index-1"
                                       >
                                         {touched.email && errors.email}
                                       </FormHelperText>
@@ -551,7 +612,16 @@ export default function ServiceDetails() {
                                     <Box>
                                       <Button
                                         variant="contained"
+                                        disabled={errors.email || !values.email}
                                         onClick={() => sendOtp(values)}
+                                        className="theme-btn wow fadeInUp" data-wow-delay=".8s"
+                                        style={{
+                                          padding: '16.5px 14px',
+                                          backgroundColor: '#18185e',
+                                          fontSize: '16px',
+                                          fontWeight: 600,
+                                          lineHeight: "1"
+                                        }}
                                       >
                                         Send OTP
                                       </Button>
@@ -576,7 +646,7 @@ export default function ServiceDetails() {
                                         />
                                         <FormHelperText
                                           error
-                                          className="helperText"
+                                          className="helperText position-relative z-index-1"
                                         >
                                           {touched.otp && errors.otp}
                                         </FormHelperText>
@@ -595,6 +665,15 @@ export default function ServiceDetails() {
                                         <Button
                                           variant="contained"
                                           onClick={() => verifyOtp(values)}
+                                          className="theme-btn wow fadeInUp" data-wow-delay=".8s"
+                                          style={{
+                                            padding: '16.5px 14px',
+                                            backgroundColor: '#18185e',
+                                            fontSize: '16px',
+                                            fontWeight: 600,
+                                            lineHeight: "1"
+
+                                          }}
                                         >
                                           Verify OTP
                                         </Button>
@@ -613,9 +692,25 @@ export default function ServiceDetails() {
                                   value={values.collegeName}
                                   onChange={handleChange}
                                   onBlur={handleBlur}
+                                  sx={{
+                                    "& .MuiOutlinedInput-root": {
+                                      "& fieldset": {
+                                        borderColor: "rgba(0, 0, 0, 0.5)",
+                                      },
+                                      "&:hover fieldset": {
+                                        borderColor: "black",
+                                      },
+                                      "&.Mui-focused fieldset": {
+                                        borderColor: "black",
+                                      },
+                                    },
+                                    "& .MuiInputLabel-shrink": {
+                                      color: "black !important",
+                                    }
+                                  }}
                                 />
 
-                                <FormHelperText error className="helperText">
+                                <FormHelperText error className="helperText position-relative z-index-1">
                                   {touched.collegeName && errors.collegeName}
                                 </FormHelperText>
                               </Box>
@@ -629,8 +724,24 @@ export default function ServiceDetails() {
                                   value={values.fieldOfStudy}
                                   onChange={handleChange}
                                   onBlur={handleBlur}
+                                  sx={{
+                                    "& .MuiOutlinedInput-root": {
+                                      "& fieldset": {
+                                        borderColor: "rgba(0, 0, 0, 0.5)",
+                                      },
+                                      "&:hover fieldset": {
+                                        borderColor: "black",
+                                      },
+                                      "&.Mui-focused fieldset": {
+                                        borderColor: "black",
+                                      },
+                                    },
+                                    "& .MuiInputLabel-shrink": {
+                                      color: "black !important",
+                                    }
+                                  }}
                                 />
-                                <FormHelperText error className="helperText">
+                                <FormHelperText error className="helperText position-relative z-index-1">
                                   {touched.fieldOfStudy && errors.fieldOfStudy}
                                 </FormHelperText>
                               </Box>
@@ -644,15 +755,36 @@ export default function ServiceDetails() {
                                   value={values.passingYear}
                                   onChange={handleChange}
                                   onBlur={handleBlur}
+                                  sx={{
+                                    "& .MuiOutlinedInput-root": {
+                                      "& fieldset": {
+                                        borderColor: "rgba(0, 0, 0, 0.5)",
+                                      },
+                                      "&:hover fieldset": {
+                                        borderColor: "black",
+                                      },
+                                      "&.Mui-focused fieldset": {
+                                        borderColor: "black",
+                                      },
+                                    },
+                                    "& .MuiInputLabel-shrink": {
+                                      color: "black !important",
+                                    }
+                                  }}
                                 />
 
-                                <FormHelperText error className="helperText">
+                                <FormHelperText error className="helperText position-relative z-index-1">
                                   {touched.passingYear && errors.passingYear}
                                 </FormHelperText>
                               </Box>
 
                               <Box mt={2}>
-                                <h4>
+                                <h4 style={{
+                                  display: 'flex',
+                                  justifyContent: "flex-start",
+                                  position: 'relative',
+                                  zIndex: '1'
+                                }}>
                                   Joined our Telegram ,LinkedIn , Whatsapp,
                                   Facebook?
                                 </h4>
@@ -661,27 +793,33 @@ export default function ServiceDetails() {
                                   style={{
                                     fontWeight: 500,
                                     marginBottom: "10px",
+                                    display: 'flex',
+                                    justifyContent: "flex-start",
+                                    position: 'relative',
+                                    zIndex: '1'
                                   }}
                                 >
                                   Please join the Telegram community for
                                   continued communication
                                 </h6>
 
-                                <ul>
+
+
+                                <ul className="row list-unstyled ">
                                   {socialLinks.map((item) => (
                                     <li
                                       key={item.id}
-                                      style={{
-                                        display: "flex",
-                                        alignItems: "center",
-                                        gap: "10px",
-                                      }}
+                                      className="col-12 col-md-6 d-flex align-items-center mb-3 z-index-1 position-relative z-index-1"
                                     >
-                                      <p>{item.name}</p> -{" "}
-                                      <a href={item.link}>Click Here</a>
+                                      <p className="mb-0">{item.name}</p> -{" "}
+                                      <Link href={item.link} className="text-primary text-decoration-underline ms-2   ">
+                                        Click Here
+                                      </Link>
                                     </li>
                                   ))}
                                 </ul>
+
+
 
                                 <Box>
                                   <RadioGroup
@@ -690,15 +828,18 @@ export default function ServiceDetails() {
                                     sx={{
                                       display: "flex",
                                       flexDirection: "row",
+                                      position: 'relative',
+                                      zIndex: '1',
+
                                     }}
                                   >
                                     <FormControlLabel
-                                      control={<Radio />}
+                                      control={<Radio style={{ color: '#18185e' }} />}
                                       label={<p>Yes</p>}
                                       value="yes"
                                     />
                                     <FormControlLabel
-                                      control={<Radio />}
+                                      control={<Radio style={{ color: '#18185e' }} />}
                                       label={<p>No</p>}
                                       value="no"
                                     />
@@ -707,19 +848,24 @@ export default function ServiceDetails() {
                               </Box>
 
                               <Box mt={2}>
-                                <h4>Where did you learn about us?</h4>
+                                <h4 style={{ display: 'flex', justifyContent: 'flex-start', position: 'relative', zIndex: '1' }}>Where did you learn about us?</h4>
                                 <Box
                                   sx={{
                                     display: "flex",
                                     flexDirection: "column",
+                                    position: 'relative',
+                                    zIndex: '1',
+
                                   }}
+
                                 >
                                   <RadioGroup
                                     value={referenceValue}
                                     onChange={handleReferenceChange}
+
                                   >
                                     <FormControlLabel
-                                      control={<Radio />}
+                                      control={<Radio style={{ color: '#18185e' }} />}
                                       label={
                                         <p>
                                           Social Media - LinkedIn, Facebook,
@@ -730,7 +876,7 @@ export default function ServiceDetails() {
                                     />
 
                                     <FormControlLabel
-                                      control={<Radio />}
+                                      control={<Radio style={{ color: '#18185e' }} />}
                                       label={
                                         <p>
                                           Referral - Friends, Colleagues,
@@ -741,7 +887,7 @@ export default function ServiceDetails() {
                                     />
 
                                     <FormControlLabel
-                                      control={<Radio />}
+                                      control={<Radio style={{ color: '#18185e' }} />}
                                       label={
                                         <p>
                                           Job portals - Internshala, Frapp,
@@ -752,7 +898,7 @@ export default function ServiceDetails() {
                                     />
 
                                     <FormControlLabel
-                                      control={<Radio />}
+                                      control={<Radio style={{ color: '#18185e' }} />}
                                       label={
                                         <p>
                                           Campus Placement Cell/Coordinators
@@ -764,42 +910,50 @@ export default function ServiceDetails() {
                                 </Box>
                               </Box>
 
-                              <Box mt={2}>
+                              <Box mt={2} style={{ display: 'flex', alignItems: "center" }}>
                                 <FormControlLabel
                                   control={
                                     <Checkbox
                                       color="primary"
                                       checked={values.termsConditions}
-                                      onChange={(e) =>
-                                        setFieldValue(
-                                          "termsConditions",
-                                          e.target.checked
-                                        )
-                                      }
+                                      onChange={(e) => setFieldValue("termsConditions", e.target.checked)}
+                                      style={{ padding: '0', marginRight: '8px', color: '#18185e' }}
                                     />
                                   }
                                   label={
-                                    <p>
-                                      I have understood the internship details
-                                      and I hereby acknowledge and accept the
-                                      terms and conditions of Codestrup
-                                      Internship Program
-                                    </p>
+                                    <span style={{
+                                      position: 'relative',
+                                      zIndex: '1',
+                                      alignSelf: 'flex-start'
+                                    }}>
+                                      I accept the Codestrup Internship Program terms and conditions as described.
+                                    </span>
                                   }
+                                  style={{ margin: '0' }}
                                 />
 
-                                <FormHelperText error className="helperText">
-                                  {touched.termsConditions &&
-                                    errors.termsConditions}
+                                <FormHelperText error className="helperText position-relative z-index-1">
+                                  {touched.termsConditions && errors.termsConditions}
                                 </FormHelperText>
                               </Box>
+
+
 
                               <Box
                                 mt={2}
                                 display="flex"
                                 justifyContent="center"
                               >
-                                <Button type="submit" variant="contained">
+                                <Button type="submit" variant="contained"
+                                  className="theme-btn wow fadeInUp" data-wow-delay=".8s"
+                                  style={{
+                                    padding: '16.5px 14px',
+                                    backgroundColor: '#18185e',
+                                    fontSize: '16px',
+                                    fontWeight: 600,
+                                    lineHeight: "1"
+
+                                  }}>
                                   Submit{" "}
                                   {loading && (
                                     <CircularProgress
@@ -813,14 +967,16 @@ export default function ServiceDetails() {
                           </Form>
                         )}
                       </Formik>
+
                     </Card>
+
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <Footer3 />
+        {/* <Footer3 /> */}
 
         {/* confirmation dialog */}
         {consentDialogOpen && (
@@ -845,10 +1001,20 @@ export default function ServiceDetails() {
                   onClick={() => {
                     handleConsentNo();
                   }}
+                  className="theme-btn1 wow fadeInUp" data-wow-delay=".8s"
+                  style={{
+                    padding: '16.5px 14px',
+
+                  }}
                 >
                   No
                 </Button>
-                <Button variant="contained" onClick={() => handleConsentYes()}>
+                <Button variant="contained" onClick={() => handleConsentYes()}
+                  className="theme-btn wow fadeInUp" data-wow-delay=".8s"
+                  style={{
+                    padding: '16.5px 14px',
+                  }}
+                >
                   Yes
                 </Button>
               </Box>
@@ -856,96 +1022,9 @@ export default function ServiceDetails() {
           </Dialog>
         )}
 
-        {/* information dialog */}
-        {informationDialogOpen && (
-          <Dialog
-            open={informationDialogOpen}
-            onClose={() => setInformationDialogOpen(false)}
-            sx={{
-              "& .MuiDialog-paperWidthSm": {
-                width: "100%",
-                maxWidth: "700px",
-              },
-            }}
-          >
-            <Box sx={{ padding: "30px", position: "relative" }}>
-              <h2 variant="h4" style={{ textAlign: "center" }}>
-                {internship[0]?.jobTitle ?? ""}
-              </h2>
 
-              <IconButton
-                sx={{ position: "absolute", top: 0, right: "5px" }}
-                onClick={() => setInformationDialogOpen(false)}
-              >
-                <i className="fas fa-times" />
-              </IconButton>
-
-              <Box mt={2}>
-                <h5 variant="h4">Perks you will receive are:</h5>
-
-                <ol>
-                  {internshipPerks.map((item) => (
-                    <li key={item.id}>{item.name}</li>
-                  ))}
-                </ol>
-              </Box>
-
-              <Box>
-                <ul>
-                  <li
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "10px",
-                    }}
-                  >
-                    <p>Visit Our Website First</p> -{" "}
-                    <a
-                      style={{
-                        color: "blue",
-                      }}
-                      target="_blank"
-                      href="http://codestrup.in.s3-website.ap-south-1.amazonaws.com/"
-                    >
-                      Click Here
-                    </a>
-                  </li>
-                  {socialLinks.map((item) => (
-                    <li
-                      key={item.id}
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "10px",
-                      }}
-                    >
-                      <p>{item.name}</p> -{" "}
-                      <a
-                        href={item.link}
-                        target="_blank"
-                        style={{
-                          color: "blue",
-                        }}
-                      >
-                        Click Here
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </Box>
-
-              <Box mt={2} display="flex" justifyContent="center">
-                <Button
-                  variant="contained"
-                  onClick={() => setInformationDialogOpen(false)}
-                >
-                  Next
-                </Button>
-              </Box>
-            </Box>
-          </Dialog>
-        )}
       </Layout>
+
     </>
   );
 }

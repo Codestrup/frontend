@@ -6,14 +6,14 @@ export default function Faq() {
     return (
         <>
 
-            <Layout headerStyle={1} footerStyle={2} breadcrumbTitle="Faq">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Faq">
                 <section className="faq-section-2 fix section-padding">
                     <div className="container">
                         <div className="faq-wrapper">
                             <div className="row g-4">
                                 <div className="col-lg-6 wow fadeInUp" data-wow-delay=".4s">
                                     <div className="faq-image">
-                                        <img src="/assets/img/faq/faq-2.png" alt="faq-img" />
+                                    <img src="/assets/img/faq/faq-2.png" alt="faq-img" />
                                     </div>
                                 </div>
                                 <div className="col-lg-6">
@@ -21,7 +21,7 @@ export default function Faq() {
                                         <div className="section-title">
                                             <span className="wow fadeInUp">See Our Faqs</span>
                                             <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                                                Keep Your Business Safe &amp; <br /> Ensure High Availability
+                                            Build your career through learning.
                                             </h2>
                                         </div>
                                         <div className="faq-accordion mt-4 mt-md-0">

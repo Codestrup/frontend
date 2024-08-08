@@ -11,6 +11,7 @@ Version: 1.0.0
   --body: #fff;
   --black: #000;
   --white: #fff;
+  --btn: #fff;
   --theme: #384bff;
   --theme2: #384bff;
   --header: #0f0d1d;
@@ -77,6 +78,63 @@ Version: 1.0.0
 .theme-btn:hover::after {
   width: 100%;
 }
+
+
+
+.theme-btn1 {
+  background-color: var(--white);
+  color: var(--theme);
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 24px 40px;
+  border-radius: 0;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+  line-height: 1;
+}
+.theme-btn1::before {
+  content: "";
+  background-color: var(--header);
+  width: 0;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: -1;
+}
+.theme-btn1::after {
+  content: "";
+  background-color: var(--header);
+  width: 0;
+  height: 50%;
+  /* color: #000; */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: -1;
+}
+.theme-btn1 i {
+  margin-left: 10px;
+}
+.theme-btn1:hover {
+  color: var(--white);
+}
+.theme-btn1:hover::before,
+.theme-btn1:hover::after {
+  width: 100%;
+}
+
+
+
+
 .theme-btn.hover-white::before,
 .theme-btn.hover-white::after {
   background-color: var(--white);
@@ -1222,6 +1280,29 @@ span {
     padding: 0;
   }
 }
+.contact-info-area .contact-info-items .icon1 {
+  width: 105px;
+  height: 65px;
+  line-height: 65px;
+  text-align: center;
+  position: relative;
+}
+
+/* fgjdtrymutusrdmtd */
+.contact-info-area .contact-info-items .icon1::before {
+  position: absolute;
+  top: 0;
+  left: -19px;
+  right: 0;
+  bottom: 0;
+  width: 70px;
+  height: 70px;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../assets/img/circle-2.png");
+  animation: cir36 10s linear infinite;
+}
 .contact-info-area .contact-info-items .icon {
   width: 65px;
   height: 65px;
@@ -1229,6 +1310,8 @@ span {
   text-align: center;
   position: relative;
 }
+
+/* fgjdtrymutusrdmtd */
 .contact-info-area .contact-info-items .icon::before {
   position: absolute;
   top: 0;
@@ -2271,7 +2354,7 @@ span {
 }
 
 .footer-widgets-wrapper {
-  padding: 90px 0 120px;
+  padding: 50px 0 150px;
   position: relative;
   z-index: 9;
 }
@@ -2317,6 +2400,13 @@ span {
 .footer-widgets-wrapper .single-footer-widget .footer-content p {
   color: var(--text-2);
 }
+.footer-widgets-wrapper .single-footer-widget .footer-content ul {
+  color: var(--text-2);
+}
+.footer-widgets-wrapper .single-footer-widget .footer-content ul li  {
+  color: var(--text-2);
+}
+
 .footer-widgets-wrapper .single-footer-widget .footer-content .social-icon {
   margin-top: 40px;
   gap: 15px;
@@ -2807,12 +2897,14 @@ span {
 .footer-section .shape-2 {
   position: absolute;
   bottom: 0;
-  right: -3%;
+  right: 0;
 }
 .footer-section .footer-shape-4 {
+  height: 100%;
   position: absolute;
   top: 0;
   left: -5%;
+
 }
 
 .header-top-section {
@@ -3723,7 +3815,7 @@ span {
 }
 
 .offcanvas__logo a img {
-  width: 150px;
+  width: 260px;
 }
 
 .offcanvas__wrapper {
@@ -3870,28 +3962,28 @@ span {
 }
 .breadcrumb-wrapper .page-heading {
   position: relative;
-  padding: 180px 0;
+  padding: 73px 0;
   text-align: center;
   z-index: 9;
 }
 @media (max-width: 1199px) {
   .breadcrumb-wrapper .page-heading {
-    padding: 140px 0;
+    padding: 70px 0;
   }
 }
 @media (max-width: 991px) {
   .breadcrumb-wrapper .page-heading {
-    padding: 120px 0;
+    padding: 60px 0;
   }
 }
 @media (max-width: 767px) {
   .breadcrumb-wrapper .page-heading {
-    padding: 100px 0;
+    padding: 60px 0;
   }
 }
 @media (max-width: 575px) {
   .breadcrumb-wrapper .page-heading {
-    padding: 80px 0;
+    padding: 50px 0;
   }
 }
 .breadcrumb-wrapper .page-heading h1 {
@@ -6914,7 +7006,7 @@ input.main-search-input::placeholder {
 }
 
 .service-wrapper {
-  margin-bottom: 187px;
+  margin-bottom: 20px;
 }
 .service-wrapper .service-text {
   margin-top: 50px;
@@ -8322,7 +8414,8 @@ input.main-search-input::placeholder {
 .tesimonial-section-3 .mask-shape {
   position: absolute;
   right: 0;
-  top: 5%;
+  /* top: 5%; */
+  bottom: 0;
 }
 @media (max-width: 1899px) {
   .tesimonial-section-3 .array-button {

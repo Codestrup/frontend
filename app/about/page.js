@@ -2,6 +2,7 @@
 import CounterUp from "@/components/elements/CounterUp"
 import Layout from "@/components/layout/Layout"
 import Footer3 from "@/components/layout/footer/Footer3"
+import Marque4 from "@/components/sections/Marque4"
 import BrandSlider1 from "@/components/slider/BrandSlider1"
 import ProjectSlider2 from "@/components/slider/ProjectSlider2"
 import Link from "next/link"
@@ -10,9 +11,9 @@ export default function About() {
     return (
         <>
 
-            <Layout headerStyle={1} footerStyle={2} breadcrumbTitle="About Us">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="About Us">
                 <div>
-                    <section className="about-section section-padding fix bg-cover" style={{ backgroundImage: 'url("assets/img/service/service-bg-2.jpg")' }}>
+                    <section className="about-section  fix bg-cover" style={{ backgroundImage: 'url("assets/img/service/service-bg-2.jpg")',paddingTop:'120px', paddingBottom:'50px'}}>
                         <div className="container">
                             <div className="about-wrapper style-2">
                                 <div className="row">
@@ -30,9 +31,9 @@ export default function About() {
                                                     <p>Of Experience</p>
                                                 </div>
                                             </div>
-                                            <div className="about-image-1 bg-cover wow fadeInLeft" data-wow-delay=".3s" style={{ backgroundImage: 'url("assets/img/about/03.png")' }}>
+                                            <div className="about-image-1 bg-cover wow fadeInLeft" data-wow-delay=".3s" style={{ backgroundImage: 'url("assets/img/about1.jpeg")' }}>
                                                 <div className="about-image-2 wow fadeInUp" data-wow-delay=".5s">
-                                                    <img src="/assets/img/about/04.jpg" alt="about-img" />
+                                                <img src="/assets/img/about3.jpeg" alt="about-img" />
                                                 </div>
                                             </div>
                                         </div>
@@ -40,7 +41,7 @@ export default function About() {
                                     <div className="col-lg-6 mt-4 mt-lg-0">
                                         <div className="about-content">
                                             <div className="section-title">
-                                                <span className="wow fadeInUp">ABOUT INFOTECK</span>
+                                                <span className="wow fadeInUp">ABOUT CODESTRUP INFOTECH</span>
                                                 <h2 className="wow fadeInUp" data-wow-delay=".3s">
                                                 Internship Highlights
 
@@ -75,7 +76,7 @@ export default function About() {
                                                 </div>
                                                 <div className="icon-items wow fadeInUp" data-wow-delay=".9s">
                                                     <div className="icon">
-                                                        <img src="/assets/img/about/icon-5.svg" alt="icon-img" />
+                                                    <img src="/assets/img/about/icon-1 - Copy.svg" alt="icon-img"  style={{color:'blue'}} />
                                                     </div>
                                                     <div className="content">
                                                         <h4>Certificates and Goodies</h4>
@@ -87,18 +88,12 @@ export default function About() {
                                             </div>
                                             <div className="about-author">
                                                 <div className="about-button wow fadeInUp" data-wow-delay=".5s">
-                                                    <Link href="/about" className="theme-btn">
-                                                        Explore More
+                                                    <Link href="/sevice-details" className="theme-btn">
+                                                        Apply Now 
                                                         <i className="fa-solid fa-arrow-right-long" />
                                                     </Link>
                                                 </div>
-                                                <div className="author-image wow fadeInUp" data-wow-delay=".7s">
-                                                    <img src="/assets/img/about/author.png" alt="author-img" />
-                                                    <div className="content">
-                                                        <h6>Ronald Richards</h6>
-                                                        <p>Co, Founder</p>
-                                                    </div>
-                                                </div>
+                                               
                                             </div>
                                         </div>
                                     </div>
@@ -107,6 +102,8 @@ export default function About() {
                         </div>
                     </section>
                     {/* Offer Section Start */}
+                    
+                    <Marque4/>
                     <section className="offer-section fix section-bg-2 section-padding">
                         <div className="line-shape">
                             <img src="/assets/img/team/line-shape.png" alt="shape-img" />
@@ -263,172 +260,17 @@ export default function About() {
                             </div>
                         </div>
                     </section>
-                    {/* Project Section Start */}
-                    <section className="project-section-2 section-padding fix">
-                        <div className="left-shape">
-                            <img src="/assets/img/project/left-shape.png" alt="shape-img" />
-                        </div>
-                        <div className="right-shape">
-                            <img src="/assets/img/project/right-shape.png" alt="shape-img" />
-                        </div>
-                        <div className="container">
-                            <div className="section-title-area">
-                                <div className="section-title">
-                                    <span className="wow fadeInUp">PROJECTS</span>
-                                    <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                                        Our Latest Incredible <br /> Client's Projects
-                                    </h2>
-                                </div>
-                                <div className="array-button wow fadeInUp" data-wow-delay=".5s">
-                                    <button className="array-prev"><i className="fal fa-arrow-right" /></button>
-                                    <button className="array-next"><i className="fal fa-arrow-left" /></button>
-                                </div>
-                            </div>
-                            <div className="project-wrapper">
-                                <ProjectSlider2 showDots />
-                            </div>
-                        </div>
-                    </section>
-                    {/*<< Marque Section Start >>*/}
-                    <div className="marque-section-3 section-padding">
-                        <div className="container-fluid">
-                            <div className="marquee-wrapper style-2 text-slider">
-                                <div className="marquee-inner to-left">
-                                    <ul className="marqee-list d-flex">
-                                        <li className="marquee-item style-2">
-                                            <span className="text-slider"><img src="/assets/img/asterisk.svg" alt="img" /></span><span className="text-slider text-style">Cyber Security</span>
-                                            <span className="text-slider"><img src="/assets/img/asterisk.svg" alt="img" /></span><span className="text-slider text-style">IT Solution</span>
-                                            <span className="text-slider"><img src="/assets/img/asterisk.svg" alt="img" /></span><span className="text-slider text-style">Technology</span>
-                                            <span className="text-slider"><img src="/assets/img/asterisk.svg" alt="img" /></span><span className="text-slider text-style">Data Security</span>
-                                            <span className="text-slider"><img src="/assets/img/asterisk.svg" alt="img" /></span><span className="text-slider text-style">Cyber Security</span>
-                                            <span className="text-slider"><img src="/assets/img/asterisk.svg" alt="img" /></span><span className="text-slider text-style">IT Solution</span>
-                                            <span className="text-slider"><img src="/assets/img/asterisk.svg" alt="img" /></span><span className="text-slider text-style">Technology</span>
-                                            <span className="text-slider"><img src="/assets/img/asterisk.svg" alt="img" /></span><span className="text-slider text-style">Data Security</span>
-                                            <span className="text-slider"><img src="/assets/img/asterisk.svg" alt="img" /></span><span className="text-slider text-style">Cyber Security</span>
-                                            <span className="text-slider"><img src="/assets/img/asterisk.svg" alt="img" /></span><span className="text-slider text-style">IT Solution</span>
-                                            <span className="text-slider"><img src="/assets/img/asterisk.svg" alt="img" /></span><span className="text-slider text-style">Technology</span>
-                                            <span className="text-slider"><img src="/assets/img/asterisk.svg" alt="img" /></span><span className="text-slider text-style">Data Security</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/*<< Team Section Start >>*/}
-                    <section className="team-section-3 fix pt-0 section-padding">
-                        <div className="container">
-                            <div className="section-title-area">
-                                <div className="section-title">
-                                    <span className="wow fadeInUp">Team Members</span>
-                                    <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                                        Our Dedicated Team <br /> Members
-                                    </h2>
-                                </div>
-                                <Link href="/team" className="theme-btn wow fadeInUp" data-wow-delay=".5s">
-                                    All Member
-                                    <i className="fa-solid fa-arrow-right-long" />
-                                </Link>
-                            </div>
-                            <div className="row">
-                                <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                                    <div className="single-team-items">
-                                        <div className="team-image">
-                                            <img src="/assets/img/team/04.jpg" alt="team-img" />
-                                            <div className="social-profile">
-                                                <ul>
-                                                    <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
-                                                    <li><Link href="#"><i className="fa-brands fa-twitter" /></Link></li>
-                                                    <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
-                                                </ul>
-                                                <span className="plus-btn"><i className="fas fa-share-alt" /></span>
-                                            </div>
-                                        </div>
-                                        <div className="team-content text-center">
-                                            <h3>
-                                                <Link href="/team-details">Marvin McKinney</Link>
-                                            </h3>
-                                            <p>Web Designer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                                    <div className="single-team-items">
-                                        <div className="team-image">
-                                            <img src="/assets/img/team/05.jpg" alt="team-img" />
-                                            <div className="social-profile">
-                                                <ul>
-                                                    <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
-                                                    <li><Link href="#"><i className="fa-brands fa-twitter" /></Link></li>
-                                                    <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
-                                                </ul>
-                                                <span className="plus-btn"><i className="fas fa-share-alt" /></span>
-                                            </div>
-                                        </div>
-                                        <div className="team-content text-center">
-                                            <h3>
-                                                <Link href="/team-details">Marvin McKinney</Link>
-                                            </h3>
-                                            <p>Web Designer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                                    <div className="single-team-items">
-                                        <div className="team-image">
-                                            <img src="/assets/img/team/06.jpg" alt="team-img" />
-                                            <div className="social-profile">
-                                                <ul>
-                                                    <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
-                                                    <li><Link href="#"><i className="fa-brands fa-twitter" /></Link></li>
-                                                    <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
-                                                </ul>
-                                                <span className="plus-btn"><i className="fas fa-share-alt" /></span>
-                                            </div>
-                                        </div>
-                                        <div className="team-content text-center">
-                                            <h3>
-                                                <Link href="/team-details">Marvin McKinney</Link>
-                                            </h3>
-                                            <p>Web Designer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".9s">
-                                    <div className="single-team-items">
-                                        <div className="team-image">
-                                            <img src="/assets/img/team/07.jpg" alt="team-img" />
-                                            <div className="social-profile">
-                                                <ul>
-                                                    <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
-                                                    <li><Link href="#"><i className="fa-brands fa-twitter" /></Link></li>
-                                                    <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
-                                                </ul>
-                                                <span className="plus-btn"><i className="fas fa-share-alt" /></span>
-                                            </div>
-                                        </div>
-                                        <div className="team-content text-center">
-                                            <h3>
-                                                <Link href="/team-details">Marvin McKinney</Link>
-                                            </h3>
-                                            <p>Web Designer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    {/* Brand Section Start */}
-                    <div className="brand-section fix section-padding pt-0">
+                  
+                    <div className="brand-section fix pb-5 pt-5">
                         <div className="container">
                             <div className="brand-wrapper">
-                                <h6 className="text-center wow fadeInUp" data-wow-delay=".3s">1k + Brands Trust Us</h6>
+                                <h6 className="text-center wow fadeInUp" data-wow-delay=".3s">Our Technologies</h6>
                                 <BrandSlider1 />
                             </div>
                         </div>
                     </div>
                 </div>
 
-            <Footer3 />
             </Layout>
         </>
     )

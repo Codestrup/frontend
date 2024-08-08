@@ -16,10 +16,7 @@ const swiperOptions = {
     delay: 1500,
     disableOnInteraction: false,
   },
-  navigation: {
-    nextEl: ".array-prev",
-    prevEl: ".array-next",
-  },
+
 
   breakpoints: {
     1199: {
@@ -73,13 +70,13 @@ export default function Service1() {
 
   const handleApplyNowClick = (id) => {
     setInternshipId(id);
-    router.push("/service-details");
+    router.push("/internship");
   };
 
   return (
     <section
-      className="service-section fix section-padding bg-cover"
-      style={{ backgroundImage: 'url("assets/img/service/service-bg.jpg")' }}
+      className="service-section fix  bg-cover"
+      style={{ backgroundImage: 'url("assets/img/service/service-bg.jpg")', paddingTop: '120px' }}
       id="service"
     >
       <div className="container">
@@ -91,14 +88,14 @@ export default function Service1() {
               Your Journey Starts Now.
             </h2>
           </div>
-          <div className="array-button">
+          {/* <div className="array-button">
             <button className="array-prev">
               <i className="fal fa-arrow-right" />
             </button>
             <button className="array-next">
               <i className="fal fa-arrow-left" />
             </button>
-          </div>
+          </div> */}
         </div>
         <div className="service-wrapper">
           <div className="swiper service-slider">
@@ -117,19 +114,19 @@ export default function Service1() {
                     }}
                   >
                     <div>
-                      <div className="icon">
-                        {/* <img src={item.imageUrl} alt="icon-img" /> */}
+                      <div className="" style={{ width: '100%', height: "100%", minHeight: '100px', overflow: "hidden" }}>
+                        <img src={item?.imageUrl} alt="icon-img" style={{ width: "100%", height: "100px", objectFit: "contain" }} />
                       </div>
                       <div className="content">
                         <h4>
-                          <Link href="/service-details">{item.jobTitle}</Link>
+                          <Link href="/internship">{item.jobTitle}</Link>
                         </h4>
-                        <div>
+                        <div style={{ height: "100%", minHeight: "100px" }}>
                           <p>
                             {showFullDescription[item._id]
                               ? item.description
                               : `${item.description.substring(0, 50)}...`}
-                              &nbsp;
+                            &nbsp;
                             {item.description.length > 50 && (
                               <span>
                                 <button
@@ -155,7 +152,7 @@ export default function Service1() {
                       <span
                         className="theme-btn-3 apply-now-btn mt-3 d-flex align-items-center "
                         onClick={() => handleApplyNowClick(item._id)}
-                        style={{cursor:'pointer'}}
+                        style={{ cursor: 'pointer' }}
                       >
                         Apply Now
                         <i className="fa-solid fa-arrow-right-long ms-2" />
@@ -171,11 +168,11 @@ export default function Service1() {
           </div>
           <div className="service-text wow fadeInUp" data-wow-delay=".4s">
             <Link
-              href="/l"
+              href="/internship"
               className="theme-btn wow fadeInUp"
               data-wow-delay=".8s"
               style={{
-                padding: "10px 20px",
+                padding: "20px 20px",
               }}
             >
               View Internship
