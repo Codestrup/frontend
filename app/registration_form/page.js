@@ -287,79 +287,11 @@ export default function ServiceDetails() {
                     </h4>
 
                     <Card
-                      sx={{ padding: "20px", marginTop: "20px" }}
+                      sx={{ padding: "20px", marginTop: "20px", borderRadius: '50px',background:"#FFF" }}
                       elevation={3}
-                      style={{
-                        background: 'linear-gradient(90deg, #5D54A4, #7C78B8)',
-                        // background: 'linear-gradient(90deg, #4a486d)',
-                        position: 'relative',
-                        // boxShadow: '0px 0px 24px #384bff'
-                        borderRadius: '50px'
-                      }}
+                      
                     >
-                      <div className="screen__background"
-                        style={{
-                          position: 'absolute',
-                          top: '0',
-                          left: '0',
-                          right: '0',
-                          bottom: '0',
-                          zIndex: '0',
-                          WebkitClipPath: 'inset(0 0 0 0)',
-                          clipPath: 'inset(0 0 0 0)'
-                        }}
-                      >
-                        <span className="screen__background__shape screen__background__shape4"
-                          style={{
-                            transform: 'rotate(45deg)',
-                            position: 'absolute',
-                            height: '532px',
-                            width: '289px',
-                            background: '#18185e',
-                            top: '765px',
-                            right: '-147px',
-                            borderRadius: '60px'
-                          }}
-                        ></span>
-                        <span className="screen__background__shape screen__background__shape3"
-                          style={{
-                            transform: 'rotate(45deg)',
-                            position: 'absolute',
-                            height: '900px',
-                            width: '250px',
-                            background: 'linear-gradient(270deg, #272777, #6A679E)',
-                            top: '103px',
-                            right: '-22px',
-                            borderRadius: '32px'
-                          }}
-                        ></span>
-                        <span className="screen__background__shape screen__background__shape2"
-                          style={{
-                            transform: 'rotate(45deg)',
-                            position: 'absolute',
-                            height: ' 340px',
-                            width: '495px',
-                            // background: '#272777',
-                            background: 'linear-gradient(45deg, #6A679E,  #272777)',
-                            top: '-88px',
-                            right: '-37px',
-                            borderRadius: '32px'
-                          }}
-                        ></span>
-                        <span className="screen__background__shape screen__background__shape1"
-                          style={{
-                            transform: 'rotate(45deg)',
-                            position: 'absolute',
-                            height: '700px',
-                            width: '700px',
-                            background: '#FFF',
-                            top: '180px',
-                            right: '190px',
-                            borderRadius: '0 72px 0 0'
-                          }}
-                        ></span>
-
-                      </div>
+                    
                       <Formik
                         className="container"
                         initialValues={{
@@ -617,7 +549,6 @@ export default function ServiceDetails() {
                                         className="theme-btn wow fadeInUp" data-wow-delay=".8s"
                                         style={{
                                           padding: '16.5px 14px',
-                                          backgroundColor: '#18185e',
                                           fontSize: '16px',
                                           fontWeight: 600,
                                           lineHeight: "1"

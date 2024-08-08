@@ -1,11 +1,3 @@
-"use client";
-import { useEffect, useState } from "react";
-import BackToTop from "../elements/BackToTop";
-import Breadcrumb from "./Breadcrumb";
-import MouseCursor from "./MouseCursor";
-import Offcanvas from "./Offcanvas";
-import Search from "./Search";
-
 'use client'
 import { useEffect, useState } from "react"
 // import BackToTop from '../elements/BackToTop'
@@ -20,64 +12,53 @@ import Header1 from "./header/Header1"
 // import Header3 from "./header/Header3"
 // import Header4 from "./header/Header4"
 
-  const [isOffCanvas, setOffCanvas] = useState(false);
-  const handleOffCanvas = () => setOffCanvas(!isOffCanvas);
+export default function Layout({ headerStyle, footerStyle, onePageNav, breadcrumbTitle, children }) {
+    const [scroll, setScroll] = useState(0)
 
-  const [isSearch, setSearch] = useState(false);
-  const handleSearch = () => setSearch(!isSearch);
+    const [isOffCanvas, setOffCanvas] = useState(false)
+    const handleOffCanvas = () => setOffCanvas(!isOffCanvas)
 
-  useEffect(() => {
-    const WOW = require("wowjs");
-    window.wow = new WOW.WOW({
-      live: false,
-    });
-    window.wow.init();
+    const [isSearch, setSearch] = useState(false)
+    const handleSearch = () => setSearch(!isSearch)
 
-    document.addEventListener("scroll", () => {
-      const scrollCheck = window.scrollY > 100;
-      if (scrollCheck !== scroll) {
-        setScroll(scrollCheck);
-      }
-    });
-  }, []);
-  return (
-    <>
-      <MouseCursor />
-      <Offcanvas isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} />
+    useEffect(() => {
+        const WOW = require('wowjs')
+        window.wow = new WOW.WOW({
+            live: false
+        })
+        window.wow.init()
 
-      {/* {!headerStyle && <Header2 scroll={scroll} onePageNav={onePageNav} isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} isSearch={isSearch} handleSearch={handleSearch} />} */}
-      {headerStyle == 1 ? (
-        <Header1
-          scroll={scroll}
-          onePageNav={onePageNav}
-          isOffCanvas={isOffCanvas}
-          handleOffCanvas={handleOffCanvas}
-          isSearch={isSearch}
-          handleSearch={handleSearch}
-        />
-      ) : null}
-      {/* {headerStyle == 2 ? <Header2 scroll={scroll} onePageNav={onePageNav} isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} isSearch={isSearch} handleSearch={handleSearch} /> : null}
+        document.addEventListener("scroll", () => {
+            const scrollCheck = window.scrollY > 100
+            if (scrollCheck !== scroll) {
+                setScroll(scrollCheck)
+            }
+        })
+    }, [])
+    return (
+        <>
+            <MouseCursor />
+            <Offcanvas isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} />
+
+            {/* {!headerStyle && <Header2 scroll={scroll} onePageNav={onePageNav} isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} isSearch={isSearch} handleSearch={handleSearch} />} */}
+            {headerStyle == 1 ? <Header1 scroll={scroll} onePageNav={onePageNav} isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} isSearch={isSearch} handleSearch={handleSearch} /> : null}
+            {/* {headerStyle == 2 ? <Header2 scroll={scroll} onePageNav={onePageNav} isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} isSearch={isSearch} handleSearch={handleSearch} /> : null}
             {headerStyle == 3 ? <Header3 scroll={scroll} onePageNav={onePageNav} isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} isSearch={isSearch} handleSearch={handleSearch} /> : null} */}
-      {/* {headerStyle == 4 ? <Header4 scroll={scroll} onePageNav={onePageNav} isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} isSearch={isSearch} handleSearch={handleSearch} /> : null}
+            {/* {headerStyle == 4 ? <Header4 scroll={scroll} onePageNav={onePageNav} isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} isSearch={isSearch} handleSearch={handleSearch} /> : null}
             <Search isSearch={isSearch} handleSearch={handleSearch} /> */}
 
-      {breadcrumbTitle && (
-        <Breadcrumb
-          breadcrumbTitle={breadcrumbTitle}
-          internshipTitle={internshipTitle}
-          internshipDescription={internshipDescription}
-        />
-      )}
 
-      {children}
+            {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} />}
 
-      {/* {!footerStyle && < Footer1 />} */}
-      {footerStyle == 1 ? <Footer3 /> : null}
-      {/* {footerStyle == 2 ? < Footer2 /> : null}
+            {children}
+
+            {/* {!footerStyle && < Footer1 />} */}
+            {footerStyle == 1 ? < Footer3 /> : null}
+            {/* {footerStyle == 2 ? < Footer2 /> : null}
             {footerStyle == 3 ? < Footer3 /> : null}
             {footerStyle == 4 ? < Footer4 /> : null} */}
 
             {/* <BackToTop /> */}
         </>
     )
-
+}
