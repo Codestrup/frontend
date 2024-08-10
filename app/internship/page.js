@@ -7,6 +7,8 @@ import { useInternship } from "../../app/context/InternshipContext";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { Dialog, Box, IconButton, Button } from "@mui/material";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTelegram, faInstagram, faFacebook, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Page = () => {
   const router = useRouter();
@@ -50,31 +52,40 @@ const Page = () => {
   const socialLinks = [
     {
       id: 1,
-      name: "Telegram",
-      link: "https://t.me/+6HxZOtDBk6w0N2Vl",
+      name: "LindkeIn",
+      link: "https://bit.ly/4erKOpQ",
+      icon: faLinkedin,
+
+
     },
     {
       id: 2,
-      name: "Instagram",
-      link: "https://bit.ly/45tfDXd",
+      name: "Whatsapp",
+      link: "https://bit.ly/4cn7J3I",
+      icon: faWhatsapp,
+
     },
 
     {
       id: 3,
-      name: "Facebook",
-      link: "https://bit.ly/3zciBU0",
+      name: "Telegram",
+      icon: faTelegram,
+      link: "https://t.me/+6HxZOtDBk6w0N2Vl",
+
     },
 
     {
       id: 4,
-      name: "Whatsapp",
-      link: "https://bit.ly/4cn7J3I",
+      name: "Instagram",
+      icon: faInstagram,
+      link: "https://bit.ly/45tfDXd",
     },
 
     {
       id: 5,
-      name: "Lindkdin",
-      link: "https://bit.ly/4erKOpQ",
+      name: "Facebook",
+      link: "https://bit.ly/3zciBU0",
+      icon: faFacebook,
     },
   ];
 
@@ -96,27 +107,13 @@ const Page = () => {
 
     {
       id: 4,
-      name: "Appreciation Letter (Best Performer Recognition).",
-    },
-
-    {
-      id: 5,
-      name: "Network Opportunities - Connect with  members and interns from around the world experiencing a multicultural and rare diverse working environment.",
-    },
-
-    {
-      id: 6,
       name: "Learning Opportunities - As an intern at  Codestrup infotech Pvt Ltd  , you'll dive into a collaborative, intellectually stimulating environment, gaining hands-on experience with cutting-edge projects at the forefront of technological advancement",
     },
 
-    {
-      id: 7,
-      name: "Network Opportunities - Connect with  members and interns from around the world experiencing a multicultural and rare diverse working environment.",
-    },
 
     {
-      id: 8,
-      name: "Job Opportunities - Access employment opportunities with us. This form is for  INTERNSHIP in Codestrup Infotech Pvt Ltd for JUNE 2024 Batch.",
+      id: 5,
+      name: "Job Opportunities - Access employment opportunities with us.                              This form is for INTERNSHIP in Codestrup Infotech Pvt Ltd ",
     },
   ];
 
@@ -171,9 +168,9 @@ const Page = () => {
                           </div>
                           <div className="content">
                             <h4>
-                              <Link href="/registration_form">
+                              <p>
                                 {item.jobTitle}
-                              </Link>
+                              </p>
                             </h4>
                             <div style={{ height: "100%", minHeight: "100px" }}>
                               <p>
@@ -266,34 +263,54 @@ const Page = () => {
             </Box>
 
             <Box>
-              <ul>
+              <ul style={{
+                display: 'flex', // Align children in a row
+                listStyle: 'none', // Remove default list styling
+                padding: 0, // Remove default padding
+                margin: 0, // Remove default margin
+                gap: '20px',
+                justifyContent:'center'
+              }}>
                 <li
                   style={{ display: "flex", alignItems: "center", gap: "10px" }}
                 >
-                  <p>Visit Our Website First</p> -{" "}
+                  
                   <Link
                     href="http://codestrup.in/"
                     style={{
                       color: "#384bff",
-                      textDecoration: "underline",
+                     
                     }}
                   >
-                    Click Here
+                    <p>Codestrup infotech Pvt Ltd</p> 
                   </Link>
+                  |
                 </li>
                 {socialLinks.map((item) => (
+
                   <li
                     key={item.id}
                     style={{
                       display: "flex",
                       alignItems: "center",
-                      gap: "20px",
-                      justifyContent: "start",
-                      width: "100%",
+                      width: "auto",
                     }}
                   >
-                    <p>{item.name}</p>-
-                    <Link
+
+
+
+
+                    <Link href={item.link} style={{
+                      display: 'flex', // Align icon horizontally within the link
+                      alignItems: 'center', // Center the icon vertically
+                      marginLeft: "10px",
+                      color: "#384bff",
+                      textDecoration: "none",
+                    }}>
+                      <FontAwesomeIcon icon={item.icon} size="lg" style={{ color: "#384bff" }} />
+                    </Link>
+                    {/* <p>{item.name}</p> */}
+                    {/* <Link
                       href={item.link}
                       style={{
                         color: "#384bff",
@@ -302,7 +319,7 @@ const Page = () => {
                       }}
                     >
                       Click Here
-                    </Link>
+                    </Link> */}
                   </li>
                 ))}
               </ul>

@@ -76,16 +76,16 @@ export default function Service1() {
   return (
     <section
       className="service-section fix  bg-cover"
-      style={{ backgroundImage: 'url("assets/img/service/service-bg.jpg")', paddingTop: '120px' }}
+      style={{ backgroundImage: 'url("assets/img/service/service-bg.jpg")', paddingTop: '100px' }}
       id="service"
     >
       <div className="container">
         <div className="section-title-area">
           <div className="section-title">
-            <span className="wow fadeInUp">Internship Domain</span>
+            <span className="wow fadeInUp " style={{fontWeight:'500'}}>Browse Internship</span>
 
             <h2 className="wow fadeInUp" data-wow-delay=".3s">
-              Your Journey Starts Now.
+            Find Your Ideal Internship
             </h2>
           </div>
           {/* <div className="array-button">

@@ -52,7 +52,7 @@ export default function Testimonial3() {
                     <div className="section-title text-center">
                         <span className="text-white">Testimonials</span>
                         <h2 className="text-white">
-                            People Who Already Love Us
+                        Those Who Admire Us
                         </h2>
                     </div>
                     <div className="swiper testimonial-slider-2">

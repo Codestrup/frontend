@@ -23,7 +23,7 @@ export default function Achievement3() {
                                 </div>
                                 <div className="content">
                                     <h2><CounterUp count={6561}/>+</h2>
-                                    <p>Satisfied Clients</p>
+                                    <p>Students</p>
                                 </div>
                             </div>
                             <div className="counter-items wow fadeInUp" data-wow-delay=".5s">
@@ -32,7 +32,7 @@ export default function Achievement3() {
                                 </div>
                                 <div className="content">
                                     <h2><CounterUp count={600}/>+</h2>
-                                    <p>Finished Projects</p>
+                                    <p>Projects</p>
                                 </div>
                             </div>
                             <div className="counter-items wow fadeInUp" data-wow-delay=".7s">
@@ -49,8 +49,8 @@ export default function Achievement3() {
                                     <img src="/assets/img/achievement-icon/04.svg" alt="icon-img" />
                                 </div>
                                 <div className="content">
-                                    <h2><CounterUp count={590}/>+</h2>
-                                    <p>Media Posts</p>
+                                    <h2><CounterUp count={6561}/>+</h2>
+                                    <p>Course Registrations</p>
                                 </div>
                             </div>
                         </div>

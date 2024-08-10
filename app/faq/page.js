@@ -1,5 +1,6 @@
 
 import Accordion1 from "@/components/elements/Accordion1"
+import Accordion2 from "@/components/elements/Accordion2"
 import Layout from "@/components/layout/Layout"
 export default function Faq() {
 
@@ -11,21 +12,21 @@ export default function Faq() {
                     <div className="container">
                         <div className="faq-wrapper">
                             <div className="row g-4">
-                                <div className="col-lg-6 wow fadeInUp" data-wow-delay=".4s">
+                                {/* <div className="col-lg-6 wow fadeInUp" data-wow-delay=".4s">
                                     <div className="faq-image">
                                     <img src="/assets/img/faq/faq-2.png" alt="faq-img" />
                                     </div>
-                                </div>
-                                <div className="col-lg-6">
+                                </div> */}
+                                <div className="col-lg-12 col-md-12">
                                     <div className="faq-content style-2">
                                         <div className="section-title">
-                                            <span className="wow fadeInUp">See Our Faqs</span>
+                                            <span className="wow fadeInUp" style={{fontWeight:'600'}}>See Our Faqs</span>
                                             <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                                            Build your career through learning.
+                                            Frequently Asked Questions
                                             </h2>
                                         </div>
                                         <div className="faq-accordion mt-4 mt-md-0">
-                                            <Accordion1 />
+                                            <Accordion2 />
                                         </div>
                                     </div>
                                 </div>

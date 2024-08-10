@@ -31,14 +31,18 @@ export default function Header1({
               <div className="top-right">
                 <div className="social-icon d-flex align-items-center">
                   <span>Follow Us:</span>
-                  <Link href="https://www.facebook.com/people/Codestrup-Infotech/61559222888433/?mibextid=ZbWKwL">
-                    <i className="fab fa-facebook-f" />
+                  <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd">
+                    <i className="fa-brands fa-linkedin-in" />
                   </Link>
+                  <Link href="https://wa.me/919699997689">
+                    <i className="fab fa-whatsapp" />
+                  </Link>
+
                   <Link href="https://t.me/+6HxZOtDBk6w0N2Vl">
                     <i className="fab fa-telegram" />
                   </Link>
-                  <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd">
-                    <i className="fa-brands fa-linkedin-in" />
+                  <Link href="https://www.facebook.com/people/Codestrup-Infotech/61559222888433/?mibextid=ZbWKwL">
+                    <i className="fab fa-facebook-f" />
                   </Link>
 
                   <Link href="https://www.instagram.com/codestrup_infotech/">

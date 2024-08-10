@@ -10,7 +10,10 @@ export default function Marque4() {
                             <ul className="marqee-list d-flex">
                                 <li className="marquee-item style-2">
                          
-                                    <span className="text-slider"><img src="/assets/img/asterisk.svg" alt="img" /></span><span className="text-slider text-style">Web Development</span>
+                                    <span className="text-slider"><img src="/assets/img/asterisk.svg" alt="img" /></span>
+                                    <span className="text-slider text-style">Web Development</span>
+
+
                                     <span className="text-slider"><img src="/assets/img/asterisk.svg" alt="img" /></span><span className="text-slider text-style">App Development</span>
                                     <span className="text-slider"><img src="/assets/img/asterisk.svg" alt="img" /></span><span className="text-slider text-style">Data Science</span>
                                     <span className="text-slider"><img src="/assets/img/asterisk.svg" alt="img" /></span><span className="text-slider text-style">Data Security</span>

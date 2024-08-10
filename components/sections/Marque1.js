@@ -8,36 +8,38 @@ export default function Marque1() {
                         <div className="marquee-inner to-left">
                             <ul className=" d-flex">
                                 <li className="marquee-item">
-                                    <span className="text-slider">Business</span>
+                                    <span className="text-slider">Skill Enhancement</span>
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>
-                                    <span className="text-slider">IT Solution</span>
+                                    <span className="text-slider">Career Growth</span>
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>
-                                    <span className="text-slider">Work Process</span>
+                                    <span className="text-slider">Professional Experience</span>
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>
-                                    <span className="text-slider">Technology</span>
+                                    <span className="text-slider">Industry Exposure</span>
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>
-                                    <span className="text-slider">IT Solution</span>
+                                    <span className="text-slider">Real Experience</span>
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>
-                                    <span className="text-slider">Business</span>
+                                    <span className="text-slider">Project Management</span>
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>
-                                    <span className="text-slider">IT Solution</span>
+                                    <span className="text-slider">Insightful Learning</span>
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>
-                                    <span className="text-slider">Work Process</span>
+                                    <span className="text-slider">Mentor Guidance</span>
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>
-                                    <span className="text-slider">Technology</span>
+                                    <span className="text-slider">Team Building</span>
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>
-                                    <span className="text-slider">IT Solution</span>
+                                    <span className="text-slider">Creative Solutions</span>
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>
-                                    <span className="text-slider">Business</span>
+                                    <span className="text-slider">Skill Enhancement</span>
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>
-                                    <span className="text-slider">IT Solution</span>
+                                    <span className="text-slider">Career Growth</span>
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>
-                                    <span className="text-slider">Work Process</span>
+                                    <span className="text-slider">Professional Experience</span>
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>
-                                    <span className="text-slider">Technology</span>
+                                    <span className="text-slider">Industry Exposure</span>
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>
-                                    <span className="text-slider">IT Solution</span>
+                                    <span className="text-slider">Real Experience</span>
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>
+                                    <span className="text-slider">Project Management</span>
+                                    
                                 </li>
                             </ul>
                         </div>

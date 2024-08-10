@@ -54,6 +54,11 @@ export default function BrandSlider1() {
                             <img src="/assets/img/nodejs.png" alt="brand-img" style={{width:"100%" , height:"100px" , objectFit:"contain"}} />
                         </div>
                     </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="brand-image" style={{width:'100%' , height:"100%", minHeight:'100px', overflow:"hidden"}}>
+                            <img src="/assets/img/Flutter.png" alt="brand-img" style={{width:"100%" , height:"100px" , objectFit:"contain"}} />
+                        </div>
+                    </SwiperSlide>
                     
                     <SwiperSlide>
                         <div className="brand-image" style={{width:'100%' , height:"100%", minHeight:'100px', overflow:"hidden"}}>

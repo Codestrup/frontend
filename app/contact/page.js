@@ -1,7 +1,5 @@
 
-import VideoPopup from "@/components/elements/VideoPopup"
 import Layout from "@/components/layout/Layout"
-import Footer3 from "@/components/layout/footer/Footer3"
 import Link from "next/link"
 export default function Contact() {
 
@@ -59,7 +57,7 @@ export default function Contact() {
                                                             <path fillRule="evenodd" clipRule="evenodd" d="M22.3774 23.1694C23.4614 23.4948 24.3547 23.8974 24.972 24.3694C25.372 24.6734 25.6654 24.9707 25.6654 25.3334C25.6654 25.5467 25.544 25.7401 25.3734 25.9334C25.0907 26.2521 24.6707 26.5387 24.1507 26.8054C22.3134 27.7454 19.3427 28.3334 15.9987 28.3334C12.6547 28.3334 9.68403 27.7454 7.8467 26.8054C7.3267 26.5387 6.9067 26.2521 6.62403 25.9334C6.45336 25.7401 6.33203 25.5467 6.33203 25.3334C6.33203 24.9707 6.62536 24.6734 7.02536 24.3694C7.6427 23.8974 8.53603 23.4948 9.62003 23.1694C9.87411 23.093 10.0874 22.9188 10.2131 22.6852C10.3387 22.4515 10.3664 22.1775 10.29 21.9234C10.2136 21.6693 10.0395 21.456 9.80579 21.3304C9.57212 21.2047 9.29811 21.177 9.04403 21.2534C7.39336 21.7507 6.1107 22.4321 5.34003 23.1854C4.6627 23.8454 4.33203 24.5841 4.33203 25.3334C4.33203 26.2694 4.86136 27.2027 5.93736 27.9814C7.82536 29.3467 11.6174 30.3334 15.9987 30.3334C20.38 30.3334 24.172 29.3467 26.06 27.9814C27.136 27.2027 27.6654 26.2694 27.6654 25.3334C27.6654 24.5841 27.3347 23.8454 26.6574 23.1854C25.8867 22.4321 24.604 21.7507 22.9534 21.2534C22.8276 21.2156 22.6955 21.2029 22.5648 21.2161C22.4341 21.2293 22.3073 21.2681 22.1916 21.3304C22.0759 21.3926 21.9736 21.477 21.8905 21.5787C21.8074 21.6805 21.7452 21.7976 21.7074 21.9234C21.6695 22.0492 21.6569 22.1812 21.6701 22.3119C21.6833 22.4427 21.7221 22.5695 21.7843 22.6852C21.8465 22.8009 21.9309 22.9032 22.0327 22.9863C22.1344 23.0694 22.2516 23.1316 22.3774 23.1694Z" fill="white" />
                                                         </svg>
                                                     </div>
-                                                    <div className="content" style={{ width: '250px' }} >
+                                                    <div className="content">
                                                         <p style={{ fontSize: '20px', fontWeight: '500' }}>Location</p>
                                                         <p>
                                                             Office No.301 3rd Floor , Umed Building , Nanded City Rd , Pune , Maharastra 411041
@@ -75,10 +73,7 @@ export default function Contact() {
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="contact-content">
-                                            <h2>Ready to Get Started?</h2>
-                                            <p>
-                                                Nullam varius, erat quis iaculis dictum, eros urna varius eros, ut blandit felis odio in turpis. Quisque rhoncus, eros in auctor ultrices,
-                                            </p>
+                                            <h2>Send Us a Message</h2>
                                             <form action="contact.php" id="contact-form" method="POST" className="contact-form-items">
                                                 <div className="row g-4">
                                                     <div className="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
