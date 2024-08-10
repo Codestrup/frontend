@@ -49,21 +49,21 @@ export default function Footer3() {
                   </div>
                   <div className="footer-content">
                     <p>
-                      making its mark as a quality software house. We develop IT
-                      solutions, underlined by innovation & value creation that
-                      impacts & redefines the businesses processes.
+                    Codestrup Infotech provides industry-aligned online internships in programming with hands-on, project-based training to bridge academic learning and real-world skills.
                     </p>
                     <div className="social-icon d-flex align-items-center">
+                      <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd">
+                        <i className="fa-brands fa-linkedin-in" />
+                      </Link>
+                      <Link href="https://wa.me/919699997689">
+                        <i className="fab fa-whatsapp" />
+                      </Link>
                       <Link href="https://www.facebook.com/codestrup">
                         <i className="fab fa-facebook-f" />
                       </Link>
                       <Link href="https://www.instagram.com/codestrup_infotech/">
                         <i className="fab fa-instagram" />
                       </Link>
-                      <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd">
-                        <i className="fa-brands fa-linkedin-in" />
-                      </Link>
-                      {/* <Link href="#"><i className="fa-brands fa-youtube" /></Link> */}
                       <Link href="https://t.me/+6HxZOtDBk6w0N2Vl">
                         <i className="fa-brands fa-telegram" />
                       </Link>
@@ -95,6 +95,12 @@ export default function Footer3() {
                             internship
                           </Link>
                         </li>
+                        <li>
+                          <Link href="/Achivement">
+                            <i className="fa-solid fa-chevron-right" />
+                            Top Achievers
+                          </Link>
+                        </li>
                         <li style={{ marginBottom: "15px" }}>
                           <Link href="/learning_Center">
                             <i className="fa-solid fa-chevron-right" />
@@ -106,12 +112,7 @@ export default function Footer3() {
 
                     <div className="col-md-6">
                       <ul className="list-area">
-                        <li>
-                          <Link href="/Achivement">
-                            <i className="fa-solid fa-chevron-right" />
-                            Top Achievers
-                          </Link>
-                        </li>
+
                         <li>
                           <Link href="/faq">
                             <i className="fa-solid fa-chevron-right" />
@@ -140,7 +141,7 @@ export default function Footer3() {
                   style={{ marginLeft: "0px" }}
                 >
                   <div className="widget-head">
-                    <h3>Services</h3>
+                    <h3>Pages</h3>
                   </div>
                   <ul className="list-area">
                     <li>

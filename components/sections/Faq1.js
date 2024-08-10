@@ -1,5 +1,5 @@
-import Accordion1 from "../elements/Accordion1"
-
+import Accordion1 from "../elements/Accordion1";
+import Link from "next/link";
 
 export default function Faq1() {
     return (
@@ -18,19 +18,26 @@ export default function Faq1() {
                         <div className="row g-4">
                             <div className="col-lg-6 wow fadeInUp" data-wow-delay=".4s">
                                 <div className="faq-image">
-                                <img src="/assets/img/faq/faq-2.png" alt="faq-img" />
+                                    <img src="/assets/img/faq/image.webp" alt="faq-img" style={{ borderRadius: '41px' }} />
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <div className="faq-content">
                                     <div className="section-title">
-                                        <span className="wow fadeInUp">See Our Faqs</span>
                                         <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                                        Build your career through learning.
+                                            Frequently Asked Questions
                                         </h2>
                                     </div>
                                     <div className="faq-accordion mt-4 mt-md-0">
                                         <Accordion1 />
+                                    </div>
+                                    <div className="about-author " style={{marginTop:'6rem'}}>
+                                        <div className="about-button wow fadeInUp" data-wow-delay=".5s">
+                                            <Link href="/internship" className="theme-btn">
+                                                Explore More
+                                                <i className="fa-solid fa-arrow-right-long" />
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -39,5 +46,5 @@ export default function Faq1() {
                 </div>
             </section>
         </>
-    )
+    );
 }

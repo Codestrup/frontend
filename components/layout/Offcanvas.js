@@ -26,10 +26,7 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
                 <MobileMenu />
               </div>
               <p className="text ">
-                Join Codestrup Infotech for hands-on experience in app
-                development, web development, data science, and cybersecurity.
-                Collaborate with industry experts, work on real-world projects,
-                and kickstart your tech career with us.
+                Codestrup Infotech provides industry-aligned online internships in programming with hands-on, project-based training to bridge academic learning and real-world skills.
               </p>
 
               <div className="offcanvas__contact">
@@ -41,7 +38,7 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
                     </div>
                     <div className="offcanvas__contact-text">
                       <Link target="_blank" href="#">
-                        Office No.301 3rd floorb, Umed building, Nanded City rd,
+                        Office No.301 3rd floor, Umed building, Nanded City rd,
                         Pune , Maharastra 411041
                       </Link>
                     </div>
@@ -53,7 +50,7 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
                     <div className="offcanvas__contact-text">
                       <Link href="mailto:info@codestrup.com">
                         <span className="mailto:info@codestrup.com">
-                          Info@codestrup.com
+                          info@codestrup.com
                         </span>
                       </Link>
                     </div>
@@ -87,7 +84,7 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
                       <i className="fa-solid fa-arrow-right-long" />
                     </span>
                   </Link>
-                  
+
                   <Link
                     href="https://user.codestrup.in/auth/login"
                     className="theme-btn wow fadeInUp d-lg-none "
@@ -106,19 +103,23 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
                   </Link>
                 </div>
                 <div className="social-icon d-flex align-items-center">
-                  <Link href="https://www.facebook.com/people/Codestrup-Infotech/61559222888433/?mibextid=ZbWKwL">
-                    <i className="fab fa-facebook-f" />
+                  <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd">
+                    <i className="fab fa-linkedin-in" />
+                  </Link>
+
+                  <Link href="https://wa.me/919699997689">
+                    <i className="fab fa-whatsapp" />
                   </Link>
                   <Link href="https://t.me/+6HxZOtDBk6w0N2Vl">
                     <i className="fab fa-telegram" />
                   </Link>
-                  {/* <Link href="#"><i className="fab fa-youtube" /></Link> */}
+                  <Link href="https://www.facebook.com/people/Codestrup-Infotech/61559222888433/?mibextid=ZbWKwL">
+                    <i className="fab fa-facebook-f" />
+                  </Link>
                   <Link href="https://www.instagram.com/codestrup_infotech/">
                     <i className="fab fa-instagram" />
                   </Link>
-                  <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd">
-                    <i className="fab fa-linkedin-in" />
-                  </Link>
+
                 </div>
               </div>
             </div>
