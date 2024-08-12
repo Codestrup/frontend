@@ -7,7 +7,7 @@ export default function WorkProcess1() {
                 <div className="container">
                     <div className="section-title text-center">
                         <h2 style={{marginBottom:'10px'}}>Our Features</h2>
-                        <span style={{fontWeight:600}}>Find global work experience in any field or region with Virtual Internships, the No. 1 platform for remote internships.</span>
+                        <span style={{fontWeight:600}}>Find global work experience in any programming language with Virtual Internships, the No. 1 platform for remote internships.</span>
                     </div>
                     <div className="process-work-wrapper">
                         <div className="line-shape">
@@ -26,7 +26,7 @@ export default function WorkProcess1() {
                                         <h4>Complete Flexibility</h4>
                                         <p>
 
-                                            Flexible learning enhances diversity, accessibility, and student autonomy and
+                                            Flexible learning enhances diversity, accessibility, and student autonomy 
                                         </p>
                                     </div>
                                 </div>
@@ -37,7 +37,7 @@ export default function WorkProcess1() {
                                         <h4>Real Experience</h4>
                                         <p>
 
-                                            Real examples stimulate critical thinking and problem-solving and
+                                            Real examples stimulate critical thinking and problem-solving 
                                         </p>
                                     </div>
                                     <div className="icon">
@@ -60,7 +60,7 @@ export default function WorkProcess1() {
                                         <h4>Award Winning & Certification</h4>
                                         <p>
 
-                                            Our program offers strategies for career growth and skill validation and
+                                            Our program offers strategies for career growth and skill validation 
                                         </p>
                                     </div>
                                 </div>
