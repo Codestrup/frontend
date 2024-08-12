@@ -47,7 +47,7 @@ export default function About1() {
                                             <div className="content">
                                                 <h4>Learning and Skill Development</h4>
                                                 <p>
-                                                Gain practical skills, master programming, solve problems, and enhance teamwork.
+                                                    Gain practical skills, master programming, solve problems, and enhance teamwork.
                                                 </p>
                                             </div>
                                         </div>
@@ -63,7 +63,9 @@ export default function About1() {
                                         </div>
                                         <div className="icon-items wow fadeInUp" data-wow-delay=".9s">
                                             <div className="icon">
-                                                <img src="/assets/img/about/icon-3.svg" alt="icon-img" />
+                                                <img src="/assets/img/achievement-icon/03.svg" alt="icon-img" style={{
+                                                    width: '48px'
+                                                }}/>
                                             </div>
                                             <div className="content">
                                                 <h4>Flexibility and Convenience</h4>
