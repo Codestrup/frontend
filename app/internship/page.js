@@ -52,15 +52,17 @@ const Page = () => {
   const socialLinks = [
     {
       id: 1,
-      name: "Telegram",
-      link: "https://t.me/+6HxZOtDBk6w0N2Vl",
-      icon: faTelegram,
+      name: "LinkedIn",
+      link: "https://bit.ly/4erKOpQ",
+      icon: faLinkedin,
+    
     },
     {
       id: 2,
-      name: "Instagram",
-      link: "https://bit.ly/45tfDXd",
-      icon: faInstagram,
+      name: "Whatsapp",
+      link: "https://bit.ly/4cn7J3I",
+      icon: faWhatsapp,
+      
     },
     {
       id: 3,
@@ -70,15 +72,15 @@ const Page = () => {
     },
     {
       id: 4,
-      name: "Whatsapp",
-      link: "https://bit.ly/4cn7J3I",
-      icon: faWhatsapp,
+      name: "Instagram",
+      link: "https://bit.ly/45tfDXd",
+      icon: faInstagram,
     },
     {
       id: 5,
-      name: "LinkedIn",
-      link: "https://bit.ly/4erKOpQ",
-      icon: faLinkedin,
+      name: "Telegram",
+      link: "https://t.me/+6HxZOtDBk6w0N2Vl",
+      icon: faTelegram,
     },
   ];
 
