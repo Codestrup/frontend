@@ -7,6 +7,8 @@ import { useInternship } from "../../app/context/InternshipContext";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { Dialog, Box, IconButton, Button } from "@mui/material";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTelegram, faInstagram, faFacebook, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Page = () => {
   const router = useRouter();
@@ -52,29 +54,31 @@ const Page = () => {
       id: 1,
       name: "Telegram",
       link: "https://t.me/+6HxZOtDBk6w0N2Vl",
+      icon: faTelegram,
     },
     {
       id: 2,
       name: "Instagram",
       link: "https://bit.ly/45tfDXd",
+      icon: faInstagram,
     },
-
     {
       id: 3,
       name: "Facebook",
       link: "https://bit.ly/3zciBU0",
+      icon: faFacebook,
     },
-
     {
       id: 4,
       name: "Whatsapp",
       link: "https://bit.ly/4cn7J3I",
+      icon: faWhatsapp,
     },
-
     {
       id: 5,
-      name: "Lindkdin",
+      name: "LinkedIn",
       link: "https://bit.ly/4erKOpQ",
+      icon: faLinkedin,
     },
   ];
 
@@ -95,28 +99,15 @@ const Page = () => {
     },
 
     {
-      id: 4,
-      name: "Appreciation Letter (Best Performer Recognition).",
-    },
-
-    {
-      id: 5,
-      name: "Network Opportunities - Connect with  members and interns from around the world experiencing a multicultural and rare diverse working environment.",
-    },
-
-    {
       id: 6,
       name: "Learning Opportunities - As an intern at  Codestrup infotech Pvt Ltd  , you'll dive into a collaborative, intellectually stimulating environment, gaining hands-on experience with cutting-edge projects at the forefront of technological advancement",
     },
 
-    {
-      id: 7,
-      name: "Network Opportunities - Connect with  members and interns from around the world experiencing a multicultural and rare diverse working environment.",
-    },
+
 
     {
       id: 8,
-      name: "Job Opportunities - Access employment opportunities with us. This form is for  INTERNSHIP in Codestrup Infotech Pvt Ltd for JUNE 2024 Batch.",
+      name: "Job Opportunities - Access employment opportunities with us. This form is for  INTERNSHIP in Codestrup Infotech Pvt Ltd .",
     },
   ];
 
@@ -266,20 +257,31 @@ const Page = () => {
             </Box>
 
             <Box>
-              <ul>
+              <ul
+              style={{
+                display: 'flex', 
+                listStyle: 'none', 
+                padding: 0, 
+                margin: 0, 
+                gap: '20px', 
+              }}
+              >
                 <li
-                  style={{ display: "flex", alignItems: "center", gap: "10px" }}
+                  style={{ display: "flex", alignItems: "center", gap: "10px" 
+                    ,justifyContent:'center'
+                  }}
                 >
-                  <p>Visit Our Website First</p> -{" "}
+                 
                   <Link
                     href="http://codestrup.in/"
                     style={{
                       color: "#384bff",
-                      textDecoration: "underline",
+                      textDecoration: "none",
                     }}
                   >
-                    Click Here
+                     <p> Codestrup Infotech Pvt Ltd.</p> 
                   </Link>
+                  |
                 </li>
                 {socialLinks.map((item) => (
                   <li
@@ -287,21 +289,17 @@ const Page = () => {
                     style={{
                       display: "flex",
                       alignItems: "center",
-                      gap: "20px",
-                      justifyContent: "start",
-                      width: "100%",
+                      width: "auto", // Adjust width to fit content
                     }}
                   >
-                    <p>{item.name}</p>-
-                    <Link
-                      href={item.link}
-                      style={{
-                        color: "#384bff",
-                        textDecoration: "underline",
-                        marginLeft: "10px",
-                      }}
-                    >
-                      Click Here
+                    <Link href={item.link} style={{
+                      display: 'flex', // Align icon horizontally within the link
+                      alignItems: 'center', // Center the icon vertically
+                      marginLeft: "10px",
+                      color: "#384bff",
+                      textDecoration: "none",
+                    }}>
+                      <FontAwesomeIcon icon={item.icon} size="lg" style={{ color: "#384bff" }} />
                     </Link>
                   </li>
                 ))}

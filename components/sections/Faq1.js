@@ -33,7 +33,7 @@ export default function Faq1() {
                                     </div>
                                     <div className="about-author " style={{marginTop:'6rem'}}>
                                         <div className="about-button wow fadeInUp" data-wow-delay=".5s">
-                                            <Link href="/internship" className="theme-btn">
+                                            <Link href="/faq" className="theme-btn">
                                                 Explore More
                                                 <i className="fa-solid fa-arrow-right-long" />
                                             </Link>
