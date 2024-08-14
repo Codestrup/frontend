@@ -14,8 +14,6 @@ export const menuProps = {
         maxHeight: 200,
         backgroundColor:'#18185e',
         color:'white',
-        
       },
     },
   }
-  
