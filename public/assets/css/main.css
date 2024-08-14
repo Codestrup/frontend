@@ -2208,7 +2208,7 @@ span {
 
 .achievement-wrapper .counter-area .counter-items:not(:last-child) {
   border-right: 1px solid var(--border3);
-  padding-right: 70px;
+  padding-right: 110px;
 }
 
 @media (max-width: 1199px) {
