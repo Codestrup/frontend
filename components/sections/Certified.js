@@ -31,10 +31,10 @@ const Certified = () => {
     return (
         <div>
             <Layout>
-                <section className="project-section  fix" style={{ paddingBottom: "120px" }}>
+                <section className="project-section-cer  fix" >
                     <div className="container">
                         <div className="row g-1">
-                            <h2 className="text-center wow fadeInUp" data-wow-delay=".3s" style={{ marginBottom: '80px' }}>Certified And Registered In</h2>
+                            <h2 className="text-center wow fadeInUp " data-wow-delay=".3s" style={{ marginBottom: '80px', }}>Certified And Registered In</h2>
                             <div className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
                                 <div className="project-items">
                                     <div className="project-image" style={imgContainerStyle}>

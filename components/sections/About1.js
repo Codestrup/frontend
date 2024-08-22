@@ -24,13 +24,13 @@ export default function About1() {
                                     </div>
 
                                     <div className="about-image-1 bg-cover wow fadeInLeft" data-wow-delay=".3s" style={{ backgroundImage: 'url("assets/img/about/about1.jpeg")' }}>
-                                        <div className="about-image-2 wow fadeInUp" data-wow-delay=".5s">
+                                        <div className="about-image-2 wow fadeInUp" data-wow-delay=".5s" style={{}}>
                                             <img src="/assets/img/about/about3.jpeg" alt="about-img" />
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-6 mt-4 mt-lg-0">
+                            <div className="col-lg-6 mt-5 mt-lg-0">
                                 <div className="about-content">
                                     <div className="section-title">
                                         {/* <span className="wow fadeInUp">ABOUT CODESTRUP INFOTECH</span> */}

@@ -9,11 +9,11 @@ export default function Achievement3() {
                     <img src="/assets/img/achiv-shape.png" alt="shape-img" />
                 </div>
                 <div className="container">
-                    <div className="achievement-wrapper style-2">
+                    <div className="achievement-wrapper style-2" >
                         <div className="section-title mb-0">
                             <span className="text-white wow fadeInUp">achievement</span>
                             <h2 className="text-white wow fadeInUp" data-wow-delay=".3s">
-                            From Intern to Achiever
+                            Celebrate Major Wins
                             </h2>
                         </div>
                         <div className="counter-area">
@@ -41,7 +41,7 @@ export default function Achievement3() {
                                 </div>
                                 <div className="content">
                                     <h2><CounterUp count={250}/>+</h2>
-                                    <p>Skilled Experts</p>
+                                    <p>Skilled Mentors</p>
                                 </div>
                             </div>
                             <div className="counter-items wow fadeInUp" data-wow-delay=".9s">
@@ -50,7 +50,7 @@ export default function Achievement3() {
                                 </div>
                                 <div className="content">
                                     <h2><CounterUp count={6561}/>+</h2>
-                                    <p>Course Registrations</p>
+                                    <p>Certified Students</p>
                                 </div>
                             </div>
                         </div>

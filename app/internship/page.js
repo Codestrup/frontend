@@ -263,66 +263,45 @@ const Page = () => {
             </Box>
 
             <Box>
-              <ul style={{
-                display: 'flex', // Align children in a row
-                listStyle: 'none', // Remove default list styling
-                padding: 0, // Remove default padding
-                margin: 0, // Remove default margin
-                gap: '20px',
-                justifyContent:'center'
-              }}>
-                <li
-                  style={{ display: "flex", alignItems: "center", gap: "10px" }}
-                >
-                  
-                  <Link
-                    href="http://codestrup.in/"
-                    style={{
-                      color: "#384bff",
-                     
-                    }}
-                  >
-                    <p>Codestrup infotech Pvt Ltd</p> 
+              <Box
+                component="ul"
+                sx={{
+                  display: 'flex',
+                  listStyle: 'none',
+                  padding: { xs: '10px', md: '30px' },
+                  margin: 0,
+                  gap: { xs: '10px', md: '20px' },
+                  justifyContent: 'center',
+                }}
+              >
+                <Box component="li" sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                  <Link href="http://codestrup.in/" >
+                    <p style={{ color: "#384bff" }}>Codestrup infotech Pvt Ltd</p>
                   </Link>
                   |
-                </li>
+                </Box>
                 {socialLinks.map((item) => (
-
-                  <li
+                  <Box
+                    component="li"
                     key={item.id}
-                    style={{
+                    sx={{
                       display: "flex",
                       alignItems: "center",
                       width: "auto",
                     }}
                   >
-
-
-
-
-                    <Link href={item.link} style={{
-                      display: 'flex', // Align icon horizontally within the link
-                      alignItems: 'center', // Center the icon vertically
+                    <Link href={item.link} sx={{
+                      display: 'flex',
+                      alignItems: 'center',
                       marginLeft: "10px",
                       color: "#384bff",
                       textDecoration: "none",
                     }}>
                       <FontAwesomeIcon icon={item.icon} size="lg" style={{ color: "#384bff" }} />
                     </Link>
-                    {/* <p>{item.name}</p> */}
-                    {/* <Link
-                      href={item.link}
-                      style={{
-                        color: "#384bff",
-                        textDecoration: "underline",
-                        marginLeft: "10px",
-                      }}
-                    >
-                      Click Here
-                    </Link> */}
-                  </li>
+                  </Box>
                 ))}
-              </ul>
+              </Box>
             </Box>
 
             <Box mt={2} display="flex" justifyContent="center">
