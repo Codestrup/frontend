@@ -26,7 +26,11 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
                 <MobileMenu />
               </div>
               <p className="text ">
+<<<<<<< HEAD
                 Gain hands-on experience with real-world projects, master technical skills, enhance problem-solving, and improve soft skills
+=======
+                Codestrup Infotech provides industry-aligned online internships in programming with hands-on, project-based training to bridge academic learning and real-world skills.
+>>>>>>> e9d2564b36ab291059cddc276756a50a3ed038af
               </p>
 
               <div className="offcanvas__contact">
@@ -105,6 +109,13 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
                 <div className="social-icon d-flex align-items-center">
                   <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd">
                     <i className="fab fa-linkedin-in" />
+<<<<<<< HEAD
+=======
+                  </Link>
+
+                  <Link href="https://wa.me/919699997689">
+                    <i className="fab fa-whatsapp" />
+>>>>>>> e9d2564b36ab291059cddc276756a50a3ed038af
                   </Link>
                   <Link href="https://wa.me/919699997689">
                         <i className="fab fa-whatsapp" />
@@ -112,14 +123,19 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
                   <Link href="https://t.me/+6HxZOtDBk6w0N2Vl">
                     <i className="fab fa-telegram" />
                   </Link>
-                  {/* <Link href="#"><i className="fab fa-youtube" /></Link> */}
+                  <Link href="https://www.facebook.com/people/Codestrup-Infotech/61559222888433/?mibextid=ZbWKwL">
+                    <i className="fab fa-facebook-f" />
+                  </Link>
                   <Link href="https://www.instagram.com/codestrup_infotech/">
                     <i className="fab fa-instagram" />
                   </Link>
 
+<<<<<<< HEAD
                   <Link href="https://www.facebook.com/people/Codestrup-Infotech/61559222888433/?mibextid=ZbWKwL">
                     <i className="fab fa-facebook-f" />
                   </Link>
+=======
+>>>>>>> e9d2564b36ab291059cddc276756a50a3ed038af
                 </div>
               </div>
             </div>

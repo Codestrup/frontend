@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import Accordion1 from "../elements/Accordion1"
 import Link from "next/link"
 
+=======
+import Accordion1 from "../elements/Accordion1";
+import Link from "next/link";
+>>>>>>> e9d2564b36ab291059cddc276756a50a3ed038af
 
 export default function Faq1() {
     return (
@@ -32,6 +37,14 @@ export default function Faq1() {
                                     <div className="faq-accordion mt-4 mt-md-0">
                                         <Accordion1 />
                                     </div>
+                                    <div className="about-author " style={{marginTop:'6rem'}}>
+                                        <div className="about-button wow fadeInUp" data-wow-delay=".5s">
+                                            <Link href="/internship" className="theme-btn">
+                                                Explore More
+                                                <i className="fa-solid fa-arrow-right-long" />
+                                            </Link>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="about-author mt-auto">
                                     <div className="about-button wow fadeInUp" data-wow-delay=".5s">
@@ -50,5 +63,5 @@ export default function Faq1() {
 
             </section>
         </>
-    )
+    );
 }

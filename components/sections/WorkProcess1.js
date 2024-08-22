@@ -26,7 +26,11 @@ export default function WorkProcess1() {
                                         <h4>Complete Flexibility</h4>
                                         <p>
 
+<<<<<<< HEAD
                                             Flexible learning enhances diversity, accessibility, and student autonomy.
+=======
+                                            Flexible learning enhances diversity, accessibility, and student autonomy 
+>>>>>>> e9d2564b36ab291059cddc276756a50a3ed038af
                                         </p>
                                     </div>
                                 </div>
@@ -37,7 +41,11 @@ export default function WorkProcess1() {
                                         <h4>Real Experience</h4>
                                         <p>
 
+<<<<<<< HEAD
                                             Real examples stimulate critical thinking and problem-solving.
+=======
+                                            Real examples stimulate critical thinking and problem-solving 
+>>>>>>> e9d2564b36ab291059cddc276756a50a3ed038af
                                         </p>
                                     </div>
                                     <div className="icon">
@@ -60,7 +68,11 @@ export default function WorkProcess1() {
                                         <h4>Certification</h4>
                                         <p>
 
+<<<<<<< HEAD
                                             Our program offers strategies for career growth and skill validation.
+=======
+                                            Our program offers strategies for career growth and skill validation 
+>>>>>>> e9d2564b36ab291059cddc276756a50a3ed038af
                                         </p>
                                     </div>
                                 </div>
