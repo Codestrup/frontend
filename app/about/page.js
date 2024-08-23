@@ -30,7 +30,6 @@ export default function About() {
                                                 <div className=" wow fadeInUp" data-wow-delay=".7s">
 
                                                     <div className="content">
-
                                                         <p >
                                                             <p style={{ paddingBottom: '20px' }}> Codestrup Infotech Pvt. Ltd. is a pioneer in providing industry-aligned online internship programs. Our mission is to bridge the gap between academia and the professional world by offering practical, hands-on training in cutting-edge technologies.
                                                             </p>
