@@ -14,7 +14,6 @@ export default function About() {
             <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="About Us">
                 <div>
                     <section className="about-section  fix bg-cover" style={{ backgroundImage: 'url("assets/img/service/service-bg-2.jpg")', paddingTop: '120px', paddingBottom: '50px' }}>
-<<<<<<< HEAD
                         <div className="section-title">
                             <h2 className="wow fadeInUp" data-wow-delay=".3s" style={{ display: 'flex', justifyContent: 'center' }}>
                                 About Codestrup Infotech Pvt. Ltd.
@@ -23,89 +22,40 @@ export default function About() {
                         <div className="container">
                             <div className="about-wrapper style-2">
                                 <div className="row">
-                                  
+
                                     <div className="col-lg-12 mt-4 mt-lg-0">
                                         <div className="about-content">
 
                                             <div className="about-icon-items">
                                                 <div className=" wow fadeInUp" data-wow-delay=".7s">
-                                                    
+
                                                     <div className="content">
-                                                      
+
                                                         <p >
-                                                           <p style={{paddingBottom:'20px'}}> Codestrup Infotech Pvt. Ltd. is a pioneer in providing industry-aligned online internship programs. Our mission is to bridge the gap between academia and the professional world by offering practical, hands-on training in cutting-edge technologies.
-                                                           </p>
-                                                           <p style={{paddingBottom:'20px'}}>
-                                                            We specialize in offering comprehensive online internships in programming languages such as React JS, Node JS, Python, Java, WordPress, Android, Flutter, iOS, and PHP. Our programs are meticulously designed by seasoned IT industry experts to ensure that interns gain real-world experience and develop the skills demanded by top companies.
+                                                            <p style={{ paddingBottom: '20px' }}> Codestrup Infotech Pvt. Ltd. is a pioneer in providing industry-aligned online internship programs. Our mission is to bridge the gap between academia and the professional world by offering practical, hands-on training in cutting-edge technologies.
+                                                            </p>
+                                                            <p style={{ paddingBottom: '20px' }}>
+                                                                We specialize in offering comprehensive online internships in programming languages such as React JS, Node JS, Python, Java, WordPress, Android, Flutter, iOS, and PHP. Our programs are meticulously designed by seasoned IT industry experts to ensure that interns gain real-world experience and develop the skills demanded by top companies.
                                                             </p>
                                                             At Codestrup Infotech, we believe in learning by doing. Our internship programs are project-oriented, allowing students to apply their knowledge to real-world challenges. Upon successful completion, interns receive a certificate validating their skills and accomplishments.
-                                                            <p style={{paddingBottom:'20px'}}>
-                                                            Join us and embark on a transformative learning journey that will equip you with the expertise to excel in your chosen tech career.
+                                                            <p style={{ paddingBottom: '20px' }}>
+                                                                Join us and embark on a transformative learning journey that will equip you with the expertise to excel in your chosen tech career.
                                                             </p>
                                                         </p>
                                                     </div>
                                                 </div>
-                                           
+
                                             </div>
-                                         
-                                        </div>
-                                    </div>
-=======
-                        <div className="container">
-                            <div className="about-wrapper style-2"  >
 
-                                <div className="about-content ">
-                                    <div className="section-title">
-                                        <h2 className="wow fadeInUp" data-wow-delay=".3s" style={{display:'flex',justifyContent:'center'}}>
-                                        About Codestrup Infotech Pvt. Ltd.
-
-                                        </h2>
-                                    </div>
-                                   
-                                    <div className="about-icon-items">
-                                        <div className="icon-items wow fadeInUp" data-wow-delay=".7s">
-                                         
-                                         
-                                               
-                                                <p>
-                                                Codestrup Infotech Pvt. Ltd. is a pioneer in providing industry-aligned online internship programs. Our mission is to bridge the gap between academia and the professional world by offering practical, hands-on training in cutting-edge technologies.
-                                                </p>
-                                          
-                                        </div>
-                                        <div className="icon-items wow fadeInUp" data-wow-delay=".9s">
-                                           
-                                                <p>
-                                                We specialize in offering comprehensive online internships in programming languages such as React JS, Node JS, Python, Java, WordPress, Android, Flutter, iOS, and PHP. Our programs are meticulously designed by seasoned IT industry experts to ensure that interns gain real-world experience and develop the skills demanded by top companies.
-                                                </p>
-                                        </div>
-                                        <div className="icon-items wow fadeInUp" data-wow-delay=".9s">
-                                            
-                                                <p>
-                                                At Codestrup Infotech, we believe in learning by doing. Our internship programs are project-oriented, allowing students to apply their knowledge to real-world challenges. Upon successful completion, interns receive a certificate validating their skills and accomplishments.
-                                                </p>
-                                        </div>
-                                        <div className="icon-items wow fadeInUp" data-wow-delay=".9s">
-                                            
-                                                <p>
-                                                Join us and embark on a transformative learning journey that will equip you with the expertise to excel in your chosen tech career.
-                                                </p>
                                         </div>
                                     </div>
-                                   
->>>>>>> e9d2564b36ab291059cddc276756a50a3ed038af
                                 </div>
                             </div>
                         </div>
                     </section>
-<<<<<<< HEAD
-                  
+
 
                     <Marque4 />
-=======
-
-                    <Marque4 />
-                   
->>>>>>> e9d2564b36ab291059cddc276756a50a3ed038af
                 </div>
 
             </Layout>

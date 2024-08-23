@@ -52,14 +52,6 @@ export default function Footer3() {
                     Codestrup Infotech provides industry-aligned online internships in programming with hands-on, project-based training to bridge academic learning and real-world skills.
                     </p>
                     <div className="social-icon d-flex align-items-center">
-<<<<<<< HEAD
-                    <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd">
-                        <i className="fa-brands fa-linkedin-in" />
-                      </Link>
-                    
-                      <Link href="https://wa.me/919699997689">
-                        <i className="fab fa-whatsapp" />
-=======
                       <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd">
                         <i className="fa-brands fa-linkedin-in" />
                       </Link>
@@ -68,19 +60,10 @@ export default function Footer3() {
                       </Link>
                       <Link href="https://www.facebook.com/codestrup">
                         <i className="fab fa-facebook-f" />
->>>>>>> e9d2564b36ab291059cddc276756a50a3ed038af
                       </Link>
                       <Link href="https://www.instagram.com/codestrup_infotech/">
                         <i className="fab fa-instagram" />
                       </Link>
-<<<<<<< HEAD
-                      {/* <Link href="#"><i className="fa-brands fa-youtube" /></Link> */}
-                      
-                      <Link href="https://www.facebook.com/codestrup">
-                        <i className="fab fa-facebook-f" />
-                      </Link>
-=======
->>>>>>> e9d2564b36ab291059cddc276756a50a3ed038af
                       <Link href="https://t.me/+6HxZOtDBk6w0N2Vl">
                         <i className="fa-brands fa-telegram" />
                       </Link>
@@ -129,11 +112,6 @@ export default function Footer3() {
 
                     <div className="col-md-6">
                       <ul className="list-area">
-<<<<<<< HEAD
-                      
-=======
-
->>>>>>> e9d2564b36ab291059cddc276756a50a3ed038af
                         <li>
                           <Link href="/faq">
                             <i className="fa-solid fa-chevron-right" />

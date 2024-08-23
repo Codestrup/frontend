@@ -82,17 +82,10 @@ export default function Service1() {
       <div className="container">
         <div className="section-title-area">
           <div className="section-title">
-<<<<<<< HEAD
             <span className="wow fadeInUp " style={{fontWeight:'500'}}>Browse Internship</span>
 
             <h2 className="wow fadeInUp" data-wow-delay=".3s">
             Find Your Ideal Internship
-=======
-            <span className="wow fadeInUp" style={{fontWeight:'600'}}>Browse Internship </span>
-
-            <h2 className="wow fadeInUp" data-wow-delay=".3s">
-            Discover Your Ideal Internship
->>>>>>> e9d2564b36ab291059cddc276756a50a3ed038af
             </h2>
           </div>
           {/* <div className="array-button">
