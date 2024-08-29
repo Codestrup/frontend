@@ -49,7 +49,7 @@ export default function Footer3() {
                   </div>
                   <div className="footer-content">
                     <p>
-                    Codestrup Infotech provides industry-aligned online internships in programming with hands-on, project-based training to bridge academic learning and real-world skills.
+                      Codestrup Infotech provides industry-aligned online internships in programming with hands-on, project-based training to bridge academic learning and real-world skills.
                     </p>
                     <div className="social-icon d-flex align-items-center">
                       <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd">
@@ -262,16 +262,27 @@ export default function Footer3() {
         </div>
         {/* <div className="footer-bottom style-3"> */}
         <div className="container">
-          <div className="footer-wrapper d-flex  align-items-center justify-content-center">
+          <div className="footer-wrapper d-flex  align-items-center justify-content-center"
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              width: '100%',
+              color: 'white',
+              textAlign: 'center',
+              padding: '10px 0',
+              zIndex: 10
+            }}
+          >
             <p
               className="wow fadeInRight "
-              style={{ color: "white" }}
+              style={{ color: "white", bottom: '0', }}
               data-wow-delay=".5s"
             >
-              © All Copyright {new Date().getFullYear()} by
+              &copy;{new Date().getFullYear()}
               <Link href="/" style={{ color: "white" }}>
                 {" "}
-                Codestrup Infotech
+                Codestrup Infotech Pvt Ltd. All rights reserved.
               </Link>
             </p>
           </div>

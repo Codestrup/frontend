@@ -262,7 +262,7 @@ export default function ServiceDetails() {
   return (
     <>
       {/* 1 */}
-      <Layout>
+      <Layout headerStyle={1}>
         <section className="service-details-section fix section-padding footer-section footer-bg ">
           <div className="footer-shape-4  d-none d-lg-block">
             <img src="/assets/img/footer-shape-4.png" alt="shape-img" style={{ height: '100%', objectFit: 'contain' }} />
@@ -285,11 +285,11 @@ export default function ServiceDetails() {
                     </h4>
 
                     <Card
-                      sx={{ padding: "20px", marginTop: "20px", borderRadius: '50px',background:"#FFF" }}
+                      sx={{ padding: "20px", marginTop: "20px", borderRadius: '50px', background: "#FFF" }}
                       elevation={3}
-                      
+
                     >
-                    
+
                       <Formik
                         className="container"
                         initialValues={{
@@ -904,6 +904,32 @@ export default function ServiceDetails() {
               </div>
             </div>
           </div>
+
+          <div className="footer-wrapper d-flex  align-items-center justify-content-center"
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              width: '100%',
+              color: 'white',
+              textAlign: 'center',
+              padding: '10px 0',
+              zIndex: 10
+            }}
+          >
+            <p
+              className="wow fadeInRight "
+              style={{ color: "white", bottom: '0',}}
+              data-wow-delay=".5s"
+            >
+              &copy;{new Date().getFullYear()}
+              <Link href="/" style={{ color: "white" }}>
+              {" "}
+                Codestrup Infotech Pvt Ltd. All rights reserved.
+              </Link>
+            </p>
+          </div>
+
         </section>
         {/* <Footer3 /> */}
 
