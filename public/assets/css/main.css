@@ -3079,6 +3079,10 @@ span {
 @media (max-width: 767px) {
   .footer-bottom.style-3 .footer-wrapper {
     justify-content: center !important;
+    
+  }
+  .footer-wrapper  p{
+    font-size: ;
   }
 }
 
@@ -4288,6 +4292,17 @@ span {
   .offcanvas__info {
     width: 300px;
   }
+  .footer-wrapper p {
+    font-size: 13px;
+  }
+  
+}
+@media (max-width: 326px) {
+  
+  .footer-wrapper p {
+    font-size: 10px;
+  }
+  
 }
 
 @media (max-width: 575px) {
