@@ -11,7 +11,7 @@ import { Dialog, Box, IconButton, Button } from "@mui/material";
 const Page = () => {
   const router = useRouter();
   const [internships, setInternships] = useState([]);
-  const [selectedInternship, setSelectedInternship] = useState(null); // To store selected internship details
+  const [selectedInternship, setSelectedInternship] = useState(null); 
   const { setInternshipId } = useInternship();
   const [informationDialogOpen, setInformationDialogOpen] = useState(false);
 

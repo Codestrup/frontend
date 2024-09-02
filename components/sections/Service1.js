@@ -17,7 +17,6 @@ const swiperOptions = {
     disableOnInteraction: false,
   },
 
-
   breakpoints: {
     1199: {
       slidesPerView: 4,
@@ -76,16 +75,21 @@ export default function Service1() {
   return (
     <section
       className="service-section fix  bg-cover"
-      style={{ backgroundImage: 'url("assets/img/service/service-bg.jpg")', paddingTop: '120px' }}
+      style={{
+        backgroundImage: 'url("assets/img/service/service-bg.jpg")',
+        paddingTop: "120px",
+      }}
       id="service"
     >
       <div className="container">
         <div className="section-title-area">
           <div className="section-title">
-            <span className="wow fadeInUp" style={{fontWeight:'600'}}>Browse Internship </span>
+            <span className="wow fadeInUp" style={{ fontWeight: "600" }}>
+              Browse Internship{" "}
+            </span>
 
             <h2 className="wow fadeInUp" data-wow-delay=".3s">
-            Discover Your Ideal Internship
+              Discover Your Ideal Internship
             </h2>
           </div>
           {/* <div className="array-button">
@@ -114,8 +118,24 @@ export default function Service1() {
                     }}
                   >
                     <div>
-                      <div className="" style={{ width: '100%', height: "100%", minHeight: '100px', overflow: "hidden" }}>
-                        <img src={item?.imageUrl} alt="icon-img" style={{ width: "100%", height: "100px", objectFit: "contain" }} />
+                      <div
+                        className=""
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          minHeight: "100px",
+                          overflow: "hidden",
+                        }}
+                      >
+                        <img
+                          src={item?.imageUrl}
+                          alt="icon-img"
+                          style={{
+                            width: "100%",
+                            height: "100px",
+                            objectFit: "contain",
+                          }}
+                        />
                       </div>
                       <div className="content">
                         <h4>
@@ -152,7 +172,7 @@ export default function Service1() {
                       <span
                         className="theme-btn-3 apply-now-btn mt-3 d-flex align-items-center "
                         onClick={() => handleApplyNowClick(item._id)}
-                        style={{ cursor: 'pointer' }}
+                        style={{ cursor: "pointer" }}
                       >
                         Apply Now
                         <i className="fa-solid fa-arrow-right-long ms-2" />
