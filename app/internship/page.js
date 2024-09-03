@@ -7,6 +7,8 @@ import { useInternship } from "../../app/context/InternshipContext";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { Dialog, Box, IconButton, Button, Card } from "@mui/material";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTelegram, faInstagram, faFacebook, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Page = () => {
   const router = useRouter();
