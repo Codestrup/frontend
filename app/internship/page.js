@@ -6,15 +6,14 @@ import Link from "next/link";
 import { useInternship } from "../../app/context/InternshipContext";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import { Dialog, Box, IconButton, Button } from "@mui/material";
+import { Dialog, Box, IconButton, Button, Card } from "@mui/material";
 
 const Page = () => {
   const router = useRouter();
   const [internships, setInternships] = useState([]);
-  const [selectedInternship, setSelectedInternship] = useState(null); 
+  const [selectedInternship, setSelectedInternship] = useState(null);
   const { setInternshipId } = useInternship();
   const [informationDialogOpen, setInformationDialogOpen] = useState(false);
-
   const [showFullDescription, setShowFullDescription] = useState({});
 
   const toggleDescription = (id) => {
@@ -47,6 +46,7 @@ const Page = () => {
     setInformationDialogOpen(false);
     router.push("/registration_form");
   };
+
   const socialLinks = [
     {
       id: 1,
@@ -134,7 +134,8 @@ const Page = () => {
                       className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
                       data-wow-delay={`${item * 0.2}s`}
                     >
-                      <div
+                      <Card
+                        elevation={3}
                         className="service-box-items "
                         style={{
                           display: "flex",
@@ -143,9 +144,6 @@ const Page = () => {
                           minHeight: "300px",
                           padding: "20px",
                           boxSizing: "border-box",
-
-                          filter:
-                            "drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5))",
                           marginTop: "48px",
                         }}
                       >
@@ -169,19 +167,21 @@ const Page = () => {
                               }}
                             />
                           </div>
+
                           <div className="content">
                             <h4>
                               <Link href="/registration_form">
                                 {item.jobTitle}
                               </Link>
                             </h4>
+
                             <div style={{ height: "100%", minHeight: "100px" }}>
                               <p>
                                 {showFullDescription[item._id]
                                   ? item.description
                                   : `${item.description.substring(0, 50)}...`}
                                 &nbsp;
-                                {item.description.length > 50 && (
+                                {/* {item.description.length > 50 && (
                                   <span>
                                     <button
                                       onClick={() =>
@@ -194,7 +194,7 @@ const Page = () => {
                                         : "Read More"}
                                     </button>
                                   </span>
-                                )}
+                                )} */}
                               </p>
                             </div>
                             <div
@@ -217,7 +217,7 @@ const Page = () => {
                             </div>
                           </div>
                         </div>
-                      </div>
+                      </Card>
                     </div>
                   ))}
                 </div>
@@ -251,7 +251,7 @@ const Page = () => {
             </IconButton>
 
             <Box mt={2}>
-              <h5 variant="h4">Perks you will receive are:</h5>
+              {/* <h5 variant="h4">Perks you will receive are:</h5> */}
               <ol>
                 {internshipPerks.map((item) => (
                   <div

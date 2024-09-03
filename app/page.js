@@ -27,7 +27,7 @@ export default function Home() {
           <Achievement3 />
           <Marque4 />
           <Testimonial3 />
-          <Brand2 />
+          {/* <Brand2 /> */}
           <Certified />
           <Faq1 />
         </Layout>

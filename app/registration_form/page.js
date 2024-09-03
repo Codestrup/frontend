@@ -54,7 +54,7 @@ const formValidationSchema = Yup.object().shape({
 
   email: Yup.string()
     .email("Invalid email address")
-    .matches(/^[a-zA-Z0-9._%+-]+@gmail\.com$/, 'Email must be a Gmail address')
+    .matches(/^[a-zA-Z0-9._%+-]+@gmail\.com$/, "Email must be a Gmail address")
     .required("Email is required"),
 
   collegeName: Yup.string()
@@ -75,7 +75,73 @@ const formValidationSchema = Yup.object().shape({
     .required("Terms and conditions must be accepted"),
 });
 
+const socialLinks = [
+  {
+    id: 1,
+    name: "Telegram",
+    link: "https://t.me/+6HxZOtDBk6w0N2Vl",
+  },
+  {
+    id: 2,
+    name: "Instagram",
+    link: "https://bit.ly/45tfDXd",
+  },
 
+  {
+    id: 3,
+    name: "Facebook",
+    link: "https://bit.ly/3zciBU0",
+  },
+
+  {
+    id: 4,
+    name: "Whatsapp",
+    link: "https://bit.ly/4cn7J3I",
+  },
+
+  {
+    id: 5,
+    name: "Lindkdin",
+    link: "https://bit.ly/4erKOpQ",
+  },
+];
+
+const internshipHighLights = [
+  {
+    id: 1,
+    text: "Working on live projects",
+  },
+
+  {
+    id: 2,
+    text: "Completed task review & approval by experts",
+  },
+
+  {
+    id: 3,
+    text: "Ask Us, Ai to help you to learn & guide to complete the project tasks",
+  },
+
+  {
+    id: 4,
+    text: "Text Courses for learning",
+  },
+
+  {
+    id: 5,
+    text: "Get new job openings alerts",
+  },
+
+  {
+    id: 6,
+    text: "Internship Certificate after completing all the projects & task",
+  },
+
+  {
+    id: 7,
+    text: "Share your Internship certificate directly on your Linkedin profile",
+  },
+];
 
 export default function ServiceDetails() {
   const router = useRouter();
@@ -96,7 +162,7 @@ export default function ServiceDetails() {
 
   const validateEmail = (email) => {
     // Enable button if email contains @gmail.com and is not empty
-    if (email && email.includes('@gmail.com')) {
+    if (email && email.includes("@gmail.com")) {
       setIsOTPButtonEnabled(true);
     } else {
       setIsOTPButtonEnabled(false);
@@ -109,11 +175,7 @@ export default function ServiceDetails() {
         const response = await axios.get("https://api.codestrup.in/loadjobs");
         setServices(response?.data?.data || []);
 
-        // const internship = response?.data?.data.filter((item) => {
-        //   return item?._id === localStorage.getItem("internshipId");
-        // });
-
-        const internship = response?.data?.data.filter((item) => {
+        const internship = response?.data?.data.find((item) => {
           return item?._id === internshipId;
         });
 
@@ -169,36 +231,8 @@ export default function ServiceDetails() {
       }
     }
   };
-  const socialLinks = [
-    {
-      id: 1,
-      name: "Telegram",
-      link: "https://t.me/+6HxZOtDBk6w0N2Vl",
-    },
-    {
-      id: 2,
-      name: "Instagram",
-      link: "https://bit.ly/45tfDXd",
-    },
 
-    {
-      id: 3,
-      name: "Facebook",
-      link: "https://bit.ly/3zciBU0",
-    },
-
-    {
-      id: 4,
-      name: "Whatsapp",
-      link: "https://bit.ly/4cn7J3I",
-    },
-
-    {
-      id: 5,
-      name: "Lindkdin",
-      link: "https://bit.ly/4erKOpQ",
-    },
-  ];
+  console.log("internship", internship);
 
   const handleConsentYes = async () => {
     setConsentDialogOpen(false);
@@ -261,78 +295,295 @@ export default function ServiceDetails() {
     router.push("/service-details");
   };
 
+  const InternshipBackgroundImage = internship?.imageUrl ?? "";
   return (
-    <>
-      {/* 1 */}
-      <Layout>
-        <section className="service-details-section fix section-padding footer-section footer-bg ">
-          <div className="footer-shape-4  d-none d-lg-block">
-            <img src="/assets/img/footer-shape-4.png" alt="shape-img" style={{ height: '100%', objectFit: 'contain' }} />
+    <Layout headerStyle={1} footerStyle={1}>
+      <section
+        className="service-details-section fix  footer-section footer-bg "
+        style={{
+          padding: "50px 0",
+        }}
+      >
+        <div className="shape-2">
+          <img src="/assets/img/footer-shape-3.png" alt="shape-img" />
+        </div>
+
+        <div
+          className="container registration-grid-container"
+          style={{ position: "relative", zIndex: 3 }}
+        >
+          <div
+            style={{
+              padding: "15px",
+            }}
+          >
+            <div
+              style={{
+                width: "100%",
+                height: "200px",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                src={InternshipBackgroundImage}
+                style={{
+                  width: "200px",
+                  height: "200px",
+                  objectFit: "contain",
+                }}
+              />
+            </div>
+
+            <div style={{ marginTop: "15px" }}>
+              <h4
+                style={{
+                  textAlign: "left",
+                  textTransform: "uppercase",
+                }}
+              >
+                {internship?.jobTitle ?? ""}
+              </h4>
+
+              <p>{internship?.description ?? ""}</p>
+            </div>
+
+            <div style={{ marginTop: "15px" }}>
+              <h6
+                style={{
+                  textAlign: "left",
+                  textTransform: "uppercase",
+                }}
+              >
+                Highligths
+              </h6>
+
+              <ol>
+                {internshipHighLights.map((hightlight) => (
+                  <li key={hightlight?.id}>{hightlight?.text}</li>
+                ))}
+              </ol>
+            </div>
           </div>
 
-          <div className="shape-2">
-            <img src="/assets/img/footer-shape-3.png" alt="shape-img" />
-          </div>
-          <div className="container" style={{ position: 'relative', zIndex: 3 }}>
-            <div className="service-details-wrapper">
-              <div className="row g-4">
-
-
-                <div className="col-12 col-lg-8 order-1 order-md-2 center">
-                  <div className="service-details-items ">
-                    {/* Details content */}
-
-                    <h4 style={{ textAlign: "center", textTransform: 'uppercase', color: 'white' }}>
-                      {internship[0]?.jobTitle ?? ""}
-                    </h4>
-
-                    <Card
-                      sx={{ padding: "20px", marginTop: "20px", borderRadius: '50px',background:"#FFF" }}
-                      elevation={3}
-                      
+          <div className="service-details-wrapper">
+            <div className="g-4">
+              <div className="">
+                <div className="service-details-items ">
+                  <Card
+                    elevation={3}
+                    sx={{
+                      marginTop: "20px",
+                      borderRadius: "10px",
+                      background: "#FFF",
+                    }}
+                  >
+                    <Formik
+                      className="container"
+                      initialValues={{
+                        firstName: "",
+                        lastName: "",
+                        gender: selectedGender ?? "",
+                        contactNumber: "",
+                        email: "",
+                        collegeName: "",
+                        passingYear: "",
+                        otp: "",
+                        fieldOfStudy: "",
+                        termsConditions: false,
+                      }}
+                      validationSchema={formValidationSchema}
+                      onSubmit={(values) => handleSubmit(values)}
+                      validateOnChange={true}
+                      validateOnBlur={true}
+                      style={{
+                        zIndex: " 1",
+                        position: "relative",
+                        height: "100%",
+                      }}
                     >
-                    
-                      <Formik
-                        className="container"
-                        initialValues={{
-                          firstName: "",
-                          lastName: "",
-                          gender: selectedGender ?? "",
-                          contactNumber: "",
-                          email: "",
-                          collegeName: "",
-                          passingYear: "",
-                          otp: "",
-                          fieldOfStudy: "",
-                          termsConditions: false,
-                        }}
-                        validationSchema={formValidationSchema}
-                        onSubmit={(values) => handleSubmit(values)}
-                        validateOnChange={true}
-                        validateOnBlur={true}
-                        style={{
-                          zIndex: ' 1',
-                          position: 'relative',
-                          height: '100%'
-                        }}
+                      {({
+                        values,
+                        handleBlur,
+                        handleChange,
+                        errors,
+                        touched,
+                        setFieldValue,
+                        isValid,
+                      }) => (
+                        <Form
+                          style={{
+                            padding: "30px",
+                          }}
+                        >
+                          <Box mt={2}>
+                            <Grid container spacing={2}>
+                              <Grid item xs={12} sm={12} md={12} lg={6}>
+                                <Box>
+                                  <TextField
+                                    fullWidth
+                                    variant="outlined"
+                                    label="First Name"
+                                    name="firstName"
+                                    value={values.firstName}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    sx={{
+                                      "& .MuiOutlinedInput-root": {
+                                        "& fieldset": {
+                                          borderColor: "rgba(0, 0, 0, 0.5)",
+                                        },
+                                        "&:hover fieldset": {
+                                          borderColor: "black",
+                                        },
+                                        "&.Mui-focused fieldset": {
+                                          borderColor: "black",
+                                        },
+                                      },
+                                      "& .MuiInputLabel-shrink": {
+                                        color: "black !important",
+                                      },
+                                    }}
+                                  />
+                                  <FormHelperText
+                                    error
+                                    className="helperText position-relative z-index-1"
+                                  >
+                                    {touched.firstName && errors.firstName}
+                                  </FormHelperText>
+                                </Box>
+                              </Grid>
 
-                      >
+                              <Grid item xs={12} sm={12} md={12} lg={6}>
+                                <Box>
+                                  <TextField
+                                    fullWidth
+                                    variant="outlined"
+                                    label="Last Name"
+                                    name="lastName"
+                                    value={values.lastName}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    sx={{
+                                      "& .MuiOutlinedInput-root": {
+                                        "& fieldset": {
+                                          borderColor: "rgba(0, 0, 0, 0.5)",
+                                        },
+                                        "&:hover fieldset": {
+                                          borderColor: "black",
+                                        },
+                                        "&.Mui-focused fieldset": {
+                                          borderColor: "black",
+                                        },
+                                      },
+                                      "& .MuiInputLabel-shrink": {
+                                        color: "black !important",
+                                      },
+                                    }}
+                                  />
 
-                        {({
-                          values,
-                          handleBlur,
-                          handleChange,
-                          errors,
-                          touched,
-                          setFieldValue,
-                          isValid
-                        }) => (
+                                  <FormHelperText
+                                    error
+                                    className="helperText position-relative z-index-1"
+                                  >
+                                    {touched.lastName && errors.lastName}
+                                  </FormHelperText>
+                                </Box>
+                              </Grid>
+                            </Grid>
+                            <Grid container spacing={2}>
+                              <Grid item xs={12} sm={12} md={12} lg={6}>
+                                <Box
+                                  mt={2}
+                                  sx={{
+                                    "& .MuiOutlinedInput-root": {
+                                      "& fieldset": {
+                                        borderColor: "rgba(0, 0, 0, 0.5)",
+                                      },
+                                      "&:hover fieldset": {
+                                        borderColor: "black !important",
+                                      },
+                                      "&.Mui-focused fieldset": {
+                                        borderColor: "black",
+                                      },
+                                    },
+                                    "& .MuiInputLabel-root": {
+                                      color: "black !important",
+                                    },
+                                    "& .MuiSelect-icon": {
+                                      color: "rgba(0, 0, 0, 0.5)",
+                                    },
+                                    "& .MuiOutlinedInput-root.Mui-focused .MuiSelect-icon":
+                                      {
+                                        color: "black !important",
+                                      },
+                                  }}
+                                >
+                                  <Select
+                                    fullWidth
+                                    name="gender"
+                                    value={values.gender}
+                                    displayEmpty
+                                    MenuProps={menuProps}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    style={{ textAlign: "start" }}
+                                  >
+                                    <MenuItem value="" disabled>
+                                      Gender
+                                    </MenuItem>
+                                    <MenuItem value="Male">Male</MenuItem>
+                                    <MenuItem value="Female">Female</MenuItem>
+                                    <MenuItem value="Other">Other</MenuItem>
+                                  </Select>
+                                  <FormHelperText
+                                    error
+                                    className="helperText position-relative z-index-1"
+                                  >
+                                    {touched.gender && errors.gender}
+                                  </FormHelperText>
+                                </Box>
+                              </Grid>
 
-                          <Form style={{
-                            // width:'320px',
-                            padding: '30px',
-                            // paddingTop: '156px'
-                          }}>
+                              <Grid item xs={12} sm={12} md={12} lg={6}>
+                                <Box mt={2}>
+                                  <TextField
+                                    fullWidth
+                                    variant="outlined"
+                                    label="Contact Number"
+                                    name="contactNumber"
+                                    value={values.contactNumber}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    sx={{
+                                      "& .MuiOutlinedInput-root": {
+                                        "& fieldset": {
+                                          borderColor: "rgba(0, 0, 0, 0.5)",
+                                        },
+                                        "&:hover fieldset": {
+                                          borderColor: "black",
+                                        },
+                                        "&.Mui-focused fieldset": {
+                                          borderColor: "black",
+                                        },
+                                      },
+                                      "& .MuiInputLabel-shrink": {
+                                        color: "black !important",
+                                      },
+                                    }}
+                                  />
+
+                                  <FormHelperText
+                                    error
+                                    className="helperText position-relative z-index-1 "
+                                  >
+                                    {touched.contactNumber &&
+                                      errors.contactNumber}
+                                  </FormHelperText>
+                                </Box>
+                              </Grid>
+                            </Grid>
+
                             <Box mt={2}>
                               <Grid container spacing={2}>
                                 <Grid item xs={12} sm={12} md={12} lg={6}>
@@ -340,9 +591,9 @@ export default function ServiceDetails() {
                                     <TextField
                                       fullWidth
                                       variant="outlined"
-                                      label="First Name"
-                                      name="firstName"
-                                      value={values.firstName}
+                                      label="Email"
+                                      name="email"
+                                      value={values.email}
                                       onChange={handleChange}
                                       onBlur={handleBlur}
                                       sx={{
@@ -362,138 +613,46 @@ export default function ServiceDetails() {
                                         },
                                       }}
                                     />
+
                                     <FormHelperText
                                       error
                                       className="helperText position-relative z-index-1"
                                     >
-                                      {touched.firstName && errors.firstName}
+                                      {touched.email && errors.email}
                                     </FormHelperText>
                                   </Box>
                                 </Grid>
 
-                                <Grid item xs={12} sm={12} md={12} lg={6}>
+                                <Grid
+                                  item
+                                  xs={12}
+                                  sm={12}
+                                  md={12}
+                                  lg={6}
+                                  alignContent="center"
+                                >
                                   <Box>
-                                    <TextField
-                                      fullWidth
-                                      variant="outlined"
-                                      label="Last Name"
-                                      name="lastName"
-                                      value={values.lastName}
-                                      onChange={handleChange}
-                                      onBlur={handleBlur}
-                                      sx={{
-                                        "& .MuiOutlinedInput-root": {
-                                          "& fieldset": {
-                                            borderColor: "rgba(0, 0, 0, 0.5)",
-                                          },
-                                          "&:hover fieldset": {
-                                            borderColor: "black",
-                                          },
-                                          "&.Mui-focused fieldset": {
-                                            borderColor: "black",
-                                          },
-                                        },
-                                        "& .MuiInputLabel-shrink": {
-                                          color: "black !important",
-                                        }
+                                    <Button
+                                      variant="contained"
+                                      disabled={errors.email || !values.email}
+                                      onClick={() => sendOtp(values)}
+                                      className="theme-btn wow fadeInUp"
+                                      data-wow-delay=".8s"
+                                      style={{
+                                        padding: "16.5px 14px",
+                                        fontSize: "16px",
+                                        fontWeight: 600,
+                                        lineHeight: "1",
                                       }}
-                                    />
-
-                                    <FormHelperText
-                                      error
-                                      className="helperText position-relative z-index-1"
                                     >
-                                      {touched.lastName && errors.lastName}
-                                    </FormHelperText>
+                                      Send OTP
+                                    </Button>
                                   </Box>
                                 </Grid>
                               </Grid>
-                              <Grid container spacing={2}>
-                                <Grid item xs={12} sm={12} md={12} lg={6}>
-                                  <Box mt={2} sx={{
-                                    '& .MuiOutlinedInput-root': {
-                                      '& fieldset': {
-                                        borderColor: "rgba(0, 0, 0, 0.5)",
-                                      },
-                                      '&:hover fieldset': {
-                                        borderColor: 'black !important',
-                                      },
-                                      '&.Mui-focused fieldset': {
-                                        borderColor: 'black',
-                                      },
-                                    },
-                                    '& .MuiInputLabel-root': {
-                                      color: 'black !important',
-                                    },
-                                    '& .MuiSelect-icon': {
-                                      color: 'rgba(0, 0, 0, 0.5)',
-                                    },
-                                    '& .MuiOutlinedInput-root.Mui-focused .MuiSelect-icon': {
-                                      color: 'black !important',
-                                    },
-                                  }}>
-                                    <Select
-                                      fullWidth
-                                      name="gender"
-                                      value={values.gender}
-                                      displayEmpty
-                                      MenuProps={menuProps}
-                                      onChange={handleChange}
-                                      onBlur={handleBlur}
-                                      style={{ textAlign: 'start' }}
+                            </Box>
 
-                                    >
-                                      <MenuItem value="" disabled>Gender</MenuItem>
-                                      <MenuItem value="Male">Male</MenuItem>
-                                      <MenuItem value="Female">Female</MenuItem>
-                                      <MenuItem value="Other">Other</MenuItem>
-                                    </Select>
-                                    <FormHelperText error className="helperText position-relative z-index-1">
-                                      {touched.gender && errors.gender}
-                                    </FormHelperText>
-                                  </Box>
-
-
-
-                                </Grid>
-                                <Grid item xs={12} sm={12} md={12} lg={6}>
-                                  <Box mt={2}>
-                                    <TextField
-                                      fullWidth
-                                      variant="outlined"
-                                      label="Contact Number"
-                                      name="contactNumber"
-                                      value={values.contactNumber}
-                                      onChange={handleChange}
-                                      onBlur={handleBlur}
-                                      sx={{
-                                        "& .MuiOutlinedInput-root": {
-                                          "& fieldset": {
-                                            borderColor: "rgba(0, 0, 0, 0.5)",
-                                          },
-                                          "&:hover fieldset": {
-                                            borderColor: "black",
-                                          },
-                                          "&.Mui-focused fieldset": {
-                                            borderColor: "black",
-                                          },
-                                        },
-                                        "& .MuiInputLabel-shrink": {
-                                          color: "black !important",
-                                        }
-                                      }}
-                                    />
-
-                                    <FormHelperText error className="helperText position-relative z-index-1 ">
-                                      {touched.contactNumber &&
-                                        errors.contactNumber}
-                                    </FormHelperText>
-                                  </Box>
-
-                                </Grid>
-
-                              </Grid>
-
+                            {showVerifyTextfield && (
                               <Box mt={2}>
                                 <Grid container spacing={2}>
                                   <Grid item xs={12} sm={12} md={12} lg={6}>
@@ -501,34 +660,17 @@ export default function ServiceDetails() {
                                       <TextField
                                         fullWidth
                                         variant="outlined"
-                                        label="Email"
-                                        name="email"
-                                        value={values.email}
+                                        label="Enter OTP"
+                                        name="otp"
+                                        value={values.otp}
                                         onChange={handleChange}
                                         onBlur={handleBlur}
-                                        sx={{
-                                          "& .MuiOutlinedInput-root": {
-                                            "& fieldset": {
-                                              borderColor: "rgba(0, 0, 0, 0.5)",
-                                            },
-                                            "&:hover fieldset": {
-                                              borderColor: "black",
-                                            },
-                                            "&.Mui-focused fieldset": {
-                                              borderColor: "black",
-                                            },
-                                          },
-                                          "& .MuiInputLabel-shrink": {
-                                            color: "black !important",
-                                          }
-                                        }}
                                       />
-
                                       <FormHelperText
                                         error
                                         className="helperText position-relative z-index-1"
                                       >
-                                        {touched.email && errors.email}
+                                        {touched.otp && errors.otp}
                                       </FormHelperText>
                                     </Box>
                                   </Grid>
@@ -544,418 +686,408 @@ export default function ServiceDetails() {
                                     <Box>
                                       <Button
                                         variant="contained"
-                                        disabled={errors.email || !values.email}
-                                        onClick={() => sendOtp(values)}
-                                        className="theme-btn wow fadeInUp" data-wow-delay=".8s"
+                                        onClick={() => verifyOtp(values)}
+                                        className="theme-btn wow fadeInUp"
+                                        data-wow-delay=".8s"
                                         style={{
-                                          padding: '16.5px 14px',
-                                          fontSize: '16px',
+                                          padding: "16.5px 14px",
+                                          backgroundColor: "#18185e",
+                                          fontSize: "16px",
                                           fontWeight: 600,
-                                          lineHeight: "1"
+                                          lineHeight: "1",
                                         }}
                                       >
-                                        Send OTP
+                                        Verify OTP
                                       </Button>
                                     </Box>
                                   </Grid>
                                 </Grid>
                               </Box>
+                            )}
 
-                              {showVerifyTextfield && (
-                                <Box mt={2}>
-                                  <Grid container spacing={2}>
-                                    <Grid item xs={12} sm={12} md={12} lg={6}>
-                                      <Box>
-                                        <TextField
-                                          fullWidth
-                                          variant="outlined"
-                                          label="Enter OTP"
-                                          name="otp"
-                                          value={values.otp}
-                                          onChange={handleChange}
-                                          onBlur={handleBlur}
-                                        />
-                                        <FormHelperText
-                                          error
-                                          className="helperText position-relative z-index-1"
-                                        >
-                                          {touched.otp && errors.otp}
-                                        </FormHelperText>
-                                      </Box>
-                                    </Grid>
-
-                                    <Grid
-                                      item
-                                      xs={12}
-                                      sm={12}
-                                      md={12}
-                                      lg={6}
-                                      alignContent="center"
-                                    >
-                                      <Box>
-                                        <Button
-                                          variant="contained"
-                                          onClick={() => verifyOtp(values)}
-                                          className="theme-btn wow fadeInUp" data-wow-delay=".8s"
-                                          style={{
-                                            padding: '16.5px 14px',
-                                            backgroundColor: '#18185e',
-                                            fontSize: '16px',
-                                            fontWeight: 600,
-                                            lineHeight: "1"
-
-                                          }}
-                                        >
-                                          Verify OTP
-                                        </Button>
-                                      </Box>
-                                    </Grid>
-                                  </Grid>
-                                </Box>
-                              )}
-
-                              <Box mt={2}>
-                                <TextField
-                                  fullWidth
-                                  variant="outlined"
-                                  label="College Name"
-                                  name="collegeName"
-                                  value={values.collegeName}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                  sx={{
-                                    "& .MuiOutlinedInput-root": {
-                                      "& fieldset": {
-                                        borderColor: "rgba(0, 0, 0, 0.5)",
-                                      },
-                                      "&:hover fieldset": {
-                                        borderColor: "black",
-                                      },
-                                      "&.Mui-focused fieldset": {
-                                        borderColor: "black",
-                                      },
+                            <Box mt={2}>
+                              <TextField
+                                fullWidth
+                                variant="outlined"
+                                label="College Name"
+                                name="collegeName"
+                                value={values.collegeName}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                sx={{
+                                  "& .MuiOutlinedInput-root": {
+                                    "& fieldset": {
+                                      borderColor: "rgba(0, 0, 0, 0.5)",
                                     },
-                                    "& .MuiInputLabel-shrink": {
-                                      color: "black !important",
-                                    }
-                                  }}
-                                />
-
-                                <FormHelperText error className="helperText position-relative z-index-1">
-                                  {touched.collegeName && errors.collegeName}
-                                </FormHelperText>
-                              </Box>
-
-                              <Box mt={2}>
-                                <TextField
-                                  fullWidth
-                                  variant="outlined"
-                                  label="Field Of Study"
-                                  name="fieldOfStudy"
-                                  value={values.fieldOfStudy}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                  sx={{
-                                    "& .MuiOutlinedInput-root": {
-                                      "& fieldset": {
-                                        borderColor: "rgba(0, 0, 0, 0.5)",
-                                      },
-                                      "&:hover fieldset": {
-                                        borderColor: "black",
-                                      },
-                                      "&.Mui-focused fieldset": {
-                                        borderColor: "black",
-                                      },
+                                    "&:hover fieldset": {
+                                      borderColor: "black",
                                     },
-                                    "& .MuiInputLabel-shrink": {
-                                      color: "black !important",
-                                    }
-                                  }}
-                                />
-                                <FormHelperText error className="helperText position-relative z-index-1">
-                                  {touched.fieldOfStudy && errors.fieldOfStudy}
-                                </FormHelperText>
-                              </Box>
-
-                              <Box mt={2}>
-                                <TextField
-                                  fullWidth
-                                  variant="outlined"
-                                  label="Passing Year"
-                                  name="passingYear"
-                                  value={values.passingYear}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                  sx={{
-                                    "& .MuiOutlinedInput-root": {
-                                      "& fieldset": {
-                                        borderColor: "rgba(0, 0, 0, 0.5)",
-                                      },
-                                      "&:hover fieldset": {
-                                        borderColor: "black",
-                                      },
-                                      "&.Mui-focused fieldset": {
-                                        borderColor: "black",
-                                      },
+                                    "&.Mui-focused fieldset": {
+                                      borderColor: "black",
                                     },
-                                    "& .MuiInputLabel-shrink": {
-                                      color: "black !important",
-                                    }
-                                  }}
-                                />
+                                  },
+                                  "& .MuiInputLabel-shrink": {
+                                    color: "black !important",
+                                  },
+                                }}
+                              />
 
-                                <FormHelperText error className="helperText position-relative z-index-1">
-                                  {touched.passingYear && errors.passingYear}
-                                </FormHelperText>
-                              </Box>
+                              <FormHelperText
+                                error
+                                className="helperText position-relative z-index-1"
+                              >
+                                {touched.collegeName && errors.collegeName}
+                              </FormHelperText>
+                            </Box>
 
-                              <Box mt={2}>
-                                <h4 style={{
-                                  display: 'flex',
+                            <Box mt={2}>
+                              <TextField
+                                fullWidth
+                                variant="outlined"
+                                label="Field Of Study"
+                                name="fieldOfStudy"
+                                value={values.fieldOfStudy}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                sx={{
+                                  "& .MuiOutlinedInput-root": {
+                                    "& fieldset": {
+                                      borderColor: "rgba(0, 0, 0, 0.5)",
+                                    },
+                                    "&:hover fieldset": {
+                                      borderColor: "black",
+                                    },
+                                    "&.Mui-focused fieldset": {
+                                      borderColor: "black",
+                                    },
+                                  },
+                                  "& .MuiInputLabel-shrink": {
+                                    color: "black !important",
+                                  },
+                                }}
+                              />
+                              <FormHelperText
+                                error
+                                className="helperText position-relative z-index-1"
+                              >
+                                {touched.fieldOfStudy && errors.fieldOfStudy}
+                              </FormHelperText>
+                            </Box>
+
+                            <Box mt={2}>
+                              <TextField
+                                fullWidth
+                                variant="outlined"
+                                label="Passing Year"
+                                name="passingYear"
+                                value={values.passingYear}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                sx={{
+                                  "& .MuiOutlinedInput-root": {
+                                    "& fieldset": {
+                                      borderColor: "rgba(0, 0, 0, 0.5)",
+                                    },
+                                    "&:hover fieldset": {
+                                      borderColor: "black",
+                                    },
+                                    "&.Mui-focused fieldset": {
+                                      borderColor: "black",
+                                    },
+                                  },
+                                  "& .MuiInputLabel-shrink": {
+                                    color: "black !important",
+                                  },
+                                }}
+                              />
+
+                              <FormHelperText
+                                error
+                                className="helperText position-relative z-index-1"
+                              >
+                                {touched.passingYear && errors.passingYear}
+                              </FormHelperText>
+                            </Box>
+
+                            <Box mt={2}>
+                              <h4
+                                style={{
+                                  display: "flex",
                                   justifyContent: "flex-start",
-                                  position: 'relative',
-                                  zIndex: '1'
-                                }}>
-                                  Joined our Telegram ,LinkedIn , Whatsapp,
-                                  Facebook?
-                                </h4>
+                                  position: "relative",
+                                  zIndex: "1",
+                                }}
+                              >
+                                Joined our Telegram ,LinkedIn , Whatsapp,
+                                Facebook?
+                              </h4>
 
-                                <h6
-                                  style={{
-                                    fontWeight: 500,
-                                    marginBottom: "10px",
-                                    display: 'flex',
-                                    justifyContent: "flex-start",
-                                    position: 'relative',
-                                    zIndex: '1'
-                                  }}
-                                >
-                                  Please join the Telegram community for
-                                  continued communication
-                                </h6>
+                              <h6
+                                style={{
+                                  fontWeight: 500,
+                                  marginBottom: "10px",
+                                  display: "flex",
+                                  justifyContent: "flex-start",
+                                  position: "relative",
+                                  zIndex: "1",
+                                }}
+                              >
+                                Please join the Telegram community for continued
+                                communication
+                              </h6>
 
-
-
-                                <ul className="row list-unstyled ">
-                                  {socialLinks.map((item) => (
-                                    <li
-                                      key={item.id}
-                                      className="col-12 col-md-6 d-flex align-items-center mb-3 z-index-1 position-relative z-index-1"
-                                    >
-                                      <p className="mb-0">{item.name}</p> -{" "}
-                                      <Link href={item.link} className="text-primary text-decoration-underline ms-2   ">
-                                        Click Here
-                                      </Link>
-                                    </li>
-                                  ))}
-                                </ul>
-
-
-
-                                <Box>
-                                  <RadioGroup
-                                    value={yesNoValue}
-                                    onChange={handleYesNoChange}
-                                    sx={{
-                                      display: "flex",
-                                      flexDirection: "row",
-                                      position: 'relative',
-                                      zIndex: '1',
-
-                                    }}
+                              <ul className="row list-unstyled ">
+                                {socialLinks.map((item) => (
+                                  <li
+                                    key={item.id}
+                                    className="col-12 col-md-6 d-flex align-items-center mb-3 z-index-1 position-relative z-index-1"
                                   >
-                                    <FormControlLabel
-                                      control={<Radio style={{ color: '#18185e' }} />}
-                                      label={<p>Yes</p>}
-                                      value="yes"
-                                    />
-                                    <FormControlLabel
-                                      control={<Radio style={{ color: '#18185e' }} />}
-                                      label={<p>No</p>}
-                                      value="no"
-                                    />
-                                  </RadioGroup>
-                                </Box>
-                              </Box>
+                                    <p className="mb-0">{item.name}</p> -{" "}
+                                    <Link
+                                      href={item.link}
+                                      className="text-primary text-decoration-underline ms-2   "
+                                    >
+                                      Click Here
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
 
-                              <Box mt={2}>
-                                <h4 style={{ display: 'flex', justifyContent: 'flex-start', position: 'relative', zIndex: '1' }}>Where did you learn about us?</h4>
-                                <Box
+                              <Box>
+                                <RadioGroup
+                                  value={yesNoValue}
+                                  onChange={handleYesNoChange}
                                   sx={{
                                     display: "flex",
-                                    flexDirection: "column",
-                                    position: 'relative',
-                                    zIndex: '1',
-
+                                    flexDirection: "row",
+                                    position: "relative",
+                                    zIndex: "1",
                                   }}
-
                                 >
-                                  <RadioGroup
-                                    value={referenceValue}
-                                    onChange={handleReferenceChange}
-
-                                  >
-                                    <FormControlLabel
-                                      control={<Radio style={{ color: '#18185e' }} />}
-                                      label={
-                                        <p>
-                                          Social Media - LinkedIn, Facebook,
-                                          Instagram etc
-                                        </p>
-                                      }
-                                      value="socialMedia"
-                                    />
-
-                                    <FormControlLabel
-                                      control={<Radio style={{ color: '#18185e' }} />}
-                                      label={
-                                        <p>
-                                          Referral - Friends, Colleagues,
-                                          Relatives etc
-                                        </p>
-                                      }
-                                      value="friends"
-                                    />
-
-                                    <FormControlLabel
-                                      control={<Radio style={{ color: '#18185e' }} />}
-                                      label={
-                                        <p>
-                                          Job portals - Internshala, Frapp,
-                                          LetsIntern, Naukri etc
-                                        </p>
-                                      }
-                                      value="jobPortals"
-                                    />
-
-                                    <FormControlLabel
-                                      control={<Radio style={{ color: '#18185e' }} />}
-                                      label={
-                                        <p>
-                                          Campus Placement Cell/Coordinators
-                                        </p>
-                                      }
-                                      value="campusPlacement"
-                                    />
-                                  </RadioGroup>
-                                </Box>
-                              </Box>
-
-                              <Box mt={2} style={{ display: 'flex', alignItems: "center" }}>
-                                <FormControlLabel
-                                  control={
-                                    <Checkbox
-                                      color="primary"
-                                      checked={values.termsConditions}
-                                      onChange={(e) => setFieldValue("termsConditions", e.target.checked)}
-                                      style={{ padding: '0', marginRight: '8px', color: '#18185e' }}
-                                    />
-                                  }
-                                  label={
-                                    <span style={{
-                                      position: 'relative',
-                                      zIndex: '1',
-                                      alignSelf: 'flex-start'
-                                    }}>
-                                      I accept the Codestrup Internship Program terms and conditions as described.
-                                    </span>
-                                  }
-                                  style={{ margin: '0' }}
-                                />
-
-                                <FormHelperText error className="helperText position-relative z-index-1">
-                                  {touched.termsConditions && errors.termsConditions}
-                                </FormHelperText>
-                              </Box>
-
-
-
-                              <Box
-                                mt={2}
-                                display="flex"
-                                justifyContent="center"
-                              >
-                                <Button type="submit" variant="contained"
-                                  className="theme-btn wow fadeInUp" data-wow-delay=".8s"
-                                  style={{
-                                    padding: '16.5px 14px',
-                                    backgroundColor: '#18185e',
-                                    fontSize: '16px',
-                                    fontWeight: 600,
-                                    lineHeight: "1"
-
-                                  }}>
-                                  Submit{" "}
-                                  {loading && (
-                                    <CircularProgress
-                                      size={20}
-                                      sx={{ color: "#FFF", marginLeft: "5px" }}
-                                    />
-                                  )}
-                                </Button>
+                                  <FormControlLabel
+                                    control={
+                                      <Radio style={{ color: "#18185e" }} />
+                                    }
+                                    label={<p>Yes</p>}
+                                    value="yes"
+                                  />
+                                  <FormControlLabel
+                                    control={
+                                      <Radio style={{ color: "#18185e" }} />
+                                    }
+                                    label={<p>No</p>}
+                                    value="no"
+                                  />
+                                </RadioGroup>
                               </Box>
                             </Box>
-                          </Form>
-                        )}
-                      </Formik>
 
-                    </Card>
+                            <Box mt={2}>
+                              <h4
+                                style={{
+                                  display: "flex",
+                                  justifyContent: "flex-start",
+                                  position: "relative",
+                                  zIndex: "1",
+                                }}
+                              >
+                                Where did you learn about us?
+                              </h4>
+                              <Box
+                                sx={{
+                                  display: "flex",
+                                  flexDirection: "column",
+                                  position: "relative",
+                                  zIndex: "1",
+                                }}
+                              >
+                                <RadioGroup
+                                  value={referenceValue}
+                                  onChange={handleReferenceChange}
+                                >
+                                  <FormControlLabel
+                                    control={
+                                      <Radio style={{ color: "#18185e" }} />
+                                    }
+                                    label={
+                                      <p>
+                                        Social Media - LinkedIn, Facebook,
+                                        Instagram etc
+                                      </p>
+                                    }
+                                    value="socialMedia"
+                                  />
 
-                  </div>
+                                  <FormControlLabel
+                                    control={
+                                      <Radio style={{ color: "#18185e" }} />
+                                    }
+                                    label={
+                                      <p>
+                                        Referral - Friends, Colleagues,
+                                        Relatives etc
+                                      </p>
+                                    }
+                                    value="friends"
+                                  />
+
+                                  <FormControlLabel
+                                    control={
+                                      <Radio style={{ color: "#18185e" }} />
+                                    }
+                                    label={
+                                      <p>
+                                        Job portals - Internshala, Frapp,
+                                        LetsIntern, Naukri etc
+                                      </p>
+                                    }
+                                    value="jobPortals"
+                                  />
+
+                                  <FormControlLabel
+                                    control={
+                                      <Radio style={{ color: "#18185e" }} />
+                                    }
+                                    label={
+                                      <p>Campus Placement Cell/Coordinators</p>
+                                    }
+                                    value="campusPlacement"
+                                  />
+                                </RadioGroup>
+                              </Box>
+                            </Box>
+
+                            <Box
+                              mt={2}
+                              style={{
+                                display: "flex",
+                                alignItems: "start",
+                              }}
+                            >
+                              <FormControlLabel
+                                control={
+                                  <Checkbox
+                                    color="primary"
+                                    checked={values.termsConditions}
+                                    onChange={(e) =>
+                                      setFieldValue(
+                                        "termsConditions",
+                                        e.target.checked
+                                      )
+                                    }
+                                    style={{
+                                      padding: "0",
+                                      marginRight: "8px",
+                                      color: "#18185e",
+                                    }}
+                                  />
+                                }
+                                label={
+                                  <span
+                                    style={{
+                                      position: "relative",
+                                      zIndex: "1",
+                                      alignSelf: "flex-start",
+                                    }}
+                                  >
+                                    I accept the Codestrup Internship Program
+                                    terms and conditions as described.
+                                  </span>
+                                }
+                                style={{ margin: "0" }}
+                              />
+
+                              <FormHelperText
+                                error
+                                className="helperText position-relative z-index-1"
+                              >
+                                {touched.termsConditions &&
+                                  errors.termsConditions}
+                              </FormHelperText>
+                            </Box>
+
+                            <Box mt={2} display="flex" justifyContent="center">
+                              <Button
+                                type="submit"
+                                variant="contained"
+                                className="theme-btn wow fadeInUp"
+                                data-wow-delay=".8s"
+                                style={{
+                                  padding: "16.5px 14px",
+                                  backgroundColor: "#18185e",
+                                  fontSize: "16px",
+                                  fontWeight: 600,
+                                  lineHeight: "1",
+                                }}
+                              >
+                                Submit{" "}
+                                {loading && (
+                                  <CircularProgress
+                                    size={20}
+                                    sx={{ color: "#FFF", marginLeft: "5px" }}
+                                  />
+                                )}
+                              </Button>
+                            </Box>
+                          </Box>
+                        </Form>
+                      )}
+                    </Formik>
+                  </Card>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-        {/* <Footer3 /> */}
+        </div>
+      </section>
+      {/* <Footer3 /> */}
 
-        {/* confirmation dialog */}
-        {consentDialogOpen && (
-          <Dialog
-            open={consentDialogOpen}
-            onClose={() => setConsentDialogOpen(false)}
-          >
-            <Box sx={{ padding: "30px", position: "relative" }}>
-              <Typography variant="h4">Confirmation Required!</Typography>
-              <IconButton
-                sx={{ position: "absolute", top: 0, right: "5px" }}
-                onClick={() => setConsentDialogOpen(false)}
+      {/* confirmation dialog */}
+      {consentDialogOpen && (
+        <Dialog
+          open={consentDialogOpen}
+          onClose={() => setConsentDialogOpen(false)}
+        >
+          <Box sx={{ padding: "30px", position: "relative" }}>
+            <Typography variant="h4">Confirmation Required!</Typography>
+            <IconButton
+              sx={{ position: "absolute", top: 0, right: "5px" }}
+              onClick={() => setConsentDialogOpen(false)}
+            >
+              <i className="fas fa-times" />
+            </IconButton>
+            <Typography mt={2} variant="h6">
+              Do you want to continue with the payment?
+            </Typography>
+            <Box mt={2} display="flex" justifyContent="center" gap="20px">
+              <Button
+                variant="outlined"
+                onClick={() => {
+                  handleConsentNo();
+                }}
+                className="theme-btn1 wow fadeInUp"
+                data-wow-delay=".8s"
+                style={{
+                  padding: "16.5px 14px",
+                }}
               >
-                <i className="fas fa-times" />
-              </IconButton>
-              <Typography mt={2} variant="h6">
-                Do you want to continue with the payment?
-              </Typography>
-              <Box mt={2} display="flex" justifyContent="center" gap="20px">
-                <Button
-                  variant="outlined"
-                  onClick={() => {
-                    handleConsentNo();
-                  }}
-                  className="theme-btn1 wow fadeInUp" data-wow-delay=".8s"
-                  style={{
-                    padding: '16.5px 14px',
-
-                  }}
-                >
-                  No
-                </Button>
-                <Button variant="contained" onClick={() => handleConsentYes()}
-                  className="theme-btn wow fadeInUp" data-wow-delay=".8s"
-                  style={{
-                    padding: '16.5px 14px',
-                  }}
-                >
-                  Yes
-                </Button>
-              </Box>
+                No
+              </Button>
+              <Button
+                variant="contained"
+                onClick={() => handleConsentYes()}
+                className="theme-btn wow fadeInUp"
+                data-wow-delay=".8s"
+                style={{
+                  padding: "16.5px 14px",
+                }}
+              >
+                Yes
+              </Button>
             </Box>
-          </Dialog>
-        )}
-
-
-      </Layout>
-
-    </>
+          </Box>
+        </Dialog>
+      )}
+    </Layout>
   );
 }
