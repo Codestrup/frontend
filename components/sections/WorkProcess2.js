@@ -1,6 +1,6 @@
 
 
-export default function WorkProcess1() {
+export default function WorkProcess2() {
     return (
         <>
             <section className="work-process-section fix " style={{paddingTop:'70px',paddingBottom:'70px'}}>
@@ -33,19 +33,20 @@ export default function WorkProcess1() {
                             </div>
                             <div className="col-xl-3 col-lg-4 col-md-6">
                                 <div className="work-process-items text-center">
-                                    <div className="content style-2">
+                                <div className="icon">
+                                        <img src="/assets/img/process/02.svg" alt="img" />
+                                        <h6 className="number">
+                                            2
+                                        </h6>
+                                    </div>
+                                    <div className="content ">
                                         <h4>Real Experience</h4>
                                         <p>
 
                                             Real examples stimulate critical thinking and problem-solving.
                                         </p>
                                     </div>
-                                    <div className="icon">
-                                        <img src="/assets/img/process/02.svg" alt="img" />
-                                        <h6 className="number">
-                                            2
-                                        </h6>
-                                    </div>
+                                   
                                 </div>
                             </div>
                             <div className="col-xl-3 col-lg-4 col-md-6">
@@ -66,19 +67,19 @@ export default function WorkProcess1() {
                                 </div>
                             </div>
                             <div className="col-xl-3 col-lg-4 col-md-6">
-                                <div className="work-process-items text-center">
-                                    <div className="content style-2">
-                                        <h4>Save Time</h4>
-                                        <p>
-                                            Online learning reduces time by 25% to 60%.
-                                        </p>
-                                    </div>
-                                    <div className="icon">
+                                <div className="work-process-items text-center"> <div className="icon">
                                         <img src="/assets/img/process/04.svg" alt="img" />
                                         <h6 className="number">
                                             4
                                         </h6>
                                     </div>
+                                    <div className="content ">
+                                        <h4>Save Time</h4>
+                                        <p>
+                                            Online learning reduces time by 25% to 60%.
+                                        </p>
+                                    </div>
+                                   
                                 </div>
                             </div>
                         </div>

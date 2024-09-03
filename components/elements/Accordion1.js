@@ -33,6 +33,11 @@ export default function Accordion1() {
                         </div>
                     </div>
                 </div>
+
+
+
+
+
                 <div className="accordion-item mb-3 wow fadeInUp" data-wow-delay=".7s">
                     <h5 className="accordion-header" onClick={() => handleClick(3)}>
                         <button className={activeItem == 3 ? "accordion-button" : "accordion-button collapsed"} type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
@@ -45,6 +50,7 @@ export default function Accordion1() {
                         </div>
                     </div>
                 </div>
+
             </div>
         </>
     )

@@ -32,8 +32,6 @@ import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { menuProps } from "../../utils/menuProps";
 import { toast } from "react-hot-toast";
-import Image from "next/image";
-import internshipImage from "../../public/assets/internship_image.jpg";
 
 const formValidationSchema = Yup.object().shape({
   firstName: Yup.string()

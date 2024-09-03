@@ -110,6 +110,7 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
                   <Link href="https://wa.me/919699997689">
                     <i className="fab fa-whatsapp" />
                   </Link>
+                 
                   <Link href="https://t.me/+6HxZOtDBk6w0N2Vl">
                     <i className="fab fa-telegram" />
                   </Link>

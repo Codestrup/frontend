@@ -21,8 +21,8 @@ export default function Faq1() {
                                     <img src="/assets/img/faq/image.webp" alt="faq-img" style={{ borderRadius: '41px' }} />
                                 </div>
                             </div>
-                            <div className="col-lg-6">
-                                <div className="faq-content">
+                            <div className="col-lg-6 d-flex flex-column">
+                                <div className="faq-content flex-grow-1">
                                     <div className="section-title">
                                         <h2 className="wow fadeInUp" data-wow-delay=".3s">
                                             Frequently Asked Questions
@@ -31,19 +31,23 @@ export default function Faq1() {
                                     <div className="faq-accordion mt-4 mt-md-0">
                                         <Accordion1 />
                                     </div>
-                                    <div className="about-author " style={{marginTop:'6rem'}}>
-                                        <div className="about-button wow fadeInUp" data-wow-delay=".5s">
-                                            <Link href="/internship" className="theme-btn">
-                                                Explore More
-                                                <i className="fa-solid fa-arrow-right-long" />
-                                            </Link>
-                                        </div>
+                                   
+                                </div>
+                                <div className="about-author mt-auto">
+                                    <div className="about-button wow fadeInUp" data-wow-delay=".5s">
+                                        <Link href="/faq" className="theme-btn">
+                                            Explore More
+                                            <i className="fa-solid fa-arrow-right-long" />
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
+
                 </div>
+
             </section>
         </>
     );

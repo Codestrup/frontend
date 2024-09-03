@@ -14,7 +14,7 @@ export default function Marque1() {
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>
                                     <span className="text-slider">Professional Experience</span>
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>
-                                    <span className="text-slider">Industry Exposur</span>
+                                    <span className="text-slider">Industry Exposure</span>
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>
                                     <span className="text-slider">Real Experience</span>
                                     <span className="text-slider"><img src="/assets/img/star.svg" alt="img" /></span>

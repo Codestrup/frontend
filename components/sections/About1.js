@@ -1,5 +1,6 @@
 
 
+
 import Link from 'next/link'
 import VideoPopup from '../elements/VideoPopup'
 import CounterUp from '../elements/CounterUp'
@@ -22,14 +23,14 @@ export default function About1() {
                                         </div>
                                     </div>
 
-                                    <div className="about-image-1 bg-cover wow fadeInLeft" data-wow-delay=".3s" style={{ backgroundImage: 'url("assets/img/about1.jpeg")' }}>
+                                    <div className="about-image-1 bg-cover wow fadeInLeft" data-wow-delay=".3s" style={{ backgroundImage: 'url("assets/img/about/about1.jpeg")' }}>
                                         <div className="about-image-2 wow fadeInUp" data-wow-delay=".5s">
-                                            <img src="/assets/img/about3.jpeg" alt="about-img" />
+                                            <img src="/assets/img/about/about3.jpeg" alt="about-img" />
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-6 mt-4 mt-lg-0">
+                            <div className="col-lg-6 mt-5 mt-lg-0">
                                 <div className="about-content">
                                     <div className="section-title">
                                         <h2 className="wow fadeInUp" data-wow-delay=".3s">
@@ -56,8 +57,11 @@ export default function About1() {
                                                 <img src="/assets/img/about/icon-3.svg" alt="icon-img" />
                                             </div>
                                             <div className="content">
-                                                <h4>Opportunities for Career Growth</h4>
-                                                <p>Gain industry insights, receive mentorship from experts, and get career guidance for planning and job search.
+                                                <h4>Career Growth and Opportunities
+                                                </h4>
+                                                <p>
+
+                                                    Gain industry insights into the software lifecycle and learn from experienced professionals through mentorship
                                                 </p>
                                             </div>
                                         </div>
@@ -80,7 +84,7 @@ export default function About1() {
                                             <div className="content">
                                                 <h4>Benefits</h4>
                                                 <p>
-                                                    Get industry-recognized certifications, validate your skills, and receive job placement assistance for full-time employment.
+                                                Verify your accomplishments and abilities with a certificate of completion. Acquire certificates to open up new opportunities.
                                                 </p>
                                             </div>
                                         </div>

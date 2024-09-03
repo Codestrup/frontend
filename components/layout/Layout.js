@@ -1,16 +1,12 @@
 'use client'
 import { useEffect, useState } from "react"
-// import BackToTop from '../elements/BackToTop'
 import Breadcrumb from './Breadcrumb'
 import MouseCursor from "./MouseCursor"
 import Offcanvas from "./Offcanvas"
-// import Search from "./Search"
 
 import Footer3 from "./footer/Footer3"
 import Header1 from "./header/Header1"
-// import Header2 from './header/Header2'
-// import Header3 from "./header/Header3"
-// import Header4 from "./header/Header4"
+import { useMediaQuery } from 'react-responsive';
 
 export default function Layout({ headerStyle, footerStyle, onePageNav, breadcrumbTitle, children }) {
     const [scroll, setScroll] = useState(0)
@@ -20,6 +16,7 @@ export default function Layout({ headerStyle, footerStyle, onePageNav, breadcrum
 
     const [isSearch, setSearch] = useState(false)
     const handleSearch = () => setSearch(!isSearch)
+    const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
     useEffect(() => {
         const WOW = require('wowjs')
@@ -37,7 +34,7 @@ export default function Layout({ headerStyle, footerStyle, onePageNav, breadcrum
     }, [])
     return (
         <>
-            <MouseCursor />
+            {!isMobile && <MouseCursor />}
             <Offcanvas isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} />
 
             {/* {!headerStyle && <Header2 scroll={scroll} onePageNav={onePageNav} isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} isSearch={isSearch} handleSearch={handleSearch} />} */}
