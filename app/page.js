@@ -25,20 +25,23 @@ export default function Home() {
   const width = useScreenWidth();
 
   return (
-    <Layout headerStyle={1} footerStyle={1}>
-      <Hero1 />
-      <Marque1 />
-      <About1 />
-      <Brand1 />
-      <Service1 />
-      {/* Conditionally render WorkProcess1 or WorkProcess2 based on screen width */}
-      {width >= 768 ? <WorkProcess1 /> : <WorkProcess2 />}
-      <Achievement3 />
-      <Marque4 />
-      <Testimonial3 />
-      <Brand2 />
-      <Certified />
-      <Faq1 />
-    </Layout>
+    <>
+ 
+        <Layout headerStyle={1} footerStyle={1}>
+          <Hero1 />
+          <Marque1 />
+          <About1 />
+          <Brand1 />
+          <Service1 />
+          <WorkProcess1 />
+          <Achievement3 />
+          <Marque4 />
+          <Testimonial3 />
+          {/* <Brand2 /> */}
+          <Certified />
+          <Faq1 />
+        </Layout>
+      
+    </>
   );
 }
