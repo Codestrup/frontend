@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function MobileMenu() {
   const [activeItem, setActiveItem] = useState(1);
-  console.log(activeItem);
+  
 
   const handleActiveItem = (index) => {
     setActiveItem(index);

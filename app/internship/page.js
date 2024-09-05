@@ -30,7 +30,7 @@ const Page = () => {
       try {
         const response = await axios.get("https://api.codestrup.in/loadjobs");
         setInternships(response?.data?.data || []);
-        console.log(response?.data?.data);
+       
       } catch (error) {
         console.error("Error fetching data:", error);
       }
