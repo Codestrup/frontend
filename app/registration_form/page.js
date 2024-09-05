@@ -230,7 +230,7 @@ export default function ServiceDetails() {
     }
   };
 
-  console.log("internship", internship);
+
 
   const handleConsentYes = async () => {
     setConsentDialogOpen(false);
@@ -256,7 +256,7 @@ export default function ServiceDetails() {
         },
       });
 
-      console.log("submit response", res);
+    
       if (res.data.success) {
         setLoading(false);
         window.open(res.data.data.upiLink, "_blank");
