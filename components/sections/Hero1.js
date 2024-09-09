@@ -1,14 +1,11 @@
 
 import Link from 'next/link'
-import VideoPopup from '../elements/VideoPopup'
 
 export default function Hero1() {
     return (
         <>
             <section className="hero-section fix hero-1 bg-cover" style={{ backgroundImage: 'url("assets/img/hero/hero-bg.jpg")' }}>
-                {/* <div className="text-transparent">
-                    <h2>Technology</h2>
-                </div> */}
+               
                 <div className="line-shape">
                     <img src="/assets/img/hero/line-shape.png" alt="shape-img" />
                 </div>
@@ -23,30 +20,26 @@ export default function Hero1() {
                     <div className="row g-4 align-items-center">
                         <div className="col-lg-8">
                             <div className="hero-content">
-                                <h6 className="wow fadeInUp" data-wow-delay=".2s">Best it solution Provider</h6>
+                                <h6 className="wow fadeInUp" data-wow-delay=".2s">Offering Top Internships </h6>
                                 <h1 className="wow fadeInUp" data-wow-delay=".4s">
-                                A Better Future
-                                Start here
+                                Find and Pursue Your Ideal Internship
                                 </h1>
                                 <p className="wow fadeInUp" data-wow-delay=".6s">
-                                The only platform that guarantees real-world work experience across the globe.
+                                Acquire certification with our online internship program.
                                 </p>
                                 <div className="hero-button">
                                     <Link href="/internship" className="theme-btn wow fadeInUp" data-wow-delay=".8s">
                                         Apply Now
                                         <i className="fa-solid fa-arrow-right-long" />
                                     </Link>
-                                    {/* <Link href="/service-details" className="theme-btn wow fadeInUp" data-wow-delay=".8s">
-                                        Apply Now
-                                        <i className="fa-solid fa-arrow-right-long" />
-                                    </Link> */}
+                                    
                                    
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-4">
                             <div className="hero-image wow fadeInUp" data-wow-delay=".4s">
-                                <img src="/assets/img/hero/image.png" alt="hero-img" style={{marginLeft:'15px'}} />
+                                <img src="/assets/img/hero/h3.png" alt="hero-img" style={{paddingLeft:'45px',paddingRight:'45px',paddingBottom:'0px'}} />
                             </div>
                         </div>
                     </div>

@@ -12,41 +12,45 @@ export default function Accordion1() {
                 <div className="accordion-item mb-3 wow fadeInUp" data-wow-delay=".3s">
                     <h5 className="accordion-header" onClick={() => handleClick(1)}>
                         <button className={activeItem == 1 ? "accordion-button" : "accordion-button collapsed"} type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
-                            apply for the program
+                        What is the duration of the internship program?
                         </button>
                     </h5>
                     <div id="faq1" className={activeItem == 1 ? "accordion-collapse collapse show" : "accordion-collapse collapse"} data-bs-parent="#accordion">
                         <div className="accordion-body">
-                            Choose your program and sign up for free to get started. You'll get access to Comprehensive Guide to the program.
+                        The internship program is one month long.
                         </div>
                     </div>
                 </div>
                 <div className="accordion-item mb-3 wow fadeInUp" data-wow-delay=".5s">
                     <h5 className="accordion-header" onClick={() => handleClick(2)}>
                         <button className={activeItem == 2 ? "accordion-button" : "accordion-button collapsed"} type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
-                            Complete tasks at your ease
-
+                        What is the mode of the internship?
                         </button>
                     </h5>
                     <div id="faq2" className={activeItem == 2 ? "accordion-collapse collapse show" : "accordion-collapse collapse"} data-bs-parent="#accordion">
                         <div className="accordion-body">
-                        Complete tasks in the modules and get feedback as you progress. The program takes 4 week and can be done according to your ease and schedule.
+                        The internship is entirely online.
                         </div>
                     </div>
                 </div>
+
+
+
+
+
                 <div className="accordion-item mb-3 wow fadeInUp" data-wow-delay=".7s">
                     <h5 className="accordion-header" onClick={() => handleClick(3)}>
                         <button className={activeItem == 3 ? "accordion-button" : "accordion-button collapsed"} type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-                            Earn a certificate
-
+                       Internship Completion and Certification?
                         </button>
                     </h5>
                     <div id="faq3" className={activeItem == 3 ? "accordion-collapse collapse show" : "accordion-collapse collapse"} data-bs-parent="#accordion">
                         <div className="accordion-body">
-                        You will get a certificate post completion of the course to share with prospective employers and your network. Use your new skills in your studies and work.
+                        After completion of all the project task you will get the Internship completion certificate.
                         </div>
                     </div>
                 </div>
+
             </div>
         </>
     )
