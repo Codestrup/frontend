@@ -3,92 +3,90 @@
 import React, { useEffect, useState } from 'react';
 import Layout from "@/components/layout/Layout";
 import CounterUp from "@/components/elements/CounterUp";
-import { Dialog, DialogActions, DialogContent,   Link } from '@mui/material';
+import { Dialog, DialogActions, DialogContent, IconButton, Link } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
 export default function Achievement() {
-  const teamMembers = [
-    {
-        name: "Vaibhav Kanchi",
-        role: "React Intern",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada lacus ac risus.",
-        imageSrc: "/assets/img/achievers/01.jpeg",
+    const teamMembers = [
+        {
+            name: "Vaibhav Kanchi",
+            role: "Successfully Completed React Internship",
+            imageSrc: "/assets/img/achievers/01.jpeg",
 
-    },
-    {
-        name: "Tushar Deshmukh",
-        role: "React Intern",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada lacus ac risus.",
-        imageSrc: "/assets/img/achievers/02.jpeg",
+        },
+        {
+            name: "Tushar Deshmukh",
+            role: "Successfully Completed React Internship",
+            imageSrc: "/assets/img/achievers/02.jpeg",
 
-    },
-    {
-        name: "Aniket Yadav",
-        role: "NodeJs Intern",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada lacus ac risus.",
-        imageSrc: "/assets/img/achievers/03.jpeg",
+        },
+        {
+            name: "Aniket Yadav",
+            role: "Successfully Completed NodeJs Internship",
+            imageSrc: "/assets/img/achievers/03.jpeg",
 
-    },
-    {
-        name: "Abhishek Anand",
-        role: "AWS Intern",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada lacus ac risus.",
-        imageSrc: "/assets/img/achievers/04.jpeg",
+        },
+        {
+            name: "Abhishek Anand",
+            role: "Successfully Completed AWS Internship",
+            imageSrc: "/assets/img/achievers/04.jpeg",
 
-    },
-    {
-        name: "Renu Kuratkar",
-        role: "React Intern",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada lacus ac risus.",
-        imageSrc: "/assets/img/achievers/05.jpeg",
+        },
+        {
+            name: "Renu Kuratkar",
+            role: "Successfully Completed React Internship",
+            imageSrc: "/assets/img/achievers/05.jpeg",
 
-    },
-    {
-        name: "Poonam Rathod",
-        role: "React Intern",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada lacus ac risus.",
-        imageSrc: "/assets/img/achievers/06.jpeg",
+        },
+        {
+            name: "Poonam Rathod",
+            role: "Successfully Completed React Internship",
+            imageSrc: "/assets/img/achievers/07.jpeg",
 
-    },
-    {
-        name: "Prajkata Kokate",
-        role: "WordPress Intern",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada lacus ac risus.",
-        imageSrc: "/assets/img/achievers/07.jpeg",
+        },
+        {
+            name: "Prajkata Kokate",
+            role: "Successfully Completed WordPress Internship",
+            imageSrc: "/assets/img/achievers/06.jpeg",
 
-    },
+        },
 
-];
-const [dialogOpen, setDialogOpen] = useState(false);
-const [selectedMember, setSelectedMember] = useState(null);
-const [isClient, setisClient] = useState(false);
+    ];
+    const [dialogOpen, setDialogOpen] = useState(false);
+    const [selectedMember, setSelectedMember] = useState(null);
+    const [isClient, setisClient] = useState(false);
 
-const handleOpenDialog = (member) => {
-    setSelectedMember(member);
-    setDialogOpen(true);
-};
+    const handleOpenDialog = (member) => {
+        setSelectedMember(member);
+        setDialogOpen(true);
+    };
 
-const handleCloseDialog = () => {
-    setDialogOpen(false);
-    setSelectedMember(null);
-};
-useEffect(() => {
-    console.log('cient side rendring ');
+    const handleCloseDialog = () => {
+        setDialogOpen(false);
+        setSelectedMember(null);
+    };
+    useEffect(() => {
+        console.log('cient side rendring ');
 
-    setisClient(true);
-}, []);
+        setisClient(true);
+    }, []);
 
-  return (
-    <>
-       <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Top Achievers">
-                <div>
+    return (
+        <>
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Top Achievers">
+                <div
+                    style={{ paddingTop: '60px' }}
+                >
                     <div style={{ textAlign: 'center', paddingTop: '0', paddingBottom: '0', alignItems: 'center', padding: '25px 120px' }}>
 
-                        <h4 >Title</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis lacinia quam, sit amet volutpat diam bibendum eget. Nam sit amet tempus quam, ut pharetra orci. Sed suscipit felis mi, a tincidunt dui volutpat eget. Nam pellentesque mollis augue
+                        <h2
+                            className="wow fadeInUp"
+                            data-wow-delay=".3s"
+                            style={{ display: "flex", justifyContent: "center" }}
+                        >
+                            Our Top Achievers
+                        </h2>
 
-                        </p>
                     </div>
                     <section className="team-section-4 section-padding" style={{ paddingTop: '16px' }}>
                         <div className="container">
@@ -101,32 +99,35 @@ useEffect(() => {
                                     >
                                         <div
                                             className="team-card-items mt-0"
-                                            style={{ width: 'auto', border: '1px solid #e0e0e0' }}
+                                            style={{
+                                                width: 'auto',
+                                                border: '1px solid #e0e0e0',
+                                                borderRadius: '20px', // Border radius applied here
+                                                overflow: 'hidden' // Ensures the border radius also affects the image
+                                            }}
                                         >
-                                            <div
-                                                className="team-image"
-                                                style={{ height: '40%' }}
-                                                onClick={() => handleOpenDialog(member)}
-                                            >
-                                                <img
-                                                    src={member.imageSrc}
-                                                    alt="team-img"
-                                                    style={{ cursor: 'pointer' }}
-                                                />
-                                            </div>
-                                            <div className="team-content">
-                                                <h3 onClick={() => handleOpenDialog(member)}>
-                                                    <Link  onClick={(e) => { e.preventDefault(); handleOpenDialog(member); }} sx={{ textDecoration: 'none', color: 'black' }}>
-                                                        {member.name}
-                                                    </Link>
-                                                </h3>
-                                                <p style={{ fontSize: '16px', fontWeight: 600 }}>
-                                                    {member.role}
-                                                </p>
-                                                <p style={{ fontSize: '15px' }}>
-                                                    {member.description}
-                                                </p>
-
+                                            <div onClick={() => handleOpenDialog(member)} style={{ cursor: 'pointer' }}>
+                                                {/* Wrapping image and content in a single div */}
+                                                <div className="team-image">
+                                                    <img
+                                                        src={member.imageSrc}
+                                                        alt="team-img"
+                                                        style={{ width: '100%', height: 'auto' }} // Ensure the image is responsive
+                                                    />
+                                                </div>
+                                                <div className="team-content" style={{ padding: '10px' }}>
+                                                    <h3>
+                                                        <Link
+                                                            onClick={(e) => { e.preventDefault(); handleOpenDialog(member); }}
+                                                            sx={{ textDecoration: 'none', color: 'black' }}
+                                                        >
+                                                            {member.name}
+                                                        </Link>
+                                                    </h3>
+                                                    <p style={{ fontSize: '16px', fontWeight: 600 }}>
+                                                        {member.role}
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -134,6 +135,7 @@ useEffect(() => {
                             </div>
                         </div>
                     </section>
+
 
                     {selectedMember && isClient && (
                         <Dialog
@@ -152,7 +154,7 @@ useEffect(() => {
                                     height: '100vh',
                                     maxWidth: '400px',
                                     overflow: 'hidden',
-                                    paddingTop:'28px'
+                                    paddingTop: '28px'
                                 },
                             }}
                         >
@@ -174,7 +176,7 @@ useEffect(() => {
                             <DialogContent>
                                 <div
                                     className="team-card-items mt-0"
-                                    style={{ width: 'auto', border: '1px solid #e0e0e0',padding:'0px 24px',paddingBottom:'10px' }}
+                                    style={{ width: 'auto', border: '1px solid #e0e0e0', padding: '0px 24px', paddingBottom: '10px' }}
                                 >
                                     <div
                                         className="team-image"
@@ -191,9 +193,9 @@ useEffect(() => {
                                         <p style={{ fontSize: '16px', fontWeight: 600 }}>
                                             {selectedMember.role}
                                         </p>
-                                        <p style={{ fontSize: '15px' }}>
+                                        {/* <p style={{ fontSize: '15px' }}>
                                             {selectedMember.description}
-                                        </p>
+                                        </p> */}
                                     </div>
                                 </div>
                             </DialogContent>
@@ -310,6 +312,6 @@ useEffect(() => {
                     </section>
                 </div>
             </Layout>
-    </>
-  );
+        </>
+    );
 }

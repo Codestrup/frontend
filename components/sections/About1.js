@@ -34,11 +34,11 @@ export default function About1() {
                                 <div className="about-content">
                                     <div className="section-title">
                                         <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                                            Internship Highlights
+                                            Internships Highlights
                                         </h2>
                                     </div>
                                     <p className="mt-1 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
-                                        Acquire certification with our online internship program.
+                                        Get certification with our online internship program.
                                     </p>
                                     <div className="about-icon-items">
                                         <div className="icon-items wow fadeInUp" data-wow-delay=".7s">
@@ -57,7 +57,7 @@ export default function About1() {
                                                 <img src="/assets/img/about/icon-3.svg" alt="icon-img" />
                                             </div>
                                             <div className="content">
-                                                <h4>Career Growth and Opportunities
+                                                <h4>Career Growth and Development
                                                 </h4>
                                                 <p>
 
@@ -84,7 +84,7 @@ export default function About1() {
                                             <div className="content">
                                                 <h4>Benefits</h4>
                                                 <p>
-                                                Verify your accomplishments and abilities with a certificate of completion. Acquire certificates to open up new opportunities.
+                                                Verify your accomplishments and abilities with a certificate of completion. Get certificate to open up new opportunities.
                                                 </p>
                                             </div>
                                         </div>

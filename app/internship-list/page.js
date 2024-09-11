@@ -1,58 +1,23 @@
 "use client";
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useState, useEffect } from "react";
+import Accordion1 from "@/components/elements/Accordion1";
+import Layout from "@/components/layout/Layout";
 import Link from "next/link";
-import axios from "axios";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { useInternship } from "../../app/context/InternshipContext";
 import { useRouter } from "next/navigation";
+import axios from "axios";
 import { Dialog, Box, IconButton, Button, Card } from "@mui/material";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTelegram, faInstagram, faFacebook, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-const swiperOptions = {
-  modules: [Autoplay, Pagination, Navigation],
-  spaceBetween: 30,
-  speed: 1500,
-  loop: true,
-  autoplay: {
-    delay: 1500,
-    disableOnInteraction: false,
-  },
-
-  breakpoints: {
-    1199: {
-      slidesPerView: 4,
-    },
-    991: {
-      slidesPerView: 2,
-    },
-    767: {
-      slidesPerView: 2,
-    },
-    575: {
-      slidesPerView: 2,
-    },
-    0: {
-      slidesPerView: 1,
-    },
-  },
-};
-
-export default function Service1() {
+const Page = () => {
   const router = useRouter();
   const [internships, setInternships] = useState([]);
   const [selectedInternship, setSelectedInternship] = useState(null);
-  const [informationDialogOpen, setInformationDialogOpen] = useState(false);
-
   const { setInternshipId } = useInternship();
+  const [informationDialogOpen, setInformationDialogOpen] = useState(false);
+  const [showFullDescription, setShowFullDescription] = useState({});
 
-  // State to manage the toggle for each item
-  const [showFullDescription, setShowFullDescription] = useState(
-    internships.reduce((acc, item) => ({ ...acc, [item._id]: false }), {})
-  );
-
-  // Function to toggle the description
   const toggleDescription = (id) => {
     setShowFullDescription((prevState) => ({
       ...prevState,
@@ -72,11 +37,6 @@ export default function Service1() {
     };
     fetchInternships();
   }, []);
-
-  // const handleApplyNowClick = (id) => {
-  //   setInternshipId(id);
-  //   router.push("/internship");
-  // };
 
   const handleApplyNowClick = (internship) => {
     setInternshipId(internship._id);
@@ -156,118 +116,111 @@ export default function Service1() {
       name: "Job Opportunities - Access employment opportunities with us.                              This form is for INTERNSHIP in Codestrup Infotech Pvt Ltd ",
     },
   ];
+
   return (
-    <section
-      className="service-section fix  bg-cover"
-      style={{
-        backgroundImage: 'url("assets/img/service/service-bg.jpg")',
-        paddingTop: "120px",
-      }}
-      id="service"
-    >
-      <div className="container">
-        <div className="section-title-area">
-          <div className="section-title">
-            <span className="wow fadeInUp" style={{ fontWeight: "600" }}>
-              Browse Internships{" "}
-            </span>
+    <div>
+      <Layout headerStyle={1} >
+        <div>
 
-            <h2 className="wow fadeInUp" data-wow-delay=".3s">
-              Enroll Your Ideal Internship
-            </h2>
-          </div>
-
-        </div>
-        <div className="service-wrapper">
-          <div className="swiper service-slider">
-            <Swiper {...swiperOptions} className="swiper-wrapper">
-              {internships.map((item) => (
-                <SwiperSlide key={item._id}>
-                  <Card
-                    elevation={3}
-                    className="service-box-items"
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
-                      minHeight: "300px",
-                      padding: "20px",
-                      boxSizing: "border-box",
-                      marginBottom: '10px'
-                    }}
-                  >
-                    <div>
-                      <div
-                        className=""
+          <section className="service-section fix "
+          style={{padding:'60px 0'}}
+          >
+           
+              <h2
+                className="wow fadeInUp"
+                data-wow-delay=".3s"
+                style={{ display: "flex", justifyContent: "center" }}
+              >
+               Enroll Your Ideal Internship
+              </h2>
+            <div className="container">
+              <div className="service-wrapper mb-0">
+                <div className="row">
+                  {internships.map((item) => (
+                    <div
+                      key={item._id}
+                      className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
+                      data-wow-delay={`${item * 0.2}s`}
+                    >
+                      <Card
+                        elevation={3}
+                        className="service-box-items "
                         style={{
-                          width: "100%",
-                          height: "100%",
-                          minHeight: "100px",
-                          overflow: "hidden",
+                          display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "space-between",
+                          minHeight: "300px",
+                          padding: "20px",
+                          boxSizing: "border-box",
+                          marginTop: "48px",
                         }}
                       >
-                        <img
-                          src={item?.imageUrl}
-                          alt="icon-img"
-                          style={{
-                            width: "100%",
-                            height: "100px",
-                            objectFit: "contain",
-                          }}
-                        />
-                      </div>
-                      <div className="content">
-                        <h4>
-                          <Link href="/internship">{item.jobTitle}</Link>
-                        </h4>
-                        <div style={{ height: "100%", minHeight: "100px" }}>
-                          <p>
-                            {showFullDescription[item._id]
-                              ? item.description
-                              : `${item.description.substring(0, 50)}...`}
-                            &nbsp;
+                        <div>
+                          <div
+                            className=""
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              minHeight: "100px",
+                              overflow: "hidden",
+                            }}
+                          >
+                            <img
+                              src={item?.imageUrl}
+                              alt="icon-img"
+                              style={{
+                                width: "100%",
+                                height: "100px",
+                                objectFit: "contain",
+                              }}
+                            />
+                          </div>
 
-                          </p>
+                          <div className="content">
+                            <h4>
+                              <p>
+                                {item.jobTitle}
+                              </p>
+                            </h4>
+
+                            <div style={{ height: "100%", minHeight: "100px" }}>
+                              <p>
+                                {showFullDescription[item._id]
+                                  ? item.description
+                                  : `${item.description.substring(0, 50)}...`}
+                                &nbsp;
+                               
+                              </p>
+                            </div>
+                            <div
+                              className="content-bottom d-flex align-items-center justify-content-between"
+                              style={{
+                                marginTop: "auto",
+                              }}
+                            >
+                              <span
+                                className="theme-btn-2 apply-now-btn mt-3 d-flex align-items-center"
+                                onClick={() => handleApplyNowClick(item)}
+                                style={{ cursor: "pointer" }}
+                              >
+                                Apply Now
+                                <i className="fa-solid fa-arrow-right-long ms-2" />
+                              </span>
+                              <span className="theme-btn-2 mt-3 d-flex align-items-center">
+                                ₹ {item.price}
+                              </span>
+                            </div>
+                          </div>
                         </div>
-                      </div>
+                      </Card>
                     </div>
-                    <div
-                      className="content-bottom d-flex align-items-center justify-content-between"
-                      style={{
-                        marginTop: "auto",
-                      }}
-                    >
-                      <span
-                        className="theme-btn-3 apply-now-btn mt-3 d-flex align-items-center "
-                        onClick={() => handleApplyNowClick(item)}
-                        style={{ cursor: "pointer" }}
-                      >
-                        Apply Now
-                        <i className="fa-solid fa-arrow-right-long ms-2" />
-                      </span>
-                      <span className="theme-btn-3 mt-3 d-flex align-items-center">
-                        ₹ {item.price}
-                      </span>
-                    </div>
-                  </Card>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-          <div className="service-text wow fadeInUp" data-wow-delay=".4s">
-            <Link
-              href="/internship"
-              className="theme-btn wow fadeInUp"
-              data-wow-delay=".8s"
-              style={{
-                padding: "20px 20px",
-              }}
-            >
-              View Internship
-            </Link>
-          </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-      </div>
+      </Layout>
 
       {selectedInternship && informationDialogOpen && (
         <Dialog
@@ -293,7 +246,7 @@ export default function Service1() {
             </IconButton>
 
             <Box mt={2}>
-
+           
               <ol>
                 {internshipPerks.map((item) => (
                   <div
@@ -378,6 +331,8 @@ export default function Service1() {
           </Box>
         </Dialog>
       )}
-    </section>
+    </div>
   );
-}
+};
+
+export default Page;

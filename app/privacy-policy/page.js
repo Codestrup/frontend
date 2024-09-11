@@ -15,7 +15,7 @@ const page = () => {
                     <h2 className='text-center wow fadeInUp ' style={{ paddingBottom: '12px' }}>WELCOME TO CODESTRUP</h2>
                     <p className='wow fadeInUp' style={{ padding: '47px' }} >The Company ensures steady commitment to your usage of the Platform and privacy with regard to the protection of your invaluable information. This document contains information about the Website and mobile application <Link href='https://codestrup.in/' style={{ color: "#384bff" }}>https://codestrup.in/</Link> hereinafter referred to as the “Platform”.
                         In order to provide You with Our uninterrupted use of services, We may collect and, in some circumstances, disclose information about you with your permission. To ensure better protection of Your privacy, We provide this notice explaining Our information collection and disclosure policies, and the choices You make about the way Your information is collected and used.
-                        This Privacy Policy shall be in compliance with the General Data Protection Regulation (GDPR) in effect from May 25, 2018, and any and all provisions that may read to the contrary shall be deemed to be void and unenforceable as of that date. If you do not agree with the terms and conditions of our Privacy Policy, including in relation to the manner of collection or use of your information, please do not use or access the Site. If you have any questions or concerns regarding this Privacy Policy, you should contact our Customer Support Desk at info@codestrup.com.
+                        This Privacy Policy shall be in compliance with the General Data Protection Regulation (GDPR) in effect from May 25, 2018, and any and all provisions that may read to the contrary shall be deemed to be void and unenforceable as of that date. If you do not agree with the terms and conditions of our Privacy Policy, including in relation to the manner of collection or use of your information, please do not use or access the Site. If you have any questions or concerns regarding this Privacy Policy, you should contact our Customer Support Desk at info@codestrup.in.
 
                         .</p>
 
@@ -56,7 +56,7 @@ const page = () => {
                         To communicate the necessary account and service related information from time to time;
                         To allow you to receive quality customer care services and data Collection;
                         To comply with applicable laws, rules and regulations;
-                        Where any service requested by You involves a third party, such information as is reasonably necessary by the Company to carry out Your service request may be shared with such third party. We also do use your contact information to send you offers based on your interests and prior activity and also to view the content preferred by you. The Company may also use contact information internally to direct its efforts for service improvement but shall immediately delete all such information upon withdrawal of your consent for the same through the ‘unsubscribe’ button or through an email to be sent to info@codestrup.com.
+                        Where any service requested by You involves a third party, such information as is reasonably necessary by the Company to carry out Your service request may be shared with such third party. We also do use your contact information to send you offers based on your interests and prior activity and also to view the content preferred by you. The Company may also use contact information internally to direct its efforts for service improvement but shall immediately delete all such information upon withdrawal of your consent for the same through the ‘unsubscribe’ button or through an email to be sent to info@codestrup.in.
 
                         To the extent possible, we provide You with the option of not divulging any specific information that you wish for us not to collect, store or use. You may also choose not to use a particular service or feature on the Platform and opt-out of any non-essential communications from the platform.
 
@@ -286,7 +286,7 @@ const page = () => {
 
                     </h6>
                     <p className='wow fadeInUp' style={{ paddingLeft: '47px', paddingRight: '47px', paddingBottom: '47px' }} >
-                    To withdraw your consent, or to request the download or delete your data with us for any or all our services & services at any time, please email to <Link  href="/mailto:info@codestrup.com" style={{ color: "#384bff" }}> info@codestrup.com</Link>
+                    To withdraw your consent, or to request the download or delete your data with us for any or all our services & services at any time, please email to <Link  href="/mailto:info@codestrup.in" style={{ color: "#384bff" }}> info@codestrup.in</Link>
 
                     </p>
 
@@ -297,7 +297,7 @@ const page = () => {
                     </h6>
                     <p className='wow fadeInUp' style={{ paddingLeft: '47px', paddingRight: '47px', paddingBottom: '47px' }} >
                     If you have any questions or concerns regarding this privacy policy, you should contact us by sending an e-mail to please email to 
-                    <Link  href="/mailto:info@codestrup.com" style={{ color: "#384bff" }}> info@codestrup.com</Link>
+                    <Link  href="/mailto:info@codestrup.in" style={{ color: "#384bff" }}> info@codestrup.in</Link>
                     <br/>
                     Information provided on the website may not be 100% accurate and may be provided for promotional purposes of the business.
                     </p>

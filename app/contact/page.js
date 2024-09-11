@@ -62,7 +62,9 @@ export default function Contact() {
     <>
       <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Contact Us">
         <div>
-          <section className="contact-section fix section-padding">
+          <section className="contact-section fix "
+          style={{padding:'60px 0'}}
+          >
             <div className="container">
               <div className="contact-wrapper-2">
                 <div className="row g-4 ">
@@ -132,7 +134,7 @@ export default function Contact() {
                             </p>
                             <p>
                               <Link
-                                href="mailto:info@codestrup.com"
+                                href="mailto:info@codestrup.in"
                                 style={{ color: "white" }}
                               >
                                 info@codestrup.in
@@ -175,8 +177,8 @@ export default function Contact() {
                               Location
                             </p>
                             <p>
-                              Office No.301 3rd Floor , Umed Building , Nanded
-                              City Rd , Pune , Maharastra 411041
+                              Office No.301, 3rd Floor, Umed Building, Nanded
+                              City Rd , Pune, Maharastra-411041
                             </p>
                           </div>
                         </div>

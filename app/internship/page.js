@@ -30,7 +30,7 @@ const Page = () => {
       try {
         const response = await axios.get("https://api.codestrup.in/loadjobs");
         setInternships(response?.data?.data || []);
-       
+
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -121,7 +121,18 @@ const Page = () => {
     <div>
       <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Internship">
         <div>
-          <section className="service-section fix section-padding">
+
+          <section className="service-section fix "
+          style={{padding:'60px 0'}}
+          >
+           
+              <h2
+                className="wow fadeInUp"
+                data-wow-delay=".3s"
+                style={{ display: "flex", justifyContent: "center" }}
+              >
+               Enroll Your Ideal Internship
+              </h2>
             <div className="container">
               <div className="service-wrapper mb-0">
                 <div className="row">
@@ -178,20 +189,7 @@ const Page = () => {
                                   ? item.description
                                   : `${item.description.substring(0, 50)}...`}
                                 &nbsp;
-                                {/* {item.description.length > 50 && (
-                                  <span>
-                                    <button
-                                      onClick={() =>
-                                        toggleDescription(item._id)
-                                      }
-                                      className="read-more-less-btn"
-                                    >
-                                      {showFullDescription[item._id]
-                                        ? "Read Less"
-                                        : "Read More"}
-                                    </button>
-                                  </span>
-                                )} */}
+                               
                               </p>
                             </div>
                             <div
@@ -248,7 +246,7 @@ const Page = () => {
             </IconButton>
 
             <Box mt={2}>
-              {/* <h5 variant="h4">Perks you will receive are:</h5> */}
+           
               <ol>
                 {internshipPerks.map((item) => (
                   <div
@@ -274,12 +272,21 @@ const Page = () => {
                   justifyContent: 'center',
                 }}
               >
-                <Box component="li" sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                  <Link href="http://codestrup.in/" >
-                    <p style={{ color: "#384bff" }}>Codestrup infotech Pvt Ltd</p>
+
+                <Box
+                  component="li"
+                  sx={{
+                    display: { xs: 'none', md: 'none', lg: 'flex' },
+                    alignItems: "center",
+                    gap: "10px"
+                  }}
+                >
+                  <Link href="http://codestrup.in/">
+                    <p style={{ color: "#384bff" }}>Codestrup Infotech Pvt Ltd</p>
                   </Link>
                   |
                 </Box>
+
                 {socialLinks.map((item) => (
                   <Box
                     component="li"
@@ -290,13 +297,16 @@ const Page = () => {
                       width: "auto",
                     }}
                   >
-                    <Link href={item.link} sx={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      marginLeft: "10px",
-                      color: "#384bff",
-                      textDecoration: "none",
-                    }}>
+                    <Link
+                      href={item.link}
+                      sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        marginLeft: "10px",
+                        color: "#384bff",
+                        textDecoration: "none",
+                      }}
+                    >
                       <FontAwesomeIcon icon={item.icon} size="lg" style={{ color: "#384bff" }} />
                     </Link>
                   </Box>

@@ -50,7 +50,25 @@ export default function Footer3() {
                   <div className="footer-content">
                     <p>
                       Codestrup Infotech provides industry-aligned online internships in programming with hands-on, project-based training to bridge academic learning and real-world skills.
+                      <Link href="/about" className="about-redireact"
+                       style={{
+                        top:'18px',
+                        position:'relative',
+                        padding: '5px 10px',
+                        border: '1px solid rgba(227, 227, 227, 0.2)',
+                        color: 'white',
+                        cursor: 'pointer',
+                        textAlign: 'center',
+                        display: 'inline-block',
+                        fontWeight:'600'
+                      }}>
+                      
+                          Read More
+                       
+                      </Link>
                     </p>
+
+
                     <div className="social-icon d-flex align-items-center">
                       <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd">
                         <i className="fa-brands fa-linkedin-in" />
@@ -92,7 +110,7 @@ export default function Footer3() {
                         <li>
                           <Link href="/internship">
                             <i className="fa-solid fa-chevron-right" />
-                            internship
+                            Internship
                           </Link>
                         </li>
                         <li>
@@ -191,8 +209,8 @@ export default function Footer3() {
                           </div>
                           <div className="offcanvas__contact-text ">
                             <p>
-                              Office No.301 3rd floor, Umed building, Nanded
-                              City rd, Pune,Maharastra 411041
+                              Office No.301, 3rd floor, Umed building, Nanded
+                              City rd, Pune, Maharastra-411041
                             </p>
                           </div>
                         </li>
@@ -203,10 +221,10 @@ export default function Footer3() {
                           <div className="offcanvas__contact-text">
                             <Link href="/mailto:info@azent.com">
                               <span
-                                className="mailto:info@codestrup.com"
+                                className="mailto:info@codestrup.in"
                                 style={{ color: "#ffffffcc" }}
                               >
-                                info@codestrup.com
+                                info@codestrup.in
                               </span>
                             </Link>
                           </div>
