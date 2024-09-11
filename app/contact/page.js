@@ -55,7 +55,12 @@ export default function Contact() {
         toast.success(response?.data?.message);
         actions.resetForm();
       }
-    } catch (error) {}
+    } catch (error) {
+      
+      if(error.response){
+        toast.error(error.response?.data?.error)
+      }
+    }
   };
 
   return (
