@@ -17,7 +17,8 @@ export default function Project() {
                     <img src="/assets/img/project/01.jpg" alt="project-img" />
                     <div className="project-content">
                       <p>Technology</p>
-                      <h4>
+                      <h4> 
+                      
                         <Link href="/project-details">
                           Platform Integration
                         </Link>
@@ -111,7 +112,6 @@ export default function Project() {
             </div>
           </div>
         </section> */}
-        
       </Layout>
     </>
   );
