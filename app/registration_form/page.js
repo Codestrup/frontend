@@ -230,8 +230,6 @@ export default function ServiceDetails() {
     }
   };
 
-
-
   const handleConsentYes = async () => {
     setConsentDialogOpen(false);
     try {
@@ -256,7 +254,6 @@ export default function ServiceDetails() {
         },
       });
 
-    
       if (res.data.success) {
         setLoading(false);
         window.open(res.data.data.upiLink, "_blank");
