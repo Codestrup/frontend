@@ -240,7 +240,7 @@ export default function ServiceDetails() {
         method: "POST",
         url: "https://api.codestrup.in/create-order",
         data: {
-          amount: internship[0]?.price ?? "",
+          amount: internship?.price ?? "",
           check: "on",
           collegeName: formValues.collegeName ?? "",
           email: formValues.email ?? "",
