@@ -14,8 +14,8 @@ export default function About() {
             className="about-section  fix bg-cover"
             style={{
               backgroundImage: 'url("assets/img/service/service-bg-2.jpg")',
-              paddingTop: "120px",
-              paddingBottom: "50px",
+              paddingTop: "60px",
+              paddingBottom: "60px",
             }}
           >
             <div className="container">
@@ -27,7 +27,7 @@ export default function About() {
                       data-wow-delay=".3s"
                       style={{ display: "flex", justifyContent: "center" }}
                     >
-                      About Codestrup Infotech Pvt. Ltd.
+                      About Codestrup Infotech Pvt. Ltd
                     </h2>
                   </div>
 
@@ -53,7 +53,7 @@ export default function About() {
                       data-wow-delay=".7s"
                     >
                       <p>
-                        Codestrup Infotech Pvt. Ltd. is a pioneer in providing
+                        Codestrup Infotech Pvt. Ltd is a pioneer in providing
                         industry-aligned online internship programs. Our mission
                         is to bridge the gap between academia and the
                         professional world by offering practical, hands-on
@@ -104,7 +104,7 @@ export default function About() {
             </div>
           </section>
 
-          <Marque4 />
+          {/* <Marque4 /> */}
         </div>
       </Layout>
     </>

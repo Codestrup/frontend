@@ -25,7 +25,7 @@ export default function Hero1() {
                                 Find and Pursue Your Ideal Internship
                                 </h1>
                                 <p className="wow fadeInUp" data-wow-delay=".6s">
-                                Acquire certification with our online internship program.
+                                Get certification with our online internship program.
                                 </p>
                                 <div className="hero-button">
                                     <Link href="/internship" className="theme-btn wow fadeInUp" data-wow-delay=".8s">
@@ -39,7 +39,7 @@ export default function Hero1() {
                         </div>
                         <div className="col-lg-4">
                             <div className="hero-image wow fadeInUp" data-wow-delay=".4s">
-                                <img src="/assets/img/hero/h3.png" alt="hero-img" style={{paddingLeft:'45px',paddingRight:'45px',paddingBottom:'0px'}} />
+                                <img src="/assets/img/hero/image.png" alt="hero-img" style={{paddingLeft:'45px',paddingRight:'45px',paddingBottom:'0px'}} />
                             </div>
                         </div>
                     </div>

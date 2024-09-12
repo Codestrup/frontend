@@ -4,114 +4,82 @@ import Link from "next/link";
 export default function Project() {
   return (
     <>
-      <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Coming Soon">
-        {/* <section className="project-section section-padding fix">
+      <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Learning Center">
+        <section style={{padding:'60px 0'}}>
+        <h2
+                className="wow fadeInUp"
+                data-wow-delay=".3s"
+                style={{ display: "flex", justifyContent: "center" }}
+              >
+               Coming Soon...
+              </h2>
+        </section>
+        <section className="project-section section-padding fix">
           <div className="container">
             <div className="row g-4">
-              <div
-                className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
+              <div className="col-xl-6 col-lg-6 col-md-6 wow fadeInUp"
                 data-wow-delay=".3s"
               >
                 <div className="project-items">
                   <div className="project-image">
                     <img src="/assets/img/project/01.jpg" alt="project-img" />
                     <div className="project-content">
-                      <p>Technology</p>
-                      <h4> 
-                      
+                      <h4>
                         <Link href="/project-details">
-                          Platform Integration
+                         Text Learning
                         </Link>
                       </h4>
                     </div>
                   </div>
                 </div>
               </div>
-              <div
-                className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
+              <div  className="col-xl-6 col-lg-6 col-md-6 wow fadeInUp"
                 data-wow-delay=".5s"
               >
                 <div className="project-items">
                   <div className="project-image">
                     <img src="/assets/img/project/02.jpg" alt="project-img" />
                     <div className="project-content">
-                      <p>Security</p>
                       <h4>
-                        <Link href="/project-details">Network Security</Link>
+                        <Link href="/project-details">Video Learning</Link>
                       </h4>
                     </div>
                   </div>
                 </div>
               </div>
-              <div
-                className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
+              <div className="col-xl-6 col-lg-6 col-md-6 wow fadeInUp"
                 data-wow-delay=".7s"
               >
                 <div className="project-items">
                   <div className="project-image">
                     <img src="/assets/img/project/03.jpg" alt="project-img" />
                     <div className="project-content">
-                      <p>Solution</p>
                       <h4>
-                        <Link href="/project-details">Web Development</Link>
+                        <Link href="/project-details">Aptitude Preparation</Link>
                       </h4>
                     </div>
                   </div>
                 </div>
               </div>
-              <div
-                className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
+              <div  className="col-xl-6 col-lg-6 col-md-6 wow fadeInUp"
                 data-wow-delay=".3s"
               >
                 <div className="project-items">
                   <div className="project-image">
                     <img src="/assets/img/project/04.jpg" alt="project-img" />
                     <div className="project-content">
-                      <p>Technology</p>
                       <h4>
-                        <Link href="/project-details">IT Management</Link>
+                        <Link href="/project-details">Interview Preparation</Link>
                       </h4>
                     </div>
                   </div>
                 </div>
               </div>
-              <div
-                className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
-                data-wow-delay=".5s"
-              >
-                <div className="project-items">
-                  <div className="project-image">
-                    <img src="/assets/img/project/10.jpg" alt="project-img" />
-                    <div className="project-content">
-                      <p>Technology</p>
-                      <h4>
-                        <Link href="/project-details">Design Solutions</Link>
-                      </h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
-                data-wow-delay=".7s"
-              >
-                <div className="project-items">
-                  <div className="project-image">
-                    <img src="/assets/img/project/11.jpg" alt="project-img" />
-                    <div className="project-content">
-                      <p>Technology</p>
-                      <h4>
-                        <Link href="/project-details">
-                          Software Development
-                        </Link>
-                      </h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
+             
             </div>
           </div>
-        </section> */}
+        </section>
+        
       </Layout>
     </>
   );

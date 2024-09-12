@@ -29,13 +29,13 @@ export default function MobileMenu() {
             <ul>
               <li className=" active menu-thumb">
                 <Link href="/">
-                  Home
+                  Home 
                   <i className="fas fa-angle-down" />
                 </Link>
               
               </li>
               <li>
-                <Link href="/about" style={{}}>About</Link>
+                <Link href="/about" >About</Link>
               </li>
               <li>
                 <Link href="/internship">Internship</Link>

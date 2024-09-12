@@ -180,7 +180,7 @@ const page = () => {
                     <h6 className='wow fadeInUp' style={{ paddingLeft: '47px', paddingRight: '47px', paddingTop: '0px', paddingBottom: '10px' }}>GRIEVANCES
                     </h6>
                     <p className='wow fadeInUp' style={{ paddingLeft: '47px', paddingRight: '47px', paddingBottom: '47px' }} >
-                        Any and all communication relating to any dispute or grievance experienced by the User may be communicated to the Company by the User by emailing to <Link href="mailto:info@codestrup.com" style={{ color: '#384bff' }}>info@codestrup.com</Link>.
+                        Any and all communication relating to any dispute or grievance experienced by the User may be communicated to the Company by the User by emailing to <Link href="mailto:info@codestrup.in" style={{ color: '#384bff' }}>info@codestrup.in</Link>.
 
                     </p>
 
@@ -207,7 +207,7 @@ const page = () => {
 
                         <p>
                             <span style={{ color: '#384bff' }}>Contact Us: </span>
-                            If you have any questions about this Agreement, the practices of the Platform, or your experience with the Service, you can contact us at <Link href="mailto:info@codestrup.com" style={{ color: '#384bff' }}>info@codestrup.com</Link> .
+                            If you have any questions about this Agreement, the practices of the Platform, or your experience with the Service, you can contact us at <Link href="mailto:info@codestrup.in" style={{ color: '#384bff' }}>info@codestrup.in</Link> .
                         </p>
                     </p>
                 </div>

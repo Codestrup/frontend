@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useInternship } from "../../app/context/InternshipContext";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import { Dialog, Box, IconButton, Button } from "@mui/material";
+import { Dialog, Box, IconButton, Button, Card } from "@mui/material";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTelegram, faInstagram, faFacebook, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
@@ -63,24 +63,29 @@ const Page = () => {
       name: "Whatsapp",
       link: "https://bit.ly/4cn7J3I",
       icon: faWhatsapp,
+
     },
+
     {
       id: 3,
-      name: "Facebook",
-      link: "https://bit.ly/3zciBU0",
-      icon: faFacebook,
+      name: "Telegram",
+      icon: faTelegram,
+      link: "https://t.me/+6HxZOtDBk6w0N2Vl",
+
     },
+
     {
       id: 4,
       name: "Instagram",
-      link: "https://bit.ly/45tfDXd",
       icon: faInstagram,
+      link: "https://bit.ly/45tfDXd",
     },
+
     {
       id: 5,
-      name: "Telegram",
-      link: "https://t.me/+6HxZOtDBk6w0N2Vl",
-      icon: faTelegram,
+      name: "Facebook",
+      link: "https://bit.ly/3zciBU0",
+      icon: faFacebook,
     },
   ];
 
@@ -114,7 +119,7 @@ const Page = () => {
 
   return (
     <div>
-      <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Internship">
+      <Layout headerStyle={1} >
         <div>
 
           <section className="service-section fix "
@@ -289,16 +294,19 @@ const Page = () => {
                     sx={{
                       display: "flex",
                       alignItems: "center",
-                      width: "auto", 
+                      width: "auto",
                     }}
                   >
-                    <Link href={item.link} style={{
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      marginLeft: "10px",
-                      color: "#384bff",
-                      textDecoration: "none",
-                    }}>
+                    <Link
+                      href={item.link}
+                      sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        marginLeft: "10px",
+                        color: "#384bff",
+                        textDecoration: "none",
+                      }}
+                    >
                       <FontAwesomeIcon icon={item.icon} size="lg" style={{ color: "#384bff" }} />
                     </Link>
                   </Box>

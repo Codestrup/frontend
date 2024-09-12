@@ -2775,7 +2775,11 @@ span {
   color: var(--white);
   border: 1px solid transparent;
 }
-
+.footer-widgets-wrapper .single-footer-widget .footer-content .about-redireact:hover{
+  background-color: var(--theme);
+  color: var(--white);
+  border: 1px solid transparent;
+}
 .footer-widgets-wrapper .single-footer-widget .footer-content .contact-info {
   margin-top: 20px;
 }
@@ -4206,6 +4210,14 @@ span {
 
 .offcanvas__wrapper .offcanvas__content .offcanvas__contact {
   margin-top: 20px;
+  
+    position: absolute;
+    bottom: 20px; 
+    left: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center; 
+  
 }
 
 .offcanvas__wrapper .offcanvas__content .offcanvas__contact ul {
@@ -4329,32 +4341,32 @@ span {
 
 .breadcrumb-wrapper .page-heading {
   position: relative;
-  padding: 73px 0;
+  padding: 20px 0;
   text-align: center;
   z-index: 9;
 }
 
 @media (max-width: 1199px) {
   .breadcrumb-wrapper .page-heading {
-    padding: 70px 0;
+    padding: 20px 0;
   }
 }
 
 @media (max-width: 991px) {
   .breadcrumb-wrapper .page-heading {
-    padding: 60px 0;
+    padding: 20px 0;
   }
 }
 
 @media (max-width: 767px) {
   .breadcrumb-wrapper .page-heading {
-    padding: 60px 0;
+    padding: 20px 0;
   }
 }
 
 @media (max-width: 575px) {
   .breadcrumb-wrapper .page-heading {
-    padding: 50px 0;
+    padding: 20px 0;
   }
 }
 
@@ -6913,7 +6925,7 @@ span {
 
 @media (max-width: 767px) {
   .preloader .animation-preloader .txt-loading {
-    font-size: 2.5em;
+    font-size: 1.5em;
   }
 }
 
@@ -8534,10 +8546,9 @@ input.main-search-input::placeholder {
   margin-top: -50px;
   position: relative;
   z-index: 9;
-  padding: 30px;
+  padding: 29px;
   background-color: var(--white);
   box-shadow: var(--box-shadow);
-  margin-right: 30px;
 }
 
 .team-card-items .team-content h3 {

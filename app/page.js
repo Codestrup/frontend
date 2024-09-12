@@ -29,13 +29,13 @@ export default function Home() {
  
         <Layout headerStyle={1} footerStyle={1}>
           <Hero1 />
-          <Marque1 />
+          {/* <Marque1 /> */}
           <About1 />
           <Brand1 />
           <Service1 />
           <WorkProcess1 />
           <Achievement3 />
-          <Marque4 />
+          {/* <Marque4 /> */}
           <Testimonial3 />
           {/* <Brand2 /> */}
           <Certified />

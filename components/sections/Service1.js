@@ -7,6 +7,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useInternship } from "../../app/context/InternshipContext";
 import { useRouter } from "next/navigation";
 import { Dialog, Box, IconButton, Button, Card } from "@mui/material";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTelegram, faInstagram, faFacebook, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -63,7 +65,7 @@ export default function Service1() {
       try {
         const response = await axios.get("https://api.codestrup.in/loadjobs");
         setInternships(response?.data?.data || []);
-     
+
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -90,31 +92,40 @@ export default function Service1() {
   const socialLinks = [
     {
       id: 1,
-      name: "Telegram",
-      link: "https://t.me/+6HxZOtDBk6w0N2Vl",
+      name: "LindkeIn",
+      link: "https://bit.ly/4erKOpQ",
+      icon: faLinkedin,
+
+
     },
     {
       id: 2,
-      name: "Instagram",
-      link: "https://bit.ly/45tfDXd",
+      name: "Whatsapp",
+      link: "https://bit.ly/4cn7J3I",
+      icon: faWhatsapp,
+
     },
 
     {
       id: 3,
-      name: "Facebook",
-      link: "https://bit.ly/3zciBU0",
+      name: "Telegram",
+      icon: faTelegram,
+      link: "https://t.me/+6HxZOtDBk6w0N2Vl",
+
     },
 
     {
       id: 4,
-      name: "Whatsapp",
-      link: "https://bit.ly/4cn7J3I",
+      name: "Instagram",
+      icon: faInstagram,
+      link: "https://bit.ly/45tfDXd",
     },
 
     {
       id: 5,
-      name: "Lindkdin",
-      link: "https://bit.ly/4erKOpQ",
+      name: "Facebook",
+      link: "https://bit.ly/3zciBU0",
+      icon: faFacebook,
     },
   ];
 
@@ -136,30 +147,15 @@ export default function Service1() {
 
     {
       id: 4,
-      name: "Appreciation Letter (Best Performer Recognition).",
-    },
-
-    {
-      id: 5,
-      name: "Network Opportunities - Connect with  members and interns from around the world experiencing a multicultural and rare diverse working environment.",
-    },
-
-    {
-      id: 6,
       name: "Learning Opportunities - As an intern at  Codestrup infotech Pvt Ltd  , you'll dive into a collaborative, intellectually stimulating environment, gaining hands-on experience with cutting-edge projects at the forefront of technological advancement",
     },
 
-    {
-      id: 7,
-      name: "Network Opportunities - Connect with  members and interns from around the world experiencing a multicultural and rare diverse working environment.",
-    },
 
     {
-      id: 8,
-      name: "Job Opportunities - Access employment opportunities with us. This form is for  INTERNSHIP in Codestrup Infotech Pvt Ltd for JUNE 2024 Batch.",
+      id: 5,
+      name: "Job Opportunities - Access employment opportunities with us.                              This form is for INTERNSHIP in Codestrup Infotech Pvt Ltd ",
     },
   ];
-
   return (
     <section
       className="service-section fix  bg-cover"
@@ -173,14 +169,14 @@ export default function Service1() {
         <div className="section-title-area">
           <div className="section-title">
             <span className="wow fadeInUp" style={{ fontWeight: "600" }}>
-              Browse Internship{" "}
+              Browse Internships{" "}
             </span>
 
             <h2 className="wow fadeInUp" data-wow-delay=".3s">
-              Discover Your Ideal Internship
+              Enroll Your Ideal Internship
             </h2>
           </div>
-          
+
         </div>
         <div className="service-wrapper">
           <div className="swiper service-slider">
@@ -197,7 +193,7 @@ export default function Service1() {
                       minHeight: "300px",
                       padding: "20px",
                       boxSizing: "border-box",
-                      marginBottom:'10px'
+                      marginBottom: '10px'
                     }}
                   >
                     <div>
@@ -230,18 +226,7 @@ export default function Service1() {
                               ? item.description
                               : `${item.description.substring(0, 50)}...`}
                             &nbsp;
-                            {/* {item.description.length > 50 && (
-                              <span>
-                                <button
-                                  onClick={() => toggleDescription(item._id)}
-                                  className="read-more-less-btn"
-                                >
-                                  {showFullDescription[item._id]
-                                    ? "Read Less"
-                                    : "Read More"}
-                                </button>
-                              </span>
-                            )} */}
+
                           </p>
                         </div>
                       </div>
@@ -308,7 +293,7 @@ export default function Service1() {
             </IconButton>
 
             <Box mt={2}>
-              {/* <h5 variant="h4">Perks you will receive are:</h5> */}
+
               <ol>
                 {internshipPerks.map((item) => (
                   <div
@@ -323,46 +308,57 @@ export default function Service1() {
             </Box>
 
             <Box>
-              <ul>
-                <li
-                  style={{ display: "flex", alignItems: "center", gap: "10px" }}
+              <Box
+                component="ul"
+                sx={{
+                  display: 'flex',
+                  listStyle: 'none',
+                  padding: { xs: '10px', md: '30px' },
+                  margin: 0,
+                  gap: { xs: '10px', md: '20px' },
+                  justifyContent: 'center',
+                }}
+              >
+
+                <Box
+                  component="li"
+                  sx={{
+                    display: { xs: 'none', md: 'none', lg: 'flex' },
+                    alignItems: "center",
+                    gap: "10px"
+                  }}
                 >
-                  <p>Visit Our Website First</p> -{" "}
-                  <Link
-                    href="http://codestrup.in/"
-                    style={{
-                      color: "#384bff",
-                      textDecoration: "underline",
-                    }}
-                  >
-                    Click Here
+                  <Link href="http://codestrup.in/">
+                    <p style={{ color: "#384bff" }}>Codestrup Infotech Pvt Ltd</p>
                   </Link>
-                </li>
+                  |
+                </Box>
+
                 {socialLinks.map((item) => (
-                  <li
+                  <Box
+                    component="li"
                     key={item.id}
-                    style={{
+                    sx={{
                       display: "flex",
                       alignItems: "center",
-                      gap: "20px",
-                      justifyContent: "start",
-                      width: "100%",
+                      width: "auto",
                     }}
                   >
-                    <p>{item.name}</p>-
                     <Link
                       href={item.link}
-                      style={{
-                        color: "#384bff",
-                        textDecoration: "underline",
+                      sx={{
+                        display: 'flex',
+                        alignItems: 'center',
                         marginLeft: "10px",
+                        color: "#384bff",
+                        textDecoration: "none",
                       }}
                     >
-                      Click Here
+                      <FontAwesomeIcon icon={item.icon} size="lg" style={{ color: "#384bff" }} />
                     </Link>
-                  </li>
+                  </Box>
                 ))}
-              </ul>
+              </Box>
             </Box>
 
             <Box mt={2} display="flex" justifyContent="center">
