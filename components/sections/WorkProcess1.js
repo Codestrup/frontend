@@ -9,257 +9,277 @@ export default function WorkProcess1() {
                     </div>
 
 
-                    <div
-                        className="icon-area wow fadeInUp section-title"
-                        data-wow-delay=".7s"
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            padding: '2%',
-                            alignContent:'center'
-                        }}
-                    >
-                        <ul
-                            className="list"
-                            style={{
-                                listStyle: 'none',
-                                padding: 0,
-                                margin: 0,
-                            }}
-                        >
-                            <li
-                                style={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    marginBottom: '10px',
-                                    fontSize: '16px',
-                                }}
-                            >
-                                <i
-                                    className="fa-regular fa-circle-check"
-                                    style={{
-                                        color: '#384bff',
-                                        marginRight: '10px',
-                                    }}
-                                />
-                                Work on live projects.
-                            </li>
-                            <li
-                                style={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    marginBottom: '10px',
-                                    fontSize: '16px',
-                                }}
-                            >
-                                <i
-                                    className="fa-regular fa-circle-check"
-                                    style={{
-                                        color: '#384bff',
-                                        marginRight: '10px',
-                                    }}
-                                />
-                                Receive task reviews and approvals from experts.
-                            </li>
-                            <li
-                                style={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    marginBottom: '10px',
-                                    fontSize: '16px',
-                                }}
-                            >
-                                <i
-                                    className="fa-regular fa-circle-check"
-                                    style={{
-                                        color: '#384bff',
-                                        marginRight: '10px',
-                                    }}
-                                />
-                                Get help from AI to learn and guide you in completing project tasks.
-                            </li>
-                            <li
-                                style={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    marginBottom: '10px',
-                                    fontSize: '16px',
-                                }}
-                            >
-                                <i
-                                    className="fa-regular fa-circle-check"
-                                    style={{
-                                        color: '#384bff',
-                                        marginRight: '10px',
-                                    }}
-                                />
-                                Access text courses for learning.
-                            </li>
-                            <li
-                                style={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    marginBottom: '10px',
-                                    fontSize: '16px',
-                                }}
-                            >
-                                <i
-                                    className="fa-regular fa-circle-check"
-                                    style={{
-                                        color: '#384bff',
-                                        marginRight: '10px',
-                                    }}
-                                />
-                                Get alerts for new job openings.
-                            </li>
-                            <li
-                                style={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    marginBottom: '10px',
-                                    fontSize: '16px',
-                                }}
-                            >
-                                <i
-                                    className="fa-regular fa-circle-check"
-                                    style={{
-                                        color: '#384bff',
-                                        marginRight: '10px',
-                                    }}
-                                />
-                                Receive an internship certificate upon completing all projects and tasks.
-                            </li>
-                            <li
-                                style={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    marginBottom: '10px',
-                                    fontSize: '16px',
-                                }}
-                            >
-                                <i
-                                    className="fa-regular fa-circle-check"
-                                    style={{
-                                        color: '#384bff',
-                                        marginRight: '10px',
-                                    }}
-                                />
-                                Share your internship certificate directly on your LinkedIn profile.
-                            </li>
-                        </ul>
-                    </div>
+                    <div style={{ maxWidth: '1000px', margin: 'auto', overflowX: 'auto', whiteSpace: 'nowrap', padding: '20px' }}>
 
-
-
-                    {/* <div className="process-work-wrapper">
-                        <div className="row">
-                            <div className="col-xl-3 col-lg-4 col-md-6">
-                                <div className="work-process-items text-center">
-                                    <div className="icon">
-                                        <img src="/assets/img/process/01.svg" alt="img" />
-                                        <h6 className="number">
-                                            1
-                                        </h6>
+                      
+                                <div style={{
+                                    display: 'inline-block',
+                                    position: 'relative',
+                                    padding: '20px',
+                                    border: '1px solid #ddd',
+                                    borderRadius: '8px',
+                                    marginRight: '20px',
+                                    backgroundColor: '#f9f9f9',
+                                    width: '80%',
+                                    boxSizing: 'border-box'
+                                }}>
+                                    <img
+                                        src="/assets/img/Highlights_icons/01.png"
+                                        alt="Logo 2"
+                                        style={{
+                                            width: '50px',
+                                            height: 'auto',
+                                            display: 'block',
+                                            margin: '0 auto 10px'
+                                        }}
+                                    />
+                                    <div style={{
+                                        textAlign: 'center',
+                                        overflow: 'hidden',
+                                        textOverflow: 'ellipsis',
+                                        wordBreak: 'break-word',
+                                    }}>
+                                        <p style={{
+                                            margin: 0,
+                                            fontSize: '14px',
+                                            color: '#666',
+                                            overflowWrap: 'break-word'
+                                        }}>
+                                            Work on live projects.
+                                        </p>
                                     </div>
-                                    <div className="content">
-                                        <h4>Complete Flexibility</h4>
-                                        <p>
+                                </div>
+                                <div style={{
+                                    display: 'inline-block',
+                                    position: 'relative',
+                                    padding: '20px',
+                                    border: '1px solid #ddd',
+                                    borderRadius: '8px',
+                                    marginRight: '20px',
+                                    backgroundColor: '#f9f9f9',
+                                    width: '80%',
+                                    boxSizing: 'border-box'
+                                }}>
+                                    <img
+                                        src="/assets/img/Highlights_icons/02.png"
+                                        alt="Logo 2"
+                                        style={{
+                                            width: '50px',
+                                            height: 'auto',
+                                            display: 'block',
+                                            margin: '0 auto 10px'
+                                        }}
+                                    />
+                                    <div style={{
+                                        textAlign: 'center',
+                                        overflow: 'hidden',
+                                        textOverflow: 'ellipsis',
+                                        wordBreak: 'break-word',
+                                    }}>
+                                        <p style={{
+                                            margin: 0,
+                                            fontSize: '14px',
+                                            color: '#666',
+                                            overflowWrap: 'break-word'
+                                        }}>
+                                            Receive task reviews and approvals from experts.
+                                        </p>
+                                    </div>
+                                </div>
 
-                                            Flexible learning enhances diversity, accessibility, and student autonomy.
+                                <div style={{
+                                    display: 'inline-block',
+                                    position: 'relative',
+                                    padding: '20px',
+                                    border: '1px solid #ddd',
+                                    borderRadius: '8px',
+                                    marginRight: '20px',
+                                    backgroundColor: '#f9f9f9',
+                                    width: '80%',
+                                    boxSizing: 'border-box'
+                                }}>
+                                    <img
+                                        src="/assets/img/Highlights_icons/03.png"
+                                        alt="Logo 2"
+                                        style={{
+                                            width: '50px',
+                                            height: 'auto',
+                                            display: 'block',
+                                            margin: '0 auto 10px'
+                                        }}
+                                    />
+                                    <div style={{
+                                        textAlign: 'center',
+                                        overflow: 'hidden',
+                                        textOverflow: 'ellipsis',
+                                        wordBreak: 'break-word',
+                                    }}>
+                                        <p style={{
+                                            margin: 0,
+                                            fontSize: '14px',
+                                            color: '#666',
+                                            overflowWrap: 'break-word'
+                                        }}>
+                                            Get help from AI to learn and guide you in completing project tasks.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div style={{
+                                    display: 'inline-block',
+                                    position: 'relative',
+                                    padding: '20px',
+                                    border: '1px solid #ddd',
+                                    borderRadius: '8px',
+                                    marginRight: '20px',
+                                    backgroundColor: '#f9f9f9',
+                                    width: '80%',
+                                    boxSizing: 'border-box'
+                                }}>
+                                    <img
+                                        src="/assets/img/Highlights_icons/04.png"
+                                        alt="Logo 2"
+                                        style={{
+                                            width: '50px',
+                                            height: 'auto',
+                                            display: 'block',
+                                            margin: '0 auto 10px'
+                                        }}
+                                    />
+                                    <div style={{
+                                        textAlign: 'center',
+                                        overflow: 'hidden',
+                                        textOverflow: 'ellipsis',
+                                        wordBreak: 'break-word',
+                                    }}>
+                                        <p style={{
+                                            margin: 0,
+                                            fontSize: '14px',
+                                            color: '#666',
+                                            overflowWrap: 'break-word'
+                                        }}>
+                                            Access text courses for learning.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div style={{
+                                    display: 'inline-block',
+                                    position: 'relative',
+                                    padding: '20px',
+                                    border: '1px solid #ddd',
+                                    borderRadius: '8px',
+                                    marginRight: '20px',
+                                    backgroundColor: '#f9f9f9',
+                                    width: '80%',
+                                    boxSizing: 'border-box'
+                                }}>
+                                    <img
+                                        src="/assets/img/Highlights_icons/05.png"
+                                        alt="Logo 2"
+                                        style={{
+                                            width: '50px',
+                                            height: 'auto',
+                                            display: 'block',
+                                            margin: '0 auto 10px'
+                                        }}
+                                    />
+                                    <div style={{
+                                        textAlign: 'center',
+                                        overflow: 'hidden',
+                                        textOverflow: 'ellipsis',
+                                        wordBreak: 'break-word',
+                                    }}>
+                                        <p style={{
+                                            margin: 0,
+                                            fontSize: '14px',
+                                            color: '#666',
+                                            overflowWrap: 'break-word'
+                                        }}>
+                                            Get alerts for new job openings.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div style={{
+                                    display: 'inline-block',
+                                    position: 'relative',
+                                    padding: '20px',
+                                    border: '1px solid #ddd',
+                                    borderRadius: '8px',
+                                    marginRight: '20px',
+                                    backgroundColor: '#f9f9f9',
+                                    width: '80%',
+                                    boxSizing: 'border-box'
+                                }}>
+                                    <img
+                                        src="/assets/img/Highlights_icons/06.png"
+                                        alt="Logo 2"
+                                        style={{
+                                            width: '50px',
+                                            height: 'auto',
+                                            display: 'block',
+                                            margin: '0 auto 10px'
+                                        }}
+                                    />
+                                    <div style={{
+                                        textAlign: 'center',
+                                        overflow: 'hidden',
+                                        textOverflow: 'ellipsis',
+                                        wordBreak: 'break-word',
+                                    }}>
+                                        <p style={{
+                                            margin: 0,
+                                            fontSize: '14px',
+                                            color: '#666',
+                                            overflowWrap: 'break-word'
+                                        }}>
+                                            Receive an internship certificate upon completing all projects and tasks.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div style={{
+                                    display: 'inline-block',
+                                    position: 'relative',
+                                    padding: '20px',
+                                    border: '1px solid #ddd',
+                                    borderRadius: '8px',
+                                    marginRight: '20px',
+                                    backgroundColor: '#f9f9f9',
+                                    width: '80%',
+                                    boxSizing: 'border-box'
+                                }}>
+                                    <img
+                                        src="/assets/img/Highlights_icons/07.png"
+                                        alt="Logo 2"
+                                        style={{
+                                            width: '50px',
+                                            height: 'auto',
+                                            display: 'block',
+                                            margin: '0 auto 10px'
+                                        }}
+                                    />
+                                    <div style={{
+                                        textAlign: 'center',
+                                        overflow: 'hidden',
+                                        textOverflow: 'ellipsis',
+                                        wordBreak: 'break-word',
+                                    }}>
+                                        <p style={{
+                                            margin: 0,
+                                            fontSize: '14px',
+                                            color: '#666',
+                                            overflowWrap: 'break-word'
+                                        }}>
+                                            Share your internship certificate directly on your LinkedIn profile.
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6">
-                                <div className="work-process-items text-center">
-                                    <div className="content style-2">
-                                        <h4>Real Experience</h4>
-                                        <p>
 
-                                            Real examples stimulate critical thinking and problem-solving.
-                                        </p>
-                                    </div>
-                                    <div className="icon">
-                                        <img src="/assets/img/process/02.svg" alt="img" />
-                                        <h6 className="number">
-                                            2
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6">
-                                <div className="work-process-items text-center">
-                                    <div className="icon">
-                                        <img src="/assets/img/process/03.svg" alt="img" />
-                                        <h6 className="number">
-                                            3
-                                        </h6>
-                                    </div>
-                                    <div className="content">
-                                        <h4>Certification</h4>
-                                        <p>
-
-                                            Our program offers strategies for career growth and skill validation.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6">
-                                <div className="work-process-items text-center">
-                                    <div className="content style-2">
-                                        <h4>Save Time</h4>
-                                        <p>
-                                            Online learning reduces time by 25% to 60%.
-                                        </p>
-                                    </div>
-                                    <div className="icon">
-                                        <img src="/assets/img/process/04.svg" alt="img" />
-                                        <h6 className="number">
-                                            4
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                    </div> */}
-                    {/* <div className="col-lg-6 mt-4 mt-lg-0">
-                      <div className="about-content">
-                        <div className="icon-area wow fadeInUp" data-wow-delay=".7s">
-                            <ul className="list">
-                                <li>
-                                    <i className="fa-regular fa-circle-check" />
-                                    Branding and design Identity
-                                </li>
-                                <li>
-                                    <i className="fa-regular fa-circle-check" />
-                                    Web site Marketing Solutions
-                                </li>
-                                <li>
-                                    <i className="fa-regular fa-circle-check" />
-                                    Unlimited Download Data
-                                </li>
-                            </ul>
-                            <ul className="list">
-                                <li>
-                                    <i className="fa-regular fa-circle-check" />
-                                    Branding and design Identity
-                                </li>
-                                <li>
-                                    <i className="fa-regular fa-circle-check" />
-                                    Web site Marketing Solutions
-                                </li>
-                                <li>
-                                    <i className="fa-regular fa-circle-check" />
-                                    Unlimited Download Data
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                      </div> */}
 
-
-                </div>
             </section>
         </>
     )

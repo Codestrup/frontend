@@ -92,7 +92,7 @@ export default function Contact() {
                           </div>
                           <div className="content">
                             <p style={{ fontSize: "20px", fontWeight: "500" }}>
-                              Call Us 7/24
+                              Call us
                             </p>
                             <p>
                               <Link

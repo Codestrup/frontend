@@ -33,6 +33,12 @@ export default function Achievement() {
 
         },
         {
+            name: "Samarth Bhokare",
+            role: "Successfully Completed NodeJs Internship",
+            imageSrc: "/assets/img/achievers/10.jpeg",
+
+        },
+        {
             name: "Renu Kuratkar",
             role: "Successfully Completed React Internship",
             imageSrc: "/assets/img/achievers/05.jpeg",
@@ -48,6 +54,18 @@ export default function Achievement() {
             name: "Prajkata Kokate",
             role: "Successfully Completed WordPress Internship",
             imageSrc: "/assets/img/achievers/06.jpeg",
+
+        },
+        {
+            name: "Pooja Naitam",
+            role: "Successfully Completed ReactJs Internship",
+            imageSrc: "/assets/img/achievers/09.jpg",
+
+        },
+        {
+            name: "Aarti Khandagale",
+            role: "Successfully Completed WordPress Internship",
+            imageSrc: "/assets/img/achievers/08.jpg",
 
         },
 

@@ -1165,7 +1165,8 @@ span {
   color: var(--header);
   font-weight: 600;
 }
-.project-section-cer{
+
+.project-section-cer {
   padding-bottom: 120px;
 }
 
@@ -1213,6 +1214,7 @@ span {
   transition: all 0.4s ease-in-out;
   opacity: 0.4;
 }
+
 .brand-image img {
   width: 100%;
   height: 100px;
@@ -1974,10 +1976,10 @@ span {
   top: 0;
   bottom: 0;
   left: 0;
-  max-width: 847px;
+  max-width: 870px;
   width: 100%;
   z-index: -1;
-  height: 950px;
+  height: 978px;
 }
 
 @media (max-width: 1199px) {
@@ -2775,11 +2777,13 @@ span {
   color: var(--white);
   border: 1px solid transparent;
 }
-.footer-widgets-wrapper .single-footer-widget .footer-content .about-redireact:hover{
+
+.footer-widgets-wrapper .single-footer-widget .footer-content .about-redireact:hover {
   background-color: var(--theme);
   color: var(--white);
   border: 1px solid transparent;
 }
+
 .footer-widgets-wrapper .single-footer-widget .footer-content .contact-info {
   margin-top: 20px;
 }
@@ -3083,9 +3087,9 @@ span {
 @media (max-width: 767px) {
   .footer-bottom.style-3 .footer-wrapper {
     justify-content: center !important;
-    
+
   }
-  
+
 }
 
 .footer-bottom.style-3 .footer-wrapper p {
@@ -4210,14 +4214,14 @@ span {
 
 .offcanvas__wrapper .offcanvas__content .offcanvas__contact {
   margin-top: 20px;
-  
-    position: absolute;
-    bottom: 20px; 
-    left: 0;
-    right: 0;
-    padding: 10px;
-    text-align: center; 
-  
+
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  text-align: center;
+
 }
 
 .offcanvas__wrapper .offcanvas__content .offcanvas__contact ul {
@@ -4302,17 +4306,19 @@ span {
   .offcanvas__info {
     width: 300px;
   }
+
   .footer-wrapper p {
     font-size: 13px;
   }
-  
+
 }
+
 @media (max-width: 326px) {
-  
+
   .footer-wrapper p {
     font-size: 10px;
   }
-  
+
 }
 
 @media (max-width: 575px) {
@@ -5156,8 +5162,9 @@ span {
   .hero-1.hero-2 {
     padding-top: 100px;
   }
+
   .hero-1 .hero-image {
-    
+
     max-width: 320px;
   }
 }
@@ -7166,20 +7173,76 @@ input.main-search-input::placeholder {
 
 .project-items .project-image {
   position: relative;
-  height: 457px;
+  height: 130px;
+}
+
+
+.overlay .overlay-text {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  bottom: 54px;
+
+}
+ .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+
+.ribbonStyleCourse {
+  flex-direction: column;
+  font-size: 10px;
+  font-weight: 700;
+  height: 100px;
+  overflow: hidden;
+  width: 130px;
+  z-index: 1;
+}
+.ribbonStyleCourse, .ribbonStyleCourse:before {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+
+.ribbonStyleCourse:before {
+  content: "Coming Soon";
+  position: absolute;
+  background: #ff7e1c;
+  font-weight: 600;
+  height: 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform-origin: 0 0; 
+  width: 150%;
+  z-index: 1;
 }
 
 .project-items .project-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  max-height: 200px;
 }
 
 .project-items .project-image .project-content {
   position: absolute;
   bottom: 25px;
-  left: 25px;
-  right: 25px;
+  left: 15px;
+  right: 15px;
   padding-top: 80px;
   /* margin: 80px; */
   padding: 35px 30px;
@@ -9097,8 +9160,9 @@ input.main-search-input::placeholder {
   top: 40px;
   right: 40px;
 }
+
 @media (max-width: 575px) {
-  .testimonial-box-items .icon img{
+  .testimonial-box-items .icon img {
     display: none;
   }
 }
@@ -9300,17 +9364,20 @@ html {
   }
 }
 
-.registration-grid-container{
+.registration-grid-container {
   display: grid;
-  grid-template-columns: 1fr; 
+  grid-template-columns: 1fr;
   gap: 16px;
   background-color: #f7f7f7;
-  padding: 15px; 
+  padding: 15px;
 }
 
-@media (min-width: 768px) { /* Adjust the breakpoint as needed */
+@media (min-width: 768px) {
+
+  /* Adjust the breakpoint as needed */
   .registration-grid-container {
-    grid-template-columns: 1fr 1fr; /* Two columns for medium and larger screens */
+    grid-template-columns: 1fr 1fr;
+    /* Two columns for medium and larger screens */
   }
 }
 
