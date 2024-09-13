@@ -353,7 +353,7 @@ export default function ServiceDetails() {
                 Highligths
               </h6>
 
-              <ol>
+              <ol style={{paddingLeft:'0.9rem'}}>
                 {internshipHighLights.map((hightlight) => (
                   <li key={hightlight?.id}>{hightlight?.text}</li>
                 ))}
@@ -817,7 +817,7 @@ export default function ServiceDetails() {
                                 Facebook?
                               </h4>
 
-                              <h6
+                              {/* <h6
                                 style={{
                                   fontWeight: 500,
                                   marginBottom: "10px",
@@ -829,7 +829,7 @@ export default function ServiceDetails() {
                               >
                                 Please join the Telegram community for continued
                                 communication
-                              </h6>
+                              </h6> */}
 
                               <ul className="row list-unstyled ">
                                 {socialLinks.map((item) => (
@@ -877,7 +877,7 @@ export default function ServiceDetails() {
                               </Box>
                             </Box>
 
-                            <Box mt={2}>
+                            {/* <Box mt={2}>
                               <h4
                                 style={{
                                   display: "flex",
@@ -950,7 +950,7 @@ export default function ServiceDetails() {
                                   />
                                 </RadioGroup>
                               </Box>
-                            </Box>
+                            </Box> */}
 
                             <Box
                               mt={2}
