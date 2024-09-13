@@ -112,7 +112,7 @@ export default function Achievement() {
                                 {teamMembers.map((member, index) => (
                                     <div
                                         key={index}
-                                        className="col-lg-3 col-md-6 col-sm-6 wow fadeInUp"
+                                        className="col-lg-3 col-md-4 col-sm-6 wow fadeInUp"
                                         data-wow-delay=".3s"
                                     >
                                         <div
@@ -120,8 +120,8 @@ export default function Achievement() {
                                             style={{
                                                 width: 'auto',
                                                 border: '1px solid #e0e0e0',
-                                                borderRadius: '20px', // Border radius applied here
-                                                overflow: 'hidden' // Ensures the border radius also affects the image
+                                                borderRadius: '20px',
+                                                overflow: 'hidden'
                                             }}
                                         >
                                             <div onClick={() => handleOpenDialog(member)} style={{ cursor: 'pointer' }}>
@@ -130,7 +130,7 @@ export default function Achievement() {
                                                     <img
                                                         src={member.imageSrc}
                                                         alt="team-img"
-                                                        style={{ width: '100%', height: 'auto' }} // Ensure the image is responsive
+                                                        style={{ width: '100%', height: 'auto' }}
                                                     />
                                                 </div>
                                                 <div className="team-content" style={{ padding: '10px' }}>
@@ -233,94 +233,63 @@ export default function Achievement() {
                                         Celebrate Major Wins
                                     </h2>
                                 </div>
-                                <div className="counter-area">
-                                    <div
-                                        className="counter-items wow fadeInUp"
-                                        data-wow-delay=".3s"
-                                    >
-                                        <div
-                                            className="icon"
-                                            style={{ display: "flex", justifyContent: "center" }}
-                                        >
-                                            <img
-                                                src="/assets/img/achievement-icon/01.svg"
-                                                alt="icon-img"
-                                            />
+                                <div className="counter-area" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))' }}>
+                                    <div className="counter-items wow fadeInUp" data-wow-delay=".3s"
+                                        style={{
+                                            alignItems: 'center',
+                                            display: 'flex',
+                                            flexDirection: 'column'
+                                        }}>
+                                        <div className="icon">
+                                            <img src="/assets/img/achievement-icon/01.svg" alt="icon-img" />
                                         </div>
                                         <div className="content">
-                                            <h2>
-                                                <CounterUp count={6561} />+
-                                            </h2>
+                                            <h2><CounterUp count={6561} />+</h2>
                                             <p>Students</p>
                                         </div>
                                     </div>
-                                    <div
-                                        className="counter-items wow fadeInUp"
-                                        data-wow-delay=".5s"
-                                    >
-                                        <div
-                                            className="icon"
-                                            style={{ display: "flex", justifyContent: "center" }}
-                                        >
-                                            <img
-                                                src="/assets/img/achievement-icon/02.svg"
-                                                alt="icon-img"
-                                            />
+
+                                    <div className="counter-items wow fadeInUp" data-wow-delay=".5s"
+                                        style={{
+                                            alignItems: 'center',
+                                            display: 'flex',
+                                            flexDirection: 'column'
+                                        }}>
+                                        <div className="icon">
+                                            <img src="/assets/img/achievement-icon/02.svg" alt="icon-img" />
                                         </div>
                                         <div className="content">
-                                            <h2>
-                                                <CounterUp count={600} />+
-                                            </h2>
+                                            <h2><CounterUp count={600} />+</h2>
                                             <p>Projects</p>
                                         </div>
                                     </div>
-                                    <div
-                                        className="counter-items wow fadeInUp"
-                                        data-wow-delay=".7s"
-                                    >
-                                        <div
-                                            className="icon"
-                                            style={{ display: "flex", justifyContent: "center" }}
-                                        >
-                                            <img
-                                                src="/assets/img/achievement-icon/03.svg"
-                                                alt="icon-img"
-                                            />
+
+                                    <div className="counter-items wow fadeInUp" data-wow-delay=".7s"
+                                        style={{
+                                            alignItems: 'center',
+                                            display: 'flex',
+                                            flexDirection: 'column'
+                                        }}>
+                                        <div className="icon">
+                                            <img src="/assets/img/achievement-icon/03.svg" alt="icon-img" />
                                         </div>
                                         <div className="content">
-                                            <h2>
-                                                <CounterUp count={250} />+
-                                            </h2>
+                                            <h2><CounterUp count={250} />+</h2>
                                             <p>Skilled Mentors</p>
                                         </div>
                                     </div>
-                                    <div
-                                        className="counter-items wow fadeInUp"
-                                        data-wow-delay=".9s"
-                                    >
-                                        <div
-                                            className="icon"
-                                            style={{
-                                                height: "60px",
-                                                display: "flex",
-                                                justifyContent: "center",
-                                            }}
-                                        >
-                                            <img
-                                                src="/assets/img/certified_students.png"
-                                                alt="icon-img"
-                                                style={{
-                                                    width: "100%",
-                                                    height: "100%",
-                                                    objectFit: "contain",
-                                                    filter: "invert(1)",
-                                                }}
-                                            />
+
+                                    <div className="counter-items wow fadeInUp" data-wow-delay=".9s"
+                                        style={{
+                                            alignItems: 'center',
+                                            display: 'flex',
+                                            flexDirection: 'column'
+                                        }}>
+                                        <div className="icon">
+                                            <img src="/assets/img/achievement-icon/04.svg" alt="icon-img" />
                                         </div>
                                         <div className="content">
-                                            <h2>
-                                                <CounterUp count={6561} />+
-                                            </h2>
+                                            <h2><CounterUp count={6561} />+</h2>
                                             <p>Certified Students</p>
                                         </div>
                                     </div>

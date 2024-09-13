@@ -50,24 +50,24 @@ export default function Footer3() {
                   <div className="footer-content">
                     <p>
                       Codestrup Infotech provides industry-aligned online internships in programming with hands-on, project-based training to bridge academic learning and real-world skills.
-                      <Link href="/about" className="about-redireact"
-                       style={{
-                        top:'18px',
-                        position:'relative',
+
+                    </p>
+                    <Link href="/about" className="about-redireact"
+                      style={{
+                        top: '10px',
+                        position: 'relative',
                         padding: '5px 10px',
                         border: '1px solid rgba(227, 227, 227, 0.2)',
                         color: 'white',
                         cursor: 'pointer',
                         textAlign: 'center',
                         display: 'inline-block',
-                        fontWeight:'600'
+                        fontWeight: '600'
                       }}>
-                      
-                          Read More
-                       
-                      </Link>
-                    </p>
 
+                      Read More
+
+                    </Link>
 
                     <div className="social-icon d-flex align-items-center">
                       <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd">
