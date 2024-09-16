@@ -7226,7 +7226,7 @@ input.main-search-input::placeholder {
 .ribbonStyleCourse:before {
   content: "Coming Soon";
   position: absolute;
-  background: #ff7e1c;
+  background: #384bff;
   font-weight: 600;
   height: 24px;
   letter-spacing: 0.1em;

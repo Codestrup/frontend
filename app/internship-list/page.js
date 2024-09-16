@@ -119,7 +119,7 @@ const Page = () => {
 
   return (
     <div>
-      <Layout headerStyle={1} >
+      <Layout  >
         <div>
 
           <section className="service-section fix "
