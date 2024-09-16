@@ -28,7 +28,7 @@ export default function Project() {
                   <div className="card h-100 shadow" style={{ borderRadius: '10px',position:'relative',overflow:'hidden' }}>
                   <span className="ribbonStyleCourse"></span>
                     <img
-                      src="/assets/img/Learning/11.jpg"
+                      src="/assets/img/Learning/01.jpg"
                       className="card-img-top"
                       alt="Card 2"
                       style={{ width: '100%', height: '200px', objectFit: 'cover',padding:'15px' }}
@@ -53,7 +53,7 @@ export default function Project() {
                   <div className="card h-100 shadow" style={{ borderRadius: '10px',position:'relative',overflow:'hidden' }}>
                   <span className="ribbonStyleCourse"></span>
                     <img
-                      src="/assets/img/Learning/12.jpg"
+                      src="/assets/img/Learning/02.jpg"
                       className="card-img-top"
                       alt="Card 2"
                       style={{ width: '100%', height: '200px', objectFit: 'cover',padding:'15px' }}
@@ -78,7 +78,7 @@ export default function Project() {
                   <div className="card h-100 shadow" style={{ borderRadius: '10px',position:'relative',overflow:'hidden' }}>
                   <span className="ribbonStyleCourse"></span>
                     <img
-                      src="/assets/img/Learning/09.jpg"
+                      src="/assets/img/Learning/03.jpg"
                       className="card-img-top"
                       alt="Card 2"
                       style={{ width: '100%', height: '200px', objectFit: 'cover',padding:'15px', }}
@@ -103,7 +103,7 @@ export default function Project() {
                   <div className="card h-100 shadow" style={{ borderRadius: '10px',position:'relative',overflow:'hidden' }}>
                   <span className="ribbonStyleCourse"></span>
                     <img
-                      src="/assets/img/Learning/08.jpg"
+                      src="/assets/img/Learning/04.jpg"
                       className="card-img-top"
                       alt="Card 2"
                       style={{ width: '100%', height: '200px', objectFit: 'cover',padding:'15px' }}
