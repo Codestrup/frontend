@@ -19,9 +19,10 @@ export default function Header1({
               <ul className="contact-list">
                 <li>
                   <i className="far fa-envelope" />
-                  <Link href="/mailto:info@codestrup.in" className="link">
+                  <a href="mailto:info@codestrup.in" >
                     info@codestrup.in
-                  </Link>
+                  </a>
+
                 </li>
                 <li>
                   <i className="fa-solid fa-phone-volume" />

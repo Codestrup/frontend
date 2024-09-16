@@ -219,14 +219,14 @@ export default function Footer3() {
                             <i className="fal fa-envelope" />
                           </div>
                           <div className="offcanvas__contact-text">
-                            <Link href="/mailto:info@azent.com">
-                              <span
-                                className="mailto:info@codestrup.in"
-                                style={{ color: "#ffffffcc" }}
-                              >
+
+                            <p
+                             
+                            >
+                              <a href="mailto:info@codestrup.in"  style={{ color: "#ffffffcc" }}>
                                 info@codestrup.in
-                              </span>
-                            </Link>
+                              </a>
+                            </p>
                           </div>
                         </li>
                         <li className="d-flex align-items-center gap-4 pb-2">
@@ -307,7 +307,7 @@ export default function Footer3() {
         </div>
 
         {/* </div> */}
-      </footer>
+      </footer >
     </>
   );
 }

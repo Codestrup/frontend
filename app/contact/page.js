@@ -133,12 +133,12 @@ export default function Contact() {
                               Make a Quote
                             </p>
                             <p>
-                              <Link
+                              <a
                                 href="mailto:info@codestrup.in"
                                 style={{ color: "white" }}
                               >
                                 info@codestrup.in
-                              </Link>
+                              </a>
                             </p>
                           </div>
                         </div>
