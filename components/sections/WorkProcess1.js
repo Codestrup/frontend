@@ -1,3 +1,16 @@
+import { Avatar, Grid, List, ListItem, ListItemAvatar, ListItemText } from "@mui/material";
+
+import ImageIcon from '@mui/icons-material/Image';
+import WorkIcon from '@mui/icons-material/Work';
+import BeachAccessIcon from '@mui/icons-material/BeachAccess';
+import LaptopChromebookIcon from '@mui/icons-material/LaptopChromebook';
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import SmartToyIcon from '@mui/icons-material/SmartToy';
+import SchoolIcon from '@mui/icons-material/School';
+import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
+import CardMembershipIcon from '@mui/icons-material/CardMembership';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 export default function WorkProcess1() {
     return (
         <>
@@ -9,276 +22,359 @@ export default function WorkProcess1() {
                     </div>
 
 
-                    <div style={{ maxWidth: '1000px', margin: 'auto', overflowX: 'auto', whiteSpace: 'nowrap', padding: '20px' }}>
+                    {/* <div style={{ margin: 'auto', overflowX: 'auto', whiteSpace: 'nowrap', padding: '20px' }}> */}
 
-                      
-                                <div style={{
-                                    display: 'inline-block',
-                                    position: 'relative',
-                                    padding: '20px',
-                                    border: '1px solid #ddd',
-                                    borderRadius: '8px',
-                                    marginRight: '20px',
-                                    backgroundColor: '#f9f9f9',
-                                    width: '80%',
-                                    boxSizing: 'border-box'
-                                }}>
-                                    <img
-                                        src="/assets/img/Highlights_icons/01.png"
-                                        alt="Logo 2"
-                                        style={{
-                                            width: '50px',
-                                            height: 'auto',
-                                            display: 'block',
-                                            margin: '0 auto 10px'
-                                        }}
-                                    />
-                                    <div style={{
-                                        textAlign: 'center',
-                                        overflow: 'hidden',
-                                        textOverflow: 'ellipsis',
-                                        wordBreak: 'break-word',
-                                    }}>
-                                        <p style={{
-                                            margin: 0,
-                                            fontSize: '14px',
-                                            color: '#666',
-                                            overflowWrap: 'break-word'
-                                        }}>
-                                            Work on live projects.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div style={{
-                                    display: 'inline-block',
-                                    position: 'relative',
-                                    padding: '20px',
-                                    border: '1px solid #ddd',
-                                    borderRadius: '8px',
-                                    marginRight: '20px',
-                                    backgroundColor: '#f9f9f9',
-                                    width: '80%',
-                                    boxSizing: 'border-box'
-                                }}>
-                                    <img
-                                        src="/assets/img/Highlights_icons/02.png"
-                                        alt="Logo 2"
-                                        style={{
-                                            width: '50px',
-                                            height: 'auto',
-                                            display: 'block',
-                                            margin: '0 auto 10px'
-                                        }}
-                                    />
-                                    <div style={{
-                                        textAlign: 'center',
-                                        overflow: 'hidden',
-                                        textOverflow: 'ellipsis',
-                                        wordBreak: 'break-word',
-                                    }}>
-                                        <p style={{
-                                            margin: 0,
-                                            fontSize: '14px',
-                                            color: '#666',
-                                            overflowWrap: 'break-word'
-                                        }}>
-                                            Receive task reviews and approvals from experts.
-                                        </p>
-                                    </div>
-                                </div>
 
-                                <div style={{
-                                    display: 'inline-block',
-                                    position: 'relative',
-                                    padding: '20px',
-                                    border: '1px solid #ddd',
-                                    borderRadius: '8px',
-                                    marginRight: '20px',
-                                    backgroundColor: '#f9f9f9',
-                                    width: '80%',
-                                    boxSizing: 'border-box'
-                                }}>
-                                    <img
-                                        src="/assets/img/Highlights_icons/03.png"
-                                        alt="Logo 2"
-                                        style={{
-                                            width: '50px',
-                                            height: 'auto',
-                                            display: 'block',
-                                            margin: '0 auto 10px'
-                                        }}
-                                    />
-                                    <div style={{
-                                        textAlign: 'center',
-                                        overflow: 'hidden',
-                                        textOverflow: 'ellipsis',
-                                        wordBreak: 'break-word',
-                                    }}>
-                                        <p style={{
-                                            margin: 0,
-                                            fontSize: '14px',
-                                            color: '#666',
-                                            overflowWrap: 'break-word'
-                                        }}>
-                                            Get help from AI to learn and guide you in completing project tasks.
-                                        </p>
-                                    </div>
-                                </div>
 
-                                <div style={{
-                                    display: 'inline-block',
-                                    position: 'relative',
-                                    padding: '20px',
-                                    border: '1px solid #ddd',
-                                    borderRadius: '8px',
-                                    marginRight: '20px',
-                                    backgroundColor: '#f9f9f9',
-                                    width: '80%',
-                                    boxSizing: 'border-box'
-                                }}>
-                                    <img
-                                        src="/assets/img/Highlights_icons/04.png"
-                                        alt="Logo 2"
-                                        style={{
-                                            width: '50px',
-                                            height: 'auto',
-                                            display: 'block',
-                                            margin: '0 auto 10px'
-                                        }}
-                                    />
-                                    <div style={{
-                                        textAlign: 'center',
-                                        overflow: 'hidden',
-                                        textOverflow: 'ellipsis',
-                                        wordBreak: 'break-word',
-                                    }}>
-                                        <p style={{
-                                            margin: 0,
-                                            fontSize: '14px',
-                                            color: '#666',
-                                            overflowWrap: 'break-word'
-                                        }}>
-                                            Access text courses for learning.
-                                        </p>
-                                    </div>
-                                </div>
 
-                                <div style={{
-                                    display: 'inline-block',
-                                    position: 'relative',
-                                    padding: '20px',
-                                    border: '1px solid #ddd',
-                                    borderRadius: '8px',
-                                    marginRight: '20px',
-                                    backgroundColor: '#f9f9f9',
-                                    width: '80%',
-                                    boxSizing: 'border-box'
+                    {/* <div style={{
+                            display: 'inline-block',
+                            position: 'relative',
+                            padding: '20px',
+                            border: '1px solid #ddd',
+                            borderRadius: '8px',
+                            marginRight: '20px',
+                            backgroundColor: '#f9f9f9',
+                            width: '80%',
+                            boxSizing: 'border-box'
+                        }}>
+                            <img
+                                src="/assets/img/Highlights_icons/01.png"
+                                alt="Logo 2"
+                                style={{
+                                    width: '50px',
+                                    height: 'auto',
+                                    display: 'block',
+                                    margin: '0 auto 10px'
+                                }}
+                            />
+                            <div style={{
+                                textAlign: 'center',
+                                overflow: 'hidden',
+                                textOverflow: 'ellipsis',
+                                wordBreak: 'break-word',
+                            }}>
+                                <p style={{
+                                    margin: 0,
+                                    fontSize: '14px',
+                                    color: '#666',
+                                    overflowWrap: 'break-word'
                                 }}>
-                                    <img
-                                        src="/assets/img/Highlights_icons/05.png"
-                                        alt="Logo 2"
-                                        style={{
-                                            width: '50px',
-                                            height: 'auto',
-                                            display: 'block',
-                                            margin: '0 auto 10px'
-                                        }}
-                                    />
-                                    <div style={{
-                                        textAlign: 'center',
-                                        overflow: 'hidden',
-                                        textOverflow: 'ellipsis',
-                                        wordBreak: 'break-word',
-                                    }}>
-                                        <p style={{
-                                            margin: 0,
-                                            fontSize: '14px',
-                                            color: '#666',
-                                            overflowWrap: 'break-word'
-                                        }}>
-                                            Get alerts for new job openings.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div style={{
-                                    display: 'inline-block',
-                                    position: 'relative',
-                                    padding: '20px',
-                                    border: '1px solid #ddd',
-                                    borderRadius: '8px',
-                                    marginRight: '20px',
-                                    backgroundColor: '#f9f9f9',
-                                    width: '80%',
-                                    boxSizing: 'border-box'
-                                }}>
-                                    <img
-                                        src="/assets/img/Highlights_icons/06.png"
-                                        alt="Logo 2"
-                                        style={{
-                                            width: '50px',
-                                            height: 'auto',
-                                            display: 'block',
-                                            margin: '0 auto 10px'
-                                        }}
-                                    />
-                                    <div style={{
-                                        textAlign: 'center',
-                                        overflow: 'hidden',
-                                        textOverflow: 'ellipsis',
-                                        wordBreak: 'break-word',
-                                    }}>
-                                        <p style={{
-                                            margin: 0,
-                                            fontSize: '14px',
-                                            color: '#666',
-                                            overflowWrap: 'break-word'
-                                        }}>
-                                            Receive an internship certificate upon completing all projects and tasks.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div style={{
-                                    display: 'inline-block',
-                                    position: 'relative',
-                                    padding: '20px',
-                                    border: '1px solid #ddd',
-                                    borderRadius: '8px',
-                                    marginRight: '20px',
-                                    backgroundColor: '#f9f9f9',
-                                    width: '80%',
-                                    boxSizing: 'border-box'
-                                }}>
-                                    <img
-                                        src="/assets/img/Highlights_icons/07.png"
-                                        alt="Logo 2"
-                                        style={{
-                                            width: '50px',
-                                            height: 'auto',
-                                            display: 'block',
-                                            margin: '0 auto 10px'
-                                        }}
-                                    />
-                                    <div style={{
-                                        textAlign: 'center',
-                                        overflow: 'hidden',
-                                        textOverflow: 'ellipsis',
-                                        wordBreak: 'break-word',
-                                    }}>
-                                        <p style={{
-                                            margin: 0,
-                                            fontSize: '14px',
-                                            color: '#666',
-                                            overflowWrap: 'break-word'
-                                        }}>
-                                            Share your internship certificate directly on your LinkedIn profile.
-                                        </p>
-                                    </div>
-                                </div>
+                                    Work on live projects.
+                                </p>
                             </div>
-
                         </div>
+                        <div style={{
+                            display: 'inline-block',
+                            position: 'relative',
+                            padding: '20px',
+                            border: '1px solid #ddd',
+                            borderRadius: '8px',
+                            marginRight: '20px',
+                            backgroundColor: '#f9f9f9',
+                            width: '80%',
+                            boxSizing: 'border-box'
+                        }}>
+                            <img
+                                src="/assets/img/Highlights_icons/02.png"
+                                alt="Logo 2"
+                                style={{
+                                    width: '50px',
+                                    height: 'auto',
+                                    display: 'block',
+                                    margin: '0 auto 10px'
+                                }}
+                            />
+                            <div style={{
+                                textAlign: 'center',
+                                overflow: 'hidden',
+                                textOverflow: 'ellipsis',
+                                wordBreak: 'break-word',
+                            }}>
+                                <p style={{
+                                    margin: 0,
+                                    fontSize: '14px',
+                                    color: '#666',
+                                    overflowWrap: 'break-word'
+                                }}>
+                                    Receive task reviews and approvals from experts.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div style={{
+                            display: 'inline-block',
+                            position: 'relative',
+                            padding: '20px',
+                            border: '1px solid #ddd',
+                            borderRadius: '8px',
+                            marginRight: '20px',
+                            backgroundColor: '#f9f9f9',
+                            width: '80%',
+                            boxSizing: 'border-box'
+                        }}>
+                            <img
+                                src="/assets/img/Highlights_icons/03.png"
+                                alt="Logo 2"
+                                style={{
+                                    width: '50px',
+                                    height: 'auto',
+                                    display: 'block',
+                                    margin: '0 auto 10px'
+                                }}
+                            />
+                            <div style={{
+                                textAlign: 'center',
+                                overflow: 'hidden',
+                                textOverflow: 'ellipsis',
+                                wordBreak: 'break-word',
+                            }}>
+                                <p style={{
+                                    margin: 0,
+                                    fontSize: '14px',
+                                    color: '#666',
+                                    overflowWrap: 'break-word'
+                                }}>
+                                    Get help from AI to learn and guide you in completing project tasks.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div style={{
+                            display: 'inline-block',
+                            position: 'relative',
+                            padding: '20px',
+                            border: '1px solid #ddd',
+                            borderRadius: '8px',
+                            marginRight: '20px',
+                            backgroundColor: '#f9f9f9',
+                            width: '80%',
+                            boxSizing: 'border-box'
+                        }}>
+                            <img
+                                src="/assets/img/Highlights_icons/04.png"
+                                alt="Logo 2"
+                                style={{
+                                    width: '50px',
+                                    height: 'auto',
+                                    display: 'block',
+                                    margin: '0 auto 10px'
+                                }}
+                            />
+                            <div style={{
+                                textAlign: 'center',
+                                overflow: 'hidden',
+                                textOverflow: 'ellipsis',
+                                wordBreak: 'break-word',
+                            }}>
+                                <p style={{
+                                    margin: 0,
+                                    fontSize: '14px',
+                                    color: '#666',
+                                    overflowWrap: 'break-word'
+                                }}>
+                                    Access text courses for learning.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div style={{
+                            display: 'inline-block',
+                            position: 'relative',
+                            padding: '20px',
+                            border: '1px solid #ddd',
+                            borderRadius: '8px',
+                            marginRight: '20px',
+                            backgroundColor: '#f9f9f9',
+                            width: '80%',
+                            boxSizing: 'border-box'
+                        }}>
+                            <img
+                                src="/assets/img/Highlights_icons/05.png"
+                                alt="Logo 2"
+                                style={{
+                                    width: '50px',
+                                    height: 'auto',
+                                    display: 'block',
+                                    margin: '0 auto 10px'
+                                }}
+                            />
+                            <div style={{
+                                textAlign: 'center',
+                                overflow: 'hidden',
+                                textOverflow: 'ellipsis',
+                                wordBreak: 'break-word',
+                            }}>
+                                <p style={{
+                                    margin: 0,
+                                    fontSize: '14px',
+                                    color: '#666',
+                                    overflowWrap: 'break-word'
+                                }}>
+                                    Get alerts for new job openings.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div style={{
+                            display: 'inline-block',
+                            position: 'relative',
+                            padding: '20px',
+                            border: '1px solid #ddd',
+                            borderRadius: '8px',
+                            marginRight: '20px',
+                            backgroundColor: '#f9f9f9',
+                            width: '80%',
+                            boxSizing: 'border-box'
+                        }}>
+                            <img
+                                src="/assets/img/Highlights_icons/06.png"
+                                alt="Logo 2"
+                                style={{
+                                    width: '50px',
+                                    height: 'auto',
+                                    display: 'block',
+                                    margin: '0 auto 10px'
+                                }}
+                            />
+                            <div style={{
+                                textAlign: 'center',
+                                overflow: 'hidden',
+                                textOverflow: 'ellipsis',
+                                wordBreak: 'break-word',
+                            }}>
+                                <p style={{
+                                    margin: 0,
+                                    fontSize: '14px',
+                                    color: '#666',
+                                    overflowWrap: 'break-word'
+                                }}>
+                                    Receive an internship certificate upon completing all projects and tasks.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div style={{
+                            display: 'inline-block',
+                            position: 'relative',
+                            padding: '20px',
+                            border: '1px solid #ddd',
+                            borderRadius: '8px',
+                            marginRight: '20px',
+                            backgroundColor: '#f9f9f9',
+                            width: '80%',
+                            boxSizing: 'border-box'
+                        }}>
+                            <img
+                                src="/assets/img/Highlights_icons/07.png"
+                                alt="Logo 2"
+                                style={{
+                                    width: '50px',
+                                    height: 'auto',
+                                    display: 'block',
+                                    margin: '0 auto 10px'
+                                }}
+                            />
+                            <div style={{
+                                textAlign: 'center',
+                                overflow: 'hidden',
+                                textOverflow: 'ellipsis',
+                                wordBreak: 'break-word',
+                            }}>
+                                <p style={{
+                                    margin: 0,
+                                    fontSize: '14px',
+                                    color: '#666',
+                                    overflowWrap: 'break-word'
+                                }}>
+                                    Share your internship certificate directly on your LinkedIn profile.
+                                </p>
+                            </div>
+                        </div> */}
+
+
+                    <Grid container spacing={2}>
+                        {/* Grid item for the first list */}
+                        <Grid item xs={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: { xs: '16px', md: '16px', lg: '16px' } }}>
+                            <List sx={{ width: '100%', maxWidth: 430, bgcolor: 'background.paper' }}>
+                                 <ListItem className="wow fadeInUp" data-wow-delay=".3s">
+                                    <ListItemAvatar >
+                                        <Avatar sx={{ backgroundColor: '#384bff' }}>
+                                            <LaptopChromebookIcon />
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText primary="Work on live projects." />
+                                </ListItem>
+                                 <ListItem className="wow fadeInUp" data-wow-delay=".3s">
+                                    <ListItemAvatar>
+                                        <Avatar sx={{ backgroundColor: '#384bff' }}>
+                                            <TaskAltIcon />
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText primary=" Receive task reviews and approvals from experts." />
+                                </ListItem>
+                                 <ListItem className="wow fadeInUp" data-wow-delay=".5s">
+                                    <ListItemAvatar>
+                                        <Avatar sx={{ backgroundColor: '#384bff' }}>
+                                            <SmartToyIcon />
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText primary=" Get help from AI to learn and guide you in completing project tasks." />
+                                </ListItem>
+                                 <ListItem className="wow fadeInUp" data-wow-delay=".5s">
+                                    <ListItemAvatar>
+                                        <Avatar sx={{ backgroundColor: '#384bff' }}>
+                                            <SchoolIcon />
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText primary=" Access text courses for learning." />
+                                </ListItem>
+                            </List>
+                        </Grid>
+
+                        {/* Grid item for the second list */}
+                        <Grid item xs={12} md={6} sx={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            paddingTop: { xs: 0, md: 0, lg: '16px' },
+                        }}>
+                            <List sx={{ width: '100%', maxWidth: 430, bgcolor: 'background.paper', }}>
+
+                                 <ListItem className="wow fadeInUp" data-wow-delay=".7s">
+                                    <ListItemAvatar>
+                                        <Avatar sx={{ backgroundColor: '#384bff' }}>
+                                            <WorkHistoryIcon />
+
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText primary=" Get alerts for new job openings." />
+                                </ListItem>
+                                 <ListItem className="wow fadeInUp" data-wow-delay=".7s">
+                                    <ListItemAvatar>
+                                        <Avatar sx={{ backgroundColor: '#384bff' }}>
+                                            <CardMembershipIcon />
+
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText primary=" Receive an internship certificate upon completing all projects and tasks." />
+                                </ListItem>
+                                 <ListItem className="wow fadeInUp" data-wow-delay=".9s">
+                                    <ListItemAvatar>
+                                        <Avatar sx={{ backgroundColor: '#384bff' }}>
+                                            <LinkedInIcon />
+
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText primary="   Share your internship certificate directly on your LinkedIn profile." />
+                                </ListItem>
+                            </List>
+                        </Grid>
+                    </Grid>
+
+
+                </div>
+
+                {/* </div> */}
 
             </section>
         </>

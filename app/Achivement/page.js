@@ -52,7 +52,7 @@ export default function Achievement() {
         },
         {
             name: "Prajkata Kokate",
-            role: "Successfully Completed WordPress Internship",
+            role: "Successfully Completed ReactJs Internship",
             imageSrc: "/assets/img/achievers/06.jpeg",
 
         },
@@ -169,7 +169,7 @@ export default function Achievement() {
                                     transform: 'translate(-50%, -50%)',
                                     margin: 0,
                                     borderRadius: '12px',
-                                    height: '100vh',
+                                    height: 'auto',
                                     maxWidth: '400px',
                                     overflow: 'hidden',
                                     paddingTop: '28px'
