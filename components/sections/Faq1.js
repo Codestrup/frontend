@@ -31,7 +31,7 @@ export default function Faq1() {
                                     <div className="faq-accordion mt-4 mt-md-0">
                                         <Accordion1 />
                                     </div>
-                                    <div className="about-author " style={{marginTop:'2rem'}}>
+                                    <div className="about-author " style={{marginTop:'2rem',display:'flex',justifyContent:'center'}}>
                                         <div className="about-button wow fadeInUp" data-wow-delay=".5s">
                                             <Link href="/faq" className="theme-btn">
                                                 Explore More
