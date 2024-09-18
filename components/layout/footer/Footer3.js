@@ -241,14 +241,14 @@ export default function Footer3() {
                           <div className="offcanvas__contact-icon mr-15">
                             <i className="far fa-phone" />
                           </div>
-                          <div className="offcanvas__contact-text">
+                          {/* <div className="offcanvas__contact-text"> */}
                             <Link
                               href="tel:+919699997689"
                               style={{ color: "#ffffffcc" }}
                             >
                               +91 9699997689
                             </Link>
-                          </div>
+                          {/* </div> */}
                         </li>
                       </ul>
                     </div>
