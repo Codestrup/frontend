@@ -158,7 +158,9 @@ const Page = () => {
                               height: "100%",
                               minHeight: "100px",
                               overflow: "hidden",
+                              cursor:'pointer'
                             }}
+                            onClick={() => handleApplyNowClick(item)}
                           >
                             <img
                               src={item?.imageUrl}
@@ -173,13 +175,17 @@ const Page = () => {
 
                           <div className="content">
                             <h4>
-                              <p>
+                              <p onClick={() => handleApplyNowClick(item)}
+                                 style={{ cursor: "pointer" }}
+                                >
                                 {item.jobTitle}
                               </p>
                             </h4>
 
                             <div style={{ height: "100%", minHeight: "100px" }}>
-                              <p>
+                              <p onClick={() => handleApplyNowClick(item)}
+                                 style={{ cursor: "pointer" }}
+                                >
                                 {showFullDescription[item._id]
                                   ? item.description
                                   : `${item.description.substring(0, 50)}...`}

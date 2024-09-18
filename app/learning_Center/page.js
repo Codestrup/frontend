@@ -38,7 +38,7 @@ export default function Project() {
                       <div className="project-image">
                         <div className="project-content">
                           <h4>
-                            <Link href="/project-details">
+                            <Link href="#">
                               Text Courses 
                             </Link>
                           </h4>
@@ -63,7 +63,7 @@ export default function Project() {
                       <div className="project-image">
                         <div className="project-content">
                           <h4>
-                            <Link href="/project-details">
+                            <Link href="#">
                             Video Courses 
                             </Link>
                           </h4>
@@ -88,8 +88,8 @@ export default function Project() {
                       <div className="project-image">
                         <div className="project-content">
                           <h4>
-                            <Link href="/project-details">
-                            Aptitude 
+                            <Link href="#">
+                            Aptitude Preparation
                             </Link>
                           </h4>
                         </div>
@@ -113,8 +113,8 @@ export default function Project() {
                       <div className="project-image">
                         <div className="project-content">
                           <h4>
-                            <Link href="/project-details">
-                            Interview 
+                            <Link href="#">
+                            Interview Preparation
                             </Link>
                           </h4>
                         </div>

@@ -58,6 +58,8 @@ Version: 1.0.0
   z-index: -1;
 }
 
+
+
 .theme-btn::before {
   left: 0;
   top: 0;
@@ -2806,6 +2808,7 @@ span {
   color: var(--white);
   border: 1px solid transparent;
 }
+  
 
 .footer-widgets-wrapper .single-footer-widget .footer-content .contact-info {
   margin-top: 20px;
@@ -7270,8 +7273,7 @@ input.main-search-input::placeholder {
   left: 15px;
   right: 15px;
   padding-top: 80px;
-  /* margin: 80px; */
-  padding: 35px 30px;
+  padding: 35px 11.3px;
   background-color: var(--white);
   overflow: hidden;
 }

@@ -5,7 +5,7 @@ export default function Faq() {
     return (
         <>
 
-            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Faq">
+            <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="FAQ’S">
                 <section className="faq-section-2 fix section-padding">
                     <div className="container">
                         <div className="faq-wrapper">
@@ -14,7 +14,7 @@ export default function Faq() {
                              
                                     <div className="faq-content style-2">
                                         <div className="section-title">
-                                            <span className="wow fadeInUp" style={{fontWeight:'600'}}>See Our Faqs</span>
+                                            <span className="wow fadeInUp" style={{fontWeight:'600'}}>See Our FAQ’S</span>
                                             <h2 className="wow fadeInUp" data-wow-delay=".3s">
                                             Frequently Asked Questions
                                             </h2>

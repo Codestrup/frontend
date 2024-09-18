@@ -62,8 +62,11 @@ export default function Footer3() {
                         cursor: 'pointer',
                         textAlign: 'center',
                         display: 'inline-block',
-                        fontWeight: '600'
-                      }}>
+                        fontWeight: '600',
+                        borderRadius:'30px'
+                      }}
+                      
+                      >
 
                       Read More
 
@@ -223,7 +226,7 @@ export default function Footer3() {
                             <p
 
                             >
-                              <a href="mailto:info@codestrup.in" style={{ color: "#ffffffcc" }}>
+                              <a href="mailto:info@codestrup.in" style={{ color: "#ffffffcc",textTransform:'lowercase' }}>
                                 info@codestrup.in
                               </a>
                             </p>

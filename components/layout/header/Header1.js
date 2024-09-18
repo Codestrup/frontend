@@ -19,7 +19,7 @@ export default function Header1({
               <ul className="contact-list">
                 <li>
                   <i className="far fa-envelope" />
-                  <a href="mailto:info@codestrup.in" >
+                  <a href="mailto:info@codestrup.in" style={{textTransform:'lowercase'}} >
                     info@codestrup.in
                   </a>
 
