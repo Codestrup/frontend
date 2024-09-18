@@ -221,9 +221,9 @@ export default function Footer3() {
                           <div className="offcanvas__contact-text">
 
                             <p
-                             
+
                             >
-                              <a href="mailto:info@codestrup.in"  style={{ color: "#ffffffcc" }}>
+                              <a href="mailto:info@codestrup.in" style={{ color: "#ffffffcc" }}>
                                 info@codestrup.in
                               </a>
                             </p>
@@ -243,7 +243,7 @@ export default function Footer3() {
                           </div>
                           <div className="offcanvas__contact-text">
                             <Link
-                              href="/tel:9699997689"
+                              href="tel:+919699997689"
                               style={{ color: "#ffffffcc" }}
                             >
                               +91 9699997689
@@ -256,25 +256,7 @@ export default function Footer3() {
                 </div>
               </div>
 
-              {/* <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                                <div className="single-footer-widget style-margin" style={{marginLeft:'0px'}}>
-                                    <div className="widget-head">
-                                        <h3>Your Knowledge Base</h3>
-                                    </div>
-                                    <div className="footer-content">
-                                        <p>
-                                            Learn about the latest internship projects and achievements.
-                                            Stay connected with the Codestrup Infotech internship community
-                                        </p>
-                                        <div className="footer-input">
-                                            <input type="email" id="email2" placeholder="Enter Email Address" />
-                                            <button className="newsletter-btn" type="submit">
-                                                <i className="fab fa-telegram-plane" />
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> */}
+             
             </div>
           </div>
         </div>

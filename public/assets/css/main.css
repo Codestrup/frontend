@@ -36,41 +36,51 @@ Version: 1.0.0
   display: inline-block;
   font-size: 16px;
   font-weight: 600;
-  padding: 24px 40px;
-  border-radius: 0;
+  padding: 16px;
+  border-radius: 30px;
   text-transform: capitalize;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   position: relative;
   z-index: 1;
   line-height: 1;
+  overflow: hidden;
+  vertical-align: middle;
 }
 
-.theme-btn::before {
-  content: "";
-  background-color: var(--header);
-  width: 0;
-  height: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  z-index: -1;
-}
-
+.theme-btn::before,
 .theme-btn::after {
   content: "";
   background-color: var(--header);
   width: 0;
   height: 50%;
   position: absolute;
-  bottom: 0;
-  right: 0;
-  -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: width 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   z-index: -1;
 }
+
+.theme-btn::before {
+  left: 0;
+  top: 0;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.theme-btn::after {
+  right: 0;
+  bottom: 0;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.theme-btn:hover::before,
+.theme-btn:hover::after {
+  width: 100%;
+}
+
 
 .theme-btn i {
   margin-left: 10px;
@@ -2683,7 +2693,7 @@ span {
 }
 
 .footer-widgets-wrapper {
-  padding: 50px 0 150px;
+  padding: 50px 0 60px;
   position: relative;
   z-index: 9;
 }
@@ -2702,7 +2712,7 @@ span {
 
 @media (max-width: 1199px) {
   .footer-widgets-wrapper {
-    padding: 60px 0 90px;
+    padding: 60px 0 70px;
   }
 }
 

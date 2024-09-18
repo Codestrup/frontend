@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Faq1() {
     return (
         <>
-            <section className="faq-section fix section-padding">
+            <section className="faq-section fix " style={{padding:'100px 0'}}>
                 <div className="right-shape">
                     <img src="/assets/img/faq/right-shape.png" alt="shape-img" />
                 </div>
@@ -31,7 +31,7 @@ export default function Faq1() {
                                     <div className="faq-accordion mt-4 mt-md-0">
                                         <Accordion1 />
                                     </div>
-                                    <div className="about-author " style={{marginTop:'6rem'}}>
+                                    <div className="about-author " style={{marginTop:'2rem'}}>
                                         <div className="about-button wow fadeInUp" data-wow-delay=".5s">
                                             <Link href="/faq" className="theme-btn">
                                                 Explore More
