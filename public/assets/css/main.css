@@ -179,16 +179,27 @@ Version: 1.0.0
   background-color: transparent;
   padding: 22px 40px;
 }
-
+.highlights
+{
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
 @media (max-width: 767px) {
   .theme-btn.border-white {
     padding: 18px 32px;
+  }
+  .highlights{
+    padding-top: 0 !important;
   }
 }
 
 @media (max-width: 575px) {
   .theme-btn.border-white {
     padding: 16px 30px;
+  }
+  .highlights{
+    padding-top: 0 !important;
   }
 }
 
