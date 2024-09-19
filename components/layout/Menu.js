@@ -1,5 +1,5 @@
 import Link from "next/link";
-import PersonIcon from '@mui/icons-material/Person';
+import PersonIcon from "@mui/icons-material/Person";
 
 export default function Menu() {
   return (
@@ -24,6 +24,9 @@ export default function Menu() {
         <li>
           <Link href="/Achivement">Top Achievers</Link>
         </li>
+        <li>
+          <Link href="/blogs">Blog</Link>
+        </li>
 
         <li>
           <Link href="/contact">Contact</Link>
@@ -36,7 +39,7 @@ export default function Menu() {
             padding: "16px 24px",
           }}
         >
-        <PersonIcon />  Login | SignUp
+          <PersonIcon /> Login | SignUp
         </Link>
       </ul>
     </>
