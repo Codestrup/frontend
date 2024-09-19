@@ -55,7 +55,10 @@ export default function Contact() {
         toast.success(response?.data?.message);
         actions.resetForm();
       }
-    } catch (error) {}
+    } catch (error) {
+      toast.error(error.response?.data?.error);
+      
+    }
   };
 
   return (
@@ -133,12 +136,12 @@ export default function Contact() {
                               Make a Quote
                             </p>
                             <p>
-                              <Link
+                              <a
                                 href="mailto:info@codestrup.in"
                                 style={{ color: "white" }}
                               >
                                 info@codestrup.in
-                              </Link>
+                              </a>
                             </p>
                           </div>
                         </div>

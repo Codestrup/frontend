@@ -282,24 +282,30 @@ const page = () => {
 
                     <h6 className='wow fadeInUp' style={{ paddingLeft: '47px', paddingRight: '47px', paddingTop: '0px', paddingBottom: '10px' }}>
 
-                    CONSENT WITHDRAWAL, DATA DOWNLOAD & DATA REMOVAL REQUESTS
+                        CONSENT WITHDRAWAL, DATA DOWNLOAD & DATA REMOVAL REQUESTS
 
                     </h6>
                     <p className='wow fadeInUp' style={{ paddingLeft: '47px', paddingRight: '47px', paddingBottom: '47px' }} >
-                    To withdraw your consent, or to request the download or delete your data with us for any or all our services & services at any time, please email to <Link  href="/mailto:info@codestrup.in" style={{ color: "#384bff" }}> info@codestrup.in</Link>
+                        To withdraw your consent, or to request the download or delete your data with us for any or all our services & services at any time, please email to <Link href="mailto:info@codestrup.in" style={{ color: "#384bff" }}>
+                            info@codestrup.in
+                        </Link>
+
 
                     </p>
 
                     <h6 className='wow fadeInUp' style={{ paddingLeft: '47px', paddingRight: '47px', paddingTop: '0px', paddingBottom: '10px' }}>
 
-                    CONTACT US:
+                        CONTACT US:
 
                     </h6>
                     <p className='wow fadeInUp' style={{ paddingLeft: '47px', paddingRight: '47px', paddingBottom: '47px' }} >
-                    If you have any questions or concerns regarding this privacy policy, you should contact us by sending an e-mail to please email to 
-                    <Link  href="/mailto:info@codestrup.in" style={{ color: "#384bff" }}> info@codestrup.in</Link>
-                    <br/>
-                    Information provided on the website may not be 100% accurate and may be provided for promotional purposes of the business.
+                        If you have any questions or concerns regarding this privacy policy, you should contact us by sending an e-mail to please email to
+                        <Link href="mailto:info@codestrup.in" style={{ color: "#384bff" }}>
+                            info@codestrup.in
+                        </Link>
+
+                        <br />
+                        Information provided on the website may not be 100% accurate and may be provided for promotional purposes of the business.
                     </p>
 
                 </div>

@@ -1009,7 +1009,6 @@ export default function ServiceDetails() {
                                 data-wow-delay=".8s"
                                 style={{
                                   padding: "16.5px 14px",
-                                  backgroundColor: "#18185e",
                                   fontSize: "16px",
                                   fontWeight: 600,
                                   lineHeight: "1",

@@ -19,13 +19,15 @@ export default function Header1({
               <ul className="contact-list">
                 <li>
                   <i className="far fa-envelope" />
-                  <Link href="/mailto:info@codestrup.in" className="link">
+                  <a href="mailto:info@codestrup.in" style={{textTransform:'lowercase'}} >
                     info@codestrup.in
-                  </Link>
+                  </a>
+
                 </li>
                 <li>
                   <i className="fa-solid fa-phone-volume" />
-                  <Link href="/tel: 9699997689">+91 9699997689</Link>
+                  <Link href="tel:+919699997689">+91 9699997689</Link>
+
                 </li>
               </ul>
               <div className="top-right">
