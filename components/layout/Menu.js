@@ -33,7 +33,7 @@ export default function Menu() {
           className="theme-btn wow fadeInUp flex items-center"
           data-wow-delay=".8s"
           style={{
-            padding: "16px 24px",
+            padding: "16px 16px",
           }}
         >
         <PersonIcon />  Login | SignUp

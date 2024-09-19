@@ -62,8 +62,11 @@ export default function Footer3() {
                         cursor: 'pointer',
                         textAlign: 'center',
                         display: 'inline-block',
-                        fontWeight: '600'
-                      }}>
+                        fontWeight: '600',
+                        borderRadius:'30px'
+                      }}
+                      
+                      >
 
                       Read More
 
@@ -219,14 +222,14 @@ export default function Footer3() {
                             <i className="fal fa-envelope" />
                           </div>
                           <div className="offcanvas__contact-text">
-                            <Link href="/mailto:info@azent.com">
-                              <span
-                                className="mailto:info@codestrup.in"
-                                style={{ color: "#ffffffcc" }}
-                              >
+
+                            <p
+
+                            >
+                              <a href="mailto:info@codestrup.in" style={{ color: "#ffffffcc",textTransform:'lowercase' }}>
                                 info@codestrup.in
-                              </span>
-                            </Link>
+                              </a>
+                            </p>
                           </div>
                         </li>
                         <li className="d-flex align-items-center gap-4 pb-2">
@@ -241,14 +244,14 @@ export default function Footer3() {
                           <div className="offcanvas__contact-icon mr-15">
                             <i className="far fa-phone" />
                           </div>
-                          <div className="offcanvas__contact-text">
+                          {/* <div className="offcanvas__contact-text"> */}
                             <Link
-                              href="/tel:9699997689"
+                              href="tel:+919699997689"
                               style={{ color: "#ffffffcc" }}
                             >
                               +91 9699997689
                             </Link>
-                          </div>
+                          {/* </div> */}
                         </li>
                       </ul>
                     </div>
@@ -256,25 +259,7 @@ export default function Footer3() {
                 </div>
               </div>
 
-              {/* <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                                <div className="single-footer-widget style-margin" style={{marginLeft:'0px'}}>
-                                    <div className="widget-head">
-                                        <h3>Your Knowledge Base</h3>
-                                    </div>
-                                    <div className="footer-content">
-                                        <p>
-                                            Learn about the latest internship projects and achievements.
-                                            Stay connected with the Codestrup Infotech internship community
-                                        </p>
-                                        <div className="footer-input">
-                                            <input type="email" id="email2" placeholder="Enter Email Address" />
-                                            <button className="newsletter-btn" type="submit">
-                                                <i className="fab fa-telegram-plane" />
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> */}
+             
             </div>
           </div>
         </div>
@@ -307,7 +292,7 @@ export default function Footer3() {
         </div>
 
         {/* </div> */}
-      </footer>
+      </footer >
     </>
   );
 }
