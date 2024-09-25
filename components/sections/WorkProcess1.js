@@ -1,89 +1,111 @@
+import { Avatar, Grid, List, ListItem, ListItemAvatar, ListItemText } from "@mui/material";
 
+import ImageIcon from '@mui/icons-material/Image';
+import WorkIcon from '@mui/icons-material/Work';
+import BeachAccessIcon from '@mui/icons-material/BeachAccess';
+import LaptopChromebookIcon from '@mui/icons-material/LaptopChromebook';
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import SmartToyIcon from '@mui/icons-material/SmartToy';
+import SchoolIcon from '@mui/icons-material/School';
+import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
+import CardMembershipIcon from '@mui/icons-material/CardMembership';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export default function WorkProcess1() {
     return (
         <>
-            <section className="work-process-section fix " style={{paddingTop:'70px',paddingBottom:'70px'}}>
+            <section className="work-process-section fix " style={{ paddingTop: '70px', paddingBottom: '70px' }}>
                 <div className="container">
                     <div className="section-title text-center">
-                        <h2 style={{marginBottom:'10px'}}>Our Features</h2>
-                        <span style={{fontWeight:600}}>Find global work experience in any programming language with Virtual Internships, the No. 1 platform for remote internships.</span>
+                        <h2 style={{ marginBottom: '10px' }}>Our Features</h2>
+                        <span style={{ fontWeight: 600 }}>Find global work experience in any programming language with Virtual Internships, the No. 1 platform for remote internships.</span>
                     </div>
-                    <div className="process-work-wrapper">
-                        <div className="line-shape">
-                            <img src="/assets/img/process/linepng.png" alt="" />
-                        </div>
-                        <div className="row">
-                            <div className="col-xl-3 col-lg-4 col-md-6">
-                                <div className="work-process-items text-center">
-                                    <div className="icon">
-                                        <img src="/assets/img/process/01.svg" alt="img" />
-                                        <h6 className="number">
-                                            1
-                                        </h6>
-                                    </div>
-                                    <div className="content">
-                                        <h4>Complete Flexibility</h4>
-                                        <p>
 
-                                            Flexible learning enhances diversity, accessibility, and student autonomy.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6">
-                                <div className="work-process-items text-center">
-                                    <div className="content style-2">
-                                        <h4>Real Experience</h4>
-                                        <p>
 
-                                            Real examples stimulate critical thinking and problem-solving.
-                                        </p>
-                                    </div>
-                                    <div className="icon">
-                                        <img src="/assets/img/process/02.svg" alt="img" />
-                                        <h6 className="number">
-                                            2
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6">
-                                <div className="work-process-items text-center">
-                                    <div className="icon">
-                                        <img src="/assets/img/process/03.svg" alt="img" />
-                                        <h6 className="number">
-                                            3
-                                        </h6>
-                                    </div>
-                                    <div className="content">
-                                        <h4>Certification</h4>
-                                        <p>
+                 
 
-                                            Our program offers strategies for career growth and skill validation.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6">
-                                <div className="work-process-items text-center">
-                                    <div className="content style-2">
-                                        <h4>Save Time</h4>
-                                        <p>
-                                            Online learning reduces time by 25% to 60%.
-                                        </p>
-                                    </div>
-                                    <div className="icon">
-                                        <img src="/assets/img/process/04.svg" alt="img" />
-                                        <h6 className="number">
-                                            4
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                    <Grid container spacing={2}>
+                       
+                        <Grid item xs={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: { xs: '16px', md: '16px', lg: '16px' } }}>
+                            <List sx={{ width: '100%', maxWidth: 430, bgcolor: 'background.paper' }}>
+                                 <ListItem className="wow fadeInUp" data-wow-delay=".3s">
+                                    <ListItemAvatar >
+                                        <Avatar sx={{ backgroundColor: '#384bff' }}>
+                                            <LaptopChromebookIcon />
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText primary="Work on live projects." />
+                                </ListItem>
+                                 <ListItem className="wow fadeInUp" data-wow-delay=".3s">
+                                    <ListItemAvatar>
+                                        <Avatar sx={{ backgroundColor: '#384bff' }}>
+                                            <TaskAltIcon />
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText primary=" Receive task reviews and approvals from experts." />
+                                </ListItem>
+                                 <ListItem className="wow fadeInUp" data-wow-delay=".5s">
+                                    <ListItemAvatar>
+                                        <Avatar sx={{ backgroundColor: '#384bff' }}>
+                                            <SmartToyIcon />
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText primary=" Get help from AI to learn and guide you in completing project tasks." />
+                                </ListItem>
+                                 <ListItem className="wow fadeInUp" data-wow-delay=".5s">
+                                    <ListItemAvatar>
+                                        <Avatar sx={{ backgroundColor: '#384bff' }}>
+                                            <SchoolIcon />
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText primary=" Access text courses for learning." />
+                                </ListItem>
+                            </List>
+                        </Grid>
+
+                      
+                        <Grid item xs={12} md={6} 
+                        className="highlights"
+                        >
+                            <List sx={{ width: '100%', maxWidth: 430, bgcolor: 'background.paper', }}>
+
+                                 <ListItem className="wow fadeInUp" data-wow-delay=".7s">
+                                    <ListItemAvatar>
+                                        <Avatar sx={{ backgroundColor: '#384bff' }}>
+                                            <WorkHistoryIcon />
+
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText primary=" Get alerts for new job openings." />
+                                </ListItem>
+                                 <ListItem className="wow fadeInUp" data-wow-delay=".7s">
+                                    <ListItemAvatar>
+                                        <Avatar sx={{ backgroundColor: '#384bff' }}>
+                                            <CardMembershipIcon />
+
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText primary=" Receive an internship certificate upon completing all projects and tasks." />
+                                </ListItem>
+                                 <ListItem className="wow fadeInUp" data-wow-delay=".9s">
+                                    <ListItemAvatar>
+                                        <Avatar sx={{ backgroundColor: '#384bff' }}>
+                                            <LinkedInIcon />
+
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText primary="   Share your internship certificate directly on your LinkedIn profile." />
+                                </ListItem>
+                            </List>
+                        </Grid>
+                    </Grid>
+
+
                 </div>
+
+                {/* </div> */}
+
             </section>
         </>
     )

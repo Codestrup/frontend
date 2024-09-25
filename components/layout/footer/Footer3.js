@@ -50,7 +50,28 @@ export default function Footer3() {
                   <div className="footer-content">
                     <p>
                       Codestrup Infotech provides industry-aligned online internships in programming with hands-on, project-based training to bridge academic learning and real-world skills.
+
                     </p>
+                    <Link href="/about" className="about-redireact"
+                      style={{
+                        top: '10px',
+                        position: 'relative',
+                        padding: '5px 10px',
+                        border: '1px solid rgba(227, 227, 227, 0.2)',
+                        color: 'white',
+                        cursor: 'pointer',
+                        textAlign: 'center',
+                        display: 'inline-block',
+                        fontWeight: '600',
+                        borderRadius:'30px'
+                      }}
+                      
+                      >
+
+                      Read More
+
+                    </Link>
+
                     <div className="social-icon d-flex align-items-center">
                       <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd">
                         <i className="fa-brands fa-linkedin-in" />
@@ -92,7 +113,7 @@ export default function Footer3() {
                         <li>
                           <Link href="/internship">
                             <i className="fa-solid fa-chevron-right" />
-                            internship
+                            Internship
                           </Link>
                         </li>
                         <li>
@@ -191,8 +212,8 @@ export default function Footer3() {
                           </div>
                           <div className="offcanvas__contact-text ">
                             <p>
-                              Office No.301 3rd floor, Umed building, Nanded
-                              City rd, Pune,Maharastra 411041
+                              Office No.301, 3rd floor, Umed building, Nanded
+                              City rd, Pune, Maharastra-411041
                             </p>
                           </div>
                         </li>
@@ -201,14 +222,14 @@ export default function Footer3() {
                             <i className="fal fa-envelope" />
                           </div>
                           <div className="offcanvas__contact-text">
-                            <Link href="/mailto:info@azent.com">
-                              <span
-                                className="mailto:info@codestrup.com"
-                                style={{ color: "#ffffffcc" }}
-                              >
-                                info@codestrup.com
-                              </span>
-                            </Link>
+
+                            <p
+
+                            >
+                              <a href="mailto:info@codestrup.in" style={{ color: "#ffffffcc",textTransform:'lowercase' }}>
+                                info@codestrup.in
+                              </a>
+                            </p>
                           </div>
                         </li>
                         <li className="d-flex align-items-center gap-4 pb-2">
@@ -223,14 +244,14 @@ export default function Footer3() {
                           <div className="offcanvas__contact-icon mr-15">
                             <i className="far fa-phone" />
                           </div>
-                          <div className="offcanvas__contact-text">
+                          {/* <div className="offcanvas__contact-text"> */}
                             <Link
-                              href="/tel:9699997689"
+                              href="tel:+919699997689"
                               style={{ color: "#ffffffcc" }}
                             >
                               +91 9699997689
                             </Link>
-                          </div>
+                          {/* </div> */}
                         </li>
                       </ul>
                     </div>
@@ -238,25 +259,7 @@ export default function Footer3() {
                 </div>
               </div>
 
-              {/* <div className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                                <div className="single-footer-widget style-margin" style={{marginLeft:'0px'}}>
-                                    <div className="widget-head">
-                                        <h3>Your Knowledge Base</h3>
-                                    </div>
-                                    <div className="footer-content">
-                                        <p>
-                                            Learn about the latest internship projects and achievements.
-                                            Stay connected with the Codestrup Infotech internship community
-                                        </p>
-                                        <div className="footer-input">
-                                            <input type="email" id="email2" placeholder="Enter Email Address" />
-                                            <button className="newsletter-btn" type="submit">
-                                                <i className="fab fa-telegram-plane" />
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> */}
+             
             </div>
           </div>
         </div>
@@ -289,7 +292,7 @@ export default function Footer3() {
         </div>
 
         {/* </div> */}
-      </footer>
+      </footer >
     </>
   );
 }

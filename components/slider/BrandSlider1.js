@@ -82,17 +82,17 @@ export default function BrandSlider1() {
                     </SwiperSlide>
                     
                   
-                    {/* <SwiperSlide>
+                     <SwiperSlide>
                         <div className="brand-image">
-                            <img src="/assets/img/brand.png" alt="brand-img" />
+                            <img src="/assets/img/php.png" alt="brand-img" />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="brand-image">
-                            <img src="/assets/img/brand.png" alt="brand-img" />
+                            <img src="/assets/img/java.png" alt="brand-img" />
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                   {/* <SwiperSlide>
                         <div className="brand-image">
                             <img src="/assets/img/brand.png" alt="brand-img" />
                         </div>

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useInternship } from "../../app/context/InternshipContext";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import { Dialog, Box, IconButton, Button, Card } from "@mui/material";
+import { Dialog, Box, IconButton, Button,Card } from "@mui/material";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTelegram, faInstagram, faFacebook, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
@@ -30,7 +30,7 @@ const Page = () => {
       try {
         const response = await axios.get("https://api.codestrup.in/loadjobs");
         setInternships(response?.data?.data || []);
-       
+
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -63,29 +63,24 @@ const Page = () => {
       name: "Whatsapp",
       link: "https://bit.ly/4cn7J3I",
       icon: faWhatsapp,
-
     },
-
     {
       id: 3,
-      name: "Telegram",
-      icon: faTelegram,
-      link: "https://t.me/+6HxZOtDBk6w0N2Vl",
-
-    },
-
-    {
-      id: 4,
-      name: "Instagram",
-      icon: faInstagram,
-      link: "https://bit.ly/45tfDXd",
-    },
-
-    {
-      id: 5,
       name: "Facebook",
       link: "https://bit.ly/3zciBU0",
       icon: faFacebook,
+    },
+    {
+      id: 4,
+      name: "Instagram",
+      link: "https://bit.ly/45tfDXd",
+      icon: faInstagram,
+    },
+    {
+      id: 5,
+      name: "Telegram",
+      link: "https://t.me/+6HxZOtDBk6w0N2Vl",
+      icon: faTelegram,
     },
   ];
 
@@ -121,7 +116,18 @@ const Page = () => {
     <div>
       <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Internship">
         <div>
-          <section className="service-section fix section-padding">
+
+          <section className="service-section fix "
+          style={{padding:'60px 0'}}
+          >
+           
+              <h2
+                className="wow fadeInUp"
+                data-wow-delay=".3s"
+                style={{ display: "flex", justifyContent: "center" }}
+              >
+               Enroll Your Ideal Internship
+              </h2>
             <div className="container">
               <div className="service-wrapper mb-0">
                 <div className="row">
@@ -152,7 +158,9 @@ const Page = () => {
                               height: "100%",
                               minHeight: "100px",
                               overflow: "hidden",
+                              cursor:'pointer'
                             }}
+                            onClick={() => handleApplyNowClick(item)}
                           >
                             <img
                               src={item?.imageUrl}
@@ -167,31 +175,22 @@ const Page = () => {
 
                           <div className="content">
                             <h4>
-                              <p>
+                              <p onClick={() => handleApplyNowClick(item)}
+                                 style={{ cursor: "pointer" }}
+                                >
                                 {item.jobTitle}
                               </p>
                             </h4>
 
                             <div style={{ height: "100%", minHeight: "100px" }}>
-                              <p>
+                              <p onClick={() => handleApplyNowClick(item)}
+                                 style={{ cursor: "pointer" }}
+                                >
                                 {showFullDescription[item._id]
                                   ? item.description
                                   : `${item.description.substring(0, 50)}...`}
                                 &nbsp;
-                                {/* {item.description.length > 50 && (
-                                  <span>
-                                    <button
-                                      onClick={() =>
-                                        toggleDescription(item._id)
-                                      }
-                                      className="read-more-less-btn"
-                                    >
-                                      {showFullDescription[item._id]
-                                        ? "Read Less"
-                                        : "Read More"}
-                                    </button>
-                                  </span>
-                                )} */}
+                               
                               </p>
                             </div>
                             <div
@@ -248,7 +247,7 @@ const Page = () => {
             </IconButton>
 
             <Box mt={2}>
-              {/* <h5 variant="h4">Perks you will receive are:</h5> */}
+           
               <ol>
                 {internshipPerks.map((item) => (
                   <div
@@ -274,12 +273,21 @@ const Page = () => {
                   justifyContent: 'center',
                 }}
               >
-                <Box component="li" sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                  <Link href="http://codestrup.in/" >
-                    <p style={{ color: "#384bff" }}>Codestrup infotech Pvt Ltd</p>
+
+                <Box
+                  component="li"
+                  sx={{
+                    display: { xs: 'none', md: 'none', lg: 'flex' },
+                    alignItems: "center",
+                    gap: "10px"
+                  }}
+                >
+                  <Link href="http://codestrup.in/">
+                    <p style={{ color: "#384bff" }}>Codestrup Infotech Pvt Ltd</p>
                   </Link>
                   |
                 </Box>
+
                 {socialLinks.map((item) => (
                   <Box
                     component="li"
@@ -287,12 +295,12 @@ const Page = () => {
                     sx={{
                       display: "flex",
                       alignItems: "center",
-                      width: "auto",
+                      width: "auto", 
                     }}
                   >
-                    <Link href={item.link} sx={{
-                      display: 'flex',
-                      alignItems: 'center',
+                    <Link href={item.link} style={{
+                      display: 'flex', 
+                      alignItems: 'center', 
                       marginLeft: "10px",
                       color: "#384bff",
                       textDecoration: "none",

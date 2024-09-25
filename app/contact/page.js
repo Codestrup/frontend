@@ -56,10 +56,8 @@ export default function Contact() {
         actions.resetForm();
       }
     } catch (error) {
+      toast.error(error.response?.data?.error);
       
-      if(error.response){
-        toast.error(error.response?.data?.error)
-      }
     }
   };
   
@@ -68,7 +66,9 @@ export default function Contact() {
     <>
       <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Contact Us">
         <div>
-          <section className="contact-section fix section-padding">
+          <section className="contact-section fix "
+          style={{padding:'60px 0'}}
+          >
             <div className="container">
               <div className="contact-wrapper-2">
                 <div className="row g-4 ">
@@ -96,7 +96,7 @@ export default function Contact() {
                           </div>
                           <div className="content">
                             <p style={{ fontSize: "20px", fontWeight: "500" }}>
-                              Call Us 7/24
+                              Call us
                             </p>
                             <p>
                               <Link
@@ -137,12 +137,12 @@ export default function Contact() {
                               Make a Quote
                             </p>
                             <p>
-                              <Link
-                                href="mailto:info@codestrup.com"
+                              <a
+                                href="mailto:info@codestrup.in"
                                 style={{ color: "white" }}
                               >
                                 info@codestrup.in
-                              </Link>
+                              </a>
                             </p>
                           </div>
                         </div>
@@ -181,8 +181,8 @@ export default function Contact() {
                               Location
                             </p>
                             <p>
-                              Office No.301 3rd Floor , Umed Building , Nanded
-                              City Rd , Pune , Maharastra 411041
+                              Office No.301, 3rd Floor, Umed Building, Nanded
+                              City Rd , Pune, Maharastra-411041
                             </p>
                           </div>
                         </div>

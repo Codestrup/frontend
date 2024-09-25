@@ -19,13 +19,15 @@ export default function Header1({
               <ul className="contact-list">
                 <li>
                   <i className="far fa-envelope" />
-                  <Link href="/mailto:info@codestrup.com" className="link">
-                    info@codestrup.com
-                  </Link>
+                  <a href="mailto:info@codestrup.in" style={{textTransform:'lowercase'}} >
+                    info@codestrup.in
+                  </a>
+
                 </li>
                 <li>
                   <i className="fa-solid fa-phone-volume" />
-                  <Link href="/tel: 9699997689">+91 9699997689</Link>
+                  <Link href="tel:+919699997689">+91 9699997689</Link>
+
                 </li>
               </ul>
               <div className="top-right">
@@ -89,7 +91,7 @@ export default function Header1({
                                             </span>
                                         </Link>
                                     </div> */}
-                  <div className="header__hamburger d-xl-block my-auto">
+                  <div className="header__hamburger  d-md-block d-lg-none my-auto">
                     <div className="sidebar__toggle" onClick={handleOffCanvas}>
                       <i className="fas fa-bars" />
                     </div>

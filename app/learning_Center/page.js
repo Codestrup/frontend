@@ -1,117 +1,141 @@
 import Layout from "@/components/layout/Layout";
-import Footer3 from "@/components/layout/footer/Footer3";
 import Link from "next/link";
 export default function Project() {
+
   return (
     <>
-      <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Coming Soon">
-        {/* <section className="project-section section-padding fix">
-          <div className="container">
-            <div className="row g-4">
-              <div
-                className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
-                data-wow-delay=".3s"
-              >
-                <div className="project-items">
-                  <div className="project-image">
-                    <img src="/assets/img/project/01.jpg" alt="project-img" />
-                    <div className="project-content">
-                      <p>Technology</p>
-                      <h4> 
-                      
-                        <Link href="/project-details">
-                          Platform Integration
-                        </Link>
-                      </h4>
+      <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Learning Center">
+        <section style={{ padding: '60px 0' }}>
+          <h2
+            className="wow fadeInUp"
+            data-wow-delay=".3s"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            Coming Soon...
+          </h2>
+          <section className="project-section mt-5 fix">
+            <div className="container">
+              <div className="row g-4">
+
+
+               
+
+
+
+            
+
+                <div className="col-lg-3 col-md-6 mb-4  wow fadeInUp">
+                  <div className="card h-100 shadow" style={{ borderRadius: '10px',position:'relative',overflow:'hidden' }}>
+                  <span className="ribbonStyleCourse"></span>
+                    <img
+                      src="/assets/img/Learning/01.jpg"
+                      className="card-img-top"
+                      alt="Card 2"
+                      style={{ width: '100%', height: '200px', objectFit: 'cover',padding:'15px' }}
+                    />
+                  
+                    <div className="project-items">
+                      <div className="project-image">
+                        <div className="project-content">
+                          <h4>
+                            <Link href="#">
+                              Text Courses 
+                            </Link>
+                          </h4>
+                        </div>
+                      </div>
                     </div>
+
+
                   </div>
                 </div>
-              </div>
-              <div
-                className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
-                data-wow-delay=".5s"
-              >
-                <div className="project-items">
-                  <div className="project-image">
-                    <img src="/assets/img/project/02.jpg" alt="project-img" />
-                    <div className="project-content">
-                      <p>Security</p>
-                      <h4>
-                        <Link href="/project-details">Network Security</Link>
-                      </h4>
+                <div className="col-lg-3 col-md-6 mb-4  wow fadeInUp">
+                  <div className="card h-100 shadow" style={{ borderRadius: '10px',position:'relative',overflow:'hidden' }}>
+                  <span className="ribbonStyleCourse"></span>
+                    <img
+                      src="/assets/img/Learning/02.jpg"
+                      className="card-img-top"
+                      alt="Card 2"
+                      style={{ width: '100%', height: '200px', objectFit: 'cover',padding:'15px' }}
+                    />
+                  
+                    <div className="project-items">
+                      <div className="project-image">
+                        <div className="project-content">
+                          <h4>
+                            <Link href="#">
+                            Video Courses 
+                            </Link>
+                          </h4>
+                        </div>
+                      </div>
                     </div>
+
+
                   </div>
                 </div>
-              </div>
-              <div
-                className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
-                data-wow-delay=".7s"
-              >
-                <div className="project-items">
-                  <div className="project-image">
-                    <img src="/assets/img/project/03.jpg" alt="project-img" />
-                    <div className="project-content">
-                      <p>Solution</p>
-                      <h4>
-                        <Link href="/project-details">Web Development</Link>
-                      </h4>
+                <div className="col-lg-3 col-md-6 mb-4  wow fadeInUp">
+                  <div className="card h-100 shadow" style={{ borderRadius: '10px',position:'relative',overflow:'hidden' }}>
+                  <span className="ribbonStyleCourse"></span>
+                    <img
+                      src="/assets/img/Learning/03.jpg"
+                      className="card-img-top"
+                      alt="Card 2"
+                      style={{ width: '100%', height: '200px', objectFit: 'cover',padding:'15px', }}
+                    />
+                  
+                    <div className="project-items">
+                      <div className="project-image">
+                        <div className="project-content">
+                          <h4>
+                            <Link href="#">
+                            Aptitude Preparation
+                            </Link>
+                          </h4>
+                        </div>
+                      </div>
                     </div>
+
+
                   </div>
                 </div>
-              </div>
-              <div
-                className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
-                data-wow-delay=".3s"
-              >
-                <div className="project-items">
-                  <div className="project-image">
-                    <img src="/assets/img/project/04.jpg" alt="project-img" />
-                    <div className="project-content">
-                      <p>Technology</p>
-                      <h4>
-                        <Link href="/project-details">IT Management</Link>
-                      </h4>
+                <div className="col-lg-3 col-md-6 mb-4  wow fadeInUp">
+                  <div className="card h-100 shadow" style={{ borderRadius: '10px',position:'relative',overflow:'hidden' }}>
+                  <span className="ribbonStyleCourse"></span>
+                    <img
+                      src="/assets/img/Learning/04.jpg"
+                      className="card-img-top"
+                      alt="Card 2"
+                      style={{ width: '100%', height: '200px', objectFit: 'cover',padding:'15px' }}
+                    />
+                  
+                    <div className="project-items">
+                      <div className="project-image">
+                        <div className="project-content">
+                          <h4>
+                            <Link href="#">
+                            Interview Preparation
+                            </Link>
+                          </h4>
+                        </div>
+                      </div>
                     </div>
+
+
                   </div>
                 </div>
-              </div>
-              <div
-                className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
-                data-wow-delay=".5s"
-              >
-                <div className="project-items">
-                  <div className="project-image">
-                    <img src="/assets/img/project/10.jpg" alt="project-img" />
-                    <div className="project-content">
-                      <p>Technology</p>
-                      <h4>
-                        <Link href="/project-details">Design Solutions</Link>
-                      </h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
-                data-wow-delay=".7s"
-              >
-                <div className="project-items">
-                  <div className="project-image">
-                    <img src="/assets/img/project/11.jpg" alt="project-img" />
-                    <div className="project-content">
-                      <p>Technology</p>
-                      <h4>
-                        <Link href="/project-details">
-                          Software Development
-                        </Link>
-                      </h4>
-                    </div>
-                  </div>
-                </div>
+
+              
+               
+
+
+
+
               </div>
             </div>
-          </div>
-        </section> */}
+          </section>
+        </section>
+
       </Layout>
     </>
   );
