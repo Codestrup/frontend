@@ -299,8 +299,7 @@ const page = () => {
 
                     </h6>
                     <p className='wow fadeInUp' style={{ paddingLeft: '47px', paddingRight: '47px', paddingBottom: '47px' }} >
-                        If you have any questions or concerns regarding this privacy policy, you should contact us by sending an e-mail to please email to
-                        <Link href="mailto:info@codestrup.in" style={{ color: "#384bff" }}>
+                        If you have any questions or concerns regarding this privacy policy, you should contact us by sending an e-mail to please email to <Link href="mailto:info@codestrup.in" style={{ color: "#384bff" }}>
                             info@codestrup.in
                         </Link>
 

@@ -119,7 +119,7 @@ export default function Achievement() {
                                             className="team-card-items mt-0"
                                             style={{
                                                 width: 'auto',
-                                                border: '1px solid #e0e0e0',
+                                                border: '3px solid #e0e0e0',
                                                 borderRadius: '20px',
                                                 overflow: 'hidden'
                                             }}
