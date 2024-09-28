@@ -227,7 +227,7 @@ export default function Achievement() {
                         </div>
                         <div className="container">
                             <div className="achievement-wrapper style-2">
-                                <div className="section-title mb-0">
+                                <div className="section-title ">
                                     <span className="text-white wow fadeInUp">achievement</span>
                                     <h2 className="text-white wow fadeInUp" data-wow-delay=".3s">
                                         Celebrate Major Wins

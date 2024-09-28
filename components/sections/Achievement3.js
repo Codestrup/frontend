@@ -23,7 +23,10 @@ export default function Achievement3() {
                 Celebrate Major Wins
               </h2>
             </div>
-            <div className="counter-area" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))' }}>
+            <div className="counter-area" 
+            
+            style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))' }}
+            >
               <div className="counter-items wow fadeInUp" data-wow-delay=".3s"
               style={{
                 alignItems: 'center',
