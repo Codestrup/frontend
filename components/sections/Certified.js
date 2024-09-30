@@ -31,7 +31,7 @@ const Certified = () => {
     return (
         <div>
             <Layout>
-                <section className="project-section-cer section-padding fix" >
+                <section className="project-section-cer fix" style={{paddingTop:'78px'}} >
                     <div className="container">
                         <div className="row g-1">
                             <h2 className="text-center wow fadeInUp " data-wow-delay=".3s" style={{ marginBottom: '80px', }}>We Are Certified And Registered With</h2>
@@ -56,7 +56,7 @@ const Certified = () => {
                                         height: "100%",
                                         minHeight: '100px',
                                         overflow: "hidden",
-                                        paddingBottom: '50px', display: 'flex',
+                                        paddingBottom: '78px', display: 'flex',
                                         justifyContent: 'center',
                                         alignItems: 'center'
                                     }}>

@@ -181,17 +181,19 @@ Version: 1.0.0
   background-color: transparent;
   padding: 22px 40px;
 }
-.highlights
-{
+
+.highlights {
   display: flex;
   justify-content: center;
   padding-top: 16px;
 }
+
 @media (max-width: 767px) {
   .theme-btn.border-white {
     padding: 18px 32px;
   }
-  .highlights{
+
+  .highlights {
     padding-top: 0 !important;
   }
 }
@@ -200,7 +202,8 @@ Version: 1.0.0
   .theme-btn.border-white {
     padding: 16px 30px;
   }
-  .highlights{
+
+  .highlights {
     padding-top: 0 !important;
   }
 }
@@ -1191,9 +1194,9 @@ span {
   font-weight: 600;
 }
 
-.project-section-cer {
+/* .project-section-cer {
   padding-bottom: 120px;
-}
+} */
 
 @media (max-width: 575px) {
   .project-section-cer {
@@ -1989,6 +1992,7 @@ span {
 
 .faq-section {
   position: relative;
+  padding: 100px;
 }
 
 @media (max-width: 1199px) {
@@ -2211,6 +2215,11 @@ span {
     align-items: center;
     justify-content: center;
   }
+
+  .faq-section {
+    padding-bottom: 120px;
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 575px) {
@@ -2219,6 +2228,10 @@ span {
     text-align: center;
     justify-self: center;
     gap: 30px;
+  }
+  .faq-section {
+    padding-bottom: 120px;
+    padding-top: 0;
   }
 
   .section-title span {
@@ -2811,7 +2824,7 @@ span {
   color: var(--white);
   border: 1px solid transparent;
 }
-  
+
 
 .footer-widgets-wrapper .single-footer-widget .footer-content .contact-info {
   margin-top: 20px;
@@ -4184,20 +4197,21 @@ span {
   transform: translateX(0);
 }
 
-.header-logo img{
-  width:  260px;
+.header-logo img {
+  width: 260px;
 }
 
 @media (max-width: 451px) {
-  
+
 
   .offcanvas__wrapper .offcanvas__content .offcanvas__close {
     width: 30px;
     height: 30px;
     line-height: 30px;
   }
-  .header-logo img{
-    width:  180px;
+
+  .header-logo img {
+    width: 180px;
   }
 }
 
@@ -4355,10 +4369,11 @@ ul li {
   .offcanvas__wrapper {
     padding: 20px;
   }
-  .header-logo img{
-    width:  190px;
+
+  .header-logo img {
+    width: 190px;
   }
- 
+
 }
 
 .breadcrumb-wrapper {
