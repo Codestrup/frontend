@@ -23,7 +23,7 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
                   >
                     <p>
                       {" "}
-                      Login | SignUp
+                      Login
                       <i className="fa-solid fa-arrow-right-long" />
                     </p>
                   </Link>
@@ -35,7 +35,7 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
                 </div>
               </div>
 
-              <div className=" d-md-block d-lg-none">
+              <div className="d-md-block d-lg-none">
                 <MobileMenu />
               </div>
 

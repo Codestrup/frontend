@@ -173,7 +173,7 @@ export default function Service1() {
             </span>
 
             <h2 className="wow fadeInUp" data-wow-delay=".3s">
-              Enroll Your Ideal Internship
+              Enroll Your Ideal Internship 
             </h2>
           </div>
 

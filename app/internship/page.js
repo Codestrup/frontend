@@ -4,14 +4,22 @@ import Accordion1 from "@/components/elements/Accordion1";
 import Layout from "@/components/layout/Layout";
 import Link from "next/link";
 import { useInternship } from "../../app/context/InternshipContext";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import axios from "axios";
-import { Dialog, Box, IconButton, Button,Card } from "@mui/material";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTelegram, faInstagram, faFacebook, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { Dialog, Box, IconButton, Button, Card } from "@mui/material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTelegram,
+  faInstagram,
+  faFacebook,
+  faWhatsapp,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Page = () => {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const refer = searchParams.get('refer');
   const [internships, setInternships] = useState([]);
   const [selectedInternship, setSelectedInternship] = useState(null);
   const { setInternshipId } = useInternship();
@@ -30,7 +38,6 @@ const Page = () => {
       try {
         const response = await axios.get("https://api.codestrup.in/loadjobs");
         setInternships(response?.data?.data || []);
-
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -46,7 +53,11 @@ const Page = () => {
 
   const handleNextClick = () => {
     setInformationDialogOpen(false);
-    router.push("/registration_form");
+    if (!refer) {
+      router.push(`/registration_form`);
+    } else {
+      router.push(`/registration_form?refer=${refer}`);
+    }
   };
 
   const socialLinks = [
@@ -55,8 +66,6 @@ const Page = () => {
       name: "LindkeIn",
       link: "https://bit.ly/4erKOpQ",
       icon: faLinkedin,
-
-
     },
     {
       id: 2,
@@ -105,29 +114,28 @@ const Page = () => {
       name: "Learning Opportunities - As an intern at  Codestrup infotech Pvt Ltd  , you'll dive into a collaborative, intellectually stimulating environment, gaining hands-on experience with cutting-edge projects at the forefront of technological advancement",
     },
 
-
     {
       id: 5,
       name: "Job Opportunities - Access employment opportunities with us.                              This form is for INTERNSHIP in Codestrup Infotech Pvt Ltd ",
     },
   ];
 
+  //  const testbg = "https://codestrupinfotech.com/reactjs.jpg"
   return (
     <div>
       <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Internship">
         <div>
-
-          <section className="service-section fix "
-          style={{padding:'60px 0'}}
+          <section
+            className="service-section fix "
+            style={{ padding: "60px 0" }}
           >
-           
-              <h2
-                className="wow fadeInUp"
-                data-wow-delay=".3s"
-                style={{ display: "flex", justifyContent: "center" }}
-              >
-               Enroll Your Ideal Internship
-              </h2>
+            <h2
+              className="wow fadeInUp"
+              data-wow-delay=".3s"
+              style={{ display: "flex", justifyContent: "center" }}
+            >
+              Enroll Your Ideal Internship
+            </h2>
             <div className="container">
               <div className="service-wrapper mb-0">
                 <div className="row">
@@ -158,12 +166,13 @@ const Page = () => {
                               height: "100%",
                               minHeight: "100px",
                               overflow: "hidden",
-                              cursor:'pointer'
+                              cursor: "pointer",
                             }}
                             onClick={() => handleApplyNowClick(item)}
                           >
                             <img
                               src={item?.imageUrl}
+                              // src={testbg}
                               alt="icon-img"
                               style={{
                                 width: "100%",
@@ -175,22 +184,23 @@ const Page = () => {
 
                           <div className="content">
                             <h4>
-                              <p onClick={() => handleApplyNowClick(item)}
-                                 style={{ cursor: "pointer" }}
-                                >
+                              <p
+                                onClick={() => handleApplyNowClick(item)}
+                                style={{ cursor: "pointer" }}
+                              >
                                 {item.jobTitle}
                               </p>
                             </h4>
 
                             <div style={{ height: "100%", minHeight: "100px" }}>
-                              <p onClick={() => handleApplyNowClick(item)}
-                                 style={{ cursor: "pointer" }}
-                                >
+                              <p
+                                onClick={() => handleApplyNowClick(item)}
+                                style={{ cursor: "pointer" }}
+                              >
                                 {showFullDescription[item._id]
                                   ? item.description
                                   : `${item.description.substring(0, 50)}...`}
                                 &nbsp;
-                               
                               </p>
                             </div>
                             <div
@@ -247,7 +257,6 @@ const Page = () => {
             </IconButton>
 
             <Box mt={2}>
-           
               <ol>
                 {internshipPerks.map((item) => (
                   <div
@@ -259,57 +268,6 @@ const Page = () => {
                   </div>
                 ))}
               </ol>
-            </Box>
-
-            <Box>
-              <Box
-                component="ul"
-                sx={{
-                  display: 'flex',
-                  listStyle: 'none',
-                  padding: { xs: '10px', md: '30px' },
-                  margin: 0,
-                  gap: { xs: '10px', md: '20px' },
-                  justifyContent: 'center',
-                }}
-              >
-
-                <Box
-                  component="li"
-                  sx={{
-                    display: { xs: 'none', md: 'none', lg: 'flex' },
-                    alignItems: "center",
-                    gap: "10px"
-                  }}
-                >
-                  <Link href="http://codestrup.in/">
-                    <p style={{ color: "#384bff" }}>Codestrup Infotech Pvt Ltd</p>
-                  </Link>
-                  |
-                </Box>
-
-                {socialLinks.map((item) => (
-                  <Box
-                    component="li"
-                    key={item.id}
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      width: "auto", 
-                    }}
-                  >
-                    <Link href={item.link} style={{
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      marginLeft: "10px",
-                      color: "#384bff",
-                      textDecoration: "none",
-                    }}>
-                      <FontAwesomeIcon icon={item.icon} size="lg" style={{ color: "#384bff" }} />
-                    </Link>
-                  </Box>
-                ))}
-              </Box>
             </Box>
 
             <Box mt={2} display="flex" justifyContent="center">
@@ -325,6 +283,65 @@ const Page = () => {
               >
                 Next
               </Button>
+            </Box>
+
+            <Box mt={2}>
+              <Box
+                component="ul"
+                sx={{
+                  display: "flex",
+                  listStyle: "none",
+                  padding: { xs: "0px", md: "0px" },
+                  margin: 0,
+                  gap: { xs: "10px", md: "20px" },
+                  justifyContent: "center",
+                }}
+              >
+                <Box
+                  component="li"
+                  sx={{
+                    display: { xs: "none", md: "none", lg: "flex" },
+                    alignItems: "center",
+                    gap: "10px",
+                  }}
+                >
+                  <Link href="http://codestrup.in/">
+                    <p style={{ color: "#384bff" }}>
+                      Codestrup Infotech Pvt Ltd
+                    </p>
+                  </Link>
+                  |
+                </Box>
+
+                {socialLinks.map((item) => (
+                  <Box
+                    component="li"
+                    key={item.id}
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      width: "auto",
+                    }}
+                  >
+                    <Link
+                      href={item.link}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        marginLeft: "10px",
+                        color: "#384bff",
+                        textDecoration: "none",
+                      }}
+                    >
+                      <FontAwesomeIcon
+                        icon={item.icon}
+                        size="lg"
+                        style={{ color: "#384bff" }}
+                      />
+                    </Link>
+                  </Box>
+                ))}
+              </Box>
             </Box>
           </Box>
         </Dialog>
