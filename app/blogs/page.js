@@ -185,7 +185,10 @@ const Page = () => {
 
                               <div style={{ height: "100%" }}>
                                 <p>
-                                  {item.metaDescription}
+                                  {item.metaDescription &&
+                                  item?.metaDescription.length > 50
+                                    ? item?.metaDescription.slice(0, 50)
+                                    : item?.metaDescription}
                                   &nbsp;
                                 </p>
                               </div>
