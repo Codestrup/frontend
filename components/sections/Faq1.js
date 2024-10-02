@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Faq1() {
     return (
         <>
-            <section className="faq-section fix " style={{padding:'100px 0'}}>
+            <section className="faq-section fix " >
                 <div className="right-shape">
                     <img src="/assets/img/faq/right-shape.png" alt="shape-img" />
                 </div>

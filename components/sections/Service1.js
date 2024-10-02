@@ -63,7 +63,14 @@ export default function Service1() {
   useEffect(() => {
     const fetchInternships = async () => {
       try {
-        const response = await axios.get("https://api.codestrup.in/loadjobs");
+        const response = await axios(
+          
+          {method:"GET",
+            url:"https://api.codestrup.in/loadjobs", 
+          params:{
+            limit:100
+          }
+          })
         setInternships(response?.data?.data || []);
 
       } catch (error) {
@@ -173,7 +180,7 @@ export default function Service1() {
             </span>
 
             <h2 className="wow fadeInUp" data-wow-delay=".3s">
-              Enroll Your Ideal Internship
+              Enroll Your Ideal Internship 
             </h2>
           </div>
 
@@ -190,7 +197,7 @@ export default function Service1() {
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "space-between",
-                      minHeight: "300px",
+                      minHeight: "360px",
                       padding: "20px",
                       boxSizing: "border-box",
                       marginBottom: '10px'
@@ -217,7 +224,7 @@ export default function Service1() {
                         />
                       </div>
                       <div className="content">
-                        <h4>
+                        <h4 style={{minHeight:'50px'}}>
                           <Link href="/internship">{item.jobTitle}</Link>
                         </h4>
                         <div style={{ height: "100%", minHeight: "100px" }}>

@@ -14,7 +14,7 @@ async function fetchBlogs() {
 
 export default async function BlogPost() {
   const blogs = await fetchBlogs();
-  console.log(blogs, "hii");
+
   return (
     <div>
       <Head>

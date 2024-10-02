@@ -2,91 +2,67 @@
 import Link from "next/link";
 import PersonIcon from "@mui/icons-material/Person";
 import { useParams, useRouter, usePathname } from "next/navigation";
+import useZoomLevel from "../hooks/useZoomLevel";
+import ModuleStyles from "./Menu.module.css";
+
+const styles = {
+  zoomInStyles: {
+    display: "flex",
+    alignItems: "center",
+  },
+
+  loginBtn: {
+    padding: "16px 16px",
+   
+  },
+  zoomedInLoginBtn: {
+    padding: "8px",
+    display: "flex",
+    alignItems: "center",
+  },
+};
+
+// Create an array of links
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/internship", label: "Internship" },
+  { href: "/learning_Center", label: "Learning Center" },
+  { href: "/Achivement", label: "Top Achievers" },
+  { href: "/blogs", label: "Blog" },
+  { href: "/contact", label: "Contact" },
+];
 
 export default function Menu() {
   const params = usePathname();
-  console.log(params, "hii");
+  const zoomLevel = useZoomLevel();
+
   return (
     <>
-      <ul>
-        <li className="has-dropdown active menu-thumb">
-          <Link
-            href="/"
-            style={{ color: `${params === "/" ? "blue" : "black"}` }}
+      <ul style={zoomLevel > 1 ? styles.zoomInStyles : null}>
+        {links.map((link, index) => (
+          <li
+            key={index}
+            className={`${params === link.href ? "active" : ""} ${
+              zoomLevel > 1 ? ModuleStyles.zoomedListItems : ""
+            }`}
           >
-            Home
-            {/* <i className="fas fa-angle-down ps-1" /> */}
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/about"
-            style={{ color: `${params === "/about" ? "blue" : "black"}` }}
-          >
-            About
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/internship"
-            style={{
-              color: `${params === "/internship" ? "blue" : "black"}`,
-            }}
-          >
-            Internship
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/learning_Center"
-            style={{
-              color: `${params === "/learning_Center" ? "blue" : "black"}`,
-            }}
-          >
-            Learning Center
-          </Link>
-        </li>
+            <Link
+              href={link.href}
+              style={{ color: params === link.href ? "blue" : "black" }}
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
 
-        <li>
-          <Link
-            href="/Achivement"
-            style={{
-              color: `${params === "/Achivement" ? "blue" : "black"}`,
-            }}
-          >
-            Top Achievers
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/blogs"
-            style={{
-              color: `${params === "/blogs" ? "blue" : "black"}`,
-            }}
-          >
-            Blog
-          </Link>
-        </li>
-
-        <li>
-          <Link
-            href="/contact"
-            style={{
-              color: `${params === "/contact" ? "blue" : "black"}`,
-            }}
-          >
-            Contact
-          </Link>
-        </li>
         <Link
           href="https://user.codestrup.in/auth/login"
-          className="theme-btn wow fadeInUp flex items-center"
+          className="theme-btn wow fadeInUp "
           data-wow-delay=".8s"
-          style={{
-            padding: "16px 16px",
-          }}
+          style={zoomLevel > 1 ? styles.zoomedInLoginBtn : styles.loginBtn}
         >
-          <PersonIcon /> Login | SignUp
+          <PersonIcon /> Login
         </Link>
       </ul>
     </>
