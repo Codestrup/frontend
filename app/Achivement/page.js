@@ -119,7 +119,7 @@ export default function Achievement() {
                                             className="team-card-items mt-0"
                                             style={{
                                                 width: 'auto',
-                                                border: '1px solid #e0e0e0',
+                                                border: '3px solid #e0e0e0',
                                                 borderRadius: '20px',
                                                 overflow: 'hidden'
                                             }}
@@ -227,7 +227,7 @@ export default function Achievement() {
                         </div>
                         <div className="container">
                             <div className="achievement-wrapper style-2">
-                                <div className="section-title mb-0">
+                                <div className="section-title ">
                                     <span className="text-white wow fadeInUp">achievement</span>
                                     <h2 className="text-white wow fadeInUp" data-wow-delay=".3s">
                                         Celebrate Major Wins
@@ -274,7 +274,7 @@ export default function Achievement() {
                                             <img src="/assets/img/achievement-icon/03.svg" alt="icon-img" />
                                         </div>
                                         <div className="content">
-                                            <h2><CounterUp count={250} />+</h2>
+                                            <h2><CounterUp count={150} />+</h2>
                                             <p>Skilled Mentors</p>
                                         </div>
                                     </div>

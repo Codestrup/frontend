@@ -118,9 +118,7 @@ export default function Achievement3() {
                   />
                 </div>
                 <div className="content">
-                  <h2>
-                    <CounterUp count={250} />+
-                  </h2>
+                  <h2><CounterUp count={150} />+</h2>
                   <p>Skilled Mentors</p>
                 </div>
               </div>

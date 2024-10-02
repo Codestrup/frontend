@@ -7,11 +7,11 @@ const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
     // slidesPerView: 5,
     spaceBetween: 50,
-    speed: 1300,
+    speed: 1000,
     loop: true,
     centeredSlides: true,
     autoplay: {
-        delay: 2000,
+        delay: 1000,
         disableOnInteraction: false,
     },
 

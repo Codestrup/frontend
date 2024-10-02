@@ -36,7 +36,14 @@ const Page = () => {
   useEffect(() => {
     const fetchInternships = async () => {
       try {
-        const response = await axios.get("https://api.codestrup.in/loadjobs");
+        const response = await axios(
+          
+        {method:"GET",
+          url:"https://api.codestrup.in/loadjobs", 
+        params:{
+          limit:100
+        }
+        })
         setInternships(response?.data?.data || []);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -152,7 +159,7 @@ const Page = () => {
                           display: "flex",
                           flexDirection: "column",
                           justifyContent: "space-between",
-                          minHeight: "300px",
+                          minHeight: "360px",
                           padding: "20px",
                           boxSizing: "border-box",
                           marginTop: "48px",
@@ -183,11 +190,10 @@ const Page = () => {
                           </div>
 
                           <div className="content">
-                            <h4>
-                              <p
-                                onClick={() => handleApplyNowClick(item)}
-                                style={{ cursor: "pointer" }}
-                              >
+                            <h4 style={{minHeight:'50px'}}>
+                              <p onClick={() => handleApplyNowClick(item)}
+                                 style={{ cursor: "pointer" }}
+                                >
                                 {item.jobTitle}
                               </p>
                             </h4>

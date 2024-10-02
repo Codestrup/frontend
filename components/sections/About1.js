@@ -23,14 +23,14 @@ export default function About1() {
                                         </div>
                                     </div>
 
-                                    <div className="about-image-1 bg-cover wow fadeInLeft" data-wow-delay=".3s" style={{ backgroundImage: 'url("assets/img/about/about1.jpeg")' }}>
+                                    <div className="about-image-1 bg-cover wow fadeInLeft" data-wow-delay=".3s" style={{ backgroundImage: 'url("assets/img/about/1.jpg")' }}>
                                         <div className="about-image-2 wow fadeInUp" data-wow-delay=".5s">
-                                            <img src="/assets/img/about/about3.jpeg" alt="about-img" />
+                                            <img src="/assets/img/about/certificate6.jpg" alt="about-img" />
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-6 mt-5 mt-lg-0">
+                            <div className="col-lg-6 mt-25 mt-lg-0">
                                 <div className="about-content">
                                     <div className="section-title">
                                         <h2 className="wow fadeInUp" data-wow-delay=".3s">
@@ -77,7 +77,7 @@ export default function About1() {
                                                 </p>
                                             </div>
                                         </div>
-                                        <div className="icon-items wow fadeInUp" data-wow-delay=".9s">
+                                        {/* <div className="icon-items wow fadeInUp" data-wow-delay=".9s">
                                             <div className="icon">
                                                 <img src="/assets/img/about/icon-1.svg" alt="icon-img" />
                                             </div>
@@ -87,7 +87,7 @@ export default function About1() {
                                                 Verify your accomplishments and abilities with a certificate of completion. Get certificate to open up new opportunities.
                                                 </p>
                                             </div>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>

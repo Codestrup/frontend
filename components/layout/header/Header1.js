@@ -68,7 +68,7 @@ export default function Header1({
                         src="/assets/img/logo/Codestrup.png"
                         alt="logo-img"
                         style={{
-                          width: "260px",
+                          // width: "260px",
                         }}
                       />
                     </Link>
