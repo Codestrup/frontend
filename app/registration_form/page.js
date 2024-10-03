@@ -47,6 +47,7 @@ import { PiListNumbersFill } from "react-icons/pi";
 import useScreenWidth from "@/components/hooks/useScreenWidth";
 import RegistrationForm from "./Form";
 import MobileScreenRegistrationFormDialog from "./MobileForm";
+import Review from "@/components/sections/Review";
 
 const formValidationSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -527,6 +528,7 @@ export default function ServiceDetails() {
           isMobileScreen={isMobileScreen}
         />
       )}
+      <Review id={internship} />
     </Layout>
   );
 }
