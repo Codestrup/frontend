@@ -7,8 +7,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useInternship } from "../../app/context/InternshipContext";
 import { useRouter } from "next/navigation";
 import { Dialog, Box, IconButton, Button, Card } from "@mui/material";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTelegram, faInstagram, faFacebook, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTelegram,
+  faInstagram,
+  faFacebook,
+  faWhatsapp,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -63,16 +69,14 @@ export default function Service1() {
   useEffect(() => {
     const fetchInternships = async () => {
       try {
-        const response = await axios(
-          
-          {method:"GET",
-            url:"https://api.codestrup.in/loadjobs", 
-          params:{
-            limit:100
-          }
-          })
+        const response = await axios({
+          method: "GET",
+          url: "https://api.codestrup.in/loadjobs",
+          params: {
+            limit: 100,
+          },
+        });
         setInternships(response?.data?.data || []);
-
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -85,10 +89,11 @@ export default function Service1() {
   //   router.push("/internship");
   // };
 
-  const handleApplyNowClick = (internship) => {
-    setInternshipId(internship._id);
-    setSelectedInternship(internship);
-    setInformationDialogOpen(true);
+  const handleApplyNowClick = async (internship) => {
+    await setInternshipId(internship._id);
+    await setSelectedInternship(internship);
+    // setInformationDialogOpen(true);
+    handleNextClick();
   };
 
   const handleNextClick = () => {
@@ -102,15 +107,12 @@ export default function Service1() {
       name: "LindkeIn",
       link: "https://bit.ly/4erKOpQ",
       icon: faLinkedin,
-
-
     },
     {
       id: 2,
       name: "Whatsapp",
       link: "https://bit.ly/4cn7J3I",
       icon: faWhatsapp,
-
     },
 
     {
@@ -118,7 +120,6 @@ export default function Service1() {
       name: "Telegram",
       icon: faTelegram,
       link: "https://t.me/+6HxZOtDBk6w0N2Vl",
-
     },
 
     {
@@ -157,7 +158,6 @@ export default function Service1() {
       name: "Learning Opportunities - As an intern at  Codestrup infotech Pvt Ltd  , you'll dive into a collaborative, intellectually stimulating environment, gaining hands-on experience with cutting-edge projects at the forefront of technological advancement",
     },
 
-
     {
       id: 5,
       name: "Job Opportunities - Access employment opportunities with us.                              This form is for INTERNSHIP in Codestrup Infotech Pvt Ltd ",
@@ -180,10 +180,9 @@ export default function Service1() {
             </span>
 
             <h2 className="wow fadeInUp" data-wow-delay=".3s">
-              Enroll Your Ideal Internship 
+              Enroll Your Ideal Internship
             </h2>
           </div>
-
         </div>
         <div className="service-wrapper">
           <div className="swiper service-slider">
@@ -200,7 +199,7 @@ export default function Service1() {
                       minHeight: "360px",
                       padding: "20px",
                       boxSizing: "border-box",
-                      marginBottom: '10px'
+                      marginBottom: "10px",
                     }}
                   >
                     <div>
@@ -224,7 +223,7 @@ export default function Service1() {
                         />
                       </div>
                       <div className="content">
-                        <h4 style={{minHeight:'50px'}}>
+                        <h4 style={{ minHeight: "50px" }}>
                           <Link href="/internship">{item.jobTitle}</Link>
                         </h4>
                         <div style={{ height: "100%", minHeight: "100px" }}>
@@ -233,7 +232,6 @@ export default function Service1() {
                               ? item.description
                               : `${item.description.substring(0, 50)}...`}
                             &nbsp;
-
                           </p>
                         </div>
                       </div>
@@ -300,7 +298,6 @@ export default function Service1() {
             </IconButton>
 
             <Box mt={2}>
-
               <ol>
                 {internshipPerks.map((item) => (
                   <div
@@ -318,25 +315,26 @@ export default function Service1() {
               <Box
                 component="ul"
                 sx={{
-                  display: 'flex',
-                  listStyle: 'none',
-                  padding: { xs: '10px', md: '30px' },
+                  display: "flex",
+                  listStyle: "none",
+                  padding: { xs: "10px", md: "30px" },
                   margin: 0,
-                  gap: { xs: '10px', md: '20px' },
-                  justifyContent: 'center',
+                  gap: { xs: "10px", md: "20px" },
+                  justifyContent: "center",
                 }}
               >
-
                 <Box
                   component="li"
                   sx={{
-                    display: { xs: 'none', md: 'none', lg: 'flex' },
+                    display: { xs: "none", md: "none", lg: "flex" },
                     alignItems: "center",
-                    gap: "10px"
+                    gap: "10px",
                   }}
                 >
                   <Link href="http://codestrup.in/">
-                    <p style={{ color: "#384bff" }}>Codestrup Infotech Pvt Ltd</p>
+                    <p style={{ color: "#384bff" }}>
+                      Codestrup Infotech Pvt Ltd
+                    </p>
                   </Link>
                   |
                 </Box>
@@ -354,14 +352,18 @@ export default function Service1() {
                     <Link
                       href={item.link}
                       sx={{
-                        display: 'flex',
-                        alignItems: 'center',
+                        display: "flex",
+                        alignItems: "center",
                         marginLeft: "10px",
                         color: "#384bff",
                         textDecoration: "none",
                       }}
                     >
-                      <FontAwesomeIcon icon={item.icon} size="lg" style={{ color: "#384bff" }} />
+                      <FontAwesomeIcon
+                        icon={item.icon}
+                        size="lg"
+                        style={{ color: "#384bff" }}
+                      />
                     </Link>
                   </Box>
                 ))}

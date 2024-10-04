@@ -36,6 +36,7 @@ import { toast } from "react-hot-toast";
 import useScreenWidth from "@/components/hooks/useScreenWidth";
 import RegistrationForm from "./Form";
 import MobileScreenRegistrationFormDialog from "./MobileForm";
+import Review from "@/components/sections/Review";
 
 
 
@@ -351,12 +352,10 @@ export default function ServiceDetails() {
                 {internship?.jobTitle ?? ""}
               </h4>
 
-              <p
-              style={{
-                marginTop:'15px',
-              }}
-              >{internship?.description ?? ""}</p>
-
+              {/* <p>{internship?.description ?? ""}</p> */}
+              <div
+                dangerouslySetInnerHTML={{ __html: internship?.description }}
+              />
             </div>
 
            
@@ -472,6 +471,7 @@ export default function ServiceDetails() {
           isMobileScreen={isMobileScreen}
         />
       )}
+      <Review id={internship} />
     </Layout>
   );
 }

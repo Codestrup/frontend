@@ -453,6 +453,16 @@ span {
     max-width: 560px;
   }
 }
+@media (max-width: 991px) {
+  .about-image-1 {
+    margin-bottom: 50px !important;
+  }
+}
+@media (max-width: 575px) {
+  .about-image-1 {
+    margin-bottom: 30px !important;
+  }
+}
 
 .about-wrapper .about-image-items .about-image-1 .about-image-2 {
   position: absolute;
@@ -1992,7 +2002,7 @@ span {
 
 .faq-section {
   position: relative;
-  padding: 100px;
+  padding: 100px 10px;
 }
 
 @media (max-width: 1199px) {

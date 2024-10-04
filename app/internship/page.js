@@ -19,7 +19,7 @@ import {
 const Page = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const refer = searchParams.get('refer');
+  const refer = searchParams.get("refer");
   const [internships, setInternships] = useState([]);
   const [selectedInternship, setSelectedInternship] = useState(null);
   const { setInternshipId } = useInternship();
@@ -36,14 +36,13 @@ const Page = () => {
   useEffect(() => {
     const fetchInternships = async () => {
       try {
-        const response = await axios(
-          
-        {method:"GET",
-          url:"https://api.codestrup.in/loadjobs", 
-        params:{
-          limit:100
-        }
-        })
+        const response = await axios({
+          method: "GET",
+          url: "https://api.codestrup.in/loadjobs",
+          params: {
+            limit: 100,
+          },
+        });
         setInternships(response?.data?.data || []);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -52,10 +51,11 @@ const Page = () => {
     fetchInternships();
   }, []);
 
-  const handleApplyNowClick = (internship) => {
-    setInternshipId(internship._id);
-    setSelectedInternship(internship);
-    setInformationDialogOpen(true);
+  const handleApplyNowClick = async (internship) => {
+    await setInternshipId(internship._id);
+    await setSelectedInternship(internship);
+    // setInformationDialogOpen(true);
+    handleNextClick();
   };
 
   const handleNextClick = () => {
@@ -190,14 +190,12 @@ const Page = () => {
                             />
                           </div>
 
-                          <div className="" style={{
-                            padding:'20px'
-                          }}>
-
-                            <h4 style={{minHeight:'50px'}}>
-                              <p onClick={() => handleApplyNowClick(item)}
-                                 style={{ cursor: "pointer" }}
-                                >
+                          <div className="content">
+                            <h4 style={{ minHeight: "50px" }}>
+                              <p
+                                onClick={() => handleApplyNowClick(item)}
+                                style={{ cursor: "pointer" }}
+                              >
                                 {item.jobTitle}
                               </p>
                             </h4>
