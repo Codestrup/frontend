@@ -397,7 +397,10 @@ export default function ServiceDetails() {
                 {internship?.jobTitle ?? ""}
               </h4>
 
-              <p>{internship?.description ?? ""}</p>
+              {/* <p>{internship?.description ?? ""}</p> */}
+              <div
+                dangerouslySetInnerHTML={{ __html: internship?.description }}
+              />
             </div>
 
             {/* <div style={{ marginTop: "15px" }}>

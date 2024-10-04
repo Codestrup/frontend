@@ -88,7 +88,6 @@ const formValidationSchema = Yup.object().shape({
 
 //styles
 const styles = {
-
   textfield: {
     "& .MuiOutlinedInput-root": {
       borderRadius: "30px",
@@ -188,27 +187,26 @@ const styles = {
     zIndex: 999,
   },
 
-  termsStyles:{
+  termsStyles: {
     position: "relative",
     zIndex: "1",
     alignSelf: "flex-start",
   },
 
-  termsStylesSmall : {
+  termsStylesSmall: {
     position: "relative",
     zIndex: "1",
     alignSelf: "flex-start",
-    fontSize:'14px',
+    fontSize: "14px",
   },
 
-  termsLabel:{
-    lineHeight:1,
+  termsLabel: {
+    lineHeight: 1,
 
-    "& .MuiTypography-root":{
-        lineHeight:1
-    }
-  }
-
+    "& .MuiTypography-root": {
+      lineHeight: 1,
+    },
+  },
 };
 
 export default function RegistrationForm({
@@ -383,6 +381,7 @@ export default function RegistrationForm({
                           label="First Name"
                           name="firstName"
                           placeholder="Enter your firstname"
+                          autoComplete="off"
                           value={values.firstName}
                           onChange={handleChange}
                           onBlur={handleBlur}
@@ -409,6 +408,7 @@ export default function RegistrationForm({
                         <TextField
                           fullWidth
                           variant="outlined"
+                          autoComplete="off"
                           label="Last Name"
                           name="lastName"
                           placeholder="Enter your lastname"
@@ -471,6 +471,7 @@ export default function RegistrationForm({
                           fullWidth
                           variant="outlined"
                           label="WhatsApp Number"
+                          autoComplete="off"
                           name="contactNumber"
                           placeholder="Enter your whatsapp number"
                           value={values.contactNumber}
@@ -556,6 +557,7 @@ export default function RegistrationForm({
                           <TextField
                             fullWidth
                             variant="outlined"
+                            autoComplete="off"
                             label="Email"
                             name="email"
                             placeholder="Enter your email"
@@ -618,6 +620,7 @@ export default function RegistrationForm({
                               fullWidth
                               variant="outlined"
                               label="Enter OTP"
+                              autoComplete="off"
                               name="otp"
                               placeholder="Enter your OTP"
                               value={values.otp}
@@ -683,6 +686,7 @@ export default function RegistrationForm({
                           <TextField
                             fullWidth
                             variant="outlined"
+                            autoComplete="off"
                             label="College Name"
                             name="collegeName"
                             placeholder="Enter your college name"
@@ -720,6 +724,7 @@ export default function RegistrationForm({
                           <TextField
                             fullWidth
                             variant="outlined"
+                            autoComplete="off"
                             label="Qualification"
                             name="qaualification"
                             placeholder="Enter your highest qualification"
@@ -750,6 +755,7 @@ export default function RegistrationForm({
                     <TextField
                       fullWidth
                       variant="outlined"
+                      autoComplete="off"
                       label="Referral Code"
                       placeholder="Referral Code (Optional)"
                       value={refer ? refer : ""}
@@ -775,8 +781,7 @@ export default function RegistrationForm({
                     }}
                   >
                     <FormControlLabel
-
-                    sx={isMobileScreen ? styles.termsLabel : null}
+                      sx={isMobileScreen ? styles.termsLabel : null}
                       control={
                         <Checkbox
                           color="primary"
@@ -793,7 +798,11 @@ export default function RegistrationForm({
                       }
                       label={
                         <span
-                          style={isMobileScreen ? styles.termsStylesSmall : styles.termsStyles}
+                          style={
+                            isMobileScreen
+                              ? styles.termsStylesSmall
+                              : styles.termsStyles
+                          }
                         >
                           I accept the Codestrup Internship Program terms and
                           conditions as described.
