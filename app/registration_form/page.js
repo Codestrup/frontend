@@ -30,62 +30,14 @@ import {
   RadioGroup,
   InputAdornment,
 } from "@mui/material";
-import { Formik, Form } from "formik";
-import * as Yup from "yup";
-import { menuProps } from "../../utils/menuProps";
+
 import { toast } from "react-hot-toast";
 // import bannerImage from "../../public/assets/img/banner.webp"
-import { TiUser } from "react-icons/ti";
-import { FaUser } from "react-icons/fa";
-import { MdKeyboardArrowDown } from "react-icons/md";
-import { RiWhatsappFill } from "react-icons/ri";
-import { MdEmail } from "react-icons/md";
-import { FaBuilding } from "react-icons/fa6";
-import { RiGraduationCapFill } from "react-icons/ri";
-import { FaShare } from "react-icons/fa";
-import { PiListNumbersFill } from "react-icons/pi";
 import useScreenWidth from "@/components/hooks/useScreenWidth";
 import RegistrationForm from "./Form";
 import MobileScreenRegistrationFormDialog from "./MobileForm";
 
-const formValidationSchema = Yup.object().shape({
-  firstName: Yup.string()
-    .matches(/^[A-Za-z]+$/, "First name should contain only letters")
-    .required("First name is required"),
 
-  lastName: Yup.string()
-    .matches(/^[A-Za-z]+$/, "Last name should contain only letters")
-    .required("Last name is required"),
-
-  gender: Yup.string()
-    .oneOf(["Male", "Female", "Other"], "Invalid gender")
-    .required("Gender is required"),
-
-  contactNumber: Yup.string()
-    .matches(/^[0-9]{10}$/, "WhatsApp number must be exactly 10 digits")
-    .required("WhatsApp number is required"),
-
-  email: Yup.string()
-    .email("Invalid email address")
-    .matches(/^[a-zA-Z0-9._%+-]+@gmail\.com$/, "Email must be a Gmail address")
-    .required("Email is required"),
-
-  collegeName: Yup.string()
-    .min(2, "College name must be at least 2 characters")
-    .required("College name is required"),
-
-  qaualification: Yup.string().required("Qualification is required"),
-
-  // state: Yup.string().required("State is required"),
-
-  // city: Yup.string().required("City is required"),
-
-  otp: Yup.string().required("OTP is required"),
-
-  termsConditions: Yup.boolean()
-    .oneOf([true], "You must accept the terms and conditions")
-    .required("Terms and conditions must be accepted"),
-});
 
 const socialLinks = [
   {
@@ -347,6 +299,8 @@ export default function ServiceDetails() {
 
   const InternshipBackgroundImage = internship?.imageUrl ?? "";
 
+  const testbg = "https://codestrupinfotech.com/reactjs.jpg";
+
   return (
     <Layout headerStyle={1} footerStyle={1}>
       <section
@@ -372,21 +326,22 @@ export default function ServiceDetails() {
               style={{
                 width: "100%",
                 height: "200px",
-                display: "flex",
-                justifyContent: "center",
+                // display: "flex",
+                // justifyContent: "center",
               }}
             >
               <img
                 src={InternshipBackgroundImage}
+                // src={testbg}
                 style={{
-                  width: "200px",
+                  width: "100%",
                   height: "200px",
-                  objectFit: "contain",
+                  objectFit: "cover",
                 }}
               />
             </div>
 
-            <div style={{ marginTop: "15px" }}>
+            <div style={{ marginTop: "25px" }}>
               <h4
                 style={{
                   textAlign: "left",
@@ -396,25 +351,15 @@ export default function ServiceDetails() {
                 {internship?.jobTitle ?? ""}
               </h4>
 
-              <p>{internship?.description ?? ""}</p>
+              <p
+              style={{
+                marginTop:'15px',
+              }}
+              >{internship?.description ?? ""}</p>
+
             </div>
 
-            {/* <div style={{ marginTop: "15px" }}>
-              <h6
-                style={{
-                  textAlign: "left",
-                  textTransform: "uppercase",
-                }}
-              >
-                Highligths
-              </h6>
-
-              <ol style={{ paddingLeft: "0.9rem" }}>
-                {internshipHighLights.map((hightlight) => (
-                  <li key={hightlight?.id}>{hightlight?.text}</li>
-                ))}
-              </ol>
-            </div> */}
+           
           </div>
 
           {!isMobileScreen && (

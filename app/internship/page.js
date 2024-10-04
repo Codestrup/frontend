@@ -127,7 +127,8 @@ const Page = () => {
     },
   ];
 
-  //  const testbg = "https://codestrupinfotech.com/reactjs.jpg"
+   const testbg = "https://codestrupinfotech.com/reactjs.jpg"
+
   return (
     <div>
       <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Internship">
@@ -160,7 +161,7 @@ const Page = () => {
                           flexDirection: "column",
                           justifyContent: "space-between",
                           minHeight: "360px",
-                          padding: "20px",
+                          padding: "0px",
                           boxSizing: "border-box",
                           marginTop: "48px",
                         }}
@@ -178,18 +179,21 @@ const Page = () => {
                             onClick={() => handleApplyNowClick(item)}
                           >
                             <img
-                              src={item?.imageUrl}
-                              // src={testbg}
+                              // src={item?.imageUrl}
+                              src={testbg}
                               alt="icon-img"
                               style={{
                                 width: "100%",
-                                height: "100px",
-                                objectFit: "contain",
+                                // height: "100px",
+                                objectFit: "cover",
                               }}
                             />
                           </div>
 
-                          <div className="content">
+                          <div className="" style={{
+                            padding:'20px'
+                          }}>
+
                             <h4 style={{minHeight:'50px'}}>
                               <p onClick={() => handleApplyNowClick(item)}
                                  style={{ cursor: "pointer" }}

@@ -178,6 +178,7 @@ const styles = {
 
   appyHeading: {
     textAlign: "center",
+    marginBottom:'20px'
   },
 
   bottomBox: {
@@ -327,7 +328,7 @@ export default function RegistrationForm({
   return (
     <div className="">
       <div className="service-details-items ">
-        <h4 style={styles.appyHeading}>Apply Now</h4>
+       
         <Card
           elevation={3}
           sx={{
@@ -373,6 +374,7 @@ export default function RegistrationForm({
                   padding: isMobileScreen ? "20px" : "30px",
                 }}
               >
+                 <h4 style={styles.appyHeading}>Apply Now</h4>
                 <Box mt={2}>
                   <Grid container spacing={2}>
                     <Grid item xs={12} sm={12} md={12} lg={6}>
