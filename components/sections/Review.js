@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import axios from "axios";
+import { ApiConfig } from "@/app/Apiconfig";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -41,7 +42,7 @@ const Review = ({ id }) => {
     try {
       const res = await axios({
         method: "get",
-        url: `https://api.codestrup.in/api/getRatingByIntershipId/${id?._id}`,
+        url: `${ApiConfig.getRatingByIntershipId}/${id?._id}`,
       });
       if (res.status === 200) {
         setReviwes(res?.data?.rating);

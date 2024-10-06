@@ -37,6 +37,7 @@ import useScreenWidth from "@/components/hooks/useScreenWidth";
 import RegistrationForm from "./Form";
 import MobileScreenRegistrationFormDialog from "./MobileForm";
 import Review from "@/components/sections/Review";
+import { ApiConfig } from "../Apiconfig";
 
 
 
@@ -233,11 +234,11 @@ export default function ServiceDetails() {
     try {
       setLoading(true);
 
-      console.log("formValues", formValues);
 
       const res = await axios({
         method: "POST",
-        url: "https://api.codestrup.in/create-order",
+        // url: "https://api.codestrup.in/create-order",
+        url:ApiConfig.createOrder,
         data: {
           amount: internship?.price ?? "",
           check: "on",
@@ -277,7 +278,8 @@ export default function ServiceDetails() {
   useEffect(() => {
     const fetchInternships = async () => {
       try {
-        const response = await axios.get("https://api.codestrup.in/loadjobs");
+        // const response = await axios.get("https://api.codestrup.in/loadjobs");
+        const response = await axios.get(ApiConfig.getFeaturedJobData);
 
         const internship = response?.data?.data.find((item) => {
           return item?._id === internshipId;
@@ -354,6 +356,7 @@ export default function ServiceDetails() {
 
               {/* <p>{internship?.description ?? ""}</p> */}
               <div
+              style={{marginTop:'10px'}}
                 dangerouslySetInnerHTML={{ __html: internship?.description }}
               />
             </div>
@@ -471,6 +474,8 @@ export default function ServiceDetails() {
           isMobileScreen={isMobileScreen}
         />
       )}
+
+      {/* rating and review */}
       <Review id={internship} />
     </Layout>
   );

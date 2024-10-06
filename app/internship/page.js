@@ -15,6 +15,7 @@ import {
   faWhatsapp,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { ApiConfig } from "../Apiconfig";
 
 const Page = () => {
   const router = useRouter();
@@ -38,7 +39,8 @@ const Page = () => {
       try {
         const response = await axios({
           method: "GET",
-          url: "https://api.codestrup.in/loadjobs",
+          // url: "https://api.codestrup.in/loadjobs",
+          url: ApiConfig.getFeaturedJobData,
           params: {
             limit: 100,
           },
@@ -127,7 +129,7 @@ const Page = () => {
     },
   ];
 
-   const testbg = "https://codestrupinfotech.com/reactjs.jpg"
+  const testbg = "https://codestrupinfotech.com/reactjs.jpg";
 
   return (
     <div>
@@ -190,7 +192,7 @@ const Page = () => {
                             />
                           </div>
 
-                          <div className="content">
+                          <div className="content" style={{ padding: "20px" }}>
                             <h4 style={{ minHeight: "50px" }}>
                               <p
                                 onClick={() => handleApplyNowClick(item)}
@@ -201,7 +203,7 @@ const Page = () => {
                             </h4>
 
                             <div style={{ height: "100%", minHeight: "100px" }}>
-                              <p
+                              {/* <p
                                 onClick={() => handleApplyNowClick(item)}
                                 style={{ cursor: "pointer" }}
                               >
@@ -209,7 +211,15 @@ const Page = () => {
                                   ? item.description
                                   : `${item.description.substring(0, 50)}...`}
                                 &nbsp;
-                              </p>
+                              </p> */}
+                              <p
+                                dangerouslySetInnerHTML={{
+                                  __html: item?.description
+                                    ? item.description.slice(0, 50) + "..."
+                                    : "",
+                                }}
+                                style={{cursor:'pointer'}}
+                              />
                             </div>
                             <div
                               className="content-bottom d-flex align-items-center justify-content-between"

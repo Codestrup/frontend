@@ -9,6 +9,7 @@ import axios from "axios";
 import { Dialog, Box, IconButton, Button, Card } from "@mui/material";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTelegram, faInstagram, faFacebook, faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { ApiConfig } from "../Apiconfig";
 
 const Page = () => {
   const router = useRouter();
@@ -28,7 +29,8 @@ const Page = () => {
   useEffect(() => {
     const fetchInternships = async () => {
       try {
-        const response = await axios.get("https://api.codestrup.in/loadjobs");
+        // const response = await axios.get("https://api.codestrup.in/loadjobs");
+        const response = await axios.get(ApiConfig.getFeaturedJobData);
         setInternships(response?.data?.data || []);
 
       } catch (error) {
@@ -41,7 +43,8 @@ const Page = () => {
   const handleApplyNowClick = (internship) => {
     setInternshipId(internship._id);
     setSelectedInternship(internship);
-    setInformationDialogOpen(true);
+    router.push("/registration_form");
+    // setInformationDialogOpen(true);
   };
 
   const handleNextClick = () => {
@@ -184,13 +187,21 @@ const Page = () => {
                             </h4>
 
                             <div style={{ height: "100%", minHeight: "100px" }}>
-                              <p>
+                              {/* <p>
                                 {showFullDescription[item._id]
                                   ? item.description
                                   : `${item.description.substring(0, 50)}...`}
                                 &nbsp;
                                
-                              </p>
+                              </p> */}
+                               <p
+                                dangerouslySetInnerHTML={{
+                                  __html: item?.description
+                                    ? item.description.slice(0, 50) + "..."
+                                    : "",
+                                }}
+                                style={{cursor:'pointer'}}
+                              />
                             </div>
                             <div
                               className="content-bottom d-flex align-items-center justify-content-between"

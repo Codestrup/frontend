@@ -17,6 +17,7 @@ import { CheckCircleOutline, CancelOutlined } from "@mui/icons-material";
 import { keyframes } from '@mui/system';
 import axios from "axios";
 import Layout from "@/components/layout/Layout";
+import { ApiConfig } from "../Apiconfig";
 
 // Keyframes for animations
 const successAnimation = keyframes`
@@ -51,7 +52,7 @@ const CertificateValidator = () => {
 
     try {
       const response = await axios.post(
-        `https://api.codestrup.in/verifyCertificateCode`,
+        ApiConfig.verifyCertificateCode,
         {
           certificateId: certificateNumber,
         }

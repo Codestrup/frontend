@@ -15,6 +15,7 @@ import {
   faWhatsapp,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { ApiConfig } from "@/app/Apiconfig";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -71,7 +72,8 @@ export default function Service1() {
       try {
         const response = await axios({
           method: "GET",
-          url: "https://api.codestrup.in/loadjobs",
+          // url: "https://api.codestrup.in/loadjobs",
+          url:ApiConfig.getFeaturedJobData,
           params: {
             limit: 100,
           },
@@ -227,12 +229,20 @@ export default function Service1() {
                           <Link href="/internship">{item.jobTitle}</Link>
                         </h4>
                         <div style={{ height: "100%", minHeight: "100px" }}>
-                          <p>
+                          {/* <p>
                             {showFullDescription[item._id]
                               ? item.description
                               : `${item.description.substring(0, 50)}...`}
                             &nbsp;
-                          </p>
+                          </p> */}
+                           <p
+                                dangerouslySetInnerHTML={{
+                                  __html: item?.description
+                                    ? item.description.slice(0, 50) + "..."
+                                    : "",
+                                }}
+                                style={{cursor:'pointer'}}
+                              />
                         </div>
                       </div>
                     </div>
