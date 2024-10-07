@@ -165,6 +165,7 @@ export default function Service1() {
       name: "Job Opportunities - Access employment opportunities with us.                              This form is for INTERNSHIP in Codestrup Infotech Pvt Ltd ",
     },
   ];
+
   return (
     <section
       className="service-section fix  bg-cover"
@@ -201,6 +202,7 @@ export default function Service1() {
                       boxSizing: "border-box",
                       marginBottom: "10px",
                       overflow: "hidden",
+                      borderRadius:'10px',
                     }}
                   >
                     <div
@@ -216,9 +218,10 @@ export default function Service1() {
                         className=""
                         style={{
                           width: "100%",
-                          height: "100%",
-                          minHeight: "100px",
-                          overflow: "hidden",
+                          height:'auto',
+                          // height: "100%",
+                          // minHeight: "100px",
+                          // overflow: "hidden",
                         }}
                       >
                         <img
@@ -239,13 +242,8 @@ export default function Service1() {
                         <h4 style={{ minHeight: "50px" }}>
                           <Link href="/internship">{item.jobTitle}</Link>
                         </h4>
-                        <div style={{ height: "100%", minHeight: "100px" }}>
-                          {/* <p>
-                            {showFullDescription[item._id]
-                              ? item.description
-                              : `${item.description.substring(0, 50)}...`}
-                            &nbsp;
-                          </p> */}
+                        <div style={{  }}>
+                  
                           <p
                             dangerouslySetInnerHTML={{
                               __html: item?.description

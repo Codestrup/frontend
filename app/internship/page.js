@@ -162,10 +162,12 @@ const Page = () => {
                           display: "flex",
                           flexDirection: "column",
                           justifyContent: "space-between",
-                          minHeight: "360px",
+                          height:'100%',
+                          maxHeight: "360px",
                           padding: "0px",
                           boxSizing: "border-box",
                           marginTop: "48px",
+                          borderRadius:'10px',
                         }}
                       >
                         <div>
@@ -173,9 +175,9 @@ const Page = () => {
                             className=""
                             style={{
                               width: "100%",
-                              height: "100%",
-                              minHeight: "100px",
-                              overflow: "hidden",
+                              // height: "100%",
+                              // minHeight: "100px",
+                              // overflow: "hidden",
                               cursor: "pointer",
                             }}
                             onClick={() => handleApplyNowClick(item)}
@@ -205,7 +207,7 @@ const Page = () => {
                               </p>
                             </h4>
 
-                            <div style={{ height: "100%", minHeight: "100px" }}>
+                            <div style={{  }}>
                               <p
                                 dangerouslySetInnerHTML={{
                                   __html: item?.description
