@@ -49,27 +49,28 @@ export default function Footer3() {
                   </div>
                   <div className="footer-content">
                     <p>
-                      Codestrup Infotech provides industry-aligned online internships in programming with hands-on, project-based training to bridge academic learning and real-world skills.
-
+                      Codestrup Infotech provides industry-aligned online
+                      internships in programming with hands-on, project-based
+                      training to bridge academic learning and real-world
+                      skills.
                     </p>
-                    <Link href="/about" className="about-redireact"
+                    <Link
+                      href="/about"
+                      className="about-redireact"
                       style={{
-                        top: '10px',
-                        position: 'relative',
-                        padding: '5px 10px',
-                        border: '1px solid rgba(227, 227, 227, 0.2)',
-                        color: 'white',
-                        cursor: 'pointer',
-                        textAlign: 'center',
-                        display: 'inline-block',
-                        fontWeight: '600',
-                        borderRadius:'30px'
+                        top: "10px",
+                        position: "relative",
+                        padding: "5px 10px",
+                        border: "1px solid rgba(227, 227, 227, 0.2)",
+                        color: "white",
+                        cursor: "pointer",
+                        textAlign: "center",
+                        display: "inline-block",
+                        fontWeight: "600",
+                        borderRadius: "30px",
                       }}
-                      
-                      >
-
+                    >
                       Read More
-
                     </Link>
 
                     <div className="social-icon d-flex align-items-center">
@@ -143,6 +144,13 @@ export default function Footer3() {
                           <Link href="/contact">
                             <i className="fa-solid fa-chevron-right" />
                             Contact Us
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link href="/verify-certificate">
+                            <i className="fa-solid fa-chevron-right" />
+                            Verify Certificate
                           </Link>
                         </li>
                       </ul>
@@ -222,11 +230,14 @@ export default function Footer3() {
                             <i className="fal fa-envelope" />
                           </div>
                           <div className="offcanvas__contact-text">
-
-                            <p
-
-                            >
-                              <a href="mailto:info@codestrup.in" style={{ color: "#ffffffcc",textTransform:'lowercase' }}>
+                            <p>
+                              <a
+                                href="mailto:info@codestrup.in"
+                                style={{
+                                  color: "#ffffffcc",
+                                  textTransform: "lowercase",
+                                }}
+                              >
                                 info@codestrup.in
                               </a>
                             </p>
@@ -245,12 +256,12 @@ export default function Footer3() {
                             <i className="far fa-phone" />
                           </div>
                           {/* <div className="offcanvas__contact-text"> */}
-                            <Link
-                              href="tel:+919699997689"
-                              style={{ color: "#ffffffcc" }}
-                            >
-                              +91 9699997689
-                            </Link>
+                          <Link
+                            href="tel:+919699997689"
+                            style={{ color: "#ffffffcc" }}
+                          >
+                            +91 9699997689
+                          </Link>
                           {/* </div> */}
                         </li>
                       </ul>
@@ -258,28 +269,27 @@ export default function Footer3() {
                   </div>
                 </div>
               </div>
-
-             
             </div>
           </div>
         </div>
         {/* <div className="footer-bottom style-3"> */}
         <div className="container">
-          <div className="footer-wrapper d-flex  align-items-center justify-content-center"
+          <div
+            className="footer-wrapper d-flex  align-items-center justify-content-center"
             style={{
-              position: 'absolute',
+              position: "absolute",
               bottom: 0,
               left: 0,
-              width: '100%',
-              color: 'white',
-              textAlign: 'center',
-              padding: '10px 0',
-              zIndex: 10
+              width: "100%",
+              color: "white",
+              textAlign: "center",
+              padding: "10px 0",
+              zIndex: 10,
             }}
           >
             <p
               className="wow fadeInRight "
-              style={{ color: "white", bottom: '0', }}
+              style={{ color: "white", bottom: "0" }}
               data-wow-delay=".5s"
             >
               &copy;{new Date().getFullYear()}
@@ -292,7 +302,7 @@ export default function Footer3() {
         </div>
 
         {/* </div> */}
-      </footer >
+      </footer>
     </>
   );
 }

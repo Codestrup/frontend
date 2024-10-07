@@ -15,11 +15,12 @@ import {
   faWhatsapp,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { ApiConfig } from "../Apiconfig";
 
 const Page = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const refer = searchParams.get('refer');
+  const refer = searchParams.get("refer");
   const [internships, setInternships] = useState([]);
   const [selectedInternship, setSelectedInternship] = useState(null);
   const { setInternshipId } = useInternship();
@@ -36,14 +37,14 @@ const Page = () => {
   useEffect(() => {
     const fetchInternships = async () => {
       try {
-        const response = await axios(
-          
-        {method:"GET",
-          url:"https://api.codestrup.in/loadjobs", 
-        params:{
-          limit:100
-        }
-        })
+        const response = await axios({
+          method: "GET",
+          // url: "https://api.codestrup.in/loadjobs",
+          url: ApiConfig.getFeaturedJobData,
+          params: {
+            limit: 100,
+          },
+        });
         setInternships(response?.data?.data || []);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -52,10 +53,11 @@ const Page = () => {
     fetchInternships();
   }, []);
 
-  const handleApplyNowClick = (internship) => {
-    setInternshipId(internship._id);
-    setSelectedInternship(internship);
-    setInformationDialogOpen(true);
+  const handleApplyNowClick = async (internship) => {
+    await setInternshipId(internship._id);
+    await setSelectedInternship(internship);
+    // setInformationDialogOpen(true);
+    handleNextClick();
   };
 
   const handleNextClick = () => {
@@ -127,7 +129,8 @@ const Page = () => {
     },
   ];
 
-  //  const testbg = "https://codestrupinfotech.com/reactjs.jpg"
+  const testbg = "https://codestrupinfotech.com/reactjs.jpg";
+
   return (
     <div>
       <Layout headerStyle={1} footerStyle={1} breadcrumbTitle="Internship">
@@ -160,7 +163,7 @@ const Page = () => {
                           flexDirection: "column",
                           justifyContent: "space-between",
                           minHeight: "360px",
-                          padding: "20px",
+                          padding: "0px",
                           boxSizing: "border-box",
                           marginTop: "48px",
                         }}
@@ -183,31 +186,34 @@ const Page = () => {
                               alt="icon-img"
                               style={{
                                 width: "100%",
-                                height: "100px",
-                                objectFit: "contain",
+                                // height: "100px",
+                                objectFit: "cover",
                               }}
                             />
                           </div>
 
-                          <div className="content">
-                            <h4 style={{minHeight:'50px'}}>
-                              <p onClick={() => handleApplyNowClick(item)}
-                                 style={{ cursor: "pointer" }}
-                                >
+                          <div
+                            className="content"
+                            style={{ padding: "20px", marginTop: "0" }}
+                          >
+                            <h4 style={{ minHeight: "50px" }}>
+                              <p
+                                onClick={() => handleApplyNowClick(item)}
+                                style={{ cursor: "pointer" }}
+                              >
                                 {item.jobTitle}
                               </p>
                             </h4>
 
                             <div style={{ height: "100%", minHeight: "100px" }}>
                               <p
-                                onClick={() => handleApplyNowClick(item)}
+                                dangerouslySetInnerHTML={{
+                                  __html: item?.description
+                                    ? item.description.slice(0, 50) + "..."
+                                    : "",
+                                }}
                                 style={{ cursor: "pointer" }}
-                              >
-                                {showFullDescription[item._id]
-                                  ? item.description
-                                  : `${item.description.substring(0, 50)}...`}
-                                &nbsp;
-                              </p>
+                              />
                             </div>
                             <div
                               className="content-bottom d-flex align-items-center justify-content-between"

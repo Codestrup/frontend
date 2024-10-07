@@ -46,12 +46,13 @@ export default function Achievement3() {
           <div className="achievement-wrapper style-2 "
           style={zoomLevel <1 ? zoomStyles.wrapper : null}
           >
-            <div className="section-title mb-0">
+            <div className="section-title mb-4">
               <span className="text-white wow faEdeInUp">achievement</span>
               <h2 className="text-white wow fadeInUp" data-wow-delay=".3s">
                 Celebrate Major Wins
               </h2>
             </div>
+
             <div
               className="counter-area"
               style={zoomLevel < 1 ? zoomStyles.zoomin : zoomStyles.normal}
