@@ -181,8 +181,8 @@ const Page = () => {
                             onClick={() => handleApplyNowClick(item)}
                           >
                             <img
-                              // src={item?.imageUrl}
-                              src={testbg}
+                              src={item?.imageUrl}
+                              // src={testbg}
                               alt="icon-img"
                               style={{
                                 width: "100%",
@@ -192,7 +192,10 @@ const Page = () => {
                             />
                           </div>
 
-                          <div className="content" style={{ padding: "20px" }}>
+                          <div
+                            className="content"
+                            style={{ padding: "20px", marginTop: "0" }}
+                          >
                             <h4 style={{ minHeight: "50px" }}>
                               <p
                                 onClick={() => handleApplyNowClick(item)}
@@ -203,22 +206,13 @@ const Page = () => {
                             </h4>
 
                             <div style={{ height: "100%", minHeight: "100px" }}>
-                              {/* <p
-                                onClick={() => handleApplyNowClick(item)}
-                                style={{ cursor: "pointer" }}
-                              >
-                                {showFullDescription[item._id]
-                                  ? item.description
-                                  : `${item.description.substring(0, 50)}...`}
-                                &nbsp;
-                              </p> */}
                               <p
                                 dangerouslySetInnerHTML={{
                                   __html: item?.description
                                     ? item.description.slice(0, 50) + "..."
                                     : "",
                                 }}
-                                style={{cursor:'pointer'}}
+                                style={{ cursor: "pointer" }}
                               />
                             </div>
                             <div

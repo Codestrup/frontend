@@ -9433,6 +9433,10 @@ html {
   padding: 15px;
 }
 
+.internship-description ul li {
+  font-weight: 400;
+}
+
 @media (min-width: 768px) {
 
   /* Adjust the breakpoint as needed */

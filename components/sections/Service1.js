@@ -73,7 +73,7 @@ export default function Service1() {
         const response = await axios({
           method: "GET",
           // url: "https://api.codestrup.in/loadjobs",
-          url:ApiConfig.getFeaturedJobData,
+          url: ApiConfig.getFeaturedJobData,
           params: {
             limit: 100,
           },
@@ -195,16 +195,23 @@ export default function Service1() {
                     elevation={3}
                     className="service-box-items"
                     style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between",
-                      minHeight: "360px",
-                      padding: "20px",
+                      height: "100%",
+                      maxHeight: "360px",
+                      padding: "0px",
                       boxSizing: "border-box",
                       marginBottom: "10px",
+                      overflow: "hidden",
                     }}
                   >
-                    <div>
+                    <div
+                      style={{
+                        height: "100%",
+                        maxHeight: "360px",
+                        display: "flex",
+                        flexDirection: "column",
+                        boxSizing: "border-box",
+                      }}
+                    >
                       <div
                         className=""
                         style={{
@@ -219,12 +226,16 @@ export default function Service1() {
                           alt="icon-img"
                           style={{
                             width: "100%",
-                            height: "100px",
-                            objectFit: "contain",
+                            // height: "100px",
+                            objectFit: "cover",
                           }}
                         />
                       </div>
-                      <div className="content">
+
+                      <div
+                        className="content"
+                        style={{ padding: "20px", marginTop: "0px" }}
+                      >
                         <h4 style={{ minHeight: "50px" }}>
                           <Link href="/internship">{item.jobTitle}</Link>
                         </h4>
@@ -235,34 +246,37 @@ export default function Service1() {
                               : `${item.description.substring(0, 50)}...`}
                             &nbsp;
                           </p> */}
-                           <p
-                                dangerouslySetInnerHTML={{
-                                  __html: item?.description
-                                    ? item.description.slice(0, 50) + "..."
-                                    : "",
-                                }}
-                                style={{cursor:'pointer'}}
-                              />
+                          <p
+                            dangerouslySetInnerHTML={{
+                              __html: item?.description
+                                ? item.description.slice(0, 50) + "..."
+                                : "",
+                            }}
+                            style={{ cursor: "pointer" }}
+                          />
+                        </div>
+
+                        <div
+                          className="content-bottom d-flex align-items-center justify-content-between"
+                          style={
+                            {
+                              // marginTop: "auto",
+                            }
+                          }
+                        >
+                          <span
+                            className="theme-btn-3 apply-now-btn mt-3 d-flex align-items-center "
+                            onClick={() => handleApplyNowClick(item)}
+                            style={{ cursor: "pointer" }}
+                          >
+                            Apply Now
+                            <i className="fa-solid fa-arrow-right-long ms-2" />
+                          </span>
+                          <span className="theme-btn-3 mt-3 d-flex align-items-center">
+                            ₹ {item.price}
+                          </span>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      className="content-bottom d-flex align-items-center justify-content-between"
-                      style={{
-                        marginTop: "auto",
-                      }}
-                    >
-                      <span
-                        className="theme-btn-3 apply-now-btn mt-3 d-flex align-items-center "
-                        onClick={() => handleApplyNowClick(item)}
-                        style={{ cursor: "pointer" }}
-                      >
-                        Apply Now
-                        <i className="fa-solid fa-arrow-right-long ms-2" />
-                      </span>
-                      <span className="theme-btn-3 mt-3 d-flex align-items-center">
-                        ₹ {item.price}
-                      </span>
                     </div>
                   </Card>
                 </SwiperSlide>
