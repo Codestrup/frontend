@@ -1,13 +1,6 @@
 "use client";
-
-import Layout from "@/components/layout/Layout";
-import Link from "next/link";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Footer3 from "@/components/layout/footer/Footer3";
-import { useRouter } from "next/navigation";
-import { useSearchParams } from "next/navigation";
-import { useInternship } from "../context/InternshipContext";
 import {
   Card,
   Box,
@@ -17,25 +10,15 @@ import {
   Grid,
   Select,
   MenuItem,
-  Typography,
-  List,
-  ListItem,
-  ListItemText,
   FormControlLabel,
-  Radio,
   Checkbox,
-  Dialog,
-  IconButton,
   CircularProgress,
-  RadioGroup,
   InputAdornment,
 } from "@mui/material";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { menuProps } from "../../utils/menuProps";
 import { toast } from "react-hot-toast";
-// import bannerImage from "../../public/assets/img/banner.webp"
-import { TiUser } from "react-icons/ti";
 import { FaUser } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RiWhatsappFill } from "react-icons/ri";
@@ -44,7 +27,8 @@ import { FaBuilding } from "react-icons/fa6";
 import { RiGraduationCapFill } from "react-icons/ri";
 import { FaShare } from "react-icons/fa";
 import { PiListNumbersFill } from "react-icons/pi";
-import useScreenWidth from "@/components/hooks/useScreenWidth";
+import { ApiConfig } from "../Apiconfig";
+import Link from "next/link";
 
 //validations
 const formValidationSchema = Yup.object().shape({
@@ -74,10 +58,6 @@ const formValidationSchema = Yup.object().shape({
     .required("College name is required"),
 
   qaualification: Yup.string().required("Qualification is required"),
-
-  // state: Yup.string().required("State is required"),
-
-  // city: Yup.string().required("City is required"),
 
   otp: Yup.string().required("OTP is required"),
 
@@ -170,14 +150,13 @@ const styles = {
   sendOtpBtnSmall: {
     fontSize: "16px",
     fontWeight: 600,
-    // lineHeight: "1",
     height: "40px",
     padding: "10px",
   },
 
   appyHeading: {
     textAlign: "center",
-    marginBottom:'20px'
+    marginBottom: "20px",
   },
 
   bottomBox: {
@@ -213,21 +192,20 @@ const styles = {
 export default function RegistrationForm({
   internship,
   refer,
-  setConsentDialogOpen,
-  setFormValues,
-  loading,
-  setStateName,
-  setCityName,
   isMobileScreen,
 }) {
+  const [loading, setLoading] = useState(false);
   const [showVerifyTextfield, setShowVerifyTextfield] = useState(false);
   const [cities, setCitites] = useState([]);
   const [states, setStates] = useState([]);
   const [selectedState, setSelectedState] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [citiesList, setCitiesList] = useState([]);
+  const [sendOtpBtnText, setSendOtpBtnText] = useState("Send OTP");
+  const [stateName, setStateName] = useState({});
+  const [cityName, setCityName] = useState({});
 
-  const sendOtp = async (values) => {
+  const sendOtp = async (values, setFieldValue) => {
     try {
       const res = await axios({
         method: "POST",
@@ -239,6 +217,10 @@ export default function RegistrationForm({
       if (res.data.status === 201) {
         toast.success(res.data.message);
         setShowVerifyTextfield(true);
+
+        if (!showVerifyTextfield) {
+          setFieldValue("otp", "");
+        }
       }
     } catch (error) {
       if (error.response) {
@@ -259,6 +241,12 @@ export default function RegistrationForm({
       });
       if (res.data.status === 200) {
         toast.success(res.data.message);
+
+        setTimeout(() => {
+          setShowVerifyTextfield(false);
+        }, 1000);
+
+        setSendOtpBtnText("Resend OTP");
       }
     } catch (error) {
       if (error.response) {
@@ -268,8 +256,41 @@ export default function RegistrationForm({
   };
 
   const handleSubmit = async (values) => {
-    setConsentDialogOpen(true);
-    setFormValues(values);
+    try {
+      setLoading(true);
+
+      const res = await axios({
+        method: "POST",
+        url: ApiConfig.createOrder,
+        data: {
+          amount: internship?.price ?? "",
+          check: "on",
+          collegeName: values.collegeName ?? "",
+          email: values.email ?? "",
+          fieldOfStudy: values.qaualification ?? "",
+          firstName: values.firstName ?? "",
+          gender: values.gender ?? "",
+          inform: "friend",
+          job: localStorage.getItem("internshipId") ?? "",
+          joined: "yes",
+          lastName: values.lastName ?? "",
+          phoneNumber: values.contactNumber ?? "",
+          state: stateName?.name ?? "",
+          city: cityName?.name ?? "",
+          referralCode: refer ? refer : "",
+        },
+      });
+
+      if (res.data.success) {
+        setLoading(false);
+        window.open(res.data?.data?.upiLink, "_blank");
+      }
+    } catch (error) {
+      if (error.response) {
+        setLoading(false);
+        toast.error(error.response?.data?.message);
+      }
+    }
   };
 
   useEffect(() => {
@@ -293,7 +314,7 @@ export default function RegistrationForm({
     fetchData();
   }, []);
 
-  const handleStateChange = (e, setFieldValue) => {
+  const handleStateChange = (e) => {
     const { value } = e.target;
 
     setSelectedState(value);
@@ -311,7 +332,7 @@ export default function RegistrationForm({
     setCitiesList(citiesOfSelectedStates);
   };
 
-  const handleCityChange = (e, setFieldValue) => {
+  const handleCityChange = (e) => {
     const { value } = e.target;
 
     setSelectedCity(value);
@@ -326,7 +347,6 @@ export default function RegistrationForm({
   return (
     <div className="">
       <div className="service-details-items ">
-       
         <Card
           elevation={3}
           sx={{
@@ -372,7 +392,7 @@ export default function RegistrationForm({
                   padding: isMobileScreen ? "20px" : "30px",
                 }}
               >
-                 <h4 style={styles.appyHeading}>Apply Now</h4>
+                <h4 style={styles.appyHeading}>Apply Now</h4>
                 <Box mt={2}>
                   <Grid container spacing={2}>
                     <Grid item xs={12} sm={12} md={12} lg={6}>
@@ -507,7 +527,7 @@ export default function RegistrationForm({
                           value={selectedState}
                           displayEmpty
                           MenuProps={menuProps}
-                          onChange={(e) => handleStateChange(e, setFieldValue)}
+                          onChange={(e) => handleStateChange(e)}
                           style={{ textAlign: "start" }}
                           IconComponent={MdKeyboardArrowDown}
                         >
@@ -532,7 +552,7 @@ export default function RegistrationForm({
                           value={selectedCity}
                           displayEmpty
                           MenuProps={menuProps}
-                          onChange={(e) => handleCityChange(e, setFieldValue)}
+                          onChange={(e) => handleCityChange(e)}
                           style={{ textAlign: "start" }}
                           IconComponent={MdKeyboardArrowDown}
                         >
@@ -597,7 +617,7 @@ export default function RegistrationForm({
                           <Button
                             variant="contained"
                             disabled={errors.email || !values.email}
-                            onClick={() => sendOtp(values)}
+                            onClick={() => sendOtp(values, setFieldValue)}
                             className="theme-btn wow fadeInUp"
                             data-wow-delay=".8s"
                             style={
@@ -606,7 +626,7 @@ export default function RegistrationForm({
                                 : styles.sendOtpBtn
                             }
                           >
-                            Send OTP
+                            {sendOtpBtnText}
                           </Button>
                         </Box>
                       </Grid>
@@ -657,7 +677,7 @@ export default function RegistrationForm({
                           <Box mb={isMobileScreen ? 1 : 0}>
                             <Button
                               variant="contained"
-                              onClick={() => verifyOtp(values)}
+                              onClick={() => verifyOtp(values, setFieldValue)}
                               className="theme-btn wow fadeInUp"
                               data-wow-delay=".8s"
                               style={
@@ -753,27 +773,29 @@ export default function RegistrationForm({
                     </Grid>
                   </Box>
 
-                  <Box mt={isMobileScreen ? 3 : 2}>
-                    <TextField
-                      fullWidth
-                      variant="outlined"
-                      autoComplete="off"
-                      label="Referral Code"
-                      placeholder="Referral Code (Optional)"
-                      value={refer ? refer : ""}
-                      InputProps={{
-                        readOnly: true,
-                        startAdornment: (
-                          <InputAdornment position="start">
-                            <FaShare size={18} />
-                          </InputAdornment>
-                        ),
-                      }}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      sx={styles.textfield}
-                    />
-                  </Box>
+                  {refer !== null && (
+                    <Box mt={isMobileScreen ? 3 : 2}>
+                      <TextField
+                        fullWidth
+                        variant="outlined"
+                        autoComplete="off"
+                        label="Referral Code"
+                        placeholder="Referral Code (Optional)"
+                        value={refer ? refer : ""}
+                        InputProps={{
+                          readOnly: true,
+                          startAdornment: (
+                            <InputAdornment position="start">
+                              <FaShare size={18} />
+                            </InputAdornment>
+                          ),
+                        }}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        sx={styles.textfield}
+                      />
+                    </Box>
+                  )}
 
                   <Box
                     mt={2}
@@ -806,8 +828,11 @@ export default function RegistrationForm({
                               : styles.termsStyles
                           }
                         >
-                          I accept the Codestrup Internship Program terms and
-                          conditions as described.
+                          I accept the{" "}
+                          <Link href="/terms-condition" target="_blank">
+                            Terms & Conditions
+                          </Link>{" "}
+                          of the Codestrup Internship Program as described.
                         </span>
                       }
                       style={{ margin: "0" }}
