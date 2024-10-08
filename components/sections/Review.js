@@ -57,72 +57,7 @@ const Review = ({ id }) => {
     }
   }, [id]);
 
-  const internships = [
-    {
-      rating: 5,
-      review:
-        "This training has been extremely beneficial to me. Also, my confidence in Python grew and I applied for internships and landed my first 3 internships in Python Django development after the training completion.",
-      userProfileUrl: "http://localhost:3000/assets/img/achievers/02.jpeg",
-      userName: "Tushar Deshmukh",
-      internship: "React js",
-    },
-    {
-      rating: 4,
-      review:
-        "This training has been extremely beneficial to me. Also, my confidence in Python grew and I applied for internships and landed my first 3 internships in Python Django development after the training completion.",
-      userProfileUrl: "http://localhost:3000/assets/img/achievers/03.jpeg",
-      userName: "Aniket Yadav",
-      internship: "React js",
-    },
-    {
-      rating: 3.5,
-      review:
-        "This training has been extremely beneficial to me. Also, my confidence in Python grew and I applied for internships and landed my first 3 internships in Python Django development after the training completion.",
-      userProfileUrl: "http://localhost:3000/assets/img/achievers/02.jpeg",
-      userName: "Tushar Deshmukh",
-      internship: "React js",
-    },
-    {
-      rating: 4.5,
-      review:
-        "This training has been extremely beneficial to me. Also, my confidence in Python grew and I applied for internships and landed my first 3 internships in Python Django development after the training completion.",
-      userProfileUrl: "http://localhost:3000/assets/img/achievers/03.jpeg",
-      userName: "Aniket Yadav",
-      internship: "React js",
-    },
-    {
-      rating: 5,
-      review:
-        "This training has been extremely beneficial to me. Also, my confidence in Python grew and I applied for internships and landed my first 3 internships in Python Django development after the training completion.",
-      userProfileUrl: "http://localhost:3000/assets/img/achievers/02.jpeg",
-      userName: "Tushar Deshmukh",
-      internship: "React js",
-    },
-    {
-      rating: 4,
-      review:
-        "This training has been extremely beneficial to me. Also, my confidence in Python grew and I applied for internships and landed my first 3 internships in Python Django development after the training completion.",
-      userProfileUrl: "http://localhost:3000/assets/img/achievers/03.jpeg",
-      userName: "Aniket Yadav",
-      internship: "React js",
-    },
-    {
-      rating: 5,
-      review:
-        "This training has been extremely beneficial to me. Also, my confidence in Python grew and I applied for internships and landed my first 3 internships in Python Django development after the training completion.",
-      userProfileUrl: "http://localhost:3000/assets/img/achievers/02.jpeg",
-      userName: "Tushar Deshmukh",
-      internship: "React js",
-    },
-    {
-      rating: 4,
-      review:
-        "This training has been extremely beneficial to me. Also, my confidence in Python grew and I applied for internships and landed my first 3 internships in Python Django development after the training completion.",
-      userProfileUrl: "http://localhost:3000/assets/img/achievers/03.jpeg",
-      userName: "Aniket Yadav",
-      internship: "React js",
-    },
-  ];
+ 
   return (
     <Container>
       <div style={{ marginTop: "30px" }}>

@@ -211,7 +211,7 @@ const Page = () => {
                               <p
                                 dangerouslySetInnerHTML={{
                                   __html: item?.description
-                                    ? item.description.slice(0, 50) + "..."
+                                    ? item.description.slice(0, 80) + "..."
                                     : "",
                                 }}
                                 style={{ cursor: "pointer" }}
