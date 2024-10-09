@@ -39,6 +39,8 @@ export default function ServiceDetails() {
   const { internshipId } = useInternship();
   const [isMobileScreen, setIsMobileScreen] = useState(false);
   const [mobileScreenDialogOpen, setMobileScreenDialogOpen] = useState(false);
+  const [averageRating, setAverageRating] = useState(4.5);
+
 
   const handleMobileScreenForm = () => {
     setMobileScreenDialogOpen(!mobileScreenDialogOpen);
@@ -76,6 +78,8 @@ export default function ServiceDetails() {
         className="service-details-section fix  footer-section footer-bg"
         style={{
           position: "relative",
+          height: "100%",
+          overflowY: "auto",
         }}
       >
         <div className="shape-2">
@@ -84,7 +88,7 @@ export default function ServiceDetails() {
 
         <div
           className="registration-grid-container"
-          style={{ position: "relative", zIndex: 3 }}
+          style={{ position: "relative", zIndex: 3, }}
         >
           <div
             style={{
@@ -141,7 +145,7 @@ export default function ServiceDetails() {
                       max={1}
                       readOnly
                     />
-                    <p>4.5</p>
+                    <p>{averageRating}</p>
                   </div>
 
                   <div
@@ -169,7 +173,10 @@ export default function ServiceDetails() {
           </div>
 
           {!isMobileScreen && (
-            <div className="service-details-wrapper">
+            <div
+              className="service-details-wrapper"
+             
+            >
               <div className="g-4">
                 <RegistrationForm
                   internship={internship}
@@ -223,7 +230,9 @@ export default function ServiceDetails() {
       )}
 
       {/* rating and review */}
-      {internship && <Review id={internship} />}
+      {internship && (
+        <Review id={internship} setAverageRating={setAverageRating} />
+      )}
     </Layout>
   );
 }

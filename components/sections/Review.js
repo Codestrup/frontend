@@ -36,8 +36,9 @@ const swiperOptions = {
     },
   },
 };
-const Review = ({ id }) => {
+const Review = ({ id , setAverageRating}) => {
   const [reviews, setReviwes] = useState([]);
+
   const getReviews = async () => {
     try {
       const res = await axios({
@@ -45,7 +46,14 @@ const Review = ({ id }) => {
         url: `${ApiConfig.getRatingByIntershipId}/${id?._id}`,
       });
       if (res.status === 200) {
-        setReviwes(res?.data?.rating);
+        const data = res?.data?.rating
+        setReviwes(data);
+
+        const averageRating = data.reduce((acc,curr) => {
+          return (acc+ curr?.rating / data.length)
+        },0);
+
+        setAverageRating(averageRating.toFixed(1));
       }
     } catch (error) {
       console.log(error);

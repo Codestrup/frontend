@@ -10,7 +10,7 @@ import { Card, useMediaQuery, useTheme } from "@mui/material";
 import { ApiConfig } from "@/app/Apiconfig";
 
 const swiperOptions = {
-  modules: [Autoplay,Pagination, Navigation],
+  modules: [Autoplay, Pagination, Navigation],
   spaceBetween: 30,
   speed: 1500,
   loop: true,
@@ -101,14 +101,16 @@ export default function Service1() {
                   <Card
                     elevation={3}
                     className="service-box-items"
+                    onClick={() => router.push("/registration_form")}
                     style={{
                       height: "100%",
                       padding: "0px",
                       boxSizing: "border-box",
                       marginBottom: "10px",
                       borderRadius: "10px",
+                      cursor: "pointer",
                       ...(isMobile
-                        ? { maxHeight: "auto"}
+                        ? { maxHeight: "auto" }
                         : { maxHeight: "360px", overflow: "hidden" }),
                     }}
                   >
@@ -145,10 +147,10 @@ export default function Service1() {
                         className="content"
                         style={{ padding: "20px", marginTop: "0px" }}
                       >
-                        <h4 style={{ minHeight: "50px" }}>
+                        <h4 style={{}}>
                           <Link href="/internship">{item.jobTitle}</Link>
                         </h4>
-                        <div style={{}}>
+                        {/* <div style={{}}>
                           <p
                             dangerouslySetInnerHTML={{
                               __html: item?.description
@@ -157,7 +159,9 @@ export default function Service1() {
                             }}
                             style={{ cursor: "pointer" }}
                           />
-                        </div>
+                        </div> */}
+
+                        <p>{item?.duration}</p>
 
                         <div className="content-bottom d-flex align-items-center justify-content-between">
                           <span

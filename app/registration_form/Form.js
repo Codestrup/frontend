@@ -204,6 +204,7 @@ export default function RegistrationForm({
   const [sendOtpBtnText, setSendOtpBtnText] = useState("Send OTP");
   const [stateName, setStateName] = useState({});
   const [cityName, setCityName] = useState({});
+  const [otpVerified, setOtpVerified] = useState(false);
 
   const sendOtp = async (values, setFieldValue) => {
     try {
@@ -221,6 +222,8 @@ export default function RegistrationForm({
         if (!showVerifyTextfield) {
           setFieldValue("otp", "");
         }
+
+        setOtpVerified(false);
       }
     } catch (error) {
       if (error.response) {
@@ -247,6 +250,8 @@ export default function RegistrationForm({
         }, 1000);
 
         setSendOtpBtnText("Resend OTP");
+
+        setOtpVerified(true);
       }
     } catch (error) {
       if (error.response) {
@@ -879,6 +884,7 @@ export default function RegistrationForm({
                         fontWeight: 600,
                         lineHeight: "1",
                       }}
+                      disabled={!otpVerified}
                     >
                       Enroll Now{" "}
                       {loading && (
