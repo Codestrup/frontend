@@ -69,7 +69,6 @@ export default function Service1() {
   };
 
   const handleNextClick = () => {
-    setInformationDialogOpen(false);
     router.push("/registration_form");
   };
 
