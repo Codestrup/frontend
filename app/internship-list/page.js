@@ -37,7 +37,6 @@ const Page = () => {
 
   const handleApplyNowClick = async (internship) => {
     await setInternshipId(internship._id);
-    await setSelectedInternship(internship);
     handleNextClick();
   };
 
