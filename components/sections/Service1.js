@@ -6,19 +6,11 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useInternship } from "../../app/context/InternshipContext";
 import { useRouter } from "next/navigation";
-import { Dialog, Box, IconButton, Button, Card } from "@mui/material";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faTelegram,
-  faInstagram,
-  faFacebook,
-  faWhatsapp,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { Card, useMediaQuery, useTheme } from "@mui/material";
 import { ApiConfig } from "@/app/Apiconfig";
 
 const swiperOptions = {
-  modules: [Autoplay, Pagination, Navigation],
+  modules: [Autoplay,Pagination, Navigation],
   spaceBetween: 30,
   speed: 1500,
   loop: true,
@@ -47,32 +39,17 @@ const swiperOptions = {
 };
 
 export default function Service1() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const router = useRouter();
   const [internships, setInternships] = useState([]);
-  const [selectedInternship, setSelectedInternship] = useState(null);
-  const [informationDialogOpen, setInformationDialogOpen] = useState(false);
-
   const { setInternshipId } = useInternship();
-
-  // State to manage the toggle for each item
-  const [showFullDescription, setShowFullDescription] = useState(
-    internships.reduce((acc, item) => ({ ...acc, [item._id]: false }), {})
-  );
-
-  // Function to toggle the description
-  const toggleDescription = (id) => {
-    setShowFullDescription((prevState) => ({
-      ...prevState,
-      [id]: !prevState[id],
-    }));
-  };
 
   useEffect(() => {
     const fetchInternships = async () => {
       try {
         const response = await axios({
           method: "GET",
-          // url: "https://api.codestrup.in/loadjobs",
           url: ApiConfig.getFeaturedJobData,
           params: {
             limit: 100,
@@ -86,15 +63,9 @@ export default function Service1() {
     fetchInternships();
   }, []);
 
-  // const handleApplyNowClick = (id) => {
-  //   setInternshipId(id);
-  //   router.push("/internship");
-  // };
-
   const handleApplyNowClick = async (internship) => {
     await setInternshipId(internship._id);
     await setSelectedInternship(internship);
-    // setInformationDialogOpen(true);
     handleNextClick();
   };
 
@@ -102,69 +73,6 @@ export default function Service1() {
     setInformationDialogOpen(false);
     router.push("/registration_form");
   };
-
-  const socialLinks = [
-    {
-      id: 1,
-      name: "LindkeIn",
-      link: "https://bit.ly/4erKOpQ",
-      icon: faLinkedin,
-    },
-    {
-      id: 2,
-      name: "Whatsapp",
-      link: "https://bit.ly/4cn7J3I",
-      icon: faWhatsapp,
-    },
-
-    {
-      id: 3,
-      name: "Telegram",
-      icon: faTelegram,
-      link: "https://t.me/+6HxZOtDBk6w0N2Vl",
-    },
-
-    {
-      id: 4,
-      name: "Instagram",
-      icon: faInstagram,
-      link: "https://bit.ly/45tfDXd",
-    },
-
-    {
-      id: 5,
-      name: "Facebook",
-      link: "https://bit.ly/3zciBU0",
-      icon: faFacebook,
-    },
-  ];
-
-  const internshipPerks = [
-    {
-      id: 1,
-      name: "Offer Letter from Codestrup infotech Pvt Ltd.",
-    },
-
-    {
-      id: 2,
-      name: "Internship Certificate - A verifiable completion certificate is provided after successful completion of one month of internship.",
-    },
-
-    {
-      id: 3,
-      name: "Letter of recommendation (based on Performance) - A verifiable recommendation letter is provided to top performing interns based on various assessment parameters.",
-    },
-
-    {
-      id: 4,
-      name: "Learning Opportunities - As an intern at  Codestrup infotech Pvt Ltd  , you'll dive into a collaborative, intellectually stimulating environment, gaining hands-on experience with cutting-edge projects at the forefront of technological advancement",
-    },
-
-    {
-      id: 5,
-      name: "Job Opportunities - Access employment opportunities with us.                              This form is for INTERNSHIP in Codestrup Infotech Pvt Ltd ",
-    },
-  ];
 
   return (
     <section
@@ -197,31 +105,32 @@ export default function Service1() {
                     className="service-box-items"
                     style={{
                       height: "100%",
-                      maxHeight: "360px",
                       padding: "0px",
                       boxSizing: "border-box",
                       marginBottom: "10px",
-                      overflow: "hidden",
-                      borderRadius:'10px',
+                      borderRadius: "10px",
+                      ...(isMobile
+                        ? { maxHeight: "auto"}
+                        : { maxHeight: "360px", overflow: "hidden" }),
                     }}
                   >
                     <div
                       style={{
                         height: "100%",
-                        maxHeight: "360px",
                         display: "flex",
                         flexDirection: "column",
                         boxSizing: "border-box",
+
+                        ...(isMobile
+                          ? { maxHeight: "auto" }
+                          : { maxHeight: "360px" }),
                       }}
                     >
                       <div
                         className=""
                         style={{
                           width: "100%",
-                          height:'auto',
-                          // height: "100%",
-                          // minHeight: "100px",
-                          // overflow: "hidden",
+                          height: "auto",
                         }}
                       >
                         <img
@@ -229,7 +138,6 @@ export default function Service1() {
                           alt="icon-img"
                           style={{
                             width: "100%",
-                            // height: "100px",
                             objectFit: "cover",
                           }}
                         />
@@ -242,8 +150,7 @@ export default function Service1() {
                         <h4 style={{ minHeight: "50px" }}>
                           <Link href="/internship">{item.jobTitle}</Link>
                         </h4>
-                        <div style={{  }}>
-                  
+                        <div style={{}}>
                           <p
                             dangerouslySetInnerHTML={{
                               __html: item?.description
@@ -254,14 +161,7 @@ export default function Service1() {
                           />
                         </div>
 
-                        <div
-                          className="content-bottom d-flex align-items-center justify-content-between"
-                          style={
-                            {
-                              // marginTop: "auto",
-                            }
-                          }
-                        >
+                        <div className="content-bottom d-flex align-items-center justify-content-between">
                           <span
                             className="theme-btn-3 apply-now-btn mt-3 d-flex align-items-center "
                             onClick={() => handleApplyNowClick(item)}
@@ -295,120 +195,6 @@ export default function Service1() {
           </div>
         </div>
       </div>
-
-      {selectedInternship && informationDialogOpen && (
-        <Dialog
-          open={informationDialogOpen}
-          onClose={() => setInformationDialogOpen(false)}
-          sx={{
-            "& .MuiDialog-paperWidthSm": {
-              width: "100%",
-              maxWidth: "700px",
-            },
-          }}
-        >
-          <Box sx={{ padding: "30px", position: "relative" }}>
-            <h2 variant="h4" style={{ textAlign: "center" }}>
-              {selectedInternship.jobTitle}
-            </h2>
-
-            <IconButton
-              sx={{ position: "absolute", top: 0, right: "5px" }}
-              onClick={() => setInformationDialogOpen(false)}
-            >
-              <i className="fas fa-times" />
-            </IconButton>
-
-            <Box mt={2}>
-              <ol>
-                {internshipPerks.map((item) => (
-                  <div
-                    className="d-flex justify-content-start "
-                    style={{ gap: "6px" }}
-                  >
-                    <li key={item.id}></li>
-                    <span>{item.name}</span>
-                  </div>
-                ))}
-              </ol>
-            </Box>
-
-            <Box>
-              <Box
-                component="ul"
-                sx={{
-                  display: "flex",
-                  listStyle: "none",
-                  padding: { xs: "10px", md: "30px" },
-                  margin: 0,
-                  gap: { xs: "10px", md: "20px" },
-                  justifyContent: "center",
-                }}
-              >
-                <Box
-                  component="li"
-                  sx={{
-                    display: { xs: "none", md: "none", lg: "flex" },
-                    alignItems: "center",
-                    gap: "10px",
-                  }}
-                >
-                  <Link href="http://codestrup.in/">
-                    <p style={{ color: "#384bff" }}>
-                      Codestrup Infotech Pvt Ltd
-                    </p>
-                  </Link>
-                  |
-                </Box>
-
-                {socialLinks.map((item) => (
-                  <Box
-                    component="li"
-                    key={item.id}
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      width: "auto",
-                    }}
-                  >
-                    <Link
-                      href={item.link}
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        marginLeft: "10px",
-                        color: "#384bff",
-                        textDecoration: "none",
-                      }}
-                    >
-                      <FontAwesomeIcon
-                        icon={item.icon}
-                        size="lg"
-                        style={{ color: "#384bff" }}
-                      />
-                    </Link>
-                  </Box>
-                ))}
-              </Box>
-            </Box>
-
-            <Box mt={2} display="flex" justifyContent="center">
-              <Button
-                variant="contained"
-                onClick={handleNextClick}
-                className="theme-btn wow fadeInUp"
-                data-wow-delay=".8s"
-                style={{
-                  padding: "10px 14px",
-                  backgroundColor: "#384bff",
-                }}
-              >
-                Next
-              </Button>
-            </Box>
-          </Box>
-        </Dialog>
-      )}
     </section>
   );
 }
