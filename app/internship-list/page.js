@@ -41,7 +41,6 @@ const Page = () => {
   };
 
   const handleNextClick = () => {
-    setInformationDialogOpen(false);
     if (!refer) {
       router.push(`/registration_form`);
     } else {
