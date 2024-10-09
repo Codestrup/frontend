@@ -65,7 +65,6 @@ export default function Service1() {
 
   const handleApplyNowClick = async (internship) => {
     await setInternshipId(internship._id);
-    await setSelectedInternship(internship);
     handleNextClick();
   };
 
