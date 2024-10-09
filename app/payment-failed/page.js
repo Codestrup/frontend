@@ -1,12 +1,16 @@
 "use client";
 
 import Layout from "@/components/layout/Layout";
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Typography, Card, CardContent, Button } from "@mui/material";
 import { useRouter } from "next/navigation";
 
 export default function page() {
   const router = useRouter();
+
+  useEffect(() => {
+    router.push("/payment-failed")
+  }, []);
 
   return (
     <Layout headerStyle={1} footerStyle={1}>
@@ -29,9 +33,7 @@ export default function page() {
             </h4>
             <p>
               We're sorry, but something went wrong with your payment. Your
-              transaction could not be completed at this time. Please check your
-              payment details or try again later. If the issue persists, feel
-              free to contact our support team for assistance.
+              transaction could not be completed at this time.
             </p>
             <Box display="flex" justifyContent="center" mt={2}>
               <Button
