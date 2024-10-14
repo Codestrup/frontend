@@ -1,16 +1,34 @@
 "use client";
 
 import Layout from "@/components/layout/Layout";
-import React, { useEffect } from "react";
-import { Box, Typography, Card, CardContent, Button } from "@mui/material";
-import { useRouter } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import { Box, Card, CardContent, Button } from "@mui/material";
+import Link from "next/link";
+import axios from "axios";
+import { ApiConfig } from "../Apiconfig";
 
 export default function page() {
-  const router = useRouter();
+  const [internshipList , setInternshipList] = useState([]);
 
-  useEffect(() => {
-    router.push("/payment-failed")
-  }, []);
+useEffect(() => {
+  console.log("page called")
+  const getInternshipList = async () => {
+    try {
+      const res = await axios({
+        method:'GET',
+        url:ApiConfig.getFeaturedJobData,
+      });
+      if(res.status === 200){
+        setInternshipList(res?.data?.data)
+      }
+    } catch (error) {
+      console.log(error)
+    }
+  };
+  getInternshipList()
+
+},[]);
+
 
   return (
     <Layout headerStyle={1} footerStyle={1}>
@@ -36,13 +54,9 @@ export default function page() {
               transaction could not be completed at this time.
             </p>
             <Box display="flex" justifyContent="center" mt={2}>
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={() => router.push("/internship")}
-              >
-                OK
-              </Button>
+              <Link href="/internship" variant="contained" color="primary">
+                <Button variant="contained">OK</Button>
+              </Link>
             </Box>
           </CardContent>
         </Card>
