@@ -36,7 +36,7 @@ const swiperOptions = {
     },
   },
 };
-const Review = ({ id , setAverageRating}) => {
+const Review = ({ id, setAverageRating, footerRef }) => {
   const [reviews, setReviwes] = useState([]);
 
   const getReviews = async () => {
@@ -46,12 +46,12 @@ const Review = ({ id , setAverageRating}) => {
         url: `${ApiConfig.getRatingByIntershipId}/${id?._id}`,
       });
       if (res.status === 200) {
-        const data = res?.data?.rating
+        const data = res?.data?.rating;
         setReviwes(data);
 
-        const averageRating = data.reduce((acc,curr) => {
-          return (acc+ curr?.rating / data.length)
-        },0);
+        const averageRating = data.reduce((acc, curr) => {
+          return acc + curr?.rating / data.length;
+        }, 0);
 
         setAverageRating(averageRating.toFixed(1));
       }
@@ -65,10 +65,9 @@ const Review = ({ id , setAverageRating}) => {
     }
   }, [id]);
 
- 
   return (
     <Container>
-      <div style={{ marginTop: "30px" }}>
+      <div style={{ marginTop: "30px" }} ref={footerRef}>
         <h3 style={{ textAlign: "center", marginBottom: "20px" }}>
           Reviews from students
         </h3>

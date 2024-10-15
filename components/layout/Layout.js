@@ -17,7 +17,7 @@ export default function Layout({
   const [scroll, setScroll] = useState(0);
 
   const [isOffCanvas, setOffCanvas] = useState(false);
-  
+
   const handleOffCanvas = () => setOffCanvas(!isOffCanvas);
 
   const [isSearch, setSearch] = useState(false);
