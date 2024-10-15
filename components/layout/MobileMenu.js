@@ -2,11 +2,9 @@
 import Link from "next/link";
 import { useState } from "react";
 
-
-
 export default function MobileMenu() {
   const [activeItem, setActiveItem] = useState(1);
- 
+
   const handleActiveItem = (index) => {
     setActiveItem(index);
   };
@@ -30,13 +28,12 @@ export default function MobileMenu() {
             <ul>
               <li className=" active menu-thumb">
                 <Link href="/">
-                  Home 
+                  Home
                   <i className="fas fa-angle-down" />
                 </Link>
-              
               </li>
               <li>
-                <Link href="/about" >About</Link>
+                <Link href="/about">About</Link>
               </li>
               <li>
                 <Link href="/internship">Internship</Link>
@@ -46,6 +43,9 @@ export default function MobileMenu() {
               </li>
               <li>
                 <Link href="/Achivement">Top Achievers</Link>
+              </li>
+              <li>
+                <Link href="/blogs">Blog</Link>
               </li>
               <li className="">
                 <Link href="/contact">Contact</Link>
