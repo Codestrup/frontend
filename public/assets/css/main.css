@@ -10016,7 +10016,7 @@ html {
   font-weight: 400;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   /* Adjust the breakpoint as needed */
   .registration-grid-container {
     grid-template-columns: 1fr 1fr;

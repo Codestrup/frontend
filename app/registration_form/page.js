@@ -1,7 +1,7 @@
 "use client";
 
+import React, { useState, useEffect, useRef } from "react";
 import Layout from "@/components/layout/Layout";
-import { useState, useEffect } from "react";
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import { useInternship } from "../context/InternshipContext";
@@ -13,7 +13,6 @@ import Review from "@/components/sections/Review";
 import { ApiConfig } from "../Apiconfig";
 import { HiUsers } from "react-icons/hi";
 
-//styles
 const styles = {
   bottomBox: {
     width: "100%",
@@ -23,11 +22,18 @@ const styles = {
     bottom: "0",
     zIndex: 999,
   },
-
   flexItemsCenterJustifyBetween: {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+  },
+  stickyForm: {
+    position: "fixed",
+
+    maxHeight: "calc(100vh - 40px)",
+    overflowY: "auto",
+    right: 0,
+    width: "50%",
   },
 };
 
@@ -40,7 +46,10 @@ export default function ServiceDetails() {
   const [isMobileScreen, setIsMobileScreen] = useState(false);
   const [mobileScreenDialogOpen, setMobileScreenDialogOpen] = useState(false);
   const [averageRating, setAverageRating] = useState(4.5);
-
+  const formRef = useRef(null);
+  const footerRef = useRef(null);
+  const [scroll, setScroll] = useState(0);
+  const [scroll1, setScroll1] = useState(0);
 
   const handleMobileScreenForm = () => {
     setMobileScreenDialogOpen(!mobileScreenDialogOpen);
@@ -50,11 +59,9 @@ export default function ServiceDetails() {
     const fetchInternships = async () => {
       try {
         const response = await axios.get(ApiConfig.getFeaturedJobData);
-
-        const internship = response?.data?.data.find((item) => {
-          return item?._id === internshipId;
-        });
-
+        const internship = response?.data?.data.find(
+          (item) => item?._id === internshipId
+        );
         setInternship(internship);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -66,16 +73,51 @@ export default function ServiceDetails() {
 
   useEffect(() => {
     if (width) {
-      setIsMobileScreen(width < 500);
+      setIsMobileScreen(width < 900);
+      setScroll1(width < 991);
     }
   }, [width]);
 
-  const InternshipBackgroundImage = internship?.imageUrl ?? "";
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      const scrollCheck = window.scrollY > 100;
+      if (scrollCheck !== scroll) {
+        setScroll(scrollCheck);
+      }
+    });
+  }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (formRef.current && footerRef.current) {
+        const formRect = formRef.current.getBoundingClientRect();
+        const footerRect = footerRef.current.getBoundingClientRect();
 
+        // Check if the footer overlaps with the form
+        if (footerRect.top < window.innerHeight) {
+          formRef.current.style.position = "absolute";
+          formRef.current.style.bottom = `${
+            window.innerHeight - footerRect.top
+          }px`;
+          formRef.current.style.top = "auto";
+          formRef.current.style.right = "0";
+        } else {
+          formRef.current.style.position = "fixed";
+          formRef.current.style.top = scroll || scroll1 ? "80px" : "120px";
+          formRef.current.style.bottom = "auto";
+          formRef.current.style.right = "0";
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [scroll, scroll1]);
+  const InternshipBackgroundImage = internship?.imageUrl ?? "";
+  console.log(scroll1);
   return (
     <Layout headerStyle={1} footerStyle={1}>
       <section
-        className="service-details-section fix  footer-section footer-bg"
+        className="service-details-section fix footer-section footer-bg"
         style={{
           position: "relative",
           height: "100%",
@@ -88,19 +130,10 @@ export default function ServiceDetails() {
 
         <div
           className="registration-grid-container"
-          style={{ position: "relative", zIndex: 3, }}
+          style={{ position: "relative", zIndex: 3 }}
         >
-          <div
-            style={{
-              padding: "15px",
-            }}
-          >
-            <div
-              style={{
-                width: "100%",
-                height: "200px",
-              }}
-            >
+          <div style={{ padding: "15px" }}>
+            <div style={{ width: "100%", height: "200px" }}>
               <img
                 src={InternshipBackgroundImage}
                 style={{
@@ -108,26 +141,18 @@ export default function ServiceDetails() {
                   height: "200px",
                   objectFit: "cover",
                 }}
+                alt="Internship background"
               />
             </div>
 
             <div style={{ marginTop: "25px" }}>
               <div style={styles.flexItemsCenterJustifyBetween}>
-                <h4
-                  style={{
-                    textAlign: "left",
-                    textTransform: "uppercase",
-                  }}
-                >
+                <h4 style={{ textAlign: "left", textTransform: "uppercase" }}>
                   {internship?.jobTitle ?? ""}
                 </h4>
 
                 <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "15px",
-                  }}
+                  style={{ display: "flex", alignItems: "center", gap: "15px" }}
                 >
                   <div
                     style={{
@@ -175,7 +200,10 @@ export default function ServiceDetails() {
           {!isMobileScreen && (
             <div
               className="service-details-wrapper"
-             
+              ref={formRef}
+              style={{
+                ...styles.stickyForm,
+              }}
             >
               <div className="g-4">
                 <RegistrationForm
@@ -192,22 +220,12 @@ export default function ServiceDetails() {
           <Box mt={1} textAlign="center" sx={styles.bottomBox}>
             <div>
               <span
-                style={{
-                  fontSize: "20px",
-                  color: "#384bff",
-                  fontWeight: 600,
-                }}
+                style={{ fontSize: "20px", color: "#384bff", fontWeight: 600 }}
               >
                 ₹ {internship?.price}
               </span>
               &nbsp; &nbsp;
-              <span
-                style={{
-                  textDecoration: "line-through",
-                }}
-              >
-                ₹ 1499
-              </span>
+              <span style={{ textDecoration: "line-through" }}>₹ 1499</span>
               &nbsp; &nbsp; Limited Period Offer
             </div>
 
@@ -216,9 +234,17 @@ export default function ServiceDetails() {
             </Box>
           </Box>
         )}
+        <div style={{ backgroundColor: "#f7f7f7", padding: "15px" }}>
+          {internship && (
+            <Review
+              id={internship}
+              setAverageRating={setAverageRating}
+              footerRef={footerRef}
+            />
+          )}
+        </div>
       </section>
 
-      {/* mobile screen registration form */}
       {mobileScreenDialogOpen && isMobileScreen && (
         <MobileScreenRegistrationFormDialog
           open={mobileScreenDialogOpen}
@@ -227,11 +253,6 @@ export default function ServiceDetails() {
           refer={refer}
           isMobileScreen={isMobileScreen}
         />
-      )}
-
-      {/* rating and review */}
-      {internship && (
-        <Review id={internship} setAverageRating={setAverageRating} />
       )}
     </Layout>
   );

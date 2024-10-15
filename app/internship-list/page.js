@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import { useInternship } from "../../app/context/InternshipContext";
@@ -74,7 +73,8 @@ const Page = () => {
                     >
                       <Card
                         elevation={3}
-                        className="service-box-items "
+                        className="service-box-items"
+                        onClick={() => router.push("/registration_form")}
                         style={{
                           display: "flex",
                           flexDirection: "column",
@@ -83,9 +83,10 @@ const Page = () => {
                           boxSizing: "border-box",
                           marginTop: "48px",
                           borderRadius: "10px",
+                          cursor: "pointer",
                           ...(isMobile
                             ? { maxHeight: "auto" }
-                            : { maxHeight: "360px", height: "100%" }),
+                            : { maxHeight: "300px", height: "100%" }),
                         }}
                       >
                         <div
@@ -97,7 +98,7 @@ const Page = () => {
 
                             ...(isMobile
                               ? { maxHeight: "auto" }
-                              : { maxHeight: "360px" }),
+                              : { maxHeight: "300px" }),
                           }}
                         >
                           <div
@@ -122,7 +123,7 @@ const Page = () => {
                             className="content"
                             style={{ padding: "20px", marginTop: "0" }}
                           >
-                            <h4 style={{ minHeight: "50px" }}>
+                            <h4>
                               <p
                                 onClick={() => handleApplyNowClick(item)}
                                 style={{ cursor: "pointer" }}
@@ -131,7 +132,7 @@ const Page = () => {
                               </p>
                             </h4>
 
-                            <div style={{}}>
+                            {/* <div style={{}}>
                               <p
                                 dangerouslySetInnerHTML={{
                                   __html: item?.description
@@ -140,7 +141,9 @@ const Page = () => {
                                 }}
                                 style={{ cursor: "pointer" }}
                               />
-                            </div>
+                            </div> */}
+
+                            <p>{item?.duration}</p>
                             <div
                               className="content-bottom d-flex align-items-center justify-content-between"
                               style={{
