@@ -203,6 +203,7 @@ export default function ServiceDetails() {
               ref={formRef}
               style={{
                 ...styles.stickyForm,
+                top: scroll1 ? "80px" : "120px",
               }}
             >
               <div className="g-4">
