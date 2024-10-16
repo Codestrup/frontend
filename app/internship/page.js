@@ -74,7 +74,7 @@ const Page = () => {
                       <Card
                         elevation={3}
                         className="service-box-items"
-                        onClick={() => router.push("/registration_form")}
+                        onClick={() => handleApplyNowClick(item)}
                         style={{
                           display: "flex",
                           flexDirection: "column",

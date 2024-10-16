@@ -101,7 +101,7 @@ export default function Service1() {
                   <Card
                     elevation={3}
                     className="service-box-items"
-                    onClick={() => router.push("/registration_form")}
+                    onClick={() => handleApplyNowClick(item)}
                     style={{
                       height: "100%",
                       padding: "0px",
