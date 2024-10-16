@@ -141,7 +141,7 @@ const Page = () => {
                   {internships.map((item) => (
                     <div
                       key={item._id}
-                      className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
+                      className="col-xl-3 col-lg-4 col-md-6  wow fadeInUp"
                       data-wow-delay={`${item * 0.2}s`}
                     >
                       <Card

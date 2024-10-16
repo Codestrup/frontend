@@ -1992,7 +1992,8 @@ span {
 
 .faq-section {
   position: relative;
-  padding: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 @media (max-width: 1199px) {
@@ -2219,6 +2220,7 @@ span {
   .faq-section {
     padding-bottom: 120px;
     padding-top: 0;
+   
   }
 }
 
@@ -2232,6 +2234,7 @@ span {
   .faq-section {
     padding-bottom: 120px;
     padding-top: 0;
+   
   }
 
   .section-title span {
