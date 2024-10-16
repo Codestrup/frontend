@@ -98,7 +98,7 @@ export default function ServiceDetails() {
           formRef.current.style.bottom = `${
             window.innerHeight - footerRect.top
           }px`;
-          formRef.current.style.top = "auto";
+          formRef.current.style.top = scroll ? "auto" : "0px";
           formRef.current.style.right = "0";
         } else {
           formRef.current.style.position = "fixed";
