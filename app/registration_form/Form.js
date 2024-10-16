@@ -502,9 +502,20 @@ export default function RegistrationForm({
                           name="contactNumber"
                           placeholder="Enter your whatsapp number"
                           value={values.contactNumber}
-                          onChange={handleChange}
+                          onChange={(e) => {
+                            const inputValue = e.target.value;
+
+                            if (
+                              /^[1-9]\d{0,9}$/.test(inputValue) ||
+                              inputValue === ""
+                            ) {
+                              handleChange(e);
+                            }
+                          }}
                           onBlur={handleBlur}
                           sx={styles.textfield}
+                          inputProps={{ maxLength: 10 }}
+                          inputMode="numeric"
                           InputProps={{
                             startAdornment: (
                               <InputAdornment position="start">
