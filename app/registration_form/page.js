@@ -26,6 +26,7 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+    flexWrap:'wrap',
   },
   stickyForm: {
     position: "fixed",
@@ -113,7 +114,7 @@ export default function ServiceDetails() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scroll, scroll1]);
   const InternshipBackgroundImage = internship?.imageUrl ?? "";
-  console.log(scroll1);
+
   return (
     <Layout headerStyle={1} footerStyle={1}>
       <section
