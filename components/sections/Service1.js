@@ -109,6 +109,7 @@ export default function Service1() {
                       marginBottom: "10px",
                       borderRadius: "10px",
                       cursor: "pointer",
+                      minWidth:'265px',
                       ...(isMobile
                         ? { maxHeight: "auto" }
                         : { maxHeight: "360px", overflow: "hidden" }),
