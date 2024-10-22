@@ -7,4 +7,5 @@ export const ApiConfig = {
   loadjobs: `${BASE_URL}/loadjobs`,
   getRatingByIntershipId:`${BASE_URL}/api/getRatingByIntershipId`,
   createOrder:`${BASE_URL}/create-order`,
+  getAllAchievers:`${BASE_URL}/getAllAchievers`,
 };
