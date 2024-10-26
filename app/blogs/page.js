@@ -38,53 +38,59 @@ const Page = () => {
                       data-wow-delay={`${item * 0.2}s`}
                       style={{ height: "100%" }}
                     >
-                      <Link href={`/blogs/${item.slug}?id=${item._id}`}>
-                        <Card
-                          elevation={3}
-                          className="service-box-items "
-                          style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            justifyContent: "space-between",
-                            minHeight: "300px",
-                            padding: "0px",
-                            boxSizing: "border-box",
-                            marginTop: "48px",
-                          }}
-                        >
-                          <div>
-                            <CardMedia
-                              sx={{ height: 140 }}
-                              image={item?.imageUrl}
-                              title="green iguana"
-                            />
-                            <div
-                              className="content"
-                              style={{ padding: "0 20px " }}
-                            >
-                              <h4>
-                                <p>{item.title}</p>
-                              </h4>
-
-                              <div style={{ height: "100%" }}>
-                                <p>
-                                  {item.metaDescription &&
-                                  item?.metaDescription.length > 50
-                                    ? item?.metaDescription.slice(0, 50)
-                                    : item?.metaDescription}
-                                  &nbsp;
-                                </p>
-                              </div>
+                      <div className="h-full">
+                        <Link href={`/blogs/${item.slug}?id=${item._id}`}>
+                          <Card
+                            elevation={3}
+                            className="service-box-items "
+                            style={{
+                              display: "flex",
+                              flexDirection: "column",
+                              justifyContent: "space-between",
+                              height: "320px",
+                              padding: "0px",
+                              boxSizing: "border-box",
+                              marginTop: "48px",
+                            }}
+                          >
+                            <div>
+                              <CardMedia
+                                sx={{ height: 140 }}
+                                image={item?.imageUrl}
+                                title="green iguana"
+                              />
                               <div
-                                className="content-bottom d-flex align-items-center justify-content-between"
-                                style={{
-                                  marginTop: "auto",
-                                }}
-                              ></div>
+                                className="content"
+                                style={{ padding: "0 20px " }}
+                              >
+                                <h4>
+                                  <p>
+                                    {item.title && item?.title.length > 60
+                                      ? item.title.slice(0, 60)
+                                      : item?.title}
+                                  </p>
+                                </h4>
+
+                                <div style={{ height: "100%" }}>
+                                  <p>
+                                    {item.metaDescription &&
+                                    item?.metaDescription.length > 50
+                                      ? item?.metaDescription.slice(0, 50)
+                                      : item?.metaDescription}
+                                    &nbsp;
+                                  </p>
+                                </div>
+                                <div
+                                  className="content-bottom d-flex align-items-center justify-content-between"
+                                  style={{
+                                    marginTop: "auto",
+                                  }}
+                                ></div>
+                              </div>
                             </div>
-                          </div>
-                        </Card>
-                      </Link>
+                          </Card>
+                        </Link>
+                      </div>
                     </div>
                   ))}
                 </div>

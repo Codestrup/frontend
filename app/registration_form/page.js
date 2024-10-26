@@ -227,7 +227,7 @@ export default function ServiceDetails() {
                 ₹ {internship?.price}
               </span>
               &nbsp; &nbsp;
-              <span style={{ textDecoration: "line-through" }}>₹ 1499</span>
+              <span style={{ textDecoration: "line-through" }}>₹ {internship?.price + 1000}</span>
               &nbsp; &nbsp; Limited Period Offer
             </div>
 

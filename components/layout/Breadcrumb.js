@@ -4,6 +4,7 @@ export default function Breadcrumb({
   breadcrumbTitle,
   internshipTitle,
   internshipDescription,
+  type,
 }) {
   return (
     <>
@@ -33,10 +34,27 @@ export default function Breadcrumb({
               <li>
                 <Link href="/">Home</Link>
               </li>
+
+              {type !== "" && (
+                <li>
+                  <i className="fas fa-chevron-right" />
+                </li>
+              )}
+
+              { (type === "theoryCourses" ||
+                type === "aptitudePreparation" ||
+                type === "interviewPreparation") && (
+                  <li>
+                    <Link href="/learning_Center">Learning Center</Link>
+                  </li>
+                )}
+
               <li>
                 <i className="fas fa-chevron-right" />
               </li>
+
               <li>{breadcrumbTitle}</li>
+
               <li>
                 <i className="fas fa-chevron-right" />
               </li>
@@ -44,7 +62,14 @@ export default function Breadcrumb({
             </ul>
 
             {internshipDescription && (
-              <p style={{ color: "white", width: "100%", maxWidth: "800px" , marginTop:'10px'}}>
+              <p
+                style={{
+                  color: "white",
+                  width: "100%",
+                  maxWidth: "800px",
+                  marginTop: "10px",
+                }}
+              >
                 {internshipDescription}
               </p>
             )}

@@ -49,7 +49,9 @@ export default async function BlogPost({ searchParams }) {
       <Layout headerStyle={1} footerStyle={1}>
         <Container maxWidth="md">
           <h2 style={{ fontWeight: 700, marginTop: "16px" }}>{blog?.title}</h2>
-          <h6 style={{ fontWeight: 700, color: "gray" }}>"{blog?.excerpt}"</h6>
+          {/* <h6 style={{ fontWeight: 700, color: "transparent" }}>
+            "{blog?.excerpt}"
+          </h6> */}
           <Typography color="gray" my={2} fontSize={12}>
             Posted on {moment(blog?.createdAt).format("L")}
           </Typography>
@@ -60,19 +62,27 @@ export default async function BlogPost({ searchParams }) {
             title={blog?.metaDescription}
           />
 
-          <Box my={3} dangerouslySetInnerHTML={{ __html: blog?.content }} />
-          <div style={{ marginBottom: "50px" }}>
-            {blog?.metaKeywords.map((word, index) => (
-              <Chip
-                key={index}
-                label={word}
-                sx={{
-                  marginRight: "10px",
-                  marginTop: "10px",
-                }}
-              />
-            ))}
-          </div>
+          <Box
+            my={3}
+            dangerouslySetInnerHTML={{ __html: blog?.content }}
+            sx={{
+              "& ul": {
+                listStyle: "disc !important",
+                paddingLeft: { xs: "20px", sm: "30px" }, 
+                marginLeft: { xs: "20px", sm: "30px" },
+              },
+
+              "& ol": {
+                listStyle: "decimal !important",
+                paddingLeft: { xs: "20px", sm: "30px" }, 
+                marginLeft: { xs: "20px", sm: "30px" },
+              },
+
+              "& li": {
+                fontWeight: "400 !important",
+              },
+            }}
+          />
         </Container>
       </Layout>
     </div>

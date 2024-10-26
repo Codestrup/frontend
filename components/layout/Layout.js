@@ -12,6 +12,7 @@ export default function Layout({
   footerStyle,
   onePageNav,
   breadcrumbTitle,
+  type="",
   children,
 }) {
   const [scroll, setScroll] = useState(0);
@@ -59,7 +60,7 @@ export default function Layout({
       {/* {headerStyle == 4 ? <Header4 scroll={scroll} onePageNav={onePageNav} isOffCanvas={isOffCanvas} handleOffCanvas={handleOffCanvas} isSearch={isSearch} handleSearch={handleSearch} /> : null}
             <Search isSearch={isSearch} handleSearch={handleSearch} /> */}
 
-      {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} />}
+      {breadcrumbTitle && <Breadcrumb breadcrumbTitle={breadcrumbTitle} type={type}/>}
 
       {children}
 
