@@ -878,7 +878,7 @@ export default function RegistrationForm({
                         textDecoration: "line-through",
                       }}
                     >
-                      ₹ {internship?.price + 1000}
+                      ₹ {internship?.priceAfterAddition}
                     </span>
                     &nbsp; &nbsp; Limited Period Offer
                   </Box>

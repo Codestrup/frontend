@@ -10,7 +10,7 @@ export const ApiConfig = {
   getAllAchievers: `${BASE_URL}/getAllAchievers`,
 
   //AI courses
-  courses: `${BASE_URL}/api/getcourses`,
+  courses: `${BASE_URL}/api/learningCenter/getAllCourse`,
   prompt: `${BASE_URL}/api/prompt`,
   generate: `${BASE_URL}/api/generate`,
   image: `${BASE_URL}/api/image`,
@@ -22,15 +22,16 @@ export const ApiConfig = {
   aptitude: `${BASE_URL}/api/aptitudeCreate`, //course
   apptitudePrompt: `${BASE_URL}/api/createPrompt`, //prompt
   apptitudeImage: `${BASE_URL}/api/createImage`, //image
-  getAppAptitude: `${BASE_URL}/api/getAllAptitude`, //courses
+  getAppAptitude: `${BASE_URL}/api/learningCenter/getAllAptitude`, //courses
   updateAptitude: `${BASE_URL}/api/updateAptitude`, //update
 
   //interview questions
-  getAllInterviewQuetion: `${BASE_URL}/api/getAllInterviewQuetion`, //courses
+  getAllInterviewQuetion: `${BASE_URL}/api/learningCenter/getAllInterviewQuestion`, //courses
   prompt: `${BASE_URL}/api/prompt`, //prompt
   generate: `${BASE_URL}/api/generate`, //generate
   image: `${BASE_URL}/api/image`, //image
   interviewQuetionCreate: `${BASE_URL}/api/interviewQuetionCreate`, //course
   updateinterviewQuetion: `${BASE_URL}/api/updateinterviewQuetion`, //update
-
+  //Testimonial
+  getAllTesti: `${BASE_URL}/getAllTesti`,
 };

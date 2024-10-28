@@ -47,7 +47,7 @@ const Page = () => {
                               display: "flex",
                               flexDirection: "column",
                               justifyContent: "space-between",
-                              height: "320px",
+                              height: "280px",
                               padding: "0px",
                               boxSizing: "border-box",
                               marginTop: "48px",
@@ -63,19 +63,20 @@ const Page = () => {
                                 className="content"
                                 style={{ padding: "0 20px " }}
                               >
-                                <h4>
-                                  <p>
-                                    {item.title && item?.title.length > 60
-                                      ? item.title.slice(0, 60)
-                                      : item?.title}
-                                  </p>
+                                <h4 style={{ fontSize: "14px" }}>
+                                  {item.title && item?.title.length > 60
+                                    ? item.title.slice(0, 60)
+                                    : item?.title}
                                 </h4>
 
                                 <div style={{ height: "100%" }}>
-                                  <p>
+                                  <p style={{ fontSize: "14px" }}>
                                     {item.metaDescription &&
                                     item?.metaDescription.length > 50
-                                      ? item?.metaDescription.slice(0, 50)
+                                      ? `${item?.metaDescription.slice(
+                                          0,
+                                          50
+                                        )}...Read`
                                       : item?.metaDescription}
                                     &nbsp;
                                   </p>
