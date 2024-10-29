@@ -12,7 +12,7 @@ export default function About1() {
               <div className="col-lg-6">
                 <div className="about-image-items">
                   <div className="counter-shape float-bob-y">
-                    <div className="icon">
+                    <div className="icon flex justify-center items-center">
                       <img
                         src="/assets/img/about/icon-1 - Copy.svg"
                         alt="icon-img"
@@ -60,7 +60,7 @@ export default function About1() {
                       className="icon-items wow fadeInUp"
                       data-wow-delay=".7s"
                     >
-                      <div className="icon">
+                      <div className="icon flex justify-center items-center">
                         <img
                           src="/assets/img/about/icon-2.svg"
                           alt="icon-img"
@@ -78,7 +78,7 @@ export default function About1() {
                       className="icon-items wow fadeInUp"
                       data-wow-delay=".9s"
                     >
-                      <div className="icon">
+                      <div className="icon flex justify-center items-center">
                         <img
                           src="/assets/img/about/icon-3.svg"
                           alt="icon-img"
@@ -97,7 +97,7 @@ export default function About1() {
                       className="icon-items wow fadeInUp"
                       data-wow-delay=".9s"
                     >
-                      <div className="icon">
+                      <div className="icon flex justify-center items-center">
                         <img
                           src="/assets/img/achievement-icon/03.svg"
                           alt="icon-img"
@@ -115,7 +115,7 @@ export default function About1() {
                       </div>
                     </div>
                     {/* <div className="icon-items wow fadeInUp" data-wow-delay=".9s">
-                                            <div className="icon">
+                                            <div className="icon flex justify-center items-center">
                                                 <img src="/assets/img/about/icon-1.svg" alt="icon-img" />
                                             </div>
                                             <div className="content">
