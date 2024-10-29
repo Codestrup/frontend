@@ -3,8 +3,8 @@ User-agent: *
 Allow: /
 
 # Host
-Host: http://codestrup.in
+Host: https://codestrup.in
 
 # Sitemaps
-Sitemap: http://codestrup.in/sitemap.xml
-Sitemap: http://codestrup.in/sitemap-0.xml
+Sitemap: https://codestrup.in/sitemap.xml
+Sitemap: https://codestrup.in/sitemap-0.xml

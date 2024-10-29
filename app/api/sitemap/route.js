@@ -2,7 +2,7 @@
 import { getServerSideSitemap } from 'next-sitemap'
 
 export async function GET(request) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://codestrup.in'
 
   // Your dynamic URLs
   const dynamicPaths = [

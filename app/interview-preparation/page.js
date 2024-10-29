@@ -58,7 +58,11 @@ export default function page() {
           {courses &&
             courses.length > 0 &&
             courses.map((course) => (
-              <Card className="course-card relative" elevation={3}>
+              <Card
+                className="course-card relative cursor-pointer"
+                elevation={3}
+                onClick={() => router.push("/internship")}
+              >
                 <Box
                   style={{
                     height: "225px",
