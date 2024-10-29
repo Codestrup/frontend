@@ -35,7 +35,7 @@ export default function page() {
       });
 
       if (response.status === 200) {
-        setCourses(response.data?.interviewQuetions);
+        setCourses(response.data?.data);
       }
     } catch (error) {
       console.log(error);
