@@ -3,8 +3,8 @@ User-agent: *
 Allow: /
 
 # Host
-Host: http://localhost:3000
+Host: https://codestrup.in
 
 # Sitemaps
-Sitemap: http://localhost:3000/sitemap.xml
-Sitemap: http://localhost:3000/sitemap-0.xml
+Sitemap: https://codestrup.in/sitemap.xml
+Sitemap: https://codestrup.in/sitemap-0.xml

@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://codestrup.in',
   generateRobotsTxt: true,
   generateIndexSitemap: false, // Disable index sitemap generation
   robotsTxtOptions: {
@@ -8,7 +8,7 @@ const config = {
       { userAgent: '*', allow: '/' },
     ],
     additionalSitemaps: [
-      `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/sitemap-0.xml`,
+      `${process.env.NEXT_PUBLIC_SITE_URL || 'https://codestrup.in'}/sitemap-0.xml`,
     ],
   },
   outDir: 'public',
