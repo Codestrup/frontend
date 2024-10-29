@@ -5,6 +5,7 @@ import Link from "next/link";
 import axios from "axios";
 import { Card, CardMedia } from "@mui/material";
 
+
 const Page = () => {
   const [blogs, setBlogs] = useState([]);
 
