@@ -26,7 +26,7 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    flexWrap:'wrap',
+    flexWrap: "wrap",
   },
   stickyForm: {
     position: "fixed",
@@ -227,7 +227,9 @@ export default function ServiceDetails() {
                 ₹ {internship?.price}
               </span>
               &nbsp; &nbsp;
-              <span style={{ textDecoration: "line-through" }}>₹ {internship?.price + 1000}</span>
+              <span style={{ textDecoration: "line-through" }}>
+                ₹ {internship?.totalInternshipPrice}
+              </span>
               &nbsp; &nbsp; Limited Period Offer
             </div>
 

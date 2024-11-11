@@ -70,6 +70,7 @@ const Page = () => {
                       key={item._id}
                       className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp"
                       data-wow-delay={`${item * 0.2}s`}
+                      style={{ marginTop: "48px" }}
                     >
                       <Card
                         elevation={3}
@@ -81,12 +82,12 @@ const Page = () => {
                           justifyContent: "space-between",
                           padding: "0px",
                           boxSizing: "border-box",
-                          marginTop: "48px",
+                          marginTop: "0px",
                           borderRadius: "10px",
                           cursor: "pointer",
                           ...(isMobile
                             ? { maxHeight: "auto" }
-                            : { maxHeight: "300px", height: "100%" }),
+                            : { maxHeight: "350px", height: "100%" }),
                         }}
                       >
                         <div
@@ -98,7 +99,7 @@ const Page = () => {
 
                             ...(isMobile
                               ? { maxHeight: "auto" }
-                              : { maxHeight: "300px" }),
+                              : { maxHeight: "350px" }),
                           }}
                         >
                           <div
@@ -121,7 +122,13 @@ const Page = () => {
 
                           <div
                             className="content"
-                            style={{ padding: "20px", marginTop: "0" }}
+                            style={{
+                              padding: "20px",
+                              marginTop: "0",
+                              height: "100%",
+                              display: "flex",
+                              flexDirection: "column",
+                            }}
                           >
                             <h4>
                               <p
