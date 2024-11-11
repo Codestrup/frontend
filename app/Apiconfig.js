@@ -1,5 +1,6 @@
 const BASE_URL = "https://api.codestrup.in";
 // const BASE_URL = "http://localhost:8080";
+// const BASE_URL = "http://192.168.1.132:8080";
 
 export const ApiConfig = {
   verifyCertificateCode: `${BASE_URL}/verifyCertificateCode`,
