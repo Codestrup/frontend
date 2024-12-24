@@ -35,4 +35,5 @@ export const ApiConfig = {
   updateinterviewQuetion: `${BASE_URL}/api/updateinterviewQuetion`, //update
   //Testimonial
   getAllTesti: `${BASE_URL}/getAllTesti`,
+  verifyCouponCode: `${BASE_URL}/verifyCouponCode`,
 };
