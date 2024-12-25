@@ -29,6 +29,7 @@ import { FaShare } from "react-icons/fa";
 import { PiListNumbersFill } from "react-icons/pi";
 import { ApiConfig } from "../Apiconfig";
 import Link from "next/link";
+import { RiCoupon2Fill } from "react-icons/ri";
 
 //validations
 const formValidationSchema = Yup.object().shape({
@@ -60,6 +61,7 @@ const formValidationSchema = Yup.object().shape({
   qaualification: Yup.string().required("Qualification is required"),
 
   otp: Yup.string().required("OTP is required"),
+  coupon: Yup.string(),
 
   termsConditions: Yup.boolean()
     .oneOf([true], "You must accept the terms and conditions")
@@ -205,6 +207,8 @@ export default function RegistrationForm({
   const [stateName, setStateName] = useState({});
   const [cityName, setCityName] = useState({});
   const [otpVerified, setOtpVerified] = useState(false);
+  const [disableCoupon, setDisableCoupon] = useState(false);
+  const [internshipPrice, setInternshipPrice] = useState(0);
 
   const sendOtp = async (values, setFieldValue) => {
     try {
@@ -259,6 +263,30 @@ export default function RegistrationForm({
       }
     }
   };
+  const applyCoupon = async (values) => {
+    try {
+      const res = await axios({
+        method: "POST",
+        url: ApiConfig?.verifyCouponCode,
+        data: {
+          couponsCode: values?.coupon,
+        },
+      });
+      if (res.status === 200) {
+        toast.success(res.data.message);
+        setDisableCoupon(true);
+        setInternshipPrice(
+          Math.round(
+            internship?.price - internship?.price * (res?.data?.discount / 100)
+          )
+        );
+      }
+    } catch (error) {
+      if (error.response) {
+        toast.error(error.response?.data?.message);
+      }
+    }
+  };
 
   const handleSubmit = async (values) => {
     try {
@@ -268,7 +296,7 @@ export default function RegistrationForm({
         method: "POST",
         url: ApiConfig.createOrder,
         data: {
-          amount: internship?.price ?? "",
+          amount: internshipPrice ?? "",
           check: "on",
           collegeName: values.collegeName ?? "",
           email: values.email ?? "",
@@ -283,6 +311,7 @@ export default function RegistrationForm({
           state: stateName?.name ?? "",
           city: cityName?.name ?? "",
           referralCode: refer ? refer : "",
+          couponCode: values?.coupon,
         },
       });
 
@@ -298,6 +327,10 @@ export default function RegistrationForm({
     }
   };
 
+  useEffect(() => {
+    setInternshipPrice(internship?.price);
+    console.log(internship, "price");
+  }, [internship]);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -372,6 +405,7 @@ export default function RegistrationForm({
               otp: "",
               qaualification: "",
               termsConditions: false,
+              coupon: "",
             }}
             validationSchema={formValidationSchema}
             onSubmit={(values) => handleSubmit(values)}
@@ -813,6 +847,61 @@ export default function RegistrationForm({
                     </Box>
                   )}
 
+                  <Box mt={2}>
+                    <Grid container spacing={2}>
+                      <Grid item xs={12} sm={12} md={12} lg={8}>
+                        <Box mt={isMobileScreen ? 1 : 0}>
+                          <TextField
+                            fullWidth
+                            variant="outlined"
+                            autoComplete="off"
+                            label="Coupon"
+                            name="coupon"
+                            placeholder="Enter coupon"
+                            value={values.coupon}
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            sx={styles.textfield}
+                            disabled={disableCoupon}
+                            InputProps={{
+                              startAdornment: (
+                                <InputAdornment position="start">
+                                  <RiCoupon2Fill size={18} />
+                                </InputAdornment>
+                              ),
+                            }}
+                          />
+                        </Box>
+                      </Grid>
+
+                      <Grid
+                        item
+                        xs={12}
+                        sm={12}
+                        md={12}
+                        lg={4}
+                        alignContent="center"
+                      >
+                        <Box mb={isMobileScreen ? 1 : 0}>
+                          <Button
+                            variant="contained"
+                            disabled={!values.coupon || disableCoupon}
+                            onClick={() => applyCoupon(values, setFieldValue)}
+                            className="theme-btn wow fadeInUp"
+                            data-wow-delay=".8s"
+                            style={
+                              isMobileScreen
+                                ? styles.sendOtpBtnSmall
+                                : styles.sendOtpBtn
+                            }
+                          >
+                            Apply Coupon
+                          </Button>
+                        </Box>
+                      </Grid>
+                    </Grid>
+                  </Box>
+
                   <Box
                     mt={2}
                     style={{
@@ -870,7 +959,7 @@ export default function RegistrationForm({
                         fontWeight: 600,
                       }}
                     >
-                      ₹ {internship?.price}
+                      ₹ {internshipPrice}
                     </span>
                     &nbsp; &nbsp;
                     <span
