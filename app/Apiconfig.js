@@ -36,4 +36,7 @@ export const ApiConfig = {
   //Testimonial
   getAllTesti: `${BASE_URL}/getAllTesti`,
   verifyCouponCode: `${BASE_URL}/verifyCouponCode`,
+  groupInternshipData: `${BASE_URL}/groupInternshipData`,
+  getJobById: `${BASE_URL}/getJobById`,
+  getAppSetting: `${BASE_URL}/getAppSetting`,
 };
