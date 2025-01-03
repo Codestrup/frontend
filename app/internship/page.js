@@ -12,12 +12,14 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
+  IconButton,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
 import { ApiConfig } from "../Apiconfig";
 import useAppSettings from "@/components/hooks/appSettings";
+import { Close } from "@mui/icons-material";
 
 const Page = () => {
   const theme = useTheme();
@@ -227,6 +229,7 @@ const Page = () => {
         open={openDialog}
         onClose={handleDialogClose}
       >
+        {/* <div className="flex justify-center w-full "> */}
         <DialogTitle
           sx={{
             fontSize: "1.5rem",
@@ -234,10 +237,18 @@ const Page = () => {
             color: "#333",
             textAlign: "center",
             marginBottom: "8px",
+            position: "relative",
           }}
         >
           {internshipDuration[0]?.jobTitle || "Internship Details"}
+          <IconButton
+            sx={{ position: "absolute", right: "20px" }}
+            onClick={handleDialogClose}
+          >
+            <Close />
+          </IconButton>
         </DialogTitle>
+        {/* </div> */}
         <DialogContent
           sx={{
             display: "flex",
@@ -304,7 +315,7 @@ const Page = () => {
             ))}
           </Box>
         </DialogContent>
-        <DialogActions
+        {/* <DialogActions
           sx={{
             justifyContent: "center",
           }}
@@ -325,7 +336,7 @@ const Page = () => {
           >
             Close
           </Button>
-        </DialogActions>
+        </DialogActions> */}
       </Dialog>
     </div>
   );
