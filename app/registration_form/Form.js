@@ -30,6 +30,7 @@ import { PiListNumbersFill } from "react-icons/pi";
 import { ApiConfig } from "../Apiconfig";
 import Link from "next/link";
 import { RiCoupon2Fill } from "react-icons/ri";
+import useAppSettings from "@/components/hooks/appSettings";
 
 //validations
 const formValidationSchema = Yup.object().shape({
@@ -209,7 +210,7 @@ export default function RegistrationForm({
   const [otpVerified, setOtpVerified] = useState(false);
   const [disableCoupon, setDisableCoupon] = useState(false);
   const [internshipPrice, setInternshipPrice] = useState(0);
-
+  const appSetting = useAppSettings();
   const sendOtp = async (values, setFieldValue) => {
     try {
       const res = await axios({
@@ -296,7 +297,7 @@ export default function RegistrationForm({
         method: "POST",
         url: ApiConfig.createOrder,
         data: {
-          amount: internshipPrice ?? "",
+          amount: appSetting?.freeInternship === false ? internshipPrice : 0,
           check: "on",
           collegeName: values.collegeName ?? "",
           email: values.email ?? "",
@@ -329,7 +330,7 @@ export default function RegistrationForm({
 
   useEffect(() => {
     setInternshipPrice(internship?.price);
-    console.log(internship, "price");
+    // console.log(internship, "price");
   }, [internship]);
   useEffect(() => {
     const fetchData = async () => {
@@ -846,61 +847,64 @@ export default function RegistrationForm({
                       />
                     </Box>
                   )}
+                  {appSetting?.freeInternship === false ? (
+                    <Box mt={2}>
+                      <Grid container spacing={2}>
+                        <Grid item xs={12} sm={12} md={12} lg={8}>
+                          <Box mt={isMobileScreen ? 1 : 0}>
+                            <TextField
+                              fullWidth
+                              variant="outlined"
+                              autoComplete="off"
+                              label="Coupon"
+                              name="coupon"
+                              placeholder="Enter coupon"
+                              value={values.coupon}
+                              onChange={handleChange}
+                              onBlur={handleBlur}
+                              sx={styles.textfield}
+                              disabled={disableCoupon}
+                              InputProps={{
+                                startAdornment: (
+                                  <InputAdornment position="start">
+                                    <RiCoupon2Fill size={18} />
+                                  </InputAdornment>
+                                ),
+                              }}
+                            />
+                          </Box>
+                        </Grid>
 
-                  <Box mt={2}>
-                    <Grid container spacing={2}>
-                      <Grid item xs={12} sm={12} md={12} lg={8}>
-                        <Box mt={isMobileScreen ? 1 : 0}>
-                          <TextField
-                            fullWidth
-                            variant="outlined"
-                            autoComplete="off"
-                            label="Coupon"
-                            name="coupon"
-                            placeholder="Enter coupon"
-                            value={values.coupon}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            sx={styles.textfield}
-                            disabled={disableCoupon}
-                            InputProps={{
-                              startAdornment: (
-                                <InputAdornment position="start">
-                                  <RiCoupon2Fill size={18} />
-                                </InputAdornment>
-                              ),
-                            }}
-                          />
-                        </Box>
+                        <Grid
+                          item
+                          xs={12}
+                          sm={12}
+                          md={12}
+                          lg={4}
+                          alignContent="center"
+                        >
+                          <Box mb={isMobileScreen ? 1 : 0}>
+                            <Button
+                              variant="contained"
+                              disabled={!values.coupon || disableCoupon}
+                              onClick={() => applyCoupon(values, setFieldValue)}
+                              className="theme-btn wow fadeInUp"
+                              data-wow-delay=".8s"
+                              style={
+                                isMobileScreen
+                                  ? styles.sendOtpBtnSmall
+                                  : styles.sendOtpBtn
+                              }
+                            >
+                              Apply Coupon
+                            </Button>
+                          </Box>
+                        </Grid>
                       </Grid>
-
-                      <Grid
-                        item
-                        xs={12}
-                        sm={12}
-                        md={12}
-                        lg={4}
-                        alignContent="center"
-                      >
-                        <Box mb={isMobileScreen ? 1 : 0}>
-                          <Button
-                            variant="contained"
-                            disabled={!values.coupon || disableCoupon}
-                            onClick={() => applyCoupon(values, setFieldValue)}
-                            className="theme-btn wow fadeInUp"
-                            data-wow-delay=".8s"
-                            style={
-                              isMobileScreen
-                                ? styles.sendOtpBtnSmall
-                                : styles.sendOtpBtn
-                            }
-                          >
-                            Apply Coupon
-                          </Button>
-                        </Box>
-                      </Grid>
-                    </Grid>
-                  </Box>
+                    </Box>
+                  ) : (
+                    ""
+                  )}
 
                   <Box
                     mt={2}
@@ -959,7 +963,10 @@ export default function RegistrationForm({
                         fontWeight: 600,
                       }}
                     >
-                      ₹ {internshipPrice}
+                      {appSetting?.freeInternship === false
+                        ? `₹ ${internshipPrice}`
+                        : "Free"}{" "}
+                      {/* ₹ {internshipPrice} */}
                     </span>
                     &nbsp; &nbsp;
                     <span

@@ -12,6 +12,7 @@ import MobileScreenRegistrationFormDialog from "./MobileForm";
 import Review from "@/components/sections/Review";
 import { ApiConfig } from "../Apiconfig";
 import { HiUsers } from "react-icons/hi";
+import useAppSettings from "@/components/hooks/appSettings";
 
 const styles = {
   bottomBox: {
@@ -51,6 +52,7 @@ export default function ServiceDetails() {
   const footerRef = useRef(null);
   const [scroll, setScroll] = useState(0);
   const [scroll1, setScroll1] = useState(0);
+  const appSetting = useAppSettings();
 
   const handleMobileScreenForm = () => {
     setMobileScreenDialogOpen(!mobileScreenDialogOpen);
@@ -59,11 +61,10 @@ export default function ServiceDetails() {
   useEffect(() => {
     const fetchInternships = async () => {
       try {
-        const response = await axios.get(ApiConfig.getFeaturedJobData);
-        const internship = response?.data?.data.find(
-          (item) => item?._id === internshipId
+        const response = await axios.get(
+          `${ApiConfig.getJobById}/${internshipId}`
         );
-        setInternship(internship);
+        setInternship(response?.data?.job);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -149,7 +150,10 @@ export default function ServiceDetails() {
             <div style={{ marginTop: "25px" }}>
               <div style={styles.flexItemsCenterJustifyBetween}>
                 <h4 style={{ textAlign: "left", textTransform: "uppercase" }}>
-                  {internship?.jobTitle ?? ""}
+                  {internship?.jobTitle ?? ""}{" "}
+                  <span style={{ fontSize: "14px", textTransform: "none" }}>
+                    ({internship?.duration ?? ""})
+                  </span>
                 </h4>
 
                 <div
@@ -224,7 +228,9 @@ export default function ServiceDetails() {
               <span
                 style={{ fontSize: "20px", color: "#384bff", fontWeight: 600 }}
               >
-                ₹ {internship?.price}
+                {appSetting?.freeInternship === false
+                  ? `₹ ${internship?.price}`
+                  : "Free"}{" "}
               </span>
               &nbsp; &nbsp;
               <span style={{ textDecoration: "line-through" }}>

@@ -8,6 +8,7 @@ import { useInternship } from "../../app/context/InternshipContext";
 import { useRouter } from "next/navigation";
 import { Card, useMediaQuery, useTheme } from "@mui/material";
 import { ApiConfig } from "@/app/Apiconfig";
+import useAppSettings from "../hooks/appSettings";
 
 const swiperOptions = {
   modules: [Autoplay, Pagination, Navigation],
@@ -44,6 +45,7 @@ export default function Service1() {
   const router = useRouter();
   const [internships, setInternships] = useState([]);
   const { setInternshipId } = useInternship();
+  const appSetting = useAppSettings();
 
   useEffect(() => {
     const fetchInternships = async () => {
@@ -109,7 +111,7 @@ export default function Service1() {
                       marginBottom: "10px",
                       borderRadius: "10px",
                       cursor: "pointer",
-                      minWidth:'265px',
+                      minWidth: "265px",
                       ...(isMobile
                         ? { maxHeight: "auto" }
                         : { maxHeight: "360px", overflow: "hidden" }),
@@ -174,7 +176,9 @@ export default function Service1() {
                             <i className="fa-solid fa-arrow-right-long ms-2" />
                           </span>
                           <span className="theme-btn-3 mt-3 d-flex align-items-center">
-                            ₹ {item.price}
+                            {appSetting?.freeInternship === false
+                              ? `₹ ${item?.price}`
+                              : "Free"}{" "}
                           </span>
                         </div>
                       </div>
