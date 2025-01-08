@@ -297,7 +297,7 @@ export default function Footer3() {
               style={{ color: "white", bottom: "0" }}
               data-wow-delay=".5s"
             >
-              &copy;{new Date().getFullYear()}
+            Copyright © {new Date().getFullYear()}
               <Link href="/" style={{ color: "white" }}>
                 {" "}
                 Codestrup Infotech Pvt Ltd. All rights reserved.
