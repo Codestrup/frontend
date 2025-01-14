@@ -55,11 +55,9 @@ const formValidationSchema = Yup.object().shape({
     .matches(/^[a-zA-Z0-9._%+-]+@gmail\.com$/, "Email must be a Gmail address")
     .required("Email is required"),
 
-  collegeName: Yup.string()
-    .min(2, "College name must be at least 2 characters")
-    .required("College name is required"),
+  collegeName: Yup.string(),
 
-  qaualification: Yup.string().required("Qualification is required"),
+  qaualification: Yup.string(),
 
   otp: Yup.string().required("OTP is required"),
   coupon: Yup.string(),
