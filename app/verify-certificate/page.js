@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   TextField,
@@ -14,10 +14,11 @@ import {
   Box,
 } from "@mui/material";
 import { CheckCircleOutline, CancelOutlined } from "@mui/icons-material";
-import { keyframes } from '@mui/system';
+import { keyframes } from "@mui/system";
 import axios from "axios";
 import Layout from "@/components/layout/Layout";
 import { ApiConfig } from "../Apiconfig";
+import { useParams, useRouter } from "next/navigation";
 
 // Keyframes for animations
 const successAnimation = keyframes`
@@ -30,13 +31,15 @@ const errorAnimation = keyframes`
   100% { transform: scale(1); opacity: 1; }
 `;
 
-const CertificateValidator = () => {
+const CertificateValidator = ({ searchParams }) => {
   const [certificateNumber, setCertificateNumber] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [userData, setUserData] = useState(null);
   const [openDialog, setOpenDialog] = useState(false);
-
+  const [certDetails, setCertDetails] = useState(false);
+  const router = useRouter();
+  console.log(searchParams?.certficateID, "iddd");
   // Handle certificate number input change
   const handleInputChange = (e) => {
     setCertificateNumber(e.target.value);
@@ -51,12 +54,9 @@ const CertificateValidator = () => {
     setOpenDialog(false);
 
     try {
-      const response = await axios.post(
-        ApiConfig.verifyCertificateCode,
-        {
-          certificateId: certificateNumber,
-        }
-      );
+      const response = await axios.post(ApiConfig.verifyCertificateCode, {
+        certificateId: certificateNumber,
+      });
       if (response.data) {
         setUserData(response.data?.certificate);
       } else {
@@ -76,92 +76,113 @@ const CertificateValidator = () => {
     setOpenDialog(false);
   };
 
+  useEffect(() => {
+    if (searchParams?.certficateID) {
+      router.push(`/verify-certificate/${searchParams?.certficateID}`);
+    }
+  }, [searchParams?.certficateID]);
+
   return (
     <Layout headerStyle={1} footerStyle={1}>
-      <Container maxWidth="sm" sx={{ mt: 5 }}>
-        <h4>Validate Your Internship Certificate</h4>
+      {certDetails ? (
+        <></>
+      ) : (
+        <Container maxWidth="sm" sx={{ mt: 5 }}>
+          <h4>Validate Your Internship Certificate</h4>
 
-        <p
-          style={{
-            marginTop: "10px",
-          }}
-        >
-          Enter your certificate number to verify the authenticity of your
-          internship. Upon entering a valid certificate number, you will be able
-          to view details such as the intern's name, email, and internship type.
-        </p>
-
-        <Box
-          component="form"
-          onSubmit={handleSubmit}
-          mt={2}
-          sx={{ mb: { xs: 2, md: 4 } }}
-        >
-          <TextField
-            label="Enter Certificate Number"
-            variant="outlined"
-            fullWidth
-            value={certificateNumber}
-            onChange={handleInputChange}
-            required
-          />
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-            fullWidth
-            sx={{ mt: 2 }}
+          <p
+            style={{
+              marginTop: "10px",
+            }}
           >
-            {loading ? <CircularProgress size={24} /> : "Validate"}
-          </Button>
-        </Box>
+            Enter your certificate number to verify the authenticity of your
+            internship. Upon entering a valid certificate number, you will be
+            able to view details such as the intern's name, email, and
+            internship type.
+          </p>
 
-        {/* Dialog box */}
-        <Dialog open={openDialog} onClose={handleClose}>
-          <DialogTitle>
-            {userData ? (
-              <Box 
-                sx={{ 
-                  display: "flex", 
-                  alignItems: "center", 
-                  justifyContent: "center", 
-                  animation: `${successAnimation} 0.5s ease-in-out` 
-                }}
-              >
-                <CheckCircleOutline sx={{ color: "green", fontSize: 50 }} />
-                <Typography sx={{ ml: 2 }} variant="h6">Certificate Valid</Typography>
-              </Box>
-            ) : (
-              <Box 
-                sx={{ 
-                  display: "flex", 
-                  alignItems: "center", 
-                  justifyContent: "center", 
-                  animation: `${errorAnimation} 0.5s ease-in-out` 
-                }}
-              >
-                <CancelOutlined sx={{ color: "red", fontSize: 50 }} />
-                <Typography sx={{ ml: 2 }} variant="h6">Certificate Invalid</Typography>
-              </Box>
-            )}
-          </DialogTitle>
+          <Box
+            component="form"
+            onSubmit={(e) => {
+              e.preventDefault();
+              router.push(`/verify-certificate/${certificateNumber}`);
+            }}
+            mt={2}
+            sx={{ mb: { xs: 2, md: 4 } }}
+          >
+            <TextField
+              label="Enter Certificate Number"
+              variant="outlined"
+              fullWidth
+              value={certificateNumber}
+              onChange={handleInputChange}
+              required
+            />
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              fullWidth
+              sx={{ mt: 2 }}
+            >
+              {loading ? <CircularProgress size={24} /> : "Validate"}
+            </Button>
+          </Box>
 
-          <DialogContent>
-            {userData ? (
-              <Box>
-                <Typography variant="h6">User Details</Typography>
-                <Typography>Name: {userData?.user?.name}</Typography>
-                <Typography>Internship: {userData?.internship?.jobTitle}</Typography>
-              </Box>
-            ) : (
-              <Typography color="error">
-                Sorry, we could not find a valid certificate for the number you
-                entered. Please check the certificate number and try again.
-              </Typography>
-            )}
-          </DialogContent>
-        </Dialog>
-      </Container>
+          {/* Dialog box */}
+          <Dialog open={openDialog} onClose={handleClose}>
+            <DialogTitle>
+              {userData ? (
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    animation: `${successAnimation} 0.5s ease-in-out`,
+                  }}
+                >
+                  <CheckCircleOutline sx={{ color: "green", fontSize: 50 }} />
+                  <Typography sx={{ ml: 2 }} variant="h6">
+                    Certificate Valid
+                  </Typography>
+                </Box>
+              ) : (
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    animation: `${errorAnimation} 0.5s ease-in-out`,
+                  }}
+                >
+                  <CancelOutlined sx={{ color: "red", fontSize: 50 }} />
+                  <Typography sx={{ ml: 2 }} variant="h6">
+                    Certificate Invalid
+                  </Typography>
+                </Box>
+              )}
+            </DialogTitle>
+
+            <DialogContent>
+              {userData ? (
+                <Box>
+                  <Typography variant="h6">User Details</Typography>
+                  <Typography>Name: {userData?.user?.name}</Typography>
+                  <Typography>
+                    Internship: {userData?.internship?.jobTitle}
+                  </Typography>
+                </Box>
+              ) : (
+                <Typography color="error">
+                  Sorry, we could not find a valid certificate for the number
+                  you entered. Please check the certificate number and try
+                  again.
+                </Typography>
+              )}
+            </DialogContent>
+          </Dialog>
+        </Container>
+      )}
     </Layout>
   );
 };
