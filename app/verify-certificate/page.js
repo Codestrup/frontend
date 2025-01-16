@@ -39,7 +39,7 @@ const CertificateValidator = ({ searchParams }) => {
   const [openDialog, setOpenDialog] = useState(false);
   const [certDetails, setCertDetails] = useState(false);
   const router = useRouter();
-  console.log(searchParams?.certficateID, "iddd");
+  console.log(searchParams?.certificateID, "iddd");
   // Handle certificate number input change
   const handleInputChange = (e) => {
     setCertificateNumber(e.target.value);
@@ -77,10 +77,10 @@ const CertificateValidator = ({ searchParams }) => {
   };
 
   useEffect(() => {
-    if (searchParams?.certficateID) {
-      router.push(`/verify-certificate/${searchParams?.certficateID}`);
+    if (searchParams?.certificateID) {
+      router.push(`/verify-certificate/${searchParams?.certificateID}`);
     }
-  }, [searchParams?.certficateID]);
+  }, [searchParams?.certificateID]);
 
   return (
     <Layout headerStyle={1} footerStyle={1}>
