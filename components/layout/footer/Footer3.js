@@ -74,21 +74,26 @@ export default function Footer3() {
                     </Link>
 
                     <div className="social-icon d-flex align-items-center">
-                      <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd">
+                      <Link href="https://www.linkedin.com/company/codestrupinternship/">
                         <i className="fa-brands fa-linkedin-in" />
                       </Link>
+
                       <Link href="https://wa.me/919699997689">
                         <i className="fab fa-whatsapp" />
                       </Link>
-                      <Link href="https://www.facebook.com/codestrup">
+
+                      <Link href="https://www.facebook.com/codestrupinternship/">
                         <i className="fab fa-facebook-f" />
                       </Link>
-                      <Link href="https://www.instagram.com/codestrup_infotech/">
+
+                      <Link href="https://www.instagram.com/codestrup_internship/">
                         <i className="fab fa-instagram" />
                       </Link>
+
                       <Link href="https://t.me/+6HxZOtDBk6w0N2Vl">
                         <i className="fa-brands fa-telegram" />
                       </Link>
+                      
                     </div>
                   </div>
                 </div>
@@ -131,6 +136,7 @@ export default function Footer3() {
                         </li>
                       </ul>
                     </div>
+
 
                     <div className="col-md-6">
                       <ul className="list-area">
@@ -292,7 +298,7 @@ export default function Footer3() {
               style={{ color: "white", bottom: "0" }}
               data-wow-delay=".5s"
             >
-              &copy;{new Date().getFullYear()}
+            Copyright © {new Date().getFullYear()}
               <Link href="/" style={{ color: "white" }}>
                 {" "}
                 Codestrup Infotech Pvt Ltd. All rights reserved.

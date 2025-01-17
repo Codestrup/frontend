@@ -41,6 +41,7 @@ const page = async ({ params }) => {
   const [certificate, setCertificate] = useState({});
   const [internship, setInternship] = useState([]);
   const [averageRatings, setAverageRating] = useState(4.5);
+  const [type, setType] = useState(true);
   const { setInternshipId } = useInternship();
   const router = useRouter();
   const handleApplyNowClick = async (internship) => {
@@ -81,6 +82,12 @@ const page = async ({ params }) => {
         certificateId: certificateNumber,
       });
       setCertificate(response?.data || {});
+      if (response?.data?.certificate?.fileName.includes("Course")) {
+        setType(true);
+        console.log("....");
+      } else {
+        setType(false);
+      }
     } catch (error) {
       console.error("Error fetching blog:", error);
       setCertificate({});
@@ -138,28 +145,53 @@ const page = async ({ params }) => {
                   loading="lazy"
                 />
               </Box>
-
-              <Typography mt={1}>
-                This certificate verifies that{" "}
-                <span className="highlight">
-                  {certificate?.certificate?.user?.name}
-                </span>{" "}
-                successfully completed the course{" "}
-                <span className="highlight">
-                  {certificate?.certificate?.internship?.jobTitle.replace(
-                    "Internship",
-                    ""
-                  )}{" "}
-                </span>
-                on{" "}
-                <span className="highlight">
-                  {moment(certificate?.certificate?.issueDate).format(
-                    "DD/MM/YYYY"
-                  )}
-                </span>
-                . The certificate indicates the entire course was completed as
-                validated by the student.
-              </Typography>
+              {type ? (
+                <Typography mt={1}>
+                  This certificate verifies that{" "}
+                  <span className="highlight">
+                    {certificate?.certificate?.user?.name}
+                  </span>{" "}
+                  successfully completed the course{" "}
+                  <span className="highlight">
+                    {certificate?.certificate?.internship?.jobTitle.replace(
+                      "Internship",
+                      ""
+                    )}{" "}
+                  </span>
+                  on{" "}
+                  <span className="highlight">
+                    {moment(certificate?.certificate?.issueDate).format(
+                      "DD/MM/YYYY"
+                    )}
+                  </span>
+                  . The certificate indicates the entire course was completed as
+                  validated by the student.
+                </Typography>
+              ) : (
+                <Typography mt={1}>
+                  This internship certificate verifies that{" "}
+                  <span className="highlight">
+                    {certificate?.certificate?.user?.name}
+                  </span>{" "}
+                  successfully completed the{" "}
+                  <span className="highlight">
+                    {certificate?.certificate?.internship?.jobTitle.replace(
+                      "Internship",
+                      ""
+                    )}{" "}
+                  </span>
+                  internship program on{" "}
+                  <span className="highlight">
+                    {moment(certificate?.certificate?.issueDate).format(
+                      "DD/MM/YYYY"
+                    )}
+                  </span>
+                  . The certificate confirms the completion of all tasks and
+                  projects as part of the internship, as validated by the
+                  supervising authority. The internship had a total duration of{" "}
+                  <span className="highlight">{internship?.duration}</span>
+                </Typography>
+              )}
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={3}>
               <Typography className="recep-hl">
@@ -184,7 +216,7 @@ const page = async ({ params }) => {
 
               <Card
                 sx={{
-                  maxWidth: 345,
+                  width: "100%",
                   boxShadow: 2,
                   borderRadius: 2,
                   mt: 2,
@@ -228,7 +260,7 @@ const page = async ({ params }) => {
                 </CardContent>
 
                 {/* Card Footer */}
-                <CardActions
+                {/* <CardActions
                   sx={{
                     flexDirection: "column",
                     alignItems: "start",
@@ -245,7 +277,7 @@ const page = async ({ params }) => {
                   </Typography>
 
                   <Chip label="Bestseller" />
-                </CardActions>
+                </CardActions> */}
               </Card>
             </Grid>
           </Grid>
