@@ -137,6 +137,7 @@ export default function Footer3() {
                       </ul>
                     </div>
 
+
                     <div className="col-md-6">
                       <ul className="list-area">
                         <li>
