@@ -90,9 +90,9 @@ export default function Footer3() {
                         <i className="fab fa-instagram" />
                       </Link>
 
-                      <Link href="https://t.me/+6HxZOtDBk6w0N2Vl">
+                      {/* <Link href="https://t.me/+6HxZOtDBk6w0N2Vl">
                         <i className="fa-brands fa-telegram" />
-                      </Link>
+                      </Link> */}
                       
                     </div>
                   </div>
