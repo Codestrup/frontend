@@ -40,9 +40,9 @@ export default function Header1({
                     <i className="fab fa-whatsapp" />
                   </Link>
 
-                  <Link href="https://t.me/+6HxZOtDBk6w0N2Vl">
+                  {/* <Link href="https://t.me/+6HxZOtDBk6w0N2Vl">
                     <i className="fab fa-telegram" />
-                  </Link>
+                  </Link> */}
                   <Link href="https://www.facebook.com/people/Codestrup-Infotech/61559222888433/?mibextid=ZbWKwL">
                     <i className="fab fa-facebook-f" />
                   </Link>

@@ -41,16 +41,16 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
 
 
               <div className="offcanvas__contact">
-                <div className="social-icon d-flex align-items-center">
+                <div className="social-icon d-flex align-items-center justify-between">
                   <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd">
                     <i className="fab fa-linkedin-in" />
                   </Link>
                   <Link href="https://wa.me/919699997689">
                     <i className="fab fa-whatsapp" />
                   </Link>
-                  <Link href="https://t.me/+6HxZOtDBk6w0N2Vl">
+                  {/* <Link href="https://t.me/+6HxZOtDBk6w0N2Vl">
                     <i className="fab fa-telegram" />
-                  </Link>
+                  </Link> */}
                   <Link href="https://www.facebook.com/people/Codestrup-Infotech/61559222888433/?mibextid=ZbWKwL">
                     <i className="fab fa-facebook-f" />
                   </Link>
