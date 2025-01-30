@@ -39,7 +39,6 @@ export default function Offcanvas({ isOffCanvas, handleOffCanvas }) {
                 <MobileMenu />
               </div>
 
-
               <div className="offcanvas__contact">
                 <div className="social-icon d-flex align-items-center justify-between">
                   <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd">
