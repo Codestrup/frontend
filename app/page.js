@@ -11,7 +11,6 @@ import Testimonial3 from "@/components/sections/Testimonial3";
 import WorkProcess1 from "@/components/sections/WorkProcess1";
 import useScreenWidth from "@/components/hooks/useScreenWidth";
 import { IconButton } from "@mui/material";
-// import { WhatsApp } from "@mui/icons-material";
 
 export default function Home() {
   const width = useScreenWidth();
