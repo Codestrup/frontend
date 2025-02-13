@@ -19,21 +19,22 @@ export default function Header1({
               <ul className="contact-list">
                 <li>
                   <i className="far fa-envelope" />
-                  <a href="mailto:info@codestrup.in" style={{textTransform:'lowercase'}} >
+                  <a
+                    href="mailto:info@codestrup.in"
+                    style={{ textTransform: "lowercase" }}
+                  >
                     info@codestrup.in
                   </a>
-
                 </li>
                 <li>
                   <i className="fa-solid fa-phone-volume" />
                   <Link href="tel:+919699997689">+91 9699997689</Link>
-
                 </li>
               </ul>
               <div className="top-right">
                 <div className="social-icon d-flex align-items-center">
                   <span>Follow Us:</span>
-                  <Link href="https://in.linkedin.com/company/codestrup-infotech-pvt-ltd">
+                  <Link href="https://www.linkedin.com/company/codestrupinternship/">
                     <i className="fa-brands fa-linkedin-in" />
                   </Link>
                   <Link href="https://wa.me/919699997689">
@@ -43,10 +44,10 @@ export default function Header1({
                   {/* <Link href="https://t.me/+6HxZOtDBk6w0N2Vl">
                     <i className="fab fa-telegram" />
                   </Link> */}
-                  <Link href="https://www.facebook.com/people/Codestrup-Infotech/61559222888433/?mibextid=ZbWKwL">
+                  <Link href="https://www.facebook.com/codestrupinternship/">
                     <i className="fab fa-facebook-f" />
                   </Link>
-                  <Link href="https://www.instagram.com/codestrup_infotech/">
+                  <Link href="https://www.instagram.com/codestrup_internship/">
                     <i className="fa-brands fa-instagram" />
                   </Link>
                 </div>
@@ -67,9 +68,11 @@ export default function Header1({
                       <img
                         src="/assets/img/logo/Codestrup.png"
                         alt="logo-img"
-                        style={{
-                          // width: "260px",
-                        }}
+                        style={
+                          {
+                            // width: "260px",
+                          }
+                        }
                       />
                     </Link>
                   </div>
