@@ -29,11 +29,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="facebook-domain-verification"
+          content="jfehn8zmuib8ejjdql2z3qpz2gyjy5"
+        />
+      </head>
       <body className={`${kumbh.className}`}>
-         {/* Google Analytics Script */}
-         <Script 
-          async 
-          src="https://www.googletagmanager.com/gtag/js?id=G-EQTF867F4X" 
+        {/* Google Analytics Script */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-EQTF867F4X"
         />
         <Script id="google-analytics">
           {`
@@ -64,7 +70,7 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-       
+
         <InternshipProvider>{children}</InternshipProvider>
         <Toaster position="top-right" />
         <Link href="https://lordicon.com/"></Link>
