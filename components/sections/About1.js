@@ -49,11 +49,11 @@ export default function About1() {
                 <div className="about-content">
                   <div className="section-title">
                     <h2 className="wow fadeInUp" data-wow-delay=".3s">
-                      Internships Highlights
+                      Why Codestrup Infotech?
                     </h2>
                   </div>
                   <p className="mt-1 mt-md-0 wow fadeInUp" data-wow-delay=".5s">
-                    Get certification with our online internship program.
+                    Get Both Internship & Course certification & Get Job Ready !
                   </p>
                   <div className="about-icon-items">
                     <div
@@ -67,10 +67,9 @@ export default function About1() {
                         />
                       </div>
                       <div className="content">
-                        <h4>Learning and Skill Development</h4>
+                        <h4>Get Your First Job</h4>
                         <p>
-                          Gain practical skills, master programming, solve
-                          problems, and enhance teamwork.
+                         Become Zero To Hero With Our Training Program and get your first job
                         </p>
                       </div>
                     </div>
@@ -87,9 +86,7 @@ export default function About1() {
                       <div className="content">
                         <h4>Career Growth and Development</h4>
                         <p>
-                          Gain industry insights into the software lifecycle and
-                          learn from experienced professionals through
-                          mentorship
+                         Learn from the basic to advance programming skills and grow your career
                         </p>
                       </div>
                     </div>
@@ -109,7 +106,7 @@ export default function About1() {
                       <div className="content">
                         <h4>Flexibility and Convenience</h4>
                         <p>
-                          Work remotely, enjoy a flexible schedule, and access
+                          Work and Learn remotely, enjoy a flexible schedule, and access
                           online resources for learning and development.
                         </p>
                       </div>

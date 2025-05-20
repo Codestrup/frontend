@@ -519,7 +519,7 @@ export default function Testimonial3() {
         <div className="container">
           <div className="section-title text-center">
             <span className="text-white">Testimonials</span>
-            <h2 className="text-white">Those Who Admire Us</h2>
+            <h2 className="text-white">What Our Students Says</h2>
           </div>
           <div className="swiper testimonial-slider-2">
             <Swiper {...swiperOptions} className="swiper-wrapper">

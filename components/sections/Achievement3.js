@@ -49,7 +49,7 @@ export default function Achievement3() {
             <div className="section-title mb-4">
               <span className="text-white wow faEdeInUp">achievement</span>
               <h2 className="text-white wow fadeInUp" data-wow-delay=".3s">
-                Celebrate Major Wins
+                Numbers Speak The Truth !
               </h2>
             </div>
 

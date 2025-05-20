@@ -87,11 +87,11 @@ export default function Service1() {
         <div className="section-title-area">
           <div className="section-title">
             <span className="wow fadeInUp" style={{ fontWeight: "600" }}>
-              Browse Internships{" "}
+              Explore Internships {" "}
             </span>
 
             <h2 className="wow fadeInUp" data-wow-delay=".3s">
-              Enroll Your Ideal Internship
+              Enroll Now Start Your Career !
             </h2>
           </div>
         </div>
@@ -172,7 +172,7 @@ export default function Service1() {
                             onClick={() => handleApplyNowClick(item)}
                             style={{ cursor: "pointer" }}
                           >
-                            Apply Now
+                            Enroll Now
                             <i className="fa-solid fa-arrow-right-long ms-2" />
                           </span>
                           <span className="theme-btn-3 mt-3 d-flex align-items-center">
@@ -197,7 +197,7 @@ export default function Service1() {
                 padding: "20px 20px",
               }}
             >
-              View Internship
+              View All
             </Link>
           </div>
         </div>
