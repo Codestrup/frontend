@@ -19,10 +19,13 @@ export default function Hero1() {
                             <div className="hero-content">
                                 <h6 className="wow fadeInUp" data-wow-delay=".2s">Internship With Course Certification </h6>
                                 <h2 className="wow fadeInUp" data-wow-delay=".4s">
-                                India's first platform which provides both Internship And Course Certification Under One Program!
-                                </h2><br/>
-                                <h5 className="wow fadeInUp" data-wow-delay=".4s"><b>
-                                Internship Certificate | Course Certification | Live Projects & Tasks | Video & Text Courses |<br/> Ai Assistance | Interview Preparation | Job Alerts & Many More..</b>
+                                India's first platform which provides both Internship And Course Certification 
+                                </h2>
+                                <h2 className="wow fadeInUp" data-wow-delay=".4s">
+                                Under One Program!  
+                                </h2>
+                                <h5 className="wow fadeInUp" data-wow-delay=".4s" style={{ marginTop: '30px',color: 'blue'}}>
+                                Internship Certificate | Course Certification | Live Projects & Tasks | Video & Text Courses |<br/> Ai Assistance | Interview Preparation | Job Alerts & Many More..
                                 </h5>
                                 <div className="hero-button">
                                     <Link href="/internship" className="theme-btn wow fadeInUp" data-wow-delay=".8s">
