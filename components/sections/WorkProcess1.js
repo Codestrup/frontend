@@ -28,10 +28,10 @@ export default function WorkProcess1() {
       >
         <div className="container">
           <div className="section-title text-center">
-            <h2 style={{ marginBottom: "10px" }}>Our Features</h2>
+            <h2 style={{ marginBottom: "10px" }}>Internship & Course Features</h2>
             <span style={{ fontWeight: 600 }}>
-              Find global work experience in any programming language with
-              Virtual Internships, the No. 1 platform for remote internships.
+              Get global work experience in any programming language with
+              Virtual Internships, India's No. 1 platform for remote Internships & Course Certification.
             </span>
           </div>
 

@@ -20,7 +20,7 @@ export default function Faq() {
                                             </h2>
                                         </div>
                                         <div className="faq-accordion mt-4 mt-md-0">
-                                            <Accordion2 />
+                                            <Accordion2/>
                                         </div>
                                     </div>
                                

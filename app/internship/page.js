@@ -83,7 +83,7 @@ const Page = () => {
               data-wow-delay=".3s"
               style={{ display: "flex", justifyContent: "center" }}
             >
-              Enroll Your Ideal Internship
+              Enroll Now Start Your Career !
             </h2>
             <div className="container">
               <div className="service-wrapper mb-0">
@@ -193,7 +193,7 @@ const Page = () => {
                                 }
                                 style={{ cursor: "pointer" }}
                               >
-                                Apply Now
+                                Enroll Now
                                 <i className="fa-solid fa-arrow-right-long ms-2" />
                               </span>
                               {/* <span className="theme-btn-2 mt-3 d-flex align-items-center">
